@@ -64,11 +64,45 @@ For the continuous event, it could be that a person is between 160 cm and 170 cm
 
 	\subsection{Random variable}
 	\subsection{Estimators and estimates}
+ 	If we are interested in certain parameters of a population distribution, we can look at a sample. From this, we can make a \textbf{point estimate}. 
+	\newline
+	Examples of this are, 
+	\newline
+	$\bar{x}$ is a point estimate of $\mu$
+	\newline
+	s is a point estimate of $\sigma$
+	\newline
+	
+	This is often supplemented with a \textbf{confidence interval}
+	\newline
+	This is an interval around the point estimate, where we are confident that the population parameter is located.
+	\newline
+	
+	For $\mu$, we have different ways of estimating it. We can use the sample mean $\bar{X}$, or the average $X_T$ of the sample upper and lower quartiles. 
+	But in this case, we have to look out for \textbf{bias}. If the distribution of a population is skewed, then $X_T$ is biased. The result of this is, that in the long run, this estimator will systematically over or under estimate the value of $\mu$. This is written as,
+	\newline
+	$E(X_T) \neq \mu$.
+	\newline
+	It is generally preferred that the estimator is \textbf{unbiased}. In this case, $\bar{X}$ is an unbiased estimate of the population mean $\mu$.
+	\newline
+	
+	The standard error of $\bar{X}$ is $\frac{\sigma}{\sqrt{n}}$. Here, the standard error decreases, when the sample size increases. If an estimator has this property, it is called \textbf{consistent}. If we compare, the estimator $X_T$ is also consistent, but has a greater variance than $\bar{X}$. 
+	\newline
+	It is generally preferred that the estimator has the smallest possible variance, and in that case it is called efficient. So $\bar{X}$ is an efficient estimator.
+	\newline
+	When estimating a parameter, the symbol $\hat$ is used above it. For $\mu$, $\hat{\mu} = \bar{X}$ .
+	\newline
+	We can calculate $\bar{X}$ using the following formula,
+	$$\bar{X}=\frac{1}{n} \sum_{i=1}^{n}X_i$$   
+\newline
+For the variance $\sigma$, we can estimate it by using the formula for $S^2$,
+$$S^2=\frac{1}{n-1} \sum_{i=1}(X_i-\bar{X})$$
+
 	\subsection{Probability distribution}
 	\subsection{Statistical methods}
 	\newpage
 	\section{Polynomial regression}
- 	sisisicsjsijcc snccskcs ncsjncsjcssnnjnjcsjjncjnc knjcsknjcnjcjnsc csinncjnjscnj chushuhuc scjscoioijsc
+ 	
 	\subsection{Assumptions}
 	\newpage
 	\section{Pseudo random number generator}
@@ -79,7 +113,7 @@ For the continuous event, it could be that a person is between 160 cm and 170 cm
 	\section{Problem statement}
 	\newpage
 	\section{Classical regression}
- 	erdkmkmfdk mkdfmke maækdf mke maf  køejkgnrkjn nhtjthirj posodpf powepro gpojgorj ojoewjjgorjo jorjweorjgpøj pewrojg pejrg pjs gwpjgpfj pewojrg<wj  øwgsødg øprjpgisvkb fkelkgl lelrkg lel   llerrsjrjtngkrgjnd jwnrjgldsn  lnælqnwel knlwnltkgæf æwlrgætew lwll
+ 	
 	\newpage
 	\section{Monte Carlo regression}
 	\newpage
