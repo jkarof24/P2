@@ -3,7 +3,15 @@ library(dplyr)
 library(moments)
 library(ggplot2)
 library(PearsonDS)  
-
+library(gridExtra)
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+library(reshape2)
+library(tidyr)
+library(caret)
+library(fastDummies)
+library(moments)
 # Set working directory and read data
 setwd("C:/Users/jonat/Documents/GitHub/P2")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
@@ -25,10 +33,10 @@ generate_data <- function(size, mean_target, variance_target, skewness_target, k
   data <- rnorm(size)
   
   # Adjust mean and variance
-  data <- (data - mean(data)) / sd(data) * sqrt(variance_target) + mean_target
+  data <- (data - mean(data)) / sd(data) * variance_target + mean_target
   
   # Adjust skewness and kurtosis using the Pearson system
-  data <- rpearson(size, moments = c(mean_target, sqrt(variance_target), skewness_target, kurtosis_target))
+  data <- rpearson(size, moments = c(mean_target, variance_target, skewness_target, kurtosis_target))
   
   # Create a data frame for plotting
   df <- data.frame(value = data)
@@ -44,19 +52,19 @@ generate_data <- function(size, mean_target, variance_target, skewness_target, k
 generated_data <- numeric_data %>%
   mutate(across(everything(), ~ generate_data(n(), mean(.), var(.), skewness(.), kurtosis(.))))
 
-# Fit polynomial regression model
 fit_polynomial_regression <- function(data) {
   response_var <- names(data)[1]
   predictor_vars <- names(data)[-1]
   
-  formula <- as.formula(paste(response_var, "~", paste("poly(", predictor_vars, ", 2)", collapse = " + ")))
+  # Corrected formula generation
+  formula <- as.formula(paste(response_var, "~", paste(sapply(predictor_vars, function(var) paste("poly(", var, ", 2)")), collapse = " + ")))
   
   model <- lm(formula, data = data)
   return(model)
 }
 
 # Perform Monte Carlo simulation
-set.seed(12)
+set.seed(421)
 n_simulations <- 1000
 results <- replicate(n_simulations, {
   simulated_data <- numeric_data %>%
@@ -199,10 +207,27 @@ plots <- lapply(names(generated_data), function(col) {
   n_bins <- ceiling(log2(length(generated_data[[col]])) + 1)
   
   ggplot(generated_data, aes_string(x = col)) +
-    geom_histogram(bins = n_bins, fill = "blue", color = "black") +
+    geom_histogram(bins = 100, fill = "blue", color = "black") +
     ggtitle(paste("Histogram of generated", col)) +
     theme_minimal()
 })
 
 # Arrange all plots in a grid
 do.call(grid.arrange, c(plots, ncol = 3))
+
+
+# Create a list of polynomial terms for numerical columns
+poly_terms <- paste("poly(", c("cylinders", "displacement", "weight", "acceleration", "model.year", "origin"), ", 2)", collapse = " + ")
+
+# Use reformulate to create the formula without car.name dummy variables
+formula <- reformulate(poly_terms, response = "mpg")
+
+# Fit the polynomial regression model
+model <- lm(formula, data = generated_data)
+
+# Display the summary of the model
+summary(model)
+
+summary(generated_data)
+
+summary(numeric_data)
