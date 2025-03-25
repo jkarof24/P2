@@ -2,6 +2,9 @@ library(ggplot2)
 library(dplyr)
 library(gridExtra)
 library(reshape2)
+library(tidyr)
+library(caret)
+library(fastDummies)
 setwd("C:/Users/Jonathan/Desktop/p2")
 data = read.csv("auto-mpg.csv", na.strings = ".")
 summary(data)
@@ -66,4 +69,74 @@ ggplot(data_melt, aes(x = Var1, y = Var2, fill = value)) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(title = "Correlation Matrix Heatmap", x = "", y = "")     
-        
+
+
+
+# Function to calculate percentage of NA values for each column
+na_percentage <- function(column) {
+  na_count <- sum(is.na(column))
+  total_count <- length(column)
+  (na_count / total_count) * 100
+}
+
+# Apply the function to each column in the dataset
+na_percentages <- sapply(data, na_percentage)
+
+# Print the percentages
+print(na_percentages)
+
+
+# Convert car.name to factor and create dummy variables
+data <- data %>%
+  dummy_cols(select_columns = "car.name", remove_first_dummy = TRUE)
+
+# Replace spaces in dummy variable names with underscores
+names(data) <- gsub(" ", "_", names(data))
+
+# Create a list of polynomial terms for numerical columns
+poly_terms <- paste("poly(", c("cylinders", "displacement", "horsepower", "weight", "acceleration", "model.year", "origin"), ", 2)", collapse = " + ")
+
+# Create a list of dummy variable terms for car.name
+dummy_terms <- names(data)[grepl("car.name_", names(data))]
+
+# Combine the terms into the formula using reformulate
+formula <- reformulate(c(poly_terms, dummy_terms), response = "mpg")
+
+# Fit the polynomial regression model
+model <- lm(formula, data = data)
+
+# Display the summary of the model
+summary(model)
+
+
+str(data)
+
+# Convert columns to numeric if necessary
+data$cylinders <- as.numeric(data$cylinders)
+data$displacement <- as.numeric(data$displacement)
+data$horsepower <- as.numeric(data$horsepower)
+data$weight <- as.numeric(data$weight)
+data$acceleration <- as.numeric(data$acceleration)
+data$model.year <- as.numeric(data$model.year)
+data$origin <- as.numeric(data$origin)
+
+data$cylinders[is.na(data$cylinders)] <- mean(data$cylinders, na.rm = TRUE)
+data$displacement[is.na(data$displacement)] <- mean(data$displacement, na.rm = TRUE)
+data$horsepower[is.na(data$horsepower)] <- mean(data$horsepower, na.rm = TRUE)
+data$weight[is.na(data$weight)] <- mean(data$weight, na.rm = TRUE)
+data$acceleration[is.na(data$acceleration)] <- mean(data$acceleration, na.rm = TRUE)
+data$model.year[is.na(data$model.year)] <- mean(data$model.year, na.rm = TRUE)
+data$origin[is.na(data$origin)] <- mean(data$origin, na.rm = TRUE)
+
+# Create a list of polynomial terms for numerical columns
+poly_terms <- paste("poly(", c("cylinders", "displacement", "horsepower", "weight", "acceleration", "model.year", "origin"), ", 2)", collapse = " + ")
+
+# Use reformulate to create the formula without car.name dummy variables
+formula <- reformulate(poly_terms, response = "mpg")
+
+# Fit the polynomial regression model
+model <- lm(formula, data = data)
+
+# Display the summary of the model
+summary(model)
+
