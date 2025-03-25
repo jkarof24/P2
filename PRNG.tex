@@ -43,17 +43,16 @@ balancing randomness and efficiency is essential for practical applications
 	Linear Congruential Sequence (LCS) is a commonly used approach to generate
 	pseudo-random numbers. LCS generates a sequence of numbers using a linear
 	recurrence relation LCS is expressed as:
-	\begin{equation}
-		X_{n+1} = (aX_n + c) \mod m.
-	\end{equation}
+
+		$$X_{n+1} = (aX_n + c) \bmod m.$$
+
 	where $X_0$ is the seed, $a$ is the multiplier, $c$ is the increment, and $m$ is the modulus.
 	
 	\textbf{Example:} Given $a = 5$, $c = 1$, $m = 16$, and $X_0 = 7$:
-	\begin{align*}
-		X_1 &= (5 \cdot 7 + 1) \mod 16 = 4 \\
-		X_2 &= (5 \cdot 4 + 1) \mod 16 = 5 \\
-		X_3 &= (5 \cdot 5 + 1) \mod 16 = 10 \\
-		X_4 &= (5 \cdot 10 + 1) \mod 16 = 3
-	\end{align*}
+		$$X_1 = (5 \cdot 7 + 1)\bmod 16 = 4 $$
+		$$X_2 = (5 \cdot 4 + 1) \bmod 16 = 5 $$
+		$$X_3 = (5 \cdot 5 + 1) \bmod 16 = 10 $$
+		$$X_4 = (5 \cdot 10 + 1) \bmod 16 = 3 $$
+
 	
 	This sequence has a period of 16. In an LCG, the period can be as large as $m$, but choosing parameters carefully is crucial to achieving long periods.

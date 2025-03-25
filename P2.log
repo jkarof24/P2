@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  24 MAR 2025 12:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  25 MAR 2025 10:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -46,83 +46,139 @@ LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 6.
+(Font)              <12> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 6.
+(Font)              <6> on input line 7.
 
 
 [1
 
 {C:/Users/marcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (P2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 2.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
+(Font)              <5> on input line 3.
 )
 \tf@toc=\write3
 \openout3 = `P2.toc'.
 
 
 
-[2] (problemanalyse.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
+[2] (Introduktion.tex)
+
+[3] (Statistical theory.tex (Statistical theory/Probability space.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
+Underfull \hbox (badness 10000) in paragraph at lines 10--19
 
  []
 
-)
 
-[3]
+LaTeX Warning: Command \O invalid in math mode on input line 23.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 28.
+
+) (Statistical theory/Probability distribution.tex
+Underfull \hbox (badness 10000) in paragraph at lines 20--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--1
+
+ []
+
+
 
 [4]
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
-[5]
+ []
+
+
+
+[5]) (Statistical theory/Statistical methods.tex
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
-[7]
+ []
+
+
+Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
+\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=scie
+nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
+s:pdf$ 
+ []
+
+
+
+[7]))
 
 [8]
 
 [9]
 
-[10]
+[10] (PRNG.tex
 
-[11]
+[11])
 
 [12]
 
 [13]
 
-[14] (P2.aux)
+[14]
+
+[15]
+
+[16]
+
+[17]
+
+[18]
+
+[19]
+
+[20] (P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 482 strings out of 473523
- 9097 string characters out of 5714631
- 400583 words of memory out of 5000000
- 23775 multiletter control sequences out of 15000+600000
- 563092 words of font info for 50 fonts, out of 8000000 for 9000
+ 527 strings out of 473523
+ 11025 string characters out of 5714630
+ 403583 words of memory out of 5000000
+ 23802 multiletter control sequences out of 15000+600000
+ 563438 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,6n,50p,530b,197s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 35i,6n,50p,1051b,197s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/marcu/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on P2.pdf (14 pages, 89299 bytes).
+ublic/amsfonts/cm/cmex10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/marcu/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/marcu/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/marcu/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/marcu/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
+/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr7.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on P2.pdf (20 pages, 213912 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 142 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
