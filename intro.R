@@ -87,26 +87,26 @@ print(na_percentages)
 
 
 # Convert car.name to factor and create dummy variables
-data <- data %>%
-  dummy_cols(select_columns = "car.name", remove_first_dummy = TRUE)
+#data <- data %>%
+ # dummy_cols(select_columns = "car.name", remove_first_dummy = TRUE)
 
 # Replace spaces in dummy variable names with underscores
-names(data) <- gsub(" ", "_", names(data))
+#names(data) <- gsub(" ", "_", names(data))
 
 # Create a list of polynomial terms for numerical columns
-poly_terms <- paste("poly(", c("cylinders", "displacement", "horsepower", "weight", "acceleration", "model.year", "origin"), ", 2)", collapse = " + ")
+#poly_terms <- paste("poly(", c("cylinders", "displacement", "horsepower", "weight", "acceleration", "model.year", "origin"), ", 2)", collapse = " + ")
 
 # Create a list of dummy variable terms for car.name
-dummy_terms <- names(data)[grepl("car.name_", names(data))]
+#dummy_terms <- names(data)[grepl("car.name_", names(data))]
 
 # Combine the terms into the formula using reformulate
-formula <- reformulate(c(poly_terms, dummy_terms), response = "mpg")
+#formula <- reformulate(c(poly_terms, dummy_terms), response = "mpg")
 
 # Fit the polynomial regression model
-model <- lm(formula, data = data)
+#model <- lm(formula, data = data)
 
 # Display the summary of the model
-summary(model)
+#summary(model)
 
 
 str(data)
