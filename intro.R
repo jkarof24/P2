@@ -5,13 +5,91 @@ library(reshape2)
 library(tidyr)
 library(caret)
 library(fastDummies)
-setwd("C:/Users/Jonathan/Desktop/p2")
+library(moments)
+setwd("C:/Users/jonat/Documents/GitHub/P2")
 data = read.csv("auto-mpg.csv", na.strings = ".")
 summary(data)
 
 numeric_data <- data[sapply(data, is.numeric)]
 cor(numeric_data)
 
+
+# Calculate moments for all columns
+moments <- numeric_data %>%
+  summarise(across(everything(), list(
+    mean = ~ mean(.),
+    variance = ~ var(.),
+    skewness = ~ skewness(.),
+    kurtosis = ~ kurtosis(.)
+  )))
+
+# Function to generate data matching the target distribution
+generate_data <- function(size, mean_target, variance_target, skewness_target, kurtosis_target) {
+  # Generate normal data
+  data <- rnorm(size)
+  
+  # Adjust mean and variance
+  data <- (data - mean(data)) / sd(data) * sqrt(variance_target) + mean_target
+  
+  # Adjust skewness and kurtosis (using a simple transformation)
+  data <- sign(data) * abs(data)^(1 + skewness_target / 3)
+  data <- data * (1 + kurtosis_target / 10)
+  
+  return(data)
+}
+
+# Generate new data for each column
+generated_data <- numeric_data %>%
+  mutate(across(everything(), ~ generate_data(n(), mean(.), var(.), skewness(.), kurtosis(.))))
+
+# Fit polynomial regression model
+fit_polynomial_regression <- function(data) {
+  model <- lm(A ~ poly(B, 2) + poly(C, 2), data = data)
+  return(model)
+}
+
+# Perform Monte Carlo simulation
+set.seed(123)
+n_simulations <- 1000
+results <- replicate(n_simulations, {
+  simulated_data <- numeric_data %>%
+    mutate(across(everything(), ~ generate_data(n(), mean(.), var(.), skewness(.), kurtosis(.))))
+  model <- fit_polynomial_regression(simulated_data)
+  coef(model)
+})
+
+# Analyze results
+results_df <- as.data.frame(t(results))
+colnames(results_df) <- names(coef(fit_polynomial_regression(numeric_data)))
+
+# Plot distribution of coefficients
+ggplot(results_df, aes(x = `(Intercept)`)) +
+  geom_histogram(bins = 30, fill = "blue", alpha = 0.7) +
+  labs(title = "Distribution of Intercept Coefficient", x = "Intercept", y = "Frequency") +
+  theme_minimal()
+
+ggplot(results_df, aes(x = `poly(B, 2)1`)) +
+  geom_histogram(bins = 30, fill = "green", alpha = 0.7) +
+  labs(title = "Distribution of B Coefficient (1st Degree)", x = "B Coefficient (1st Degree)", y = "Frequency") +
+  theme_minimal()
+
+ggplot(results_df, aes(x = `poly(B, 2)2`)) +
+  geom_histogram(bins = 30, fill = "red", alpha = 0.7) +
+  labs(title = "Distribution of B Coefficient (2nd Degree)", x = "B Coefficient (2nd Degree)", y = "Frequency") +
+  theme_minimal()
+
+ggplot(results_df, aes(x = `poly(C, 2)1`)) +
+  geom_histogram(bins = 30, fill = "purple", alpha = 0.7) +
+  labs(title = "Distribution of C Coefficient (1st Degree)", x = "C Coefficient (1st Degree)", y = "Frequency") +
+  theme_minimal()
+
+ggplot(results_df, aes(x = `poly(C, 2)2`)) +
+  geom_histogram(bins = 30, fill = "orange", alpha = 0.7) +
+  labs(title = "Distribution of C Coefficient (2nd Degree)", x = "C Coefficient (2nd Degree)", y = "Frequency") +
+  theme_minimal()
+
+# Calculate and print moments for all columns
+calculate_moments(numeric_data)
 
 
 
