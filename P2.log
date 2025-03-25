@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  25 MAR 2025 10:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  25 MAR 2025 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -84,28 +84,45 @@ LaTeX Warning: Command \O invalid in math mode on input line 23.
 
 LaTeX Warning: Command \O invalid in math mode on input line 28.
 
-) (Statistical theory/Probability distribution.tex
-Underfull \hbox (badness 10000) in paragraph at lines 20--1
+) (Estimator and estimates
+Underfull \hbox (badness 10000) in paragraph at lines 20--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--1
+Underfull \hbox (badness 10000) in paragraph at lines 20--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--9
 
  []
 
 
 
 [4]
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--22
+
+ []
+
+) (Statistical theory/Probability distribution.tex
+
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
 
 
-[5]) (Statistical theory/Statistical methods.tex
+[6]) (Statistical theory/Statistical methods.tex
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
@@ -119,17 +136,15 @@ s:pdf$
 
 
 
-[7]))
-
-[8]
+[8]))
 
 [9]
 
-[10] (PRNG.tex
+[10]
 
-[11])
+[11] (PRNG.tex
 
-[12]
+[12])
 
 [13]
 
@@ -145,17 +160,19 @@ s:pdf$
 
 [19]
 
-[20] (P2.aux)
+[20]
+
+[21] (P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 527 strings out of 473523
- 11025 string characters out of 5714630
- 403583 words of memory out of 5000000
- 23802 multiletter control sequences out of 15000+600000
+ 533 strings out of 473523
+ 11245 string characters out of 5714630
+ 404583 words of memory out of 5000000
+ 23805 multiletter control sequences out of 15000+600000
  563438 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,6n,50p,1051b,197s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -176,9 +193,9 @@ msfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (20 pages, 213912 bytes).
+Output written on P2.pdf (21 pages, 217170 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
+ 145 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

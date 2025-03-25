@@ -32,7 +32,7 @@ For the continuous event, it could be that a person is between 160 cm and 170 cm
 	\newline
 	Probability of union
 	\newline
-	$P(A \cup B)=P(A)+P(B)-P(A \cap B)
+	$P(A \cup B)=P(A)+P(B)-P(A \cap B)$
 	 \newline
 	Here, the union of the two events is \textit{A} added to \textit{B}, but minus their common event, since it otherwise would be added twice. 
  	\newline

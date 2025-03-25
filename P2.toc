@@ -3,23 +3,23 @@
 \contentsline {subsection}{\numberline {2.1}Probability space}{4}{}%
 \contentsline {subsection}{\numberline {2.2}Probability distribution}{5}{}%
 \contentsline {subsubsection}{\numberline {2.2.1}Normal distribution}{5}{}%
-\contentsline {subsubsection}{\numberline {2.2.2}The central limit theorem}{5}{}%
-\contentsline {subsubsection}{\numberline {2.2.3}The t-distribution}{6}{}%
-\contentsline {subsection}{\numberline {2.3}Statistical methods}{6}{}%
-\contentsline {subsubsection}{\numberline {2.3.1}Confidence intervals}{6}{}%
-\contentsline {subsubsection}{\numberline {2.3.2}Hypothesis testing}{7}{}%
-\contentsline {section}{\numberline {3}Polynomial regression}{9}{}%
-\contentsline {subsection}{\numberline {3.1}Assumptions}{10}{}%
-\contentsline {section}{\numberline {4}Pseudo random number generator}{11}{}%
-\contentsline {section}{\numberline {5}Pseudo Random Number Generator}{11}{}%
-\contentsline {subsection}{\numberline {5.1}Properties of PRNGs}{11}{}%
-\contentsline {subsection}{\numberline {5.2}Linear Congruential Generator}{11}{}%
-\contentsline {section}{\numberline {6}Monte Carlo}{13}{}%
-\contentsline {subsection}{\numberline {6.1}Assumptions}{13}{}%
-\contentsline {section}{\numberline {7}Problem statement}{14}{}%
-\contentsline {section}{\numberline {8}Classical regression}{15}{}%
-\contentsline {section}{\numberline {9}Monte Carlo regression}{16}{}%
-\contentsline {section}{\numberline {10}Comparison between regressions}{17}{}%
-\contentsline {section}{\numberline {11}Discussion}{18}{}%
-\contentsline {section}{\numberline {12}Conclusion}{19}{}%
-\contentsline {section}{\numberline {13}Litteratur}{20}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}The central limit theorem}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}The t-distribution}{7}{}%
+\contentsline {subsection}{\numberline {2.3}Statistical methods}{7}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Confidence intervals}{7}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Hypothesis testing}{8}{}%
+\contentsline {section}{\numberline {3}Polynomial regression}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Assumptions}{11}{}%
+\contentsline {section}{\numberline {4}Pseudo random number generator}{12}{}%
+\contentsline {section}{\numberline {5}Pseudo Random Number Generator}{12}{}%
+\contentsline {subsection}{\numberline {5.1}Properties of PRNGs}{12}{}%
+\contentsline {subsection}{\numberline {5.2}Linear Congruential Generator}{12}{}%
+\contentsline {section}{\numberline {6}Monte Carlo}{14}{}%
+\contentsline {subsection}{\numberline {6.1}Assumptions}{14}{}%
+\contentsline {section}{\numberline {7}Problem statement}{15}{}%
+\contentsline {section}{\numberline {8}Classical regression}{16}{}%
+\contentsline {section}{\numberline {9}Monte Carlo regression}{17}{}%
+\contentsline {section}{\numberline {10}Comparison between regressions}{18}{}%
+\contentsline {section}{\numberline {11}Discussion}{19}{}%
+\contentsline {section}{\numberline {12}Conclusion}{20}{}%
+\contentsline {section}{\numberline {13}Litteratur}{21}{}%

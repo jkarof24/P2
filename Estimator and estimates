@@ -24,7 +24,7 @@ If we are interested in certain parameters of a population distribution, we can 
 	\newline
 	It is generally preferred that the estimator has the smallest possible variance, and in that case it is called efficient. So $\bar{X}$ is an efficient estimator.
 	\newline
-	When estimating a parameter, the symbol $\hat$ is used above it. For $\mu$, $\hat{\mu} = \bar{X}$ .
+	When estimating a parameter, the symbol $\hat{}$ is used above it. For $\mu$, $\hat{\mu} = \bar{X}$ .
 	\newline
 	We can calculate $\bar{X}$ using the following formula,
 	$$\bar{X}=\frac{1}{n} \sum_{i=1}^{n}X_i$$   
