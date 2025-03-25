@@ -13,6 +13,24 @@ numeric_data <- data[sapply(data, is.numeric)]
 cor(numeric_data)
 
 
+
+
+
+dependent_variable <- "mpg"
+
+# Lav scatter plots for hver kolonne i numeric_data mod 'mpg'
+scatter_plots <- lapply(names(numeric_data), function(col) {
+  ggplot(numeric_data, aes_string(x = col, y = dependent_variable)) +
+    geom_point(color = "blue") +
+    ggtitle(paste("Scatter Plot of", col, "vs", dependent_variable)) +
+    theme_minimal()
+})
+
+do.call(grid.arrange, scatter_plots)
+  
+  
+  
+  
 plots <- lapply(names(numeric_data), function(col) {
   n_bins <- ceiling(log2(length(numeric_data[[col]])) + 1)
   
