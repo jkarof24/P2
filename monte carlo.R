@@ -2,6 +2,7 @@
 library(dplyr)
 library(moments)
 library(ggplot2)
+library(PearsonDS)  
 
 # Set working directory and read data
 setwd("C:/Users/jonat/Documents/GitHub/P2")
@@ -19,7 +20,6 @@ moments <- numeric_data %>%
     kurtosis = ~ kurtosis(.)
   )))
 
-# Function to generate data matching the target distribution
 generate_data <- function(size, mean_target, variance_target, skewness_target, kurtosis_target) {
   # Generate normal data
   data <- rnorm(size)
@@ -27,9 +27,15 @@ generate_data <- function(size, mean_target, variance_target, skewness_target, k
   # Adjust mean and variance
   data <- (data - mean(data)) / sd(data) * sqrt(variance_target) + mean_target
   
-  # Adjust skewness and kurtosis (using a simple transformation)
-  data <- sign(data) * abs(data)^(1 + skewness_target / 3)
-  data <- data * (1 + kurtosis_target / 10)
+  # Adjust skewness and kurtosis using the Pearson system
+  data <- rpearson(size, moments = c(mean_target, sqrt(variance_target), skewness_target, kurtosis_target))
+  
+  # Create a data frame for plotting
+  df <- data.frame(value = data)
+  
+  # Plot histogram
+  ggplot(df, aes(x = value)) + geom_histogram(binwidth = 0.5) + 
+    labs(title = "Generated Data Histogram", x = "Value", y = "Frequency")
   
   return(data)
 }
@@ -40,19 +46,17 @@ generated_data <- numeric_data %>%
 
 # Fit polynomial regression model
 fit_polynomial_regression <- function(data) {
-  # Use the first column as the response variable and the rest as predictors
   response_var <- names(data)[1]
   predictor_vars <- names(data)[-1]
   
-  # Create the formula for polynomial regression
-  formula <- as.formula(paste(response_var, "~ poly(", paste(predictor_vars, collapse = ", 2) + poly("), ", 2)"))
+  formula <- as.formula(paste(response_var, "~", paste("poly(", predictor_vars, ", 2)", collapse = " + ")))
   
   model <- lm(formula, data = data)
   return(model)
 }
 
 # Perform Monte Carlo simulation
-set.seed(123)
+set.seed(12)
 n_simulations <- 1000
 results <- replicate(n_simulations, {
   simulated_data <- numeric_data %>%
@@ -60,6 +64,7 @@ results <- replicate(n_simulations, {
   model <- fit_polynomial_regression(simulated_data)
   coef(model)
 })
+
 
 # Analyze results
 results_df <- as.data.frame(t(results))
@@ -167,7 +172,6 @@ ggplot(results_df, aes(x = `poly(origin, 2)2`)) +
 best_coefficients <- colMeans(results_df)
 
 print(best_coefficients)
-
 # Fit the final regression model using the best coefficients
 final_model <- fit_polynomial_regression(numeric_data)
 
@@ -175,8 +179,30 @@ final_model <- fit_polynomial_regression(numeric_data)
 X_final_poly <- model.matrix(final_model)
 y_final_pred <- X_final_poly %*% best_coefficients
 
+# Calculate R-squared
+actual_values <- numeric_data[[1]]
+ss_total <- sum((actual_values - mean(actual_values))^2)
+ss_residual <- sum((actual_values - y_final_pred)^2)
+r_squared <- 1 - (ss_residual / ss_total)
+
+# Print R-squared value
+cat("R-squared:", r_squared, "\n")
+
 # Plot the final regression model
-ggplot(data.frame(Actual = numeric_data[[1]], Predicted = y_final_pred), aes(x = Actual, y = Predicted)) +
+ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Actual, y = Predicted)) +
   geom_point(alpha = 0.7) +
-  labs(title = "Final Regression Model", x = "Actual Values", y = "Predicted Values") +
+  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 20), ")"), 
+       x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
+
+plots <- lapply(names(generated_data), function(col) {
+  n_bins <- ceiling(log2(length(generated_data[[col]])) + 1)
+  
+  ggplot(generated_data, aes_string(x = col)) +
+    geom_histogram(bins = n_bins, fill = "blue", color = "black") +
+    ggtitle(paste("Histogram of generated", col)) +
+    theme_minimal()
+})
+
+# Arrange all plots in a grid
+do.call(grid.arrange, c(plots, ncol = 3))
