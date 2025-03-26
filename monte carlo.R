@@ -1,17 +1,13 @@
-# Load necessary libraries
 library(dplyr)
 library(moments)
 library(ggplot2)
 library(PearsonDS)  
 library(gridExtra)
-library(ggplot2)
-library(dplyr)
-library(gridExtra)
 library(reshape2)
 library(tidyr)
 library(caret)
 library(fastDummies)
-library(moments)
+
 # Set working directory and read data
 setwd("C:/Users/jonat/Documents/GitHub/P2")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
@@ -38,13 +34,6 @@ generate_data <- function(size, mean_target, variance_target, skewness_target, k
   # Adjust skewness and kurtosis using the Pearson system
   data <- rpearson(size, moments = c(mean_target, variance_target, skewness_target, kurtosis_target))
   
-  # Create a data frame for plotting
-  df <- data.frame(value = data)
-  
-  # Plot histogram
-  ggplot(df, aes(x = value)) + geom_histogram(binwidth = 0.5) + 
-    labs(title = "Generated Data Histogram", x = "Value", y = "Frequency")
-  
   return(data)
 }
 
@@ -63,26 +52,32 @@ fit_polynomial_regression <- function(data) {
   return(model)
 }
 
-# Perform Monte Carlo simulation
 set.seed(421)
-n_simulations <- 1000
+n_simulations <- 100
 results <- replicate(n_simulations, {
   simulated_data <- numeric_data %>%
     mutate(across(everything(), ~ generate_data(n(), mean(.), var(.), skewness(.), kurtosis(.))))
   model <- fit_polynomial_regression(simulated_data)
-  coef(model)
+  coefficients <- coef(model)
+  r_squared <- summary(model)$r.squared
+  c(coefficients, r_squared)
 })
 
+# Convert results to a data frame
+results_df <- as.data.frame(t(results))
+colnames(results_df) <- c(names(coef(fit_polynomial_regression(numeric_data))), "r_squared")
 
 # Analyze results
-results_df <- as.data.frame(t(results))
-colnames(results_df) <- names(coef(fit_polynomial_regression(numeric_data)))
-
-# Inspect column names in results_df
-print(colnames(results_df))
-# Calculate the mean and SD for each coefficient
 mean_values <- colMeans(results_df)
 sd_values <- apply(results_df, 2, sd)
+
+# Visualize the distribution of R-squared values
+ggplot(results_df, aes(x = r_squared)) +
+  geom_histogram(bins = 30, fill = "black", alpha = 0.7) +
+  labs(title = "Distribution of R-squared Values", x = "R-squared", y = "Frequency") +
+  theme_minimal() +
+  annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean(results_df$r_squared), 2), "\nSD:", round(sd(results_df$r_squared), 2)), 
+           hjust = 1.1, vjust = 2, color = "black", size = 4)
 
 # Plot distribution of coefficients using the correct column names with annotations
 ggplot(results_df, aes(x = `(Intercept)`)) +
@@ -231,3 +226,10 @@ summary(model)
 summary(generated_data)
 
 summary(numeric_data)
+
+ggplot(results_df, aes(x = r_squared)) +
+  geom_histogram(bins = 30, fill = "black", alpha = 0.7) +
+  labs(title = "Distribution of R-squared Values", x = "R-squared", y = "Frequency") +
+  theme_minimal() +
+  annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean(results_df$r_squared), 2), "\nSD:", round(sd(results_df$r_squared), 2)), 
+           hjust = 1.1, vjust = 2, color = "black", size = 4)
