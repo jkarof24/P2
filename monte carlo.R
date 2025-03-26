@@ -8,8 +8,20 @@ library(tidyr)
 library(caret)
 library(fastDummies)
 
+#install.packages("dplyr")
+#install.packages("moments")
+#install.packages("ggplot2")
+#install.packages("PearsonDS")
+#install.packages("gridExtra")
+#install.packages("reshape2")
+#install.packages("tidyr")
+#install.packages("caret")
+#install.packages("fastDummies")
+
+#install.packages(c("dplyr", "moments", "ggplot2", "PearsonDS", "gridExtra", "reshape2", "tidyr", "caret", "fastDummies"))
+
 # Set working directory and read data
-setwd("C:/Users/jonat/Documents/GitHub/P2")
+setwd("C:/Users/Jonathan/Documents/GitHub/P2")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # Select numeric columns
