@@ -6,35 +6,12 @@ library(gridExtra)
 library(foreach)
 library(doParallel)
 
-# Define or load the rpearson function
-rpearson <- function(n, moments) {
-  # Custom implementation of rpearson
-  # This is a placeholder. Replace with the actual implementation.
-  rnorm(n)
-}
-
 # Set working directory and read data
 setwd("C:/Users/Jonathan/Documents/GitHub/P2")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # Select numeric columns
 numeric_data <- data[sapply(data, is.numeric)]
-
-# Calculate moments for all columns
-moments <- numeric_data %>%
-  summarise(across(everything(), list(
-    mean = ~ mean(.),
-    variance = ~ var(.),
-    skewness = ~ skewness(.),
-    kurtosis = ~ kurtosis(.)
-  )))
-
-generate_data <- function(size, mean_target, variance_target, skewness_target, kurtosis_target) {
-  data <- rnorm(size)
-  data <- (data - mean(data)) / sd(data) * sqrt(variance_target) + mean_target
-  data <- rpearson(size, moments = c(mean_target, variance_target, skewness_target, kurtosis_target))
-  return(data)
-}
 
 fit_polynomial_regression <- function(data) {
   formula <- as.formula(paste("mpg ~", paste(sapply(setdiff(names(data), "mpg"), function(var) paste("poly(", var, ", 2)")), collapse = " + ")))
@@ -46,16 +23,15 @@ run_simulations <- function(n_simulations, numeric_data) {
   cl <- makeCluster(num_cores)
   registerDoParallel(cl)
   
-  clusterExport(cl, c("numeric_data", "generate_data", "fit_polynomial_regression", "moments", "%>%", "across", "summarise", "rpearson"))
+  clusterExport(cl, c("numeric_data", "fit_polynomial_regression", "%>%", "across", "summarise"))
   clusterEvalQ(cl, {
     library(dplyr)
-    library(moments)
   })
   
-  results <- foreach(i = 1:n_simulations, .combine = rbind, .packages = c("dplyr", "moments")) %dopar% {
-    simulated_data <- numeric_data %>%
-      mutate(across(everything(), ~ generate_data(n(), mean(.), var(.), skewness(.), kurtosis(.))))
-    model <- fit_polynomial_regression(simulated_data)
+  results <- foreach(i = 1:n_simulations, .combine = rbind, .packages = c("dplyr")) %dopar% {
+    resampled_data <- numeric_data %>%
+      mutate(across(everything(), ~ sample(.x, size = n(), replace = TRUE)))
+    model <- fit_polynomial_regression(resampled_data)
     c(coef(model), summary(model)$r.squared)
   }
   
@@ -68,7 +44,7 @@ run_simulations <- function(n_simulations, numeric_data) {
 }
 
 set.seed(421)
-n_simulations <- 100000
+n_simulations <- 3000
 results_df <- run_simulations(n_simulations, numeric_data)
 
 # Clean column names to remove special characters

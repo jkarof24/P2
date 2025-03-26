@@ -6,7 +6,7 @@ library(tidyr)
 library(caret)
 library(fastDummies)
 library(moments)
-setwd("C:/Users/jonat/Documents/GitHub/P2")
+setwd("C:/Users/Jonathan/Documents/GitHub/P2")
 data = read.csv("auto-mpg.csv", na.strings = ".")
 summary(data)
 
