@@ -13,15 +13,10 @@ data <- read.csv("auto-mpg.csv", na.strings = ".")
 # Select numeric columns
 numeric_data <- data[sapply(data, is.numeric)]
 
-# Define the strata variable (e.g., origin)
-strata_var <- "mpg"
-
-# Function to perform stratified sampling
-stratified_sampling <- function(data, strata_var, sample_size) {
+# Function to perform Monte Carlo bootstrapping
+monte_carlo_bootstrap <- function(data, sample_size) {
   data %>%
-    group_by(.data[[strata_var]]) %>%
-    sample_n(sample_size, replace = TRUE) %>%
-    ungroup()
+    sample_n(sample_size, replace = TRUE)
 }
 
 fit_polynomial_regression <- function(data) {
@@ -29,18 +24,18 @@ fit_polynomial_regression <- function(data) {
   lm(formula, data = data)
 }
 
-run_simulations <- function(n_simulations, numeric_data, strata_var, sample_size_per_stratum) {
+run_simulations <- function(n_simulations, numeric_data, sample_size) {
   num_cores <- detectCores() - 1
   cl <- makeCluster(num_cores)
   registerDoParallel(cl)
   
-  clusterExport(cl, c("numeric_data", "fit_polynomial_regression", "stratified_sampling", "strata_var", "sample_size_per_stratum", "%>%", "across", "summarise"))
+  clusterExport(cl, c("numeric_data", "fit_polynomial_regression", "monte_carlo_bootstrap", "sample_size", "%>%", "across", "summarise"))
   clusterEvalQ(cl, {
     library(dplyr)
   })
   
   results <- foreach(i = 1:n_simulations, .combine = rbind, .packages = c("dplyr")) %dopar% {
-    resampled_data <- stratified_sampling(numeric_data, strata_var, sample_size_per_stratum)
+    resampled_data <- monte_carlo_bootstrap(numeric_data, sample_size)
     model <- fit_polynomial_regression(resampled_data)
     c(coef(model), summary(model)$r.squared)
   }
@@ -54,9 +49,9 @@ run_simulations <- function(n_simulations, numeric_data, strata_var, sample_size
 }
 
 set.seed(200)
-n_simulations <- 1000
-sample_size_per_stratum <- 75  # Adjust sample size as needed
-results_df <- run_simulations(n_simulations, numeric_data, strata_var, sample_size_per_stratum)
+n_simulations <- 10000
+sample_size <- 75  # Adjust sample size as needed
+results_df <- run_simulations(n_simulations, numeric_data, sample_size)
 
 # Clean column names to remove special characters
 clean_colnames <- function(df) {
