@@ -49,7 +49,7 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
 }
 
 set.seed(200)
-n_simulations <- 10000
+n_simulations <- 1000
 sample_size <- 75  # Adjust sample size as needed
 results_df <- run_simulations(n_simulations, numeric_data, sample_size)
 
