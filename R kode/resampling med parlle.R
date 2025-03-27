@@ -7,7 +7,7 @@ library(foreach)
 library(doParallel)
 
 # Set working directory and read data
-setwd("C:/Users/Jonathan/Documents/GitHub/P2")
+setwd("C:/Users/jonat/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # Select numeric columns
