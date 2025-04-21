@@ -2,13 +2,13 @@ library(ggplot2)
 library(gridExtra)
 
 # Set seed for reproducibility
-set.seed(123)
+set.seed(223)
 
 # Generate independent variables
-n <- 100
+n <- 1000
 x1 <- rnorm(n, mean = 5, sd = 2)
 x2 <- rnorm(n, mean = 10, sd = 3)
-x3 <- rnorm(n, mean = 15, sd = 4)
+x3 <- rnorm(n, mean = 15, sd = 3)
 x4 <- rnorm(n, mean = 20, sd = 5)
 
 # Generate dependent variable with a polynomial relationship
@@ -24,13 +24,13 @@ model <- lm(y ~ poly(x1, 2) + x2 + poly(x3, 2) + x4, data = data)
 summary(model)
 
 # Add an error term to x1 that scales with the corresponding y value
-x1_new <- x1 + rnorm(n, mean = 0, sd = 0.1 * abs(y))
+x3_new <- x3 + rnorm(n, mean = 0, sd = 0.001 * abs(y))
 
 # Generate new dependent variable with the same polynomial relationship
 y_new <- 3 + 2*x1_new - 0.5*x1_new^2 + 1.5*x2 + 0.3*x3^2 - 0.2*x4 + rnorm(n, mean = 0, sd = 1)
 
 # Create a new data frame
-data_new <- data.frame(y, x1 = x1_new, x2, x3, x4)
+data_new <- data.frame(y, x1 = x1, x2, x3_new, x4)
 
 # Fit a new polynomial regression model
 model_new <- lm(y ~ poly(x1, 2) + x2 + poly(x3, 2) + x4, data = data_new)
@@ -49,7 +49,7 @@ plot(model_new)
 # Function to create scatter plots for each numeric column against 'y'
 scatter_plots <- function(data, color, title_prefix) {
   lapply(names(data)[-1], function(col) {
-    ggplot(data, aes_string(x = col, y = "y")) +
+    ggplot(data, aes_string(x = "y", y = col)) +
       geom_point(color = color) +
       ggtitle(paste(title_prefix, col, "vs y")) +
       theme_minimal()
