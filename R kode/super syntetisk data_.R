@@ -5,6 +5,7 @@ library(caret)
 library(glmnet)
 library(ggplot2)
 library(gridExtra)
+library(lmtest)
 
 # Load the Auto MPG dataset
 auto_mpg <- read.csv("auto-mpg.csv", na.strings = ".")
@@ -89,8 +90,8 @@ cat("R-squared for Non-Homoscedastic Data: ", r_squared_non_homoscedastic, "\n")
 
 # Analyze residuals and diagnostics
 par(mfrow = c(2, 2))
-plot(model_normal, main = "Normal Data - Residuals and Diagnostics")
-plot(model_non_homoscedastic, main = "Non-Homoscedastic Data - Residuals and Diagnostics")
+plot(model_normal, which = 1:2, main = "Normal Data - Residuals and Diagnostics")
+plot(model_non_homoscedastic, which = 1:2, main = "Non-Homoscedastic Data - Residuals and Diagnostics")
 
 # Check for multicollinearity
 vif(model_normal)
