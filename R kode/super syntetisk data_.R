@@ -37,19 +37,17 @@ df_normal <- data.frame(
 )
 df_normal$mpg <- 30 - 0.5 * df_normal$cylinders + 0.3 * df_normal$displacement - 0.02 * df_normal$horsepower + 0.01 * df_normal$weight - 0.1 * df_normal$acceleration + rnorm(n, 0, 2)
 
-# Generate non-homoscedastic data
+# Generate non-homoscedastic data by altering the standard deviations of the variables
 df_non_homoscedastic <- data.frame(
-  mpg = rnorm(n, means["mpg"], sds["mpg"]),
-  cylinders = rnorm(n, means["cylinders"], sds["cylinders"]),
-  displacement = rnorm(n, means["displacement"], sds["displacement"]),
-  horsepower = rnorm(n, means["horsepower"], sds["horsepower"]),
-  weight = rnorm(n, means["weight"], sds["weight"]),
-  acceleration = rnorm(n, means["acceleration"], sds["acceleration"]),
-  model.year = rnorm(n, means["model.year"], sds["model.year"]),
-  origin = rnorm(n, means["origin"], sds["origin"])
+  mpg = df_normal$mpg,
+  cylinders = rnorm(n, means["cylinders"], sds["cylinders"] * means["mpg"]),
+  displacement = rnorm(n, means["displacement"], sds["displacement"] * means["mpg"]),
+  horsepower = rnorm(n, means["horsepower"], sds["horsepower"] * means["mpg"]),
+  weight = rnorm(n, means["weight"], sds["weight"] * means["mpg"]),
+  acceleration = rnorm(n, means["acceleration"], sds["acceleration"] * means["mpg"]),
+  model.year = rnorm(n, means["model.year"], sds["model.year"] * means["mpg"]),
+  origin = rnorm(n, means["origin"], sds["origin"] * means["mpg"])
 )
-error_term <- rnorm(n, 0, sqrt(rowSums(df_non_homoscedastic^2)))
-df_non_homoscedastic$mpg <- 30 - 0.5 * df_non_homoscedastic$cylinders + 0.3 * df_non_homoscedastic$displacement - 0.02 * df_non_homoscedastic$horsepower + 0.01 * df_non_homoscedastic$weight - 0.1 * df_non_homoscedastic$acceleration + error_term
 
 # Perform polynomial regression and calculate R-squared values
 model_normal <- lm(mpg ~ poly(cylinders, 2) + poly(displacement, 2) + poly(horsepower, 2) + poly(weight, 2) + poly(acceleration, 2) + poly(model.year, 2) + poly(origin, 2), data = df_normal)
@@ -84,3 +82,23 @@ scatter_plots <- function(data, color, title_prefix) {
 }
 grid.arrange(grobs = scatter_plots(df_normal, "blue", "Normal Data: Scatter Plot of"), ncol = 2, top = "Scatter Plots for Normal Data")
 grid.arrange(grobs = scatter_plots(df_non_homoscedastic, "red", "Non-Homoscedastic Data: Scatter Plot of"), ncol = 2, top = "Scatter Plots for Non-Homoscedastic Data")
+
+# Create histograms for each numeric column
+create_histograms <- function(data, color, title_prefix) {
+  lapply(names(data), function(col) {
+    n_bins <- ceiling(log2(length(data[[col]])) + 1)
+    ggplot(data, aes_string(x = col)) +
+      geom_histogram(bins = n_bins, fill = color, color = "black") +
+      ggtitle(paste(title_prefix, col)) +
+      theme_minimal()
+  })
+}
+
+# Histograms for normal data
+histograms_normal <- create_histograms(df_normal, "blue", "Histogram of")
+# Histograms for non-homoscedastic data
+histograms_non_homoscedastic <- create_histograms(df_non_homoscedastic, "red", "Histogram of")
+
+# Arrange all histograms in grids
+do.call(grid.arrange, c(histograms_normal, ncol = 3, top = "Histograms for Normal Data"))
+do.call(grid.arrange, c(histograms_non_homoscedastic, ncol = 3, top = "Histograms for Non-Homoscedastic Data"))
