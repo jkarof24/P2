@@ -37,16 +37,16 @@ df_normal <- data.frame(
 )
 df_normal$mpg <- 30 - 0.5 * df_normal$cylinders + 0.3 * df_normal$displacement - 0.02 * df_normal$horsepower + 0.01 * df_normal$weight - 0.1 * df_normal$acceleration + rnorm(n, 0, 2)
 
-# Generate non-homoscedastic data by altering the standard deviations of the variables
+# Generate non-homoscedastic data by scaling standard deviations with individual MPG values
 df_non_homoscedastic <- data.frame(
   mpg = df_normal$mpg,
-  cylinders = rnorm(n, means["cylinders"], sds["cylinders"] * means["mpg"]),
-  displacement = rnorm(n, means["displacement"], sds["displacement"] * means["mpg"]),
-  horsepower = rnorm(n, means["horsepower"], sds["horsepower"] * means["mpg"]),
-  weight = rnorm(n, means["weight"], sds["weight"] * means["mpg"]),
-  acceleration = rnorm(n, means["acceleration"], sds["acceleration"] * means["mpg"]),
-  model.year = rnorm(n, means["model.year"], sds["model.year"] * means["mpg"]),
-  origin = rnorm(n, means["origin"], sds["origin"] * means["mpg"])
+  cylinders = rnorm(n, means["cylinders"], sds["cylinders"] * df_normal$mpg),
+  displacement = rnorm(n, means["displacement"], sds["displacement"] * df_normal$mpg),
+  horsepower = rnorm(n, means["horsepower"], sds["horsepower"] * df_normal$mpg),
+  weight = rnorm(n, means["weight"], sds["weight"] * df_normal$mpg),
+  acceleration = rnorm(n, means["acceleration"], sds["acceleration"] * df_normal$mpg),
+  model.year = rnorm(n, means["model.year"], sds["model.year"] * df_normal$mpg),
+  origin = rnorm(n, means["origin"], sds["origin"] * df_normal$mpg)
 )
 
 # Perform polynomial regression and calculate R-squared values
