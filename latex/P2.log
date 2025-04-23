@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  25 MAR 2025 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.7)  23 APR 2025 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./P2.tex
-(P2.tex
+**P2.tex
+(./P2.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+(c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+(c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count196
@@ -22,13 +22,11 @@ File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count270
 \l__pdf_internal_box=\box52
-) (P2.aux)
+) (./P2.aux)
 \openout1 = `P2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -55,20 +53,20 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{C:/Users/marcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (P2.toc
+{c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./P2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
+(Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
+(Font)              <5> on input line 2.
 )
 \tf@toc=\write3
 \openout3 = `P2.toc'.
 
 
 
-[2] (Introduktion.tex)
+[2] (./Introduktion.tex)
 
-[3] (Statistical theory.tex (Statistical theory/Probability space.tex
+[3] (./Statistical theory.tex (./Statistical theory/Probability space.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
@@ -84,7 +82,7 @@ LaTeX Warning: Command \O invalid in math mode on input line 23.
 
 LaTeX Warning: Command \O invalid in math mode on input line 28.
 
-) (Estimator and estimates
+) (./Estimator and estimates
 Underfull \hbox (badness 10000) in paragraph at lines 20--9
 
  []
@@ -111,7 +109,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--22
 
  []
 
-) (Statistical theory/Probability distribution.tex
+) (./Statistical theory/Probability distribution.tex
 
 [5]
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
@@ -120,7 +118,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
 
 
-[6]) (Statistical theory/Statistical methods.tex
+[6]) (./Statistical theory/Statistical methods.tex
 
 [7]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
@@ -129,9 +127,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
 
 Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
-\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=scie
-nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
-s:pdf$ 
+\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=science=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]ciences:pdf$ 
  []
 
 
@@ -142,7 +138,7 @@ s:pdf$
 
 [10]
 
-[11] (PRNG.tex
+[11] (./PRNG.tex
 
 [12])
 
@@ -152,50 +148,26 @@ s:pdf$
 
 [15]
 
-[16]
+! LaTeX Error: File `intro til data.tex' not found.
 
-[17]
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
 
-[18]
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.37 	\input{intro til data}
+                            ^^M
+*** (cannot \read from terminal in nonstop modes)
 
-[19]
-
-[20]
-
-[21] (P2.aux)
- ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
- ***********
- ) 
+ 
 Here is how much of TeX's memory you used:
- 533 strings out of 473523
- 11245 string characters out of 5714630
- 404583 words of memory out of 5000000
- 23805 multiletter control sequences out of 15000+600000
+ 528 strings out of 475170
+ 10599 string characters out of 5764214
+ 399963 words of memory out of 5000000
+ 23573 multiletter control sequences out of 15000+600000
  563438 words of font info for 51 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 35i,6n,50p,1051b,197s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/marcu/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/marcu/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/marcu/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/marcu/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
-/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><
-C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
-5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr7.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (21 pages, 217170 bytes).
-PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 14 hyphenation exceptions out of 8191
+ 35i,6n,50p,1049b,197s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
