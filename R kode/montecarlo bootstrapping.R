@@ -1,14 +1,17 @@
-library(parallel)
 library(dplyr)
-library(moments)
 library(ggplot2)
-library(gridExtra)
 library(foreach)
 library(doParallel)
 
 # Set working directory and read data
 setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
+
+# Convert horsepower to numeric, coercing non-numeric values to NA
+data$horsepower <- as.numeric(data$horsepower)
+
+# Remove rows with any NA values
+data <- cleaned_data %>% na.omit()
 
 # Select numeric columns
 numeric_data <- data[sapply(data, is.numeric)]
@@ -29,12 +32,10 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
   cl <- makeCluster(num_cores)
   registerDoParallel(cl)
   
-  clusterExport(cl, c("numeric_data", "fit_polynomial_regression", "monte_carlo_bootstrap", "sample_size", "%>%", "across", "summarise"))
-  clusterEvalQ(cl, {
-    library(dplyr)
-  })
+  clusterExport(cl, c("numeric_data", "fit_polynomial_regression", "monte_carlo_bootstrap", "sample_size"))
+  clusterEvalQ(cl, library(dplyr))
   
-  results <- foreach(i = 1:n_simulations, .combine = rbind, .packages = c("dplyr")) %dopar% {
+  results <- foreach(i = 1:n_simulations, .combine = rbind, .packages = "dplyr") %dopar% {
     resampled_data <- monte_carlo_bootstrap(numeric_data, sample_size)
     model <- fit_polynomial_regression(resampled_data)
     c(coef(model), summary(model)$r.squared)
@@ -49,8 +50,8 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
 }
 
 set.seed(200)
-n_simulations <- 10000
-sample_size <- 300  # Adjust sample size as needed
+n_simulations <- 100
+sample_size <- 300
 results_df <- run_simulations(n_simulations, numeric_data, sample_size)
 
 # Clean column names to remove special characters
@@ -61,14 +62,13 @@ clean_colnames <- function(df) {
 
 results_df <- clean_colnames(results_df)
 
-create_histograms_1 <- function(df) {
+create_histograms <- function(df) {
   plots <- lapply(names(df), function(col) {
-    n_bins <- ceiling(log2(length(df[[col]])) + 1000)
     mean_value <- mean(df[[col]])
     sd_value <- sd(df[[col]])
     
     ggplot(df, aes_string(x = col)) +
-      geom_histogram(aes(y = ..density..), bins = n_bins, fill = "blue", color = "blue") +
+      geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", color = "black", alpha = 0.7) +
       geom_density(color = "red", size = 1) +
       geom_vline(aes(xintercept = mean_value), color = "green", linetype = "dashed", size = 1) +
       ggtitle(paste("Density, Mean and SD of", col)) +
@@ -81,33 +81,7 @@ create_histograms_1 <- function(df) {
 }
 
 # Generate histograms for the simulation results
-create_histograms_1(results_df)
-
-
-create_histograms_2 <- function(df) {
-  plots <- list()
-  
-  for (col in names(df)) {
-    if (is.numeric(df[[col]])) {
-      bin_width <- (max(df[[col]]) - min(df[[col]])) / 30
-      mean_value <- mean(df[[col]])
-      sd_value <- sd(df[[col]])
-      
-      p <- ggplot(df, aes(x = .data[[col]])) +
-        geom_histogram(binwidth = bin_width, fill = "blue", color = "black", alpha = 0.7) +
-        labs(title = paste("Histogram of", col), x = col, y = "Frequency") +
-        theme_minimal() +
-        annotate("text", x = max(df[[col]]), y = Inf, label = paste("Mean:", round(mean_value, 2), "\nSD:", round(sd_value, 2)), 
-                 hjust = 1.1, vjust = 2, color = "black", size = 4)
-      plots[[col]] <- p
-    }
-  }
-  
-  grid.arrange(grobs = plots, ncol = 2)
-}
-
-# Generate histograms for the simulation results
-create_histograms_2(results_df)
+create_histograms(results_df)
 
 # Calculate the mean of the coefficients from the Monte Carlo simulation
 best_coefficients <- colMeans(results_df)
@@ -132,6 +106,6 @@ cat("R-squared:", r_squared, "\n")
 # Plot the final regression model
 ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Actual, y = Predicted)) +
   geom_point(alpha = 0.7) +
-  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 20), ")"), 
+  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 2), ")"), 
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()

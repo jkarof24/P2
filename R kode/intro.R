@@ -10,6 +10,20 @@ library(moments)
 # Indlæs data
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
+# Funktion til at beregne procentdelen af NA-værdier for hver kolonne
+na_percentage <- function(column) {
+  sum(is.na(column)) / length(column) * 100
+}
+
+# Udskriv procentdelene af NA-værdier
+print(sapply(data, na_percentage))
+
+# Convert horsepower to numeric, coercing non-numeric values to NA
+data$horsepower <- as.numeric(data$horsepower)
+
+# Remove rows with any NA values
+data <- cleaned_data %>% na.omit()
+
 # Udvælg numeriske kolonner
 numeric_data <- data %>% select_if(is.numeric)
 
@@ -54,10 +68,3 @@ plots <- lapply(names(numeric_data), function(col) {
 
 do.call(grid.arrange, c(plots, ncol = 3))
 
-# Funktion til at beregne procentdelen af NA-værdier for hver kolonne
-na_percentage <- function(column) {
-  sum(is.na(column)) / length(column) * 100
-}
-
-# Udskriv procentdelene af NA-værdier
-print(sapply(data, na_percentage))
