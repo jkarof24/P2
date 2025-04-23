@@ -14,7 +14,7 @@ rpearson <- function(n, moments) {
 }
 
 # Set working directory and read data
-setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
+setwd("C:/Users/Jonathan/Documents/GitHub/P2")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # Select numeric columns
@@ -68,7 +68,7 @@ run_simulations <- function(n_simulations, numeric_data) {
 }
 
 set.seed(421)
-n_simulations <- 1000
+n_simulations <- 100000
 results_df <- run_simulations(n_simulations, numeric_data)
 
 # Clean column names to remove special characters
@@ -83,11 +83,16 @@ create_histograms <- function(df) {
   plots <- list()
   
   for (col in names(df)) {
+    mean_val <- mean(df[[col]])
+    sd_val <- sd(df[[col]])
     bin_width <- (max(df[[col]]) - min(df[[col]])) / 30
     p <- ggplot(df, aes(x = .data[[col]])) +
       geom_histogram(binwidth = bin_width, fill = "blue", color = "black", alpha = 0.7) +
       labs(title = paste("Histogram of", col), x = col, y = "Frequency") +
-      theme_minimal()
+      theme_minimal() +
+      geom_vline(aes(xintercept = mean_val), color = "red", linetype = "dashed", size = 1) +
+      annotate("text", x = mean_val, y = Inf, label = paste("Mean:", round(mean_val, 2)), vjust = 1.5, color = "red") +
+      annotate("text", x = mean_val, y = Inf, label = paste("SD:", round(sd_val, 2)), vjust = 3, color = "red")
     plots[[col]] <- p
   }
   
