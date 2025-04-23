@@ -1,5 +1,6 @@
 library(ggplot2)
 library(gridExtra)
+library(lmtest)  # Tilføj lmtest for Breusch-Pagan testen
 
 # Set seed for reproducibility
 set.seed(223)
@@ -84,3 +85,11 @@ histograms_non_homoscedastic <- create_histograms(data_new, "red", "Histogram of
 # Arrange histograms in grids
 do.call(grid.arrange, c(histograms_normal, ncol = 3, top = "Histograms for Normal Data"))
 do.call(grid.arrange, c(histograms_non_homoscedastic, ncol = 3, top = "Histograms for Non-Homoscedastic Data"))
+
+# Breusch-Pagan test for the original model
+bp_test <- bptest(model)
+print(bp_test)
+bp_test <- bptest(model_new)
+print(bp_test)
+
+
