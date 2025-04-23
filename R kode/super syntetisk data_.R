@@ -24,16 +24,16 @@ model <- lm(y ~ poly(x1, 2) + x2 + poly(x3, 2) + x4, data = data)
 summary(model)
 
 # Add an error term to x1 that scales with the corresponding y value
-x3_new <- x3 + rnorm(n, mean = 0, sd = 0.00154 * abs(y))
+x3_new <- x3 + rnorm(n, mean = 0, sd = 0.00254 * abs(y))
 
 # Generate new dependent variable with the same polynomial relationship
-#y_new <- 3 + 2*x1_new - 0.5*x1_new^2 + 1.5*x2 + 0.3*x3^2 - 0.2*x4 + rnorm(n, mean = 0, sd = 1)
+y_new <- 3 + 2*x1 + 5*x1^2 + 1.5*x2 + 3*x3_new^2 + 2*x4 + 0.001*rnorm(n, mean = 0, sd = 1)
 
 # Create a new data frame
-data_new <- data.frame(y, x1 = x1, x2, x3_new, x4)
+data_new <- data.frame(y_new, x1 = x1, x2, x3_new, x4)
 
 # Fit a new polynomial regression model
-model_new <- lm(y ~ poly(x1, 2) + x2 + poly(x3, 2) + x4, data = data_new)
+model_new <- lm(y_new ~ poly(x1, 2) + x2 + poly(x3, 2) + x4, data = data_new)
 
 # Summary of the new model
 summary(model_new)

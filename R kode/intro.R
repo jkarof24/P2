@@ -2,10 +2,7 @@ library(ggplot2)
 library(dplyr)
 library(gridExtra)
 library(reshape2)
-library(tidyr)
-library(caret)
-library(fastDummies)
-library(moments)
+library(lmtest)
 
 # Indlæs data
 data <- read.csv("auto-mpg.csv", na.strings = ".")
@@ -39,7 +36,6 @@ ggplot(data_korrelationer, aes(x = Var1, y = Var2, fill = abs(value))) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(title = "Correlation Matrix Heatmap", x = "", y = "")
 
-
 # Lav scatter plots for hver kolonne mod 'mpg'
 scatter_plots <- lapply(names(numeric_data), function(col) {
   ggplot(numeric_data, aes_string(x = col, y = "mpg")) +
@@ -48,7 +44,20 @@ scatter_plots <- lapply(names(numeric_data), function(col) {
     theme_minimal()
 })
 
-do.call(grid.arrange, scatter_plots)
+# Beregn Breusch–Pagan test p-værdier
+bp_results <- sapply(names(numeric_data), function(col) {
+  model <- lm(mpg ~ numeric_data[[col]], data = numeric_data)
+  bp_test <- bptest(model)
+  bp_test$p.value
+})
+
+# Opret data frame til p-værdier
+bp_df <- data.frame(Variable = names(bp_results), P_Value = bp_results)
+
+print(bp_df)
+
+# Arranger scatter plots og Breusch–Pagan plot
+do.call(grid.arrange, c(scatter_plots, list(bp_plot), ncol = 3))
 
 # Lav histogrammer og density plots med mean og SD
 plots <- lapply(names(numeric_data), function(col) {
@@ -67,4 +76,3 @@ plots <- lapply(names(numeric_data), function(col) {
 })
 
 do.call(grid.arrange, c(plots, ncol = 3))
-
