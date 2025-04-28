@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.7)  28 APR 2025 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.7)  28 APR 2025 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**P2.tex
-(./P2.tex
+**.tex
+(./.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -33,17 +33,17 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.7 \usepackage
+l.3 \usepackage
                {xcolor}^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 236 strings out of 475170
- 2968 string characters out of 5764214
+ 235 strings out of 475170
+ 2960 string characters out of 5764214
  386851 words of memory out of 5000000
  23326 multiletter control sequences out of 15000+600000
  558837 words of font info for 36 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,0n,38p,151b,36s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 35i,0n,38p,140b,36s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!
