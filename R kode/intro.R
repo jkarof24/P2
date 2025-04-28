@@ -3,7 +3,7 @@ library(dplyr)
 library(gridExtra)
 library(reshape2)
 library(lmtest)
-
+library(gridExtra)
 # Indlæs data
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
@@ -18,8 +18,10 @@ print(sapply(data, na_percentage))
 # Convert horsepower to numeric, coercing non-numeric values to NA
 data$horsepower <- as.numeric(data$horsepower)
 
+
+
 # Remove rows with any NA values
-data <- cleaned_data %>% na.omit()
+data <- data %>% na.omit()
 
 # Udvælg numeriske kolonner
 numeric_data <- data %>% select_if(is.numeric)
@@ -57,7 +59,7 @@ bp_df <- data.frame(Variable = names(bp_results), P_Value = bp_results)
 print(bp_df)
 
 # Arranger scatter plots og Breusch–Pagan plot
-do.call(grid.arrange, c(scatter_plots, list(bp_plot), ncol = 3))
+do.call(grid.arrange, c(scatter_plots, ncol = 3))
 
 # Lav histogrammer og density plots med mean og SD
 plots <- lapply(names(numeric_data), function(col) {

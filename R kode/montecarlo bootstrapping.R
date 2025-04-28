@@ -2,6 +2,7 @@ library(dplyr)
 library(ggplot2)
 library(foreach)
 library(doParallel)
+library(gridExtra)
 
 # Set working directory and read data
 setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
@@ -11,7 +12,7 @@ data <- read.csv("auto-mpg.csv", na.strings = ".")
 data$horsepower <- as.numeric(data$horsepower)
 
 # Remove rows with any NA values
-data <- cleaned_data %>% na.omit()
+data <- data %>% na.omit()
 
 # Select numeric columns
 numeric_data <- data[sapply(data, is.numeric)]
@@ -109,3 +110,4 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
   labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 2), ")"), 
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
+
