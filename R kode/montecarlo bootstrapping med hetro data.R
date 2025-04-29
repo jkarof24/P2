@@ -16,7 +16,7 @@ x3 <- rnorm(n, mean = 15, sd = 3)
 x4 <- rnorm(n, mean = 20, sd = 5)
 
 # Generate dependent variable with a polynomial relationship
-y <- 3 + 2*x1 + 5*x1^2 + 1.5*x2 + 3*x3^2 + 2*x4 + 0.001*rnorm(n, mean = 0, sd = 1)
+y <- 3 + 2*x1 + 5*x1^2 + 1.5*x2^3 + 3*x3^4 + 2*x4^5 + 0.001*rnorm(n, mean = 0, sd = 1)
 
 # Create a data frame
 data <- data.frame(y, x1, x2, x3, x4)
