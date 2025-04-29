@@ -83,7 +83,7 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
 }
 
 set.seed(200)
-n_simulations <- 1000
+n_simulations <- 10000
 sample_size <- 50
 results_df <- run_simulations(n_simulations, numeric_data, sample_size)
 
@@ -124,6 +124,7 @@ print(best_coefficients)
 # Fit the final regression model using the best coefficients
 final_model <- lm(y ~ ., data = numeric_data)
 
+
 # Predict using the final model
 y_final_pred <- predict(final_model, newdata = numeric_data)
 
@@ -143,3 +144,5 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
 
+
+summary(final_model)
