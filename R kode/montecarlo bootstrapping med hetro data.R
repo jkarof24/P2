@@ -47,7 +47,7 @@ summary(model_new)
 
 data=data
 numeric_data=data
-
+df=data
 
 
 
@@ -122,7 +122,7 @@ best_coefficients <- colMeans(results_df)
 print(best_coefficients)
 
 # Fit the final regression model using the best coefficients
-final_model <- lm(y ~ ., data = numeric_data)
+final_model <- lm(y ~ poly, data = numeric_data)
 
 
 # Predict using the final model
