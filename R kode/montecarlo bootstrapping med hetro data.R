@@ -16,7 +16,7 @@ x3 <- rnorm(n, mean = 15, sd = 3)
 x4 <- rnorm(n, mean = 20, sd = 5)
 
 # Generate dependent variable with a polynomial relationship
-y <- 3 + 2*x1 + 5*x1^2 + 1.5*x2^3 + 3*x3^4 + 2*x4^5 + 0.001*rnorm(n, mean = 0, sd = 1)
+y <- 3 + 2*x1 + x1^2 + 0.015*x2^3 + 0.003*x3^4 + 0.0002*x4^5 + 0.001*rnorm(n, mean = 0, sd = 1)
 
 # Create a data frame
 data <- data.frame(y, x1, x2, x3, x4)
@@ -54,6 +54,13 @@ df=data
 
 
 
+
+
+
+monte_carlo_bootstrap <- function(data, sample_size) {
+  data %>%
+    sample_n(sample_size, replace = TRUE)
+}
 
 fit_polynomial_regression <- function(data) {
   formula <- as.formula(paste("y ~", paste(sapply(setdiff(names(data), "y"), function(var) paste("poly(", var, ", 2)")), collapse = " + ")))
@@ -122,8 +129,7 @@ best_coefficients <- colMeans(results_df)
 print(best_coefficients)
 
 # Fit the final regression model using the best coefficients
-final_model <- lm(y ~ poly, data = numeric_data)
-
+final_model <- lm(y ~ ., data = numeric_data)
 
 # Predict using the final model
 y_final_pred <- predict(final_model, newdata = numeric_data)
@@ -143,6 +149,5 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
   labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 2), ")"), 
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
-
 
 summary(final_model)

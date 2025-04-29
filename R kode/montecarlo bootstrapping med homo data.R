@@ -6,7 +6,7 @@ library(gridExtra)
 library(lmtest)  # For Breusch-Pagan test
 
 # Set seed for reproducibility
-set.seed(223)
+set.seed(200)
 
 # Generate independent variables
 n <- 250
@@ -15,49 +15,49 @@ x2 <- rnorm(n, mean = 10, sd = 4)
 x3 <- rnorm(n, mean = 15, sd = 3)
 x4 <- rnorm(n, mean = 20, sd = 5)
 
+
 # Generate dependent variable with a polynomial relationship
-y <- 3 + 2*x1 + 5*x1^2 + 1.5*x2 + 3*x3^2 + 2*x4 + 0.001*rnorm(n, mean = 0, sd = 1)
+y <- 3 + 5*x1^2 + 1.5*x2^3 + 3*x3^4 + 2*x4^5 + 1*rnorm(n, mean = 0, sd = 1)
 
 # Create a data frame
 data <- data.frame(y, x1, x2, x3, x4)
 
 # Fit a polynomial regression model
-model <- lm(y ~ poly(x1, 2) + x2 + poly(x3, 2) + x4, data = data)
+model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3^4) + I(x4^5), data = data)
 
-# Summary of the model
-summary(model)
 
 # Add an error term to x3 that scales with the corresponding y value
-x3_new <- x3 + rnorm(n, mean = 0, sd = 0.00254 * abs(y))
+x3_new <- x3 + rnorm(n, mean = 0, sd = 0.00001 * abs(y))
 
 # Generate new dependent variable with the same polynomial relationship
-y <- 3 + 2*x1 + 5*x1^2 + 1.5*x2 + 3*x3_new^2 + 2*x4 + 0.001*rnorm(n, mean = 0, sd = 1)
+y <- 3 + 5*x1^2 + 1.5*x2^3 + 3*x3^4 + 2*x4^5 + 1*rnorm(n, mean = 0, sd = 1)
 
 # Create a new data frame
 data_new <- data.frame(y, x1 = x1, x2, x3_new, x4)
 
 # Fit a new polynomial regression model
-model_new <- lm(y ~ poly(x1, 2) + x2 + poly(x3_new, 2) + x4, data = data_new)
+model_new <- lm(y ~ 1 + I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data_new)
 
-# Summary of the new model
+summary(model)
 summary(model_new)
 
-
-
-
-data=data_new
-numeric_data=data_new
-
+data <- data_new
+numeric_data <- data_new
 
 
 
 
 
 
+monte_carlo_bootstrap <- function(data, sample_size) {
+  data %>%
+    sample_n(sample_size, replace = TRUE)
+}
 
 fit_polynomial_regression <- function(data) {
-  formula <- as.formula(paste("y ~", paste(sapply(setdiff(names(data), "y"), function(var) paste("poly(", var, ", 2)")), collapse = " + ")))
-  lm(formula, data = data)
+  
+  
+  formula <- lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data)
 }
 
 run_simulations <- function(n_simulations, numeric_data, sample_size) {
@@ -122,7 +122,11 @@ best_coefficients <- colMeans(results_df)
 print(best_coefficients)
 
 # Fit the final regression model using the best coefficients
-final_model <- lm(y ~ ., data = numeric_data)
+final_model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data)
+
+
+final_model$coefficients <- best_coefficients
+
 
 # Predict using the final model
 y_final_pred <- predict(final_model, newdata = numeric_data)
@@ -143,4 +147,7 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
 
+
+print(best_coefficients)
 summary(final_model)
+
