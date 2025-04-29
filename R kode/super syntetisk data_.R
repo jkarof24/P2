@@ -1,6 +1,6 @@
 library(ggplot2)
 library(gridExtra)
-library(lmtest)  # Tilføj lmtest for Breusch-Pagan testen
+library(lmtest) 
 
 # Set seed for reproducibility
 set.seed(223)
