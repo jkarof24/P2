@@ -34,3 +34,4 @@
 \contentsline {section}{\numberline {16}Discussion}{29}{}%
 \contentsline {section}{\numberline {17}Conclusion}{30}{}%
 \contentsline {section}{\numberline {18}Litteratur}{31}{}%
+\contentsline {section}{\numberline {19}latex_tables}{31}{}%
