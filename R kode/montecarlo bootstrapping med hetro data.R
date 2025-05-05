@@ -9,7 +9,7 @@ library(lmtest)  # For Breusch-Pagan test
 set.seed(203)
 
 # Generate independent variables
-n <- 250
+n <- 2500
 x1 <- rnorm(n, mean = 20, sd = 1)
 x2 <- rnorm(n, mean = 15, sd = 4)
 x3 <- rnorm(n, mean = 10, sd = 3)
@@ -38,6 +38,9 @@ summary(model)
 print("klassisk hetro")
 summary(model_new)
 
+
+
+
 # Monte Carlo Bootstrap Function
 monte_carlo_bootstrap <- function(data, sample_size) {
   data %>%
@@ -50,16 +53,16 @@ fit_polynomial_regression <- function(data) {
 }
 
 # Run Simulations Function
-run_simulations <- function(n_simulations, numeric_data, sample_size) {
+run_simulations <- function(n_simulations, data_new, sample_size) {
   num_cores <- detectCores() - 1
   cl <- makeCluster(num_cores)
   registerDoParallel(cl)
   
-  clusterExport(cl, c("numeric_data", "fit_polynomial_regression", "monte_carlo_bootstrap", "sample_size"))
+  clusterExport(cl, c("data_new", "fit_polynomial_regression", "monte_carlo_bootstrap", "sample_size"))
   clusterEvalQ(cl, library(dplyr))
   
   results <- foreach(i = 1:n_simulations, .combine = rbind, .packages = "dplyr") %dopar% {
-    resampled_data <- monte_carlo_bootstrap(numeric_data, sample_size)
+    resampled_data <- monte_carlo_bootstrap(data_new, sample_size)
     model <- fit_polynomial_regression(resampled_data)
     c(coef(model), summary(model)$r.squared)
   }
@@ -67,13 +70,13 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
   stopCluster(cl)
   
   results_df <- as.data.frame(results)
-  colnames(results_df) <- c(names(coef(fit_polynomial_regression(numeric_data))), "r_squared")
+  colnames(results_df) <- c(names(coef(fit_polynomial_regression(data_new))), "r_squared")
   
   return(results_df)
 }
 
 set.seed(200)
-n_simulations <- 100000
+n_simulations <- 10000
 sample_size <- 50
 results_df <- run_simulations(n_simulations, data_new, sample_size)
 

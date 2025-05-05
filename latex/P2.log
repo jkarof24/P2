@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.29)  5 MAY 2025 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.29)  5 MAY 2025 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -113,7 +113,38 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count279
-) (./P2.aux)
+) (./P2.aux
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+
+LaTeX Warning: Label `fig:j06' multiply defined.
+
+)
 \openout1 = `P2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -141,20 +172,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./P2.toc)
+{c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./P2.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+
+
+[2])
 \tf@toc=\write3
 \openout3 = `P2.toc'.
 
 
 
-[2] (./Introduktion.tex)
+[3] (./Introduktion.tex)
 
-[3] (./Statistical theory.tex (./Statistical theory/Probability space.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 7.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 7.
-
+[4] (./Statistical theory.tex (./Statistical theory/Probability space.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
@@ -187,7 +220,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--9
 
 
 
-[4]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 10--14
 
  []
@@ -199,16 +232,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--22
 
 ) (./Statistical theory/Probability distribution.tex
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
 
 
-[6]) (./Statistical theory/Statistical methods.tex
+[7]) (./Statistical theory/Statistical methods.tex
 
-[7]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
@@ -220,26 +253,262 @@ Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
 
 
 
-[8]))
+[9]))
 
-[9]
-! I can't find file `(Polinomial'.
-l.55  	\input(Polinomial 
-                         regression)
-(Press Enter to retry, or Control-Z to exit)
-Please type another input file name
-! Emergency stop.
-l.55  	\input(Polinomial 
-                         regression)
-*** (job aborted, file error in nonstop mode)
+[10]
 
- 
+[11]
+
+[12] (./PRNG.tex
+
+[13])
+
+[14]
+
+[15]
+
+[16] (./intro til data.tex (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2024/09/23 1.10c listings language file
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2024/09/23 1.10c listings language file
+) (c:/Users/Jonathan/Documents/GitHub/P2/R kode/intro.R
+
+[17])
+<p2/1.png, id=73, 867.24pt x 589.4522pt>
+File: p2/1.png Graphic file (type png)
+<use p2/1.png>
+Package pdftex.def Info: p2/1.png  used on input line 35.
+(pdftex.def)             Requested size: 398.33858pt x 270.74655pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 35--36
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<p2/2.png, id=74, 867.24pt x 589.4522pt>
+File: p2/2.png Graphic file (type png)
+<use p2/2.png>
+Package pdftex.def Info: p2/2.png  used on input line 42.
+(pdftex.def)             Requested size: 398.33858pt x 270.74655pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 42--43
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<p2/3.png, id=75, 867.24pt x 589.4522pt>
+File: p2/3.png Graphic file (type png)
+<use p2/3.png>
+Package pdftex.def Info: p2/3.png  used on input line 48.
+(pdftex.def)             Requested size: 398.33858pt x 270.74655pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 48--49
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[18]
+
+[19 <./p2/1.png (PNG copy)>]
+
+[20 <./p2/2.png>] (./montecarlobootstrap.tex (c:/Users/Jonathan/Documents/GitHub/P2/R kode/montecarlo bootstrapping.R
+
+[21 <./p2/3.png>]
+
+[22]
+
+[23])
+<C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/10.png, id=97, 1433.355pt x 753.5653pt>
+File: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/10.png Graphic file (type png)
+<use C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/10.png>
+Package pdftex.def Info: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/10.png  used on input line 12.
+(pdftex.def)             Requested size: 398.33858pt x 209.42155pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 12--13
+ [][] 
+ []
+
+<C:/Users/Jonathan/Desktop/p2/11.png, id=98, 1433.355pt x 753.5653pt>
+File: C:/Users/Jonathan/Desktop/p2/11.png Graphic file (type png)
+<use C:/Users/Jonathan/Desktop/p2/11.png>
+Package pdftex.def Info: C:/Users/Jonathan/Desktop/p2/11.png  used on input line 19.
+(pdftex.def)             Requested size: 398.33858pt x 209.42155pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 19--20
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./super syntetisk.tex (c:/Users/Jonathan/Documents/GitHub/P2/R kode/super syntetisk data_.R
+
+[24 <c:/Users/Jonathan/Documents/GitHub/P2/latex/p2/10.png>]
+
+[25 <c:/Users/Jonathan/Desktop/p2/11.png>]
+
+[26])
+<C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/4.png, id=111, 867.24pt x 589.4522pt>
+File: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/4.png Graphic file (type png)
+<use C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/4.png>
+Package pdftex.def Info: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/4.png  used on input line 10.
+(pdftex.def)             Requested size: 398.33858pt x 270.74655pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 10--11
+ [][] 
+ []
+
+<C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/5.png, id=112, 867.24pt x 589.4522pt>
+File: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/5.png Graphic file (type png)
+<use C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/5.png>
+Package pdftex.def Info: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/5.png  used on input line 16.
+(pdftex.def)             Requested size: 398.33858pt x 270.74655pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 16--17
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/6.png, id=113, 867.24pt x 589.4522pt>
+File: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/6.png Graphic file (type png)
+<use C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/6.png>
+Package pdftex.def Info: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/6.png  used on input line 22.
+(pdftex.def)             Requested size: 398.33858pt x 270.74655pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 22--23
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/7.png, id=114, 867.24pt x 589.4522pt>
+File: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/7.png Graphic file (type png)
+<use C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/7.png>
+Package pdftex.def Info: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/7.png  used on input line 28.
+(pdftex.def)             Requested size: 398.33858pt x 270.74655pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 28--29
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/8.png, id=115, 867.24pt x 589.4522pt>
+File: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/8.png Graphic file (type png)
+<use C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/8.png>
+Package pdftex.def Info: C:/Users/Jonathan/Documents/GitHub/P2/latex/p2/8.png  used on input line 35.
+(pdftex.def)             Requested size: 398.33858pt x 270.74655pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 35--36
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<C:/Users/Jonathan/Desktop/p2/model 1.JPG, id=116, 254.45062pt x 57.21375pt>
+File: C:/Users/Jonathan/Desktop/p2/model 1.JPG Graphic file (type jpg)
+<use C:/Users/Jonathan/Desktop/p2/model 1.JPG>
+Package pdftex.def Info: C:/Users/Jonathan/Desktop/p2/model 1.JPG  used on input line 43.
+(pdftex.def)             Requested size: 398.33858pt x 89.57083pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 43--44
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<C:/Users/Jonathan/Desktop/p2/model 2.JPG, id=117, 267.24844pt x 54.2025pt>
+File: C:/Users/Jonathan/Desktop/p2/model 2.JPG Graphic file (type jpg)
+<use C:/Users/Jonathan/Desktop/p2/model 2.JPG>
+Package pdftex.def Info: C:/Users/Jonathan/Desktop/p2/model 2.JPG  used on input line 50.
+(pdftex.def)             Requested size: 398.33858pt x 80.7982pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 50--51
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<C:/Users/Jonathan/Desktop/p2/model opsumering 1.JPG, id=118, 389.20406pt x 185.94469pt>
+File: C:/Users/Jonathan/Desktop/p2/model opsumering 1.JPG Graphic file (type jpg)
+<use C:/Users/Jonathan/Desktop/p2/model opsumering 1.JPG>
+Package pdftex.def Info: C:/Users/Jonathan/Desktop/p2/model opsumering 1.JPG  used on input line 57.
+(pdftex.def)             Requested size: 398.33858pt x 190.31363pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 57--58
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<C:/Users/Jonathan/Desktop/p2/model opsumering 2.JPG, id=119, 420.82219pt x 231.86626pt>
+File: C:/Users/Jonathan/Desktop/p2/model opsumering 2.JPG Graphic file (type jpg)
+<use C:/Users/Jonathan/Desktop/p2/model opsumering 2.JPG>
+Package pdftex.def Info: C:/Users/Jonathan/Desktop/p2/model opsumering 2.JPG  used on input line 64.
+(pdftex.def)             Requested size: 398.33858pt x 219.47917pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 64--65
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[27 <c:/Users/Jonathan/Documents/GitHub/P2/latex/p2/4.png>]
+
+[28 <c:/Users/Jonathan/Documents/GitHub/P2/latex/p2/5.png>]
+
+[29 <c:/Users/Jonathan/Documents/GitHub/P2/latex/p2/6.png>]
+
+[30 <c:/Users/Jonathan/Documents/GitHub/P2/latex/p2/7.png>]
+
+[31 <c:/Users/Jonathan/Documents/GitHub/P2/latex/p2/8.png>]
+
+[32 <c:/Users/Jonathan/Desktop/p2/model 1.JPG> <c:/Users/Jonathan/Desktop/p2/model 2.JPG> <c:/Users/Jonathan/Desktop/p2/model opsumering 1.JPG>]
+
+[33 <c:/Users/Jonathan/Desktop/p2/model opsumering 2.JPG>] (./P2.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-03-26>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3508 strings out of 471606
- 58192 string characters out of 5519417
- 442753 words of memory out of 5000000
- 30033 multiletter control sequences out of 15000+600000
- 631426 words of font info for 55 fonts, out of 8000000 for 9000
+ 4793 strings out of 471606
+ 76424 string characters out of 5519417
+ 999145 words of memory out of 5000000
+ 31281 multiletter control sequences out of 15000+600000
+ 632059 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,6n,65p,1049b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 57i,6n,65p,1049b,2452s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt0800.600pk><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on P2.pdf (33 pages, 605089 bytes).
+PDF statistics:
+ 219 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+

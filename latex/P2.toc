@@ -1,0 +1,36 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{}%
+\contentsline {subsection}{\numberline {1.1}Independence of Errors}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Linearity}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Homoscedasticity}{4}{}%
+\contentsline {subsection}{\numberline {1.4}Normality of Errors}{4}{}%
+\contentsline {subsection}{\numberline {1.5}Multicollinearity}{4}{}%
+\contentsline {subsection}{\numberline {1.6}Correct Model Specifications}{4}{}%
+\contentsline {section}{\numberline {2}Statistical theory}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Probability space}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Probability distribution}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Normal distribution}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}The central limit theorem}{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}The t-distribution}{8}{}%
+\contentsline {subsection}{\numberline {2.3}Statistical methods}{8}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Confidence intervals}{8}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Hypothesis testing}{9}{}%
+\contentsline {section}{\numberline {3}Polynomial regression}{11}{}%
+\contentsline {subsection}{\numberline {3.1}Assumptions}{12}{}%
+\contentsline {section}{\numberline {4}Pseudo random number generator}{13}{}%
+\contentsline {section}{\numberline {5}Pseudo Random Number Generator}{13}{}%
+\contentsline {subsection}{\numberline {5.1}Properties of PRNGs}{13}{}%
+\contentsline {subsection}{\numberline {5.2}Linear Congruential Generator}{13}{}%
+\contentsline {section}{\numberline {6}Monte Carlo}{15}{}%
+\contentsline {subsection}{\numberline {6.1}Assumptions}{15}{}%
+\contentsline {section}{\numberline {7}Problem statement}{16}{}%
+\contentsline {section}{\numberline {8}intro til data}{17}{}%
+\contentsline {section}{\numberline {9}intro til data }{17}{}%
+\contentsline {section}{\numberline {10}Classical regression}{19}{}%
+\contentsline {section}{\numberline {11}Monte Carlo regression}{20}{}%
+\contentsline {section}{\numberline {12}montecarlo bootstrapping }{21}{}%
+\contentsline {section}{\numberline {13}super syntetisk}{24}{}%
+\contentsline {section}{\numberline {14}super syntetisk }{24}{}%
+\contentsline {section}{\numberline {15}Comparison between regressions}{28}{}%
+\contentsline {section}{\numberline {16}Discussion}{29}{}%
+\contentsline {section}{\numberline {17}Conclusion}{30}{}%
+\contentsline {section}{\numberline {18}Litteratur}{31}{}%
