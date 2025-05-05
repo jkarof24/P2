@@ -95,14 +95,15 @@ create_histograms <- function(df, xz) {
     mean_value <- mean(df[[col]])
     sd_value <- sd(df[[col]])
     
+    
     ggplot(df, aes_string(x = col)) +
       geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", color = "black", alpha = 0.7) +
       geom_density(color = "red", size = 1) +
       geom_vline(aes(xintercept = mean_value), color = "green", linetype = "dashed", size = 1) +
-      ggtitle(paste("Density, Mean and SD of", xz)) +
+      ggtitle(paste(col,"and", xz)) +
       theme_minimal() +
-      annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 2), "\nSD:", round(sd_value, 2)), 
-               hjust = 1.1, vjust = 2, color = "black", size = 4)
+      annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 4), "\nSD:", round(sd_value, 4)), 
+               hjust = 1, vjust = 1, color = "black", size = 3.3)
   })
   
   grid.arrange(grobs = plots, ncol = 2)
