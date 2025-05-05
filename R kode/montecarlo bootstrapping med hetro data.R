@@ -38,9 +38,6 @@ summary(model)
 print("klassisk hetro")
 summary(model_new)
 
-
-
-
 # Monte Carlo Bootstrap Function
 monte_carlo_bootstrap <- function(data, sample_size) {
   data %>%
@@ -89,12 +86,10 @@ clean_colnames <- function(df) {
 results_df <- clean_colnames(results_df)
 
 # Create Histograms Function
-
 create_histograms <- function(df, xz) {
   plots <- lapply(names(df), function(col) {
     mean_value <- mean(df[[col]])
     sd_value <- sd(df[[col]])
-    
     
     ggplot(df, aes_string(x = col)) +
       geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", color = "black", alpha = 0.7) +
@@ -114,20 +109,25 @@ create_histograms(results_df, "results")
 create_histograms(data, "homo")
 create_histograms(data_new, "hetro")
 
-
 # Calculate the mean of the coefficients from the Monte Carlo simulation
 best_coefficients <- colMeans(results_df)
 
 print(best_coefficients)
 
-# Fit the final regression model using the best coefficients
+# Fit the final model using the original data
 final_model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data_new)
-final_model$coefficients <- best_coefficients
+
+# Create a function to apply averaged coefficients
+apply_coefficients <- function(model, coefficients) {
+  model$coefficients <- coefficients
+  return(model)
+}
+
+# Apply the averaged coefficients to the final model
+final_model <- apply_coefficients(final_model, best_coefficients)
 
 # Predict using the final model
-y_final_pred_boot <- predict(final_model, newdata = data_new)
-y_final_pred_klassisk <- predict(model_new, newdata = data_new)
-
+y_final_pred <- predict(final_model, newdata = data_new)
 
 # Calculate R-squared
 actual_values <- data_new$y
@@ -145,15 +145,6 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
 
-
-# Plot the final regression model
-ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred_klassisk), aes(x = Actual, y = Predicted)) +
-  geom_point(alpha = 0.7) +
-  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 3), ")"), 
-       x = "Actual Values", y = "Predicted Values") +
-  theme_minimal()
-
-
-print(best_coefficients)
-print("boot hetro")
+# Summarize models
 summary(final_model)
+summary(model_new)
