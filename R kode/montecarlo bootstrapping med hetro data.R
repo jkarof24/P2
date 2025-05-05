@@ -6,67 +6,50 @@ library(gridExtra)
 library(lmtest)  # For Breusch-Pagan test
 
 # Set seed for reproducibility
-set.seed(223)
+set.seed(203)
 
 # Generate independent variables
 n <- 250
-x1 <- rnorm(n, mean = 5, sd = 1)
-x2 <- rnorm(n, mean = 10, sd = 4)
-x3 <- rnorm(n, mean = 15, sd = 3)
-x4 <- rnorm(n, mean = 20, sd = 5)
+x1 <- rnorm(n, mean = 20, sd = 1)
+x2 <- rnorm(n, mean = 15, sd = 4)
+x3 <- rnorm(n, mean = 10, sd = 3)
+x4 <- rnorm(n, mean = 5, sd = 5)
 
 # Generate dependent variable with a polynomial relationship
-y <- 3 + 2*x1 + x1^2 + 0.015*x2^3 + 0.003*x3^4 + 0.0002*x4^5 + 0.001*rnorm(n, mean = 0, sd = 1)
+y <- 3 + 0.8*x1^2 + 0.15*x2^3 + 0.003*x3^4 + 0.002*x4^5 + rnorm(n, mean = 0, sd = 100)
 
 # Create a data frame
 data <- data.frame(y, x1, x2, x3, x4)
 
 # Fit a polynomial regression model
-model <- lm(y ~ poly(x1, 2) + x2 + poly(x3, 2) + x4, data = data)
-
-# Summary of the model
-summary(model)
+model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3^4) + I(x4^5), data = data)
 
 # Add an error term to x3 that scales with the corresponding y value
-x3_new <- x3 + rnorm(n, mean = 0, sd = 0.00254 * abs(y))
-
-# Generate new dependent variable with the same polynomial relationship
-y <- 3 + 2*x1 + 5*x1^2 + 1.5*x2 + 3*x3_new^2 + 2*x4 + 0.001*rnorm(n, mean = 0, sd = 1)
+x3_new <- x3 + rnorm(n, mean = 0, sd = 0.008 * abs(y))
 
 # Create a new data frame
-data_new <- data.frame(y, x1 = x1, x2, x3_new, x4)
+data_new <- data.frame(y, x1, x2, x3_new, x4)
 
 # Fit a new polynomial regression model
-model_new <- lm(y ~ poly(x1, 2) + x2 + poly(x3_new, 2) + x4, data = data_new)
+model_new <- lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data_new)
 
-# Summary of the new model
+print("klassisk homo")
+summary(model)
+print("klassisk hetro")
 summary(model_new)
 
-
-
-
-data=data
-numeric_data=data
-df=data
-
-
-
-
-
-
-
-
-
+# Monte Carlo Bootstrap Function
 monte_carlo_bootstrap <- function(data, sample_size) {
   data %>%
     sample_n(sample_size, replace = TRUE)
 }
 
+# Fit Polynomial Regression Function
 fit_polynomial_regression <- function(data) {
-  formula <- as.formula(paste("y ~", paste(sapply(setdiff(names(data), "y"), function(var) paste("poly(", var, ", 2)")), collapse = " + ")))
-  lm(formula, data = data)
+  lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data)
 }
 
+# Run Simulations Function
 run_simulations <- function(n_simulations, numeric_data, sample_size) {
   num_cores <- detectCores() - 1
   cl <- makeCluster(num_cores)
@@ -90,9 +73,9 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
 }
 
 set.seed(200)
-n_simulations <- 10000
+n_simulations <- 1000
 sample_size <- 50
-results_df <- run_simulations(n_simulations, numeric_data, sample_size)
+results_df <- run_simulations(n_simulations, data_new, sample_size)
 
 # Clean column names to remove special characters
 clean_colnames <- function(df) {
@@ -102,6 +85,7 @@ clean_colnames <- function(df) {
 
 results_df <- clean_colnames(results_df)
 
+# Create Histograms Function
 create_histograms <- function(df) {
   plots <- lapply(names(df), function(col) {
     mean_value <- mean(df[[col]])
@@ -129,13 +113,14 @@ best_coefficients <- colMeans(results_df)
 print(best_coefficients)
 
 # Fit the final regression model using the best coefficients
-final_model <- lm(y ~ ., data = numeric_data)
+final_model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data_new)
+final_model$coefficients <- best_coefficients
 
 # Predict using the final model
-y_final_pred <- predict(final_model, newdata = numeric_data)
+y_final_pred <- predict(final_model, newdata = data_new)
 
 # Calculate R-squared
-actual_values <- numeric_data$y
+actual_values <- data_new$y
 ss_total <- sum((actual_values - mean(actual_values))^2)
 ss_residual <- sum((actual_values - y_final_pred)^2)
 r_squared <- 1 - (ss_residual / ss_total)
@@ -150,4 +135,6 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
 
+print(best_coefficients)
+print("boot hetro")
 summary(final_model)

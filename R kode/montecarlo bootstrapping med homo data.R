@@ -17,7 +17,7 @@ x4 <- rnorm(n, mean = 20, sd = 5)
 
 
 # Generate dependent variable with a polynomial relationship
-y <- 3 + 5*x1^2 + 1.5*x2^3 + 3*x3^4 + 2*x4^5 + 1*rnorm(n, mean = 0, sd = 1)
+y <- 3 + 0.05*x1^2 + 0.015*x2^3 + 0.03*x3^4 + 0.02*x4^5 + 10*rnorm(n, mean = 0, sd = 1000)
 
 # Create a data frame
 data <- data.frame(y, x1, x2, x3, x4)
@@ -27,10 +27,8 @@ model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3^4) + I(x4^5), data = data)
 
 
 # Add an error term to x3 that scales with the corresponding y value
-x3_new <- x3 + rnorm(n, mean = 0, sd = 0.00001 * abs(y))
+x3_new <- x3 + rnorm(n, mean = 0, sd = 0.0001 * abs(y))
 
-# Generate new dependent variable with the same polynomial relationship
-y <- 3 + 5*x1^2 + 1.5*x2^3 + 3*x3^4 + 2*x4^5 + 1*rnorm(n, mean = 0, sd = 1)
 
 # Create a new data frame
 data_new <- data.frame(y, x1 = x1, x2, x3_new, x4)
@@ -38,7 +36,10 @@ data_new <- data.frame(y, x1 = x1, x2, x3_new, x4)
 # Fit a new polynomial regression model
 model_new <- lm(y ~ 1 + I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data_new)
 
+
+print("klassisk homo")
 summary(model)
+print("klassisk hetro")
 summary(model_new)
 
 data <- data_new
@@ -149,5 +150,6 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
 
 
 print(best_coefficients)
+print("boot hetro")
 summary(final_model)
 
