@@ -73,7 +73,7 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
 }
 
 set.seed(200)
-n_simulations <- 1000
+n_simulations <- 100000
 sample_size <- 50
 results_df <- run_simulations(n_simulations, data_new, sample_size)
 
@@ -86,7 +86,8 @@ clean_colnames <- function(df) {
 results_df <- clean_colnames(results_df)
 
 # Create Histograms Function
-create_histograms <- function(df) {
+
+create_histograms <- function(df, xz) {
   plots <- lapply(names(df), function(col) {
     mean_value <- mean(df[[col]])
     sd_value <- sd(df[[col]])
@@ -95,7 +96,7 @@ create_histograms <- function(df) {
       geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", color = "black", alpha = 0.7) +
       geom_density(color = "red", size = 1) +
       geom_vline(aes(xintercept = mean_value), color = "green", linetype = "dashed", size = 1) +
-      ggtitle(paste("Density, Mean and SD of", col)) +
+      ggtitle(paste("Density, Mean and SD of", xz)) +
       theme_minimal() +
       annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 2), "\nSD:", round(sd_value, 2)), 
                hjust = 1.1, vjust = 2, color = "black", size = 4)
@@ -105,7 +106,10 @@ create_histograms <- function(df) {
 }
 
 # Generate histograms for the simulation results
-create_histograms(results_df)
+create_histograms(results_df, "results")
+create_histograms(data, "homo")
+create_histograms(data_new, "hetro")
+
 
 # Calculate the mean of the coefficients from the Monte Carlo simulation
 best_coefficients <- colMeans(results_df)
