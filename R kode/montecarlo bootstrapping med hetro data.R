@@ -102,8 +102,8 @@ create_histograms <- function(df, xz) {
       geom_vline(aes(xintercept = mean_value), color = "green", linetype = "dashed", size = 1) +
       ggtitle(paste(col,"and", xz)) +
       theme_minimal() +
-      annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 4), "\nSD:", round(sd_value, 4)), 
-               hjust = 1, vjust = 1, color = "black", size = 3.3)
+      annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 6), "\nSD:", round(sd_value, 6)), 
+               hjust = 1, vjust = 1, color = "black", size = 4)
   })
   
   grid.arrange(grobs = plots, ncol = 2)
@@ -125,7 +125,9 @@ final_model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data_new
 final_model$coefficients <- best_coefficients
 
 # Predict using the final model
-y_final_pred <- predict(final_model, newdata = data_new)
+y_final_pred_boot <- predict(final_model, newdata = data_new)
+y_final_pred_klassisk <- predict(model_new, newdata = data_new)
+
 
 # Calculate R-squared
 actual_values <- data_new$y
@@ -139,9 +141,18 @@ cat("R-squared:", r_squared, "\n")
 # Plot the final regression model
 ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Actual, y = Predicted)) +
   geom_point(alpha = 0.7) +
-  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 2), ")"), 
+  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 3), ")"), 
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
+
+
+# Plot the final regression model
+ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred_klassisk), aes(x = Actual, y = Predicted)) +
+  geom_point(alpha = 0.7) +
+  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 3), ")"), 
+       x = "Actual Values", y = "Predicted Values") +
+  theme_minimal()
+
 
 print(best_coefficients)
 print("boot hetro")
