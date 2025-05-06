@@ -31,13 +31,13 @@
 \contentsline {section}{\numberline {7}Problem statement}{21}{}%
 \contentsline {section}{\numberline {8}intro til data}{22}{}%
 \contentsline {section}{\numberline {9}intro til data }{22}{}%
-\contentsline {section}{\numberline {10}Classical regression}{23}{}%
-\contentsline {section}{\numberline {11}Monte Carlo regression}{24}{}%
-\contentsline {section}{\numberline {12}montecarlo bootstrapping }{25}{}%
-\contentsline {section}{\numberline {13}super syntetisk}{25}{}%
-\contentsline {section}{\numberline {14}super syntetisk }{25}{}%
-\contentsline {section}{\numberline {15}Comparison between regressions}{27}{}%
-\contentsline {section}{\numberline {16}Discussion}{28}{}%
-\contentsline {section}{\numberline {17}Conclusion}{29}{}%
-\contentsline {section}{\numberline {18}Litteratur}{30}{}%
-\contentsline {section}{\numberline {19}latextables}{30}{}%
+\contentsline {section}{\numberline {10}Classical regression}{24}{}%
+\contentsline {section}{\numberline {11}Monte Carlo regression}{25}{}%
+\contentsline {section}{\numberline {12}montecarlo bootstrapping }{26}{}%
+\contentsline {section}{\numberline {13}super syntetisk}{30}{}%
+\contentsline {section}{\numberline {14}super syntetisk }{30}{}%
+\contentsline {section}{\numberline {15}Comparison between regressions}{33}{}%
+\contentsline {section}{\numberline {16}Discussion}{34}{}%
+\contentsline {section}{\numberline {17}Conclusion}{35}{}%
+\contentsline {section}{\numberline {18}Litteratur}{36}{}%
+\contentsline {section}{\numberline {19}latextables}{36}{}%
