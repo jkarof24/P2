@@ -1,0 +1,101 @@
+\documentclass{article}
+\title{Monte Carlo simulation}
+\author{Christian, Jonathan, Marcus, Puk \& Sofia }
+\date{\today}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\begin{document}
+	
+	
+	\setcounter{section}{0}
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	\section{Introduction}
+	\input{Introduktion}
+	\newpage
+	
+	\section{Statistical theory}
+	\input{Statistical theory}
+	\newpage
+	
+	\section{Polynomial regression}
+ 	\input{Polynomial regression}
+	\newpage
+	
+	\subsection{Assumptions}
+	\newpage
+	
+	\section{Pseudo random number generator}
+	\input{PRNG}
+	\newpage
+	
+	\section{Monte Carlo}
+	\subsection{Assumptions}
+	\newpage
+	
+	\section{Problem statement}
+	\newpage
+	\section{intro til data}
+	\input{intro til data}
+	\newpage
+	\section{Classical regression}
+	\newpage
+	
+	\section{Monte Carlo regression}
+	\newpage
+	
+	\input{montecarlobootstrap.tex}
+	
+	
+	\section{super syntetisk}
+	\input{super syntetisk}
+	\newpage
+	
+	\section{Comparison between regressions}
+	\newpage
+	
+	\section{Discussion}
+	\newpage
+	
+	\section{Conclusion}
+	\newpage
+	
+ 	\section{Litteratur}
+ 	
+ 	\section{latextables}
+ 	\newpage
+  
+\end{document}

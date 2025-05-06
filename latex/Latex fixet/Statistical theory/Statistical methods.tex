@@ -1,0 +1,62 @@
+\subsection{Statistical methods}
+
+\subsubsection{Confidence intervals}
+The confidence interval is a good tool to use, when trying to estimate a parameter of a population. Its used to create an interval, where the parameter has a probability to lie inside of. This probability is called the confidence level and it's a chosen value, usually the chosen confidence level is either 95\% or 99\%. The confidence interval will become bigger with a larger confidence level. A good confidence interval is small with a large confidence level, this will usually occur when the sample size is large. The chosen confidence level relates to an $\alpha$-value, where as an example the chosen confidence level is 95\%, then the $\alpha$-value would be 5\% or normally written as $0.05$. The $\alpha$-value will sometimes be needed to find the critical value, that is used to calculate the margin of error, as an example it's used when trying to find the critical value of the confidence interval, when working with a t-distribution.
+\newline
+To set up a confidence interval, the margin of error needs to be computed and then that will be both added and subtracted from the point estimate. This will give the values of the outer bounds of the interval. The margin of error is calculated from this formula:
+$$Margin\_of\_error = critical\_value \pm standard\_error$$
+\newline
+The standard error will change depending on which parameter that the confidence interval is estimating, but the general formula for the standard error is:
+$$\frac{\sigma}{\sqrt{n}}$$
+\newline
+An example of computing a confidence interval of the mean while working with a standard normal distribution, then the formula for the confidence interval would be this:
+
+$$P(-z_{\alpha/2}<Z<z_{\alpha/2}) = 1-\alpha$$
+\newline
+Where $1-\alpha$ is the confidence level. As it's the mean that is being estimated, then instead of Z-score, then $\mu$ must be isolated and that is done by multiplying $\frac{\sigma}{\sqrt{n}}$ and subtracting $\bar{X}$ on all sides, then multiplying all side by $-1$ to remove the minus sign. So the formula for a confidence interval of the mean will look like this:
+
+$$P(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}<\mu<\bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})=1-\alpha$$
+\newline
+This formula will give the upper and lower bounds of the confidence interval.\\
+
+\noindent \textbf{The interpretation of a confidence interval}
+\newline
+To interpret a confidence interval, it would be incorrect to interpret the confidence level of some value $x$, as the probability of the true parameter being inside of the interval. The reason behind this is that the computed interval is static, so either the value $x$ is inside the interval or it's not. So the correct way of interpreting the confidence interval is by taking multiple samples and computing the confidence interval for all samples, then the value $x$ would reside inside 95\% of the confidence intervals.
+\textbf{Kilde for fortolkningen af kofidense intervaller:}
+\newline
+$http://www.drhuang.com/science/mathematics/book/probability_and_statistics_for_engineering_and_the_sciences.pdf$
+
+
+\subsubsection{Hypothesis testing}
+A hypothesis test is used to test an assumption about a population. This is done from a sample of the population, as the information about the population is usually hard to come by. A hypothesis test is set up, by having a null hypothesis and an alternate hypothesis.
+$$H_0 = Null\; hypothesis$$
+$$H_a = Alternate\; hypothesis$$
+When working with hypothesis testing, the hypothesis $H_0$ is usually represented as the status quo, where as the hypothesis $H_a$ is represented as the opposition. It is also important to note that there is only two outcomes of a hypothesis test, either $H_0$ is rejected in favor of $H_a$ or $H_0$ is failed to be rejected. Therefore in no situation can $H_0$ be stated to be an absolute truth, as there might be other samples where $H_0$ will be rejected. Therefore in a hypothesis test $H_0$ needs to be the thing that can be rejected and if $H_0$ gets rejected, then $H_a$ will become the new status quo until proven otherwise.\\
+In a hypothesis test $H_0$ will be the assumption that a parameter for two populations is the same, where as $H_a$ can be either one of three assumptions, depending on the intention of the hypothesis test.
+$$H_0: \theta = \theta_0$$
+$$1.\;H_a: \theta \neq \theta_0$$
+$$2.\;H_a: \theta < \theta_0$$
+$$3.\;H_a: \theta > \theta_0$$
+When the direction of the rejection is not important and also is unknown, then (1) will be the case. This scenario sets up a two-tailed-test, where the hypothesis test is used to reject $H_0$ if $H_a$ is either significantly larger or smaller than $H_0$, this means that the critical area is on both sides of the difference of $\theta$ and $\theta_0$. Either (2) or (3) will set up a one-tailed-test, where depending on what is important, either the hypothesis test is used to determine if $H_a$ is significantly bigger or smaller than $H_0$. This means that the critical area only spans one side of the difference between $\theta$ and $\theta_0$.\\
+
+
+\noindent \textbf{Error in hypothesis testing}
+\newline
+When making a hypothesis test there is four different possible outcomes. The results are separated by correct decisions and errors. There exist two types of hypothesis errors, called type 1 error and type 2 error. The type 1 error occurs when $H_0$ is mistakenly rejected and $H_0$ is true. Type 2 error is the opposite, where $H_a$ is rejected and $H_a$ is true. The types of outcomes occurring from a hypothesis test can be seen in Table \ref{tab:example2x3}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		 & $H_0$ is true & $H_0$ is false \\
+		\hline
+		Does not reject $H_0$ & Correct decision & Type 2 error \\ \hline
+		Reject $H_0$ & Type 1 error & Correct decision \\
+		\hline
+	\end{tabular}
+	\caption{Outcomes of a hypothesis test}
+	\label{tab:example2x3}
+\end{table}
+
+It is possible to compute the type 1 error
+
+
