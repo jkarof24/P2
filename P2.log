@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  5 MAY 2025 11:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  5 MAY 2025 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -283,17 +283,17 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-))
 
-[9] (Polynomial regression.tex (Assumptions.tex
 
-[10]))
+[9]))
 
-[11] (PRNG.tex
+[10] (Polynomial regression.tex (Assumptions.tex
 
-[12])
+[11]))
 
-[13]
+[12] (PRNG.tex
+
+[13])
 
 [14]
 
@@ -309,7 +309,9 @@ or  <return>  to continue without it.
 
 [20]
 
-[21] (P2.aux)
+[21]
+
+[22] (P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -341,9 +343,9 @@ msfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1
 ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/marcu/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on P2.pdf (21 pages, 229081 bytes).
+Output written on P2.pdf (22 pages, 231638 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
+ 153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

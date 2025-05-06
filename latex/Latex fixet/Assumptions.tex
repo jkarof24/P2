@@ -1,0 +1,55 @@
+\subsubsection{Homoscedasticity}
+One of the assumptions of a polynomial regression is that homoscedasticity is fulfilled. Homoscedasticity is the assumption of constant error variance, where observations in a dataset would exhibit errors that have roughly the same spread across all levels of the independent variable.
+\newline
+If this assumption is not upheld, then this will cause the standard error to be biased and therefore not trustworthy. This problem causes further testing involving this standard error to become wrong, an example is the hypothesis test.
+\newline
+The reason for the assumption needs to be upheld, comes from how the regression is created. The regression is created via the ordinary least square method, that requires the assumption of homoscedasticity to be upheld.
+\newline
+A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values. If the matrix contains all the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
+
+
+	
+%	\[
+%	\text{Var}(\varepsilon) = \begin{bmatrix}
+%		\sigma^2 & 0 & \cdots & 0 & 0 \\
+%		0 & \sigma^2 & \cdots & 0 & 0 \\
+%		\vdots & \vdots & \ddots & \vdots & \vdots \\
+%		0 & 0 & \cdots & \sigma^2 & 0 \\
+%		0 & 0 & \cdots & 0 & \sigma^2
+%	\end{bmatrix} = \sigma^2 I
+%	\]
+%\newline
+%The general way of writing the variance-covariance matrix, is by this formula:
+%\[
+%\text{Var}(\epsilon) = \mathbb{E}(\epsilon \epsilon') = \begin{bmatrix}
+%	\sigma_{1,1}^2 & \sigma_{1,2} & \sigma_{1,3} & \cdots & \sigma_{1,l-1} & \sigma_{1,l} \\
+%	\sigma_{2,1} & \sigma_{2,2}^2 & 0 & 0 & 0 \\
+%	\sigma_{3,1} & 0 & \ddots & \vdots & \vdots \\
+%	\vdots & & \ddots & \ddots & 0 \\
+%	\sigma_{l-1,1} & 0 & & 0 & \sigma_{l-1,l-1}^2 \\
+%	\sigma_{l,1} & 0 & & & & \sigma_{l,l}^2 
+%\end{bmatrix}
+%\]
+%\newline
+Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The positions that are not on the diagonal should be zero else the data contains another problem, that is autocorrelation, meaning that the observations in the data set are correlated.
+
+Source: https://openpublishing.library.umass.edu/pare/article/id/1590/
+
+\subsubsection{No multicollinearity}
+Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
+$$
+X_1 = c+\beta_1\cdot X_2+...+\beta_n\cdot X_n
+$$ 
+Where $X_1...X_n$ is all the independent variables that have a perfect linear relationship. The coefficients are represented by $\beta_1...\beta_n$ and they are the amount that $X_1$ changes when their relative independent variable changes.
+Lastly $c$ is the intercept and represents the value of $X_1$, when all other independent variables are zero.
+\newline
+The regression model can feel the effects of multicollinearity even without there being perfect multicollinearity. A strong linear relationship is enough to have an effect on the model. The problem caused by multicollinearity, is that as it increases the variance of the value that the coefficients can receive also increases. Where as perfect multicollinearity will make the model unable to estimate a value of one coefficient, due to the perfect linearity between the independent variables.
+\newline
+The VIF (variance inflation factor) is used to measure how much the variance of the coefficients are inflated due to multicollinearity. The formula for the VIF, is as followed:
+$$
+\frac{1}{1-R^2}
+$$
+Where $R^2$ is the coefficient of dertermination. This coefficient of dermination is calculated through a linear regression that is set up with an independent variable as the dependent variable and all the other independent variables staying as independent variables. This is done for all independent variables, so each independent variable has a VIF-value. A rule of thumb is that a VIF-value greater that ten is significant and therefore needs to be dealt with.
+
+
+Source: https://ekja.org/upload/pdf/kja-19087.pdf
