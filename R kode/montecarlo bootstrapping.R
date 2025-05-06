@@ -23,11 +23,14 @@ monte_carlo_bootstrap <- function(data, sample_size) {
     sample_n(sample_size, replace = TRUE)
 }
 
+# Fit polynomial regression function
 fit_polynomial_regression <- function(data) {
-  formula <- as.formula(paste("mpg ~", paste(sapply(setdiff(names(data), "mpg"), function(var) paste("poly(", var, ", 2)")), collapse = " + ")))
+  predictors <- setdiff(names(data), "mpg")
+  formula <- reformulate(termlabels = paste0("poly(", predictors, ", 2)"), response = "mpg")
   lm(formula, data = data)
 }
 
+# Run simulations
 run_simulations <- function(n_simulations, numeric_data, sample_size) {
   num_cores <- detectCores() - 1
   cl <- makeCluster(num_cores)
@@ -50,7 +53,8 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
   return(results_df)
 }
 
-set.seed(200)
+# Set seed and run simulations
+set.seed(210)
 n_simulations <- 10000
 sample_size <- 300
 results_df <- run_simulations(n_simulations, numeric_data, sample_size)
@@ -63,6 +67,7 @@ clean_colnames <- function(df) {
 
 results_df <- clean_colnames(results_df)
 
+# Create histograms
 create_histograms <- function(df) {
   plots <- lapply(names(df), function(col) {
     mean_value <- mean(df[[col]])
@@ -89,8 +94,17 @@ best_coefficients <- colMeans(results_df)
 
 print(best_coefficients)
 
-# Fit the final regression model using the best coefficients
-final_model <- lm(mpg ~ ., data = numeric_data)
+# Fit the final model using the original data
+final_model <- fit_polynomial_regression(numeric_data)
+
+# Create a function to apply averaged coefficients
+apply_coefficients <- function(model, coefficients) {
+  model$coefficients <- coefficients
+  return(model)
+}
+
+# Apply the averaged coefficients to the final model
+final_model <- apply_coefficients(final_model, best_coefficients)
 
 # Predict using the final model
 y_final_pred <- predict(final_model, newdata = numeric_data)
@@ -111,3 +125,7 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
 
+# Summarize models
+klassisk_model <- fit_polynomial_regression(numeric_data)
+summary(final_model)
+summary(klassisk_model)
