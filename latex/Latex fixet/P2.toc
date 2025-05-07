@@ -10,13 +10,14 @@
 \contentsline {subsection}{\numberline {2.2}Random variables}{6}{}%
 \contentsline {subsubsection}{\numberline {2.2.1}Discrete random variable}{6}{}%
 \contentsline {subsubsection}{\numberline {2.2.2}Continuous random variable}{7}{}%
-\contentsline {subsection}{\numberline {2.3}Probability distribution}{9}{}%
-\contentsline {subsubsection}{\numberline {2.3.1}Normal distribution}{9}{}%
-\contentsline {subsubsection}{\numberline {2.3.2}The central limit theorem}{10}{}%
-\contentsline {subsubsection}{\numberline {2.3.3}The t-distribution}{10}{}%
-\contentsline {subsection}{\numberline {2.4}Statistical methods}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.1}Confidence intervals}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.2}Hypothesis testing}{12}{}%
+\contentsline {subsection}{\numberline {2.3}test}{8}{}%
+\contentsline {subsection}{\numberline {2.4}Probability distribution}{9}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Normal distribution}{9}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}The central limit theorem}{10}{}%
+\contentsline {subsubsection}{\numberline {2.4.3}The t-distribution}{10}{}%
+\contentsline {subsection}{\numberline {2.5}Statistical methods}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Confidence intervals}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.2}Hypothesis testing}{12}{}%
 \contentsline {section}{\numberline {3}Polynomial regression}{14}{}%
 \contentsline {subsection}{\numberline {3.1}Assumptions}{14}{}%
 \contentsline {subsubsection}{\numberline {3.1.1}Homoscedasticity}{14}{}%
