@@ -1,0 +1,50 @@
+\subsection{Probability space}
+
+The \textbf{sample space}, \textit{S}, is the set of all possible outcomes.
+\newline
+If a sample space contains a finite number of possibilities or an unending sequence with as many elements as there are whole numbers, it is called a \textbf{discrete sample space}.
+\newline
+Example: When rolling a standard six-sided die form the discrete sample space, the possible outcomes are $S={1,2,3,4,5,6}$ 
+\newline
+
+If a sample space contains an infinite number of possibilities equal to the number of points on a line segment, it is called a \textbf{continuous sample space}.
+\break
+Example: Measuring the heights of people in a population. This is a continuous sample space, because height can take any real value within a given range. 
+\newline
+An \textbf{event} is a subset, $A\subseteq S$, of the sample space. The event is the amount that contains all possible events.
+An example of a discrete event could be rolling a die and getting an uneven number, this would be the event $A={1,3,5}$.
+\newline 
+For the continuous event, it could be that a person is between 160 cm and 170 cm tall.
+\newline
+
+The probability of an event \textit{A}, $P(A)$, is the sum of the weights of all sample points in \textit{A}.
+The probability of the whole sample space is 1, $P(S)=1$
+The probability of any event being between 0 and 1,$0<P(A)<1$
+The probability of the empty set being 0, $P(Ø)=0$
+\newline
+\newline
+Probability of mutually exclusive events
+\newline
+If \textit{A} and \textit{B} are mutually exclusive, $A \cap B=Ø$, then
+\newline
+$P(A \cup B) = P(A)+P(B)$
+\newline
+\newline
+Where \textit{A} and \textit{B} never occur at the same time, so their union is equal to the two events added together. 
+\newline
+Probability of union
+\newline
+$P(A \cup B)=P(A)+P(B)-P(A \cap B)$
+\newline
+Here, the union of the two events is \textit{A} added to \textit{B}, but minus their common event, since it otherwise would be added twice. 
+\newline
+Two events \textit{A} and \textit{B} are independent, if 
+\newline
+$P(A|B)=P(A)$
+\newline
+The equivalent definition to this is:
+\newline
+Two events \textit{A} and \textit{B} are independent if and only if 
+\newline
+$P(A \cap B)=P(A)P(B)$
+This says that the probability of both event \textit{A} and \textit{B} happening, is equal to the product of the two events.

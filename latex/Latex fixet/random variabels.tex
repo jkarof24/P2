@@ -1,0 +1,60 @@
+
+\subsection{Random variables}
+test
+A random variable is defined as a function that associates a real number with each element in the sample space. We use capital letters to denote a random variabel, for example $X$, and then the corresponding small letter, in this case $x$, for one of its values. As an example we roll a dice 3 times, which gives us a sample space of the different combinations. Each point in the sample space gets a numerical value assigned between 0 and 3.These values are random quantities and are assumed by the random variabel $X$, which for example could assume the amount of 5's rolled. In that case $X(5,1,2) = 1$ and $X(3,6,1) = 0$.
+\newline
+
+A random variable $X$ can be discrete, which means that its set of possible outcomes is countable. The dice example is a discrete random variable, because you can count how many times 5 is rolled. The outcomes of some statistical experiments may be neither finite nor countable. For example when something is measured such as temperature or speed where the set of possible values is an entire interval of numbers, it is not discrete. The random variable $X$ then takes values on a continues scale, which therefore is called a continuous random variable.
+
+\subsubsection{Discrete random variable}
+A discrete random variable assumes each of its values with a certain probability. Frequently, it is convenient to represent all the probabilities of a random variable $X$ by a formula. Let $X$ be a discrete random variable which can take the values $x_{1}, x_{2},...$ Then the distribution of $X$ is given by the probability function:
+$$f(x_{i})=P(X=x_{i}),\quad i=1,2,...$$
+\newline
+For a discrete random variable this function is also called the probability mass function, where following holds for each possible outcome $x$:
+
+\begin{itemize}
+	\item $P(X = x) = f(x).$
+	\item $f(x) \geq 0,$
+	\item $\sum_x f(x) = 1.$
+\end{itemize}
+
+In addition to the probability mass function $f$, the discrete random variable $X$ also has a distribution function $F(x)$ given by:
+$$F(x) = P(X \leq x) = \sum_{x_i \leq x} f(x_i), \quad x \in \textbf{R}.$$
+
+This helps decide the probability that the random variable assumes a value equal to or smaller than $x$. Its sums up the probability mass functions's values.
+\newline
+
+The mean of a discrete variabel $X$, with a distribution function $f(x_{i})$ is given by:
+$$\mu = E(X) = \sum_i x_i P(X = x_i) = \sum_i x_i f(x_i).$$
+The mean is typically the expected value. It is a weighed average of the possible values of $X$. The values are weighed by its probability in the sample space.
+\\
+
+In addition to the mean, we should also mention the variance. The variance is the mean squared distance between the values of the variable and the mean value. It is given by:
+$$\sigma^2 = E\left[(X - \mu)^2\right] = \sum_{i} (x_i - \mu)^2 f(x_i).$$
+The variance indicates whether the values of $X$ are far from the mean values or close. A high variance means that the values of $X$ have a high probability of being far from the mean values and vice versa. Along with the variance, the standard deviation is also often used. It is given by the square root of the variance:
+$$\sigma=+\sqrt{\sigma^2}.$$
+The advantage of the standard deviation over the variance is that it is measured in the same units as $X$.
+
+\subsubsection{Continuous random variable}
+Contrary to a discrete random variable, a continuous random variable can take values that are not countable. A continuous random variable can take infinetly many possible values within a certain range or interval. For a continuous random variable $X$ the distribution is given by the probability density function $f$, which satisfies:
+
+\begin{itemize}
+	\item $f(x)$ is defined for all $x$ in $\textbf{R}$,
+	\item $f(x) \geq 0$ for all $x$ in $\textbf{R}$,
+	\item $\int_{-\infty}^{\infty} f(x) \, dx = 1.$
+\end{itemize}
+
+Condition 3. ensures that $P(-\infty < X < \infty) = 1$, which means that the probability of the random variable $X$ being between $-\infty$ and $\infty$ is 100\%. Furthermore the probability of $X$ assuming a specific value $a$ is zero, in other words: $P(X=a)=0$. That means that the values of the density function should not be interpreted as a probability of a given outcome. Instead the probability of $X$ is found by integrating over the probability density function. So, the probability that a continuous random variable $X$ lies between the values $a$ and $b$ is: 
+$$P(a < X < b) = \int_a^b f(x) \, dx.$$
+
+A continuous random variable $X$ also has a distribution function $F(x)$, that also predicts whether $X$ assumes a value equal to or smaller than $x$. For a continuous random variable it is again given by integrating over the probability density function in the interval from $-\infty$ to $x$:
+$$F(x) = P(X \leq x) = \int_{-\infty}^{x} f(y) \ dy$$.
+That also means that $P(a<X<b)$ can be calculated by $F(b)-F(a)$.
+\\
+
+For a continuous random variabel $X$ the mean, variance and standard deviation the same interpretation applies. Just given by different formulars, which are:
+$$\mu = E(X) = \int_{-\infty}^{\infty} x f(x) \, dx$$
+and
+$$\sigma^2 = E\left[(X - \mu)^2\right] = \int_{-\infty}^{\infty} (x - \mu)^2 f(x) \, dx,$$
+(The standard deviation is still given by til square root of the variance).
+

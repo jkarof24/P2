@@ -14,7 +14,7 @@ rpearson <- function(n, moments) {
 }
 
 # Set working directory and read data
-setwd("C:/Users/Jonathan/Documents/GitHub/P2")
+setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # Select numeric columns

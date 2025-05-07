@@ -57,6 +57,13 @@ When making a hypothesis test there is four different possible outcomes. The res
 	\label{tab:example2x3}
 \end{table}
 
-It is possible to compute the type 1 error
+It is possible to compute the possibility of a type 1 error occurring, because the probability is equal to the significance level also denoted as $\alpha$. So when a significance level of 0.05 is chosen, then that is the same as the probability of a type 1 error occurring. As for computing the probability of a type 2 error occurring, it can only be done if $H_a$ is defined. The probability of a type 2 error occurring is denoted as $\beta$ and by a defined $H_a$, whats meant is that the $\mu$ of the sample is needed. Depending on the distribution and sample size, the calculation of $\beta$ will change.
+As an example in a normal distributed sample, the $\mu$ is needed in calculating a Z-score and this Z-score is needed to extract a value from the Z-table. Then the probability of a type 2 error occurring is calculated from this formula:
+$$
+\beta = 1-\phi(Z_\beta)
+$$
+In this formula $\phi(Z_\beta)$ is the value from the Z-table. Its possible to reverse this formula and denote the probability of a correct decision, where $H_0$ is rejected and $H_a$ is true, this is denoted as, $1-\beta$.
+It is possible to change the probability of these two errors occurring, this is done by changing the significance level. The consequence of this is that one of the errors will always lower its probability of occurring, while the other will have its probability increased. By reducing the significance level, the type 1 error will have a lower probability of happening, but a type 2 error will have an increase in probability of occurring. The opposite where the significance level is increased, the probability of the type 1 error will increase and for the type 2 error, it will be reduced. To overcome this problem, the only solution is to increase the sample size, as this will lower the probability of either of the two error types of happening.
+
 
 

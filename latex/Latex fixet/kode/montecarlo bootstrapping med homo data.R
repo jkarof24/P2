@@ -1,36 +1,66 @@
 library(dplyr)
-library(ggplot2)
-library(foreach)
 library(doParallel)
+library(foreach)
+library(ggplot2)
 library(gridExtra)
+library(lmtest)  # For Breusch-Pagan test
 
-# Set working directory and read data
-setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
-data <- read.csv("auto-mpg.csv", na.strings = ".")
+# Set seed for reproducibility
+set.seed(200)
 
-# Convert horsepower to numeric, coercing non-numeric values to NA
-data$horsepower <- as.numeric(data$horsepower)
+# Generate independent variables
+n <- 250
+x1 <- rnorm(n, mean = 5, sd = 1)
+x2 <- rnorm(n, mean = 10, sd = 4)
+x3 <- rnorm(n, mean = 15, sd = 3)
+x4 <- rnorm(n, mean = 20, sd = 5)
 
-# Remove rows with any NA values
-data <- data %>% na.omit()
 
-# Select numeric columns
-numeric_data <- data[sapply(data, is.numeric)]
+# Generate dependent variable with a polynomial relationship
+y <- 3 + 0.05*x1^2 + 0.015*x2^3 + 0.03*x3^4 + 0.02*x4^5 + 10*rnorm(n, mean = 0, sd = 1000)
 
-# Function to perform Monte Carlo bootstrapping
+# Create a data frame
+data <- data.frame(y, x1, x2, x3, x4)
+
+# Fit a polynomial regression model
+model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3^4) + I(x4^5), data = data)
+
+
+# Add an error term to x3 that scales with the corresponding y value
+x3_new <- x3 + rnorm(n, mean = 0, sd = 0.0001 * abs(y))
+
+
+# Create a new data frame
+data_new <- data.frame(y, x1 = x1, x2, x3_new, x4)
+
+# Fit a new polynomial regression model
+model_new <- lm(y ~ 1 + I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data_new)
+
+
+print("klassisk homo")
+summary(model)
+print("klassisk hetro")
+summary(model_new)
+
+data <- data_new
+numeric_data <- data_new
+
+
+
+
+
+
 monte_carlo_bootstrap <- function(data, sample_size) {
   data %>%
     sample_n(sample_size, replace = TRUE)
 }
 
-# Fit polynomial regression function
 fit_polynomial_regression <- function(data) {
-  predictors <- setdiff(names(data), "mpg")
-  formula <- reformulate(termlabels = paste0("poly(", predictors, ", 2)"), response = "mpg")
-  lm(formula, data = data)
+  
+  
+  formula <- lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data)
 }
 
-# Run simulations
 run_simulations <- function(n_simulations, numeric_data, sample_size) {
   num_cores <- detectCores() - 1
   cl <- makeCluster(num_cores)
@@ -53,10 +83,9 @@ run_simulations <- function(n_simulations, numeric_data, sample_size) {
   return(results_df)
 }
 
-# Set seed and run simulations
-set.seed(210)
+set.seed(200)
 n_simulations <- 10000
-sample_size <- 300
+sample_size <- 50
 results_df <- run_simulations(n_simulations, numeric_data, sample_size)
 
 # Clean column names to remove special characters
@@ -67,7 +96,6 @@ clean_colnames <- function(df) {
 
 results_df <- clean_colnames(results_df)
 
-# Create histograms
 create_histograms <- function(df) {
   plots <- lapply(names(df), function(col) {
     mean_value <- mean(df[[col]])
@@ -94,23 +122,18 @@ best_coefficients <- colMeans(results_df)
 
 print(best_coefficients)
 
-# Fit the final model using the original data
-final_model <- fit_polynomial_regression(numeric_data)
+# Fit the final regression model using the best coefficients
+final_model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3_new^4) + I(x4^5), data = data)
 
-# Create a function to apply averaged coefficients
-apply_coefficients <- function(model, coefficients) {
-  model$coefficients <- coefficients
-  return(model)
-}
 
-# Apply the averaged coefficients to the final model
-final_model <- apply_coefficients(final_model, best_coefficients)
+final_model$coefficients <- best_coefficients
+
 
 # Predict using the final model
 y_final_pred <- predict(final_model, newdata = numeric_data)
 
 # Calculate R-squared
-actual_values <- numeric_data$mpg
+actual_values <- numeric_data$y
 ss_total <- sum((actual_values - mean(actual_values))^2)
 ss_residual <- sum((actual_values - y_final_pred)^2)
 r_squared <- 1 - (ss_residual / ss_total)
@@ -125,7 +148,8 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
        x = "Actual Values", y = "Predicted Values") +
   theme_minimal()
 
-# Summarize models
-klassisk_model <- fit_polynomial_regression(numeric_data)
+
+print(best_coefficients)
+print("boot hetro")
 summary(final_model)
-summary(klassisk_model)
+

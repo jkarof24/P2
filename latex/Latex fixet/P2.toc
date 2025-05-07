@@ -1,0 +1,43 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{}%
+\contentsline {subsection}{\numberline {1.1}Independence of Errors}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Linearity}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Homoscedasticity}{4}{}%
+\contentsline {subsection}{\numberline {1.4}Normality of Errors}{4}{}%
+\contentsline {subsection}{\numberline {1.5}Multicollinearity}{4}{}%
+\contentsline {subsection}{\numberline {1.6}Correct Model Specifications}{4}{}%
+\contentsline {section}{\numberline {2}Statistical Theory}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Probability space}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Random variables}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Discrete random variable}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Continuous random variable}{7}{}%
+\contentsline {subsection}{\numberline {2.3}Probability distribution}{9}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Normal distribution}{9}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}The central limit theorem}{10}{}%
+\contentsline {subsubsection}{\numberline {2.3.3}The t-distribution}{10}{}%
+\contentsline {subsection}{\numberline {2.4}Statistical methods}{11}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Confidence intervals}{11}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}Hypothesis testing}{12}{}%
+\contentsline {section}{\numberline {3}Polynomial Regression}{14}{}%
+\contentsline {subsection}{\numberline {3.1}Assumptions}{14}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Homoscedasticity}{14}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}No multicollinearity}{15}{}%
+\contentsline {subsection}{\numberline {3.2}Assumptions}{17}{}%
+\contentsline {section}{\numberline {4}Pseudo Random Number Generator}{18}{}%
+\contentsline {section}{\numberline {5}Pseudo Random Number Generator}{18}{}%
+\contentsline {subsection}{\numberline {5.1}Properties of PRNGs}{18}{}%
+\contentsline {subsection}{\numberline {5.2}Linear Congruential Generator}{18}{}%
+\contentsline {section}{\numberline {6}Monte Carlo Bootstrap}{20}{}%
+\contentsline {subsection}{\numberline {6.1}Assumptions}{20}{}%
+\contentsline {section}{\numberline {7}Problem Statement}{21}{}%
+\contentsline {section}{\numberline {8}intro til data}{22}{}%
+\contentsline {section}{\numberline {9}intro til data }{22}{}%
+\contentsline {section}{\numberline {10}Classical Regression}{24}{}%
+\contentsline {section}{\numberline {11}Monte Carlo Regression}{25}{}%
+\contentsline {section}{\numberline {12}montecarlo bootstrapping }{26}{}%
+\contentsline {section}{\numberline {13}super syntetisk}{30}{}%
+\contentsline {section}{\numberline {14}super syntetisk }{30}{}%
+\contentsline {section}{\numberline {15}Comparison between Regressions}{33}{}%
+\contentsline {section}{\numberline {16}Discussion}{34}{}%
+\contentsline {section}{\numberline {17}Conclusion}{35}{}%
+\contentsline {section}{\numberline {18}Litteratur}{36}{}%
+\contentsline {section}{\numberline {19}latextables}{36}{}%

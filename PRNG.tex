@@ -1,0 +1,58 @@
+	\section{Pseudo Random Number Generator}
+	
+	To generate the dataset, we use a Pseudo-Random Number Generator (PRNG).
+	PRNGs are algorithms that produce sequences of numbers that appear random
+	but are actually deterministically generated from an initial seed value. While
+	these numbers are not truly random, they are sufficiently unpredictable for many
+	practical applications.
+	Random numbers are widely used in fields such as statistics, game theory, cryp-
+	tography, and simulations. These applications require numbers that behave
+	as if they were random, yet can be reproduced when needed. This is where
+	PRNGs come in—they allow for repeatable randomness, making them ideal for
+	controlled experiments, testing, and security.
+	This chapter will explore the key concepts behind PRNGs. Before going into the
+	mechanics of these generators, it is important to first understand what ’random’
+	means and the characteristics that define truly random numbers.
+	
+	\subsection{Properties of PRNGs}
+	
+The quality of a PRNG is determined by several key factors that influence its
+use for different applications. Some of the properties of a good PRNG is prop-
+erties: Independency, a large period and reproducibility
+The numbers produced by the PRNG should be statistically independent, en-
+suring that each generated value exhibits no correlation with previous numbers
+or other sequences. This implies that knowledge of previously generated num-
+bers or sequences provides no advantage in predicting the next output.
+A PRNG operates within a specific interval before its sequence begins to repeat.
+A high-quality PRNG has a long interval, delaying repetition and enhancing its
+unpredictability. Conversely, a PRNG with a shorter period becomes more pre-
+dictable and less suitable for practical use.
+A key feature of a PRNG is its ability to reproduce the same sequence of num-
+bers when given a specific seed. This property is particularly useful in testing
+and simulation scenarios, where it is essential to generate identical sequences
+multiple times for consistency and reproducibility
+In addition, a PRNG must be fast and efficient to prevent it from introducing
+performance bottlenecks within an application. The speed of number generation
+directly impacts computational efficiency, especially in applications requiring a
+large volume of random numbers. An inefficient PRNG can significantly slow
+down processes, undermining the overall performance of the system. Therefore,
+balancing randomness and efficiency is essential for practical applications
+	
+	\subsection{Linear Congruential Generator}
+	
+	Linear Congruential Sequence (LCS) is a commonly used approach to generate
+	pseudo-random numbers. LCS generates a sequence of numbers using a linear
+	recurrence relation LCS is expressed as:
+
+		$$X_{n+1} = (aX_n + c) \bmod m.$$
+
+	where $X_0$ is the seed, $a$ is the multiplier, $c$ is the increment, and $m$ is the modulus.
+	
+	\textbf{Example:} Given $a = 5$, $c = 1$, $m = 16$, and $X_0 = 7$:
+		$$X_1 = (5 \cdot 7 + 1)\bmod 16 = 4 $$
+		$$X_2 = (5 \cdot 4 + 1) \bmod 16 = 5 $$
+		$$X_3 = (5 \cdot 5 + 1) \bmod 16 = 10 $$
+		$$X_4 = (5 \cdot 10 + 1) \bmod 16 = 3 $$
+
+	
+	This sequence has a period of 16. In an LCG, the period can be as large as $m$, but choosing parameters carefully is crucial to achieving long periods.

@@ -1,0 +1,37 @@
+
+Linear regression is a model that estimates the relationship between a dependent variable, \( y \), and one or more independent variables, \( x \).
+
+A reasonable relationship between the two in simple regression is the linear relationship:
+
+\[
+Y = \beta_0 + \beta_1 x
+\]
+
+Where \( \beta_0 \) is the intercept, and \( \beta_1 \) is the slope.
+
+In a lot of cases, there will be more independent variables, so the relationship for multiple regression will look like this:
+
+\[
+Y = \beta_0 + \beta_1 x_1 + ......+ \beta_n x_n
+\]
+
+
+
+Where \( n \) is the number of independent variables. Linear models use the method of least squares of the residuals to estimate parameters, in order to find the best fitting line for the data.
+
+In simple linear regression, the random error \( \epsilon \) is included:
+
+\[
+Y = \beta_0 + \beta_1 x + \epsilon
+\]
+
+It is assumed that \( \epsilon \) is distributed with $\epsilon = 0$ and $\epsilon) = \sigma^2$, and it has consistent variance, which is usually called the \textit{homogeneous variance assumption}. The random error \( \epsilon \) adds randomness to account for the natural variability in real data, making the model more realistic.
+
+\section*{Polynomial Regression}
+
+Polynomial regression is a form of linear regression, but the relationship between \( x \) and \( y \) is an \( n \)th-degree polynomial. It fits a nonlinear relationship between the value of \( x \) and the corresponding conditional mean of \( y \), meaning the model predicts the expected value of \( y \) given \( x \).
+
+That is why it is used when the relationship between the independent variable and the dependent variable is better represented by a curve rather than a straight line, since it can show the nonlinear patterns in the data.
+
+	\subsection{Assumptions}
+	\input{Assumptions}
