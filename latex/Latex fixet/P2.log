@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  7 MAY 2025 09:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  7 MAY 2025 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -334,9 +334,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
 [19]
 
-[20]
+[20] (metrics.tex
+Underfull \hbox (badness 10000) in paragraph at lines 23--31
 
-[21] (intro til data.tex
+ []
+
+)
+
+[21]
+
+[22] (intro til data.tex
 (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
@@ -348,8 +355,8 @@ File: lstlang3.sty 2024/09/23 1.10c listings language file
 )
 (kode/intro.R
 
-[22])
-<billder/1.png, id=89, 867.24pt x 589.4522pt>
+[23])
+<billder/1.png, id=92, 867.24pt x 589.4522pt>
 File: billder/1.png Graphic file (type png)
 <use billder/1.png>
 Package pdftex.def Info: billder/1.png  used on input line 34.
@@ -362,7 +369,7 @@ Overfull \hbox (53.33858pt too wide) in paragraph at lines 34--35
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<billder/2.png, id=90, 867.24pt x 589.4522pt>
+<billder/2.png, id=93, 867.24pt x 589.4522pt>
 File: billder/2.png Graphic file (type png)
 <use billder/2.png>
 Package pdftex.def Info: billder/2.png  used on input line 41.
@@ -375,7 +382,7 @@ Overfull \hbox (53.33858pt too wide) in paragraph at lines 41--42
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<billder/3.png, id=91, 867.24pt x 589.4522pt>
+<billder/3.png, id=94, 867.24pt x 589.4522pt>
 File: billder/3.png Graphic file (type png)
 <use billder/3.png>
 Package pdftex.def Info: billder/3.png  used on input line 47.
@@ -390,19 +397,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 
-[23]
+[24]
 
-[24 <./billder/1.png (PNG copy)>] (montecarlobootstrap.tex
+[25 <./billder/1.png (PNG copy)>]
+
+[26 <./billder/2.png>] (montecarlobootstrap.tex
 (kode/montecarlo bootstrapping.R
 
-[25 <./billder/2.png>]
+[27 <./billder/3.png>]
 
-[26 <./billder/3.png>]
+[28]
 
-[27]
-
-[28])
-<billder/10.png, id=113, 1433.355pt x 753.5653pt>
+[29])
+<billder/10.png, id=116, 1433.355pt x 753.5653pt>
 File: billder/10.png Graphic file (type png)
 <use billder/10.png>
 Package pdftex.def Info: billder/10.png  used on input line 12.
@@ -412,14 +419,14 @@ Overfull \hbox (53.33858pt too wide) in paragraph at lines 12--13
  [][] 
  []
 
-)
+) (super syntetisk.tex
 
-[29 <./billder/10.png>] (super syntetisk.tex (kode/super syntetisk data_.R
+[30 <./billder/10.png>] (kode/super syntetisk data_.R
 
-[30]
+[31]
 
-[31])
-<billder/4.png, id=125, 867.24pt x 589.4522pt>
+[32])
+<billder/4.png, id=128, 867.24pt x 589.4522pt>
 File: billder/4.png Graphic file (type png)
 <use billder/4.png>
 Package pdftex.def Info: billder/4.png  used on input line 8.
@@ -429,7 +436,7 @@ Overfull \hbox (53.33858pt too wide) in paragraph at lines 8--9
  [][] 
  []
 
-<billder/5.png, id=126, 867.24pt x 589.4522pt>
+<billder/5.png, id=129, 867.24pt x 589.4522pt>
 File: billder/5.png Graphic file (type png)
 <use billder/5.png>
 Package pdftex.def Info: billder/5.png  used on input line 14.
@@ -442,7 +449,7 @@ Overfull \hbox (53.33858pt too wide) in paragraph at lines 14--15
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<billder/6.png, id=127, 867.24pt x 589.4522pt>
+<billder/6.png, id=130, 867.24pt x 589.4522pt>
 File: billder/6.png Graphic file (type png)
 <use billder/6.png>
 Package pdftex.def Info: billder/6.png  used on input line 20.
@@ -455,7 +462,7 @@ Overfull \hbox (53.33858pt too wide) in paragraph at lines 20--21
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<billder/7.png, id=128, 867.24pt x 589.4522pt>
+<billder/7.png, id=131, 867.24pt x 589.4522pt>
 File: billder/7.png Graphic file (type png)
 <use billder/7.png>
 Package pdftex.def Info: billder/7.png  used on input line 26.
@@ -468,7 +475,7 @@ Overfull \hbox (53.33858pt too wide) in paragraph at lines 26--27
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<billder/8.png, id=129, 867.24pt x 589.4522pt>
+<billder/8.png, id=132, 867.24pt x 589.4522pt>
 File: billder/8.png Graphic file (type png)
 <use billder/8.png>
 Package pdftex.def Info: billder/8.png  used on input line 33.
@@ -483,15 +490,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 
-[32 <./billder/4.png>]
+[33 <./billder/4.png>]
 
-[33 <./billder/5.png>]
+[34 <./billder/5.png>]
 
-[34 <./billder/6.png>]
+[35 <./billder/6.png>]
 
-[35 <./billder/7.png>]
+[36 <./billder/7.png>]
 
-[36 <./billder/8.png>] (P2.aux)
+[37 <./billder/8.png>] (P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -502,13 +509,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5115 strings out of 473523
- 78333 string characters out of 5714631
- 1020476 words of memory out of 5000000
- 28254 multiletter control sequences out of 15000+600000
+ 5123 strings out of 473523
+ 78512 string characters out of 5714631
+ 1000476 words of memory out of 5000000
+ 28259 multiletter control sequences out of 15000+600000
  564406 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1051b,2452s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,10n,65p,1146b,2452s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\jonat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt
 0800.pk> <C:\Users\jonat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm1000.pk><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/
@@ -529,9 +536,9 @@ pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/jonat/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jonat/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on P2.pdf (36 pages, 521400 bytes).
+Output written on P2.pdf (37 pages, 525162 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
+ 230 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
