@@ -3,6 +3,8 @@ library(ggplot2)
 library(foreach)
 library(doParallel)
 library(gridExtra)
+library(boot)
+library(car)
 
 # Set working directory and read data
 setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
@@ -17,6 +19,28 @@ data <- data %>% na.omit()
 # Select numeric columns
 numeric_data <- data[sapply(data, is.numeric)]
 
+# Function to calculate VIF and remove predictors with high VIF
+remove_multicollinearity <- function(data, threshold = 5) {
+  predictors <- setdiff(names(data), "mpg")
+  formula <- as.formula(paste("mpg ~", paste(predictors, collapse = " + ")))
+  model <- lm(formula, data = data)
+  vif_values <- vif(model)
+  
+  while (any(vif_values > threshold)) {
+    high_vif <- names(vif_values)[which.max(vif_values)]
+    predictors <- setdiff(predictors, high_vif)
+    formula <- as.formula(paste("mpg ~", paste(predictors, collapse = " + ")))
+    model <- lm(formula, data = data)
+    vif_values <- vif(model)
+  }
+  
+  data <- data %>% select(all_of(c("mpg", predictors)))
+  return(data)
+}
+
+# Remove multicollinearity
+numeric_data <- remove_multicollinearity(numeric_data)
+
 # Function to perform Monte Carlo bootstrapping
 monte_carlo_bootstrap <- function(data, sample_size) {
   data %>%
@@ -24,40 +48,38 @@ monte_carlo_bootstrap <- function(data, sample_size) {
 }
 
 # Fit polynomial regression function
-fit_polynomial_regression <- function(data) {
+fit_polynomial_regression <- function(data, indices) {
+  resampled_data <- data[indices, ]
   predictors <- setdiff(names(data), "mpg")
   formula <- reformulate(termlabels = paste0("poly(", predictors, ", 2)"), response = "mpg")
-  lm(formula, data = data)
+  model <- lm(formula, data = resampled_data)
+  return(model)
 }
 
-# Run simulations
-run_simulations <- function(n_simulations, numeric_data, sample_size) {
-  num_cores <- detectCores() - 1
-  cl <- makeCluster(num_cores)
-  registerDoParallel(cl)
-  
-  clusterExport(cl, c("numeric_data", "fit_polynomial_regression", "monte_carlo_bootstrap", "sample_size"))
-  clusterEvalQ(cl, library(dplyr))
-  
-  results <- foreach(i = 1:n_simulations, .combine = rbind, .packages = "dplyr") %dopar% {
-    resampled_data <- monte_carlo_bootstrap(numeric_data, sample_size)
-    model <- fit_polynomial_regression(resampled_data)
+# Apply coefficients function
+apply_coefficients <- function(model, coefficients) {
+  model$coefficients <- coefficients[1:length(model$coefficients)]
+  return(model)
+}
+
+# Run simulations using boot
+run_simulations <- function(n_simulations, numeric_data) {
+  boot_results <- boot(data = numeric_data, statistic = function(data, indices) {
+    model <- fit_polynomial_regression(data, indices)
     c(coef(model), summary(model)$r.squared)
-  }
+  }, R = n_simulations)
   
-  stopCluster(cl)
-  
-  results_df <- as.data.frame(results)
-  colnames(results_df) <- c(names(coef(fit_polynomial_regression(numeric_data))), "r_squared")
+  results_df <- as.data.frame(boot_results$t)
+  colnames(results_df) <- c(names(coef(fit_polynomial_regression(numeric_data, 1:nrow(numeric_data)))), "r_squared")
   
   return(results_df)
 }
 
 # Set seed and run simulations
 set.seed(210)
-n_simulations <- 10000
+n_simulations <- 1000
 sample_size <- 300
-results_df <- run_simulations(n_simulations, numeric_data, sample_size)
+results_df <- run_simulations(n_simulations, numeric_data)
 
 # Clean column names to remove special characters
 clean_colnames <- function(df) {
@@ -91,17 +113,10 @@ create_histograms(results_df)
 
 # Calculate the mean of the coefficients from the Monte Carlo simulation
 best_coefficients <- colMeans(results_df)
-
-print(best_coefficients)
+best_coefficients <- setNames(best_coefficients, names(coef(fit_polynomial_regression(numeric_data, 1:nrow(numeric_data)))))
 
 # Fit the final model using the original data
-final_model <- fit_polynomial_regression(numeric_data)
-
-# Create a function to apply averaged coefficients
-apply_coefficients <- function(model, coefficients) {
-  model$coefficients <- coefficients
-  return(model)
-}
+final_model <- fit_polynomial_regression(numeric_data, 1:nrow(numeric_data))
 
 # Apply the averaged coefficients to the final model
 final_model <- apply_coefficients(final_model, best_coefficients)
@@ -126,6 +141,6 @@ ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Act
   theme_minimal()
 
 # Summarize models
-klassisk_model <- fit_polynomial_regression(numeric_data)
+klassisk_model <- fit_polynomial_regression(numeric_data, 1:nrow(numeric_data))
 summary(final_model)
 summary(klassisk_model)
