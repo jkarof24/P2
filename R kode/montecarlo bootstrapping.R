@@ -1,3 +1,4 @@
+# Load necessary libraries
 library(dplyr)
 library(ggplot2)
 library(foreach)
@@ -89,28 +90,6 @@ clean_colnames <- function(df) {
 
 results_df <- clean_colnames(results_df)
 
-# Create histograms
-create_histograms <- function(df) {
-  plots <- lapply(names(df), function(col) {
-    mean_value <- mean(df[[col]])
-    sd_value <- sd(df[[col]])
-    
-    ggplot(df, aes_string(x = col)) +
-      geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", color = "black", alpha = 0.7) +
-      geom_density(color = "red", size = 1) +
-      geom_vline(aes(xintercept = mean_value), color = "green", linetype = "dashed", size = 1) +
-      ggtitle(paste("Density, Mean and SD of", col)) +
-      theme_minimal() +
-      annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 2), "\nSD:", round(sd_value, 2)), 
-               hjust = 1.1, vjust = 2, color = "black", size = 4)
-  })
-  
-  grid.arrange(grobs = plots, ncol = 2)
-}
-
-# Generate histograms for the simulation results
-create_histograms(results_df)
-
 # Calculate the mean of the coefficients from the Monte Carlo simulation
 best_coefficients <- colMeans(results_df)
 best_coefficients <- setNames(best_coefficients, names(coef(fit_polynomial_regression(numeric_data, 1:nrow(numeric_data)))))
@@ -132,6 +111,28 @@ r_squared <- 1 - (ss_residual / ss_total)
 
 # Print R-squared value
 cat("R-squared:", r_squared, "\n")
+
+# Create histograms
+create_histograms <- function(df) {
+  plots <- lapply(names(df), function(col) {
+    mean_value <- mean(df[[col]])
+    sd_value <- sd(df[[col]])
+    
+    ggplot(df, aes_string(x = col)) +
+      geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", color = "black", alpha = 0.7) +
+      geom_density(color = "red", size = 1) +
+      geom_vline(aes(xintercept = mean_value), color = "green", linetype = "dashed", size = 1) +
+      ggtitle(paste("Density, Mean and SD of", col)) +
+      theme_minimal() +
+      annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 2), "\nSD:", round(sd_value, 2)), 
+               hjust = 1.1, vjust = 2, color = "black", size = 4)
+  })
+  
+  grid.arrange(grobs = plots, ncol = 2)
+}
+
+# Generate histograms for the simulation results
+create_histograms(results_df)
 
 # Plot the final regression model
 ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Actual, y = Predicted)) +
