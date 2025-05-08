@@ -10,13 +10,14 @@
 \contentsline {subsection}{\numberline {2.2}Random variables}{6}{}%
 \contentsline {subsubsection}{\numberline {2.2.1}Discrete random variable}{6}{}%
 \contentsline {subsubsection}{\numberline {2.2.2}Continuous random variable}{7}{}%
-\contentsline {subsection}{\numberline {2.3}Probability distribution}{9}{}%
-\contentsline {subsubsection}{\numberline {2.3.1}Normal distribution}{9}{}%
-\contentsline {subsubsection}{\numberline {2.3.2}The central limit theorem}{10}{}%
-\contentsline {subsubsection}{\numberline {2.3.3}The t-distribution}{10}{}%
-\contentsline {subsection}{\numberline {2.4}Statistical methods}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.1}Confidence intervals}{11}{}%
-\contentsline {subsubsection}{\numberline {2.4.2}Hypothesis testing}{12}{}%
+\contentsline {subsection}{\numberline {2.3}test}{8}{}%
+\contentsline {subsection}{\numberline {2.4}Probability distribution}{9}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Normal distribution}{9}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}The central limit theorem}{10}{}%
+\contentsline {subsubsection}{\numberline {2.4.3}The t-distribution}{10}{}%
+\contentsline {subsection}{\numberline {2.5}Statistical methods}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Confidence intervals}{11}{}%
+\contentsline {subsubsection}{\numberline {2.5.2}Hypothesis testing}{12}{}%
 \contentsline {section}{\numberline {3}Polynomial Regression}{14}{}%
 \contentsline {subsection}{\numberline {3.1}Assumptions}{14}{}%
 \contentsline {subsubsection}{\numberline {3.1.1}Homoscedasticity}{14}{}%
@@ -28,16 +29,16 @@
 \contentsline {subsection}{\numberline {5.2}Linear Congruential Generator}{18}{}%
 \contentsline {section}{\numberline {6}Monte Carlo Bootstrap}{20}{}%
 \contentsline {subsection}{\numberline {6.1}Assumptions}{20}{}%
-\contentsline {section}{\numberline {7}Problem Statement}{21}{}%
-\contentsline {section}{\numberline {8}intro til data}{22}{}%
-\contentsline {section}{\numberline {9}intro til data }{22}{}%
-\contentsline {section}{\numberline {10}Classical Regression}{24}{}%
-\contentsline {section}{\numberline {11}Monte Carlo Regression}{25}{}%
-\contentsline {section}{\numberline {12}montecarlo bootstrapping }{26}{}%
-\contentsline {section}{\numberline {13}super syntetisk}{30}{}%
-\contentsline {section}{\numberline {14}super syntetisk }{30}{}%
-\contentsline {section}{\numberline {15}Comparison between Regressions}{33}{}%
-\contentsline {section}{\numberline {16}Discussion}{34}{}%
-\contentsline {section}{\numberline {17}Conclusion}{35}{}%
-\contentsline {section}{\numberline {18}Litteratur}{36}{}%
-\contentsline {section}{\numberline {19}latextables}{36}{}%
+\contentsline {section}{\numberline {7}Metrics}{21}{}%
+\contentsline {subsection}{\numberline {7.1}R-Squared}{21}{}%
+\contentsline {section}{\numberline {8}Problem Statement}{22}{}%
+\contentsline {section}{\numberline {9}intro til data}{23}{}%
+\contentsline {section}{\numberline {10}Classical Regression}{25}{}%
+\contentsline {section}{\numberline {11}Monte Carlo Regression}{26}{}%
+\contentsline {section}{\numberline {12}montecarlo bootstrapping }{27}{}%
+\contentsline {section}{\numberline {13}super syntetisk}{31}{}%
+\contentsline {section}{\numberline {14}Comparison between Regressions}{34}{}%
+\contentsline {section}{\numberline {15}Discussion}{35}{}%
+\contentsline {section}{\numberline {16}Conclusion}{36}{}%
+\contentsline {section}{\numberline {17}Litteratur}{37}{}%
+\contentsline {section}{\numberline {18}latextables}{37}{}%
