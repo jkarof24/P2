@@ -31,7 +31,7 @@ $$MBE=\frac{1}{n}\sum_{i=1}^{n}(\hat{y_i}-y_i)$$
 \noindent Here $\hat{y_i}$ is the predicted value, $y_i$ is the actual value, and $n$ is the number of observations.
 \\\\
 
-When interpreting MBE there are three different cases. If the $\text{MBE}\geq 0$, the model tends to over-predict the values compared to the actual values. If the $\text{MBE}\leq0$, the opposite is the case, and the model tends to under-predict the values. If the $\text{MBE}\approx0$ there is no consistent bias in either direction.
+When interpreting MBE there are three different cases. If the $\textbf{MBE}\geq 0$, the model tends to over-predict the values compared to the actual values. If the $\textbf{MBE}\leq0$, the opposite is the case, and the model tends to under-predict the values. If the $\textbf{MBE}\approx0$ there is no consistent bias in either direction.
 \\
 
 \noindent As mentioned, the MBE measures the bias of the model, if it generally predicts values too high or too low compared to the actual values. This means that we cannot use MBE to estimate the size of the error or the overall quality of the model. If two actual values are $100$ and the model predicts $120$ and $80$ the error calculated with $\hat{y}-y$ is respectively $+20$ and $-20$. Because the absolute or squared values are not used, these errors will cancel each other out. Therefore, the size of the error is not computed. Instead, to understand the size of the errors, Root Mean Square Error can be used, which penalizes large deviations more heavily.
@@ -44,7 +44,7 @@ https://www.sciencedirect.com/topics/earth-and-planetary-sciences/root-mean-squa
 Root Mean Square Error (RMSE) is a metric used to evaluate regression models. It measures the average size of prediction errors. Since it squares the errors, it punishes larger mistakes harder than smaller ones, which is useful if the objective is to emphasize the impact of larger deviations of the actual values.
 \\
 The formula used to calculate RMSE:
-$$\text{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y_i}-y_{1})^2}$$
+$$\textbf{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y_i}-y_{1})^2}$$
 As before $\hat{y_i}$ is the predicted value, $y_i$ is the actual value, and $n$ is the number of observations.
 \\ The idea is to find the error by subtracting the actual value from its prediction, square the error so negatives and positives do not cancel out (like in MBE) and large errors will stand out. Then the average of all squared errors is found, and the square root is taken to bring the result back to the original scale. 
 \\
