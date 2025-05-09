@@ -8,7 +8,7 @@ library(boot)
 library(car)
 
 # Set working directory and read data
-setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
+setwd("C:/Users/jonat/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # Convert horsepower to numeric, coercing non-numeric values to NA
@@ -51,9 +51,7 @@ monte_carlo_bootstrap <- function(data, sample_size) {
 # Fit polynomial regression function
 fit_polynomial_regression <- function(data, indices) {
   resampled_data <- data[indices, ]
-  predictors <- setdiff(names(data), "mpg")
-  formula <- reformulate(termlabels = paste0("poly(", predictors, ", 2)"), response = "mpg")
-  model <- lm(formula, data = resampled_data)
+  model <- lm(mpg ~ poly(acceleration, 2) + poly(cylinders, 2) + poly(model.year, 2) + poly(origin, 2), data = resampled_data)
   return(model)
 }
 
@@ -77,8 +75,8 @@ run_simulations <- function(n_simulations, numeric_data) {
 }
 
 # Set seed and run simulations
-set.seed(210)
-n_simulations <- 1000
+set.seed(211)
+n_simulations <- 10000
 sample_size <- 300
 results_df <- run_simulations(n_simulations, numeric_data)
 
@@ -90,58 +88,19 @@ clean_colnames <- function(df) {
 
 results_df <- clean_colnames(results_df)
 
-# Calculate the mean of the coefficients from the Monte Carlo simulation
-best_coefficients <- colMeans(results_df)
-best_coefficients <- setNames(best_coefficients, names(coef(fit_polynomial_regression(numeric_data, 1:nrow(numeric_data)))))
+# Calculate the median of the coefficients from the Monte Carlo simulation
+best_coefficients <- apply(results_df, 8, median)
 
 # Fit the final model using the original data
 final_model <- fit_polynomial_regression(numeric_data, 1:nrow(numeric_data))
 
-# Apply the averaged coefficients to the final model
+# Apply the median coefficients to the final model
 final_model <- apply_coefficients(final_model, best_coefficients)
 
-# Predict using the final model
+
 y_final_pred <- predict(final_model, newdata = numeric_data)
 
-# Calculate R-squared
-actual_values <- numeric_data$mpg
-ss_total <- sum((actual_values - mean(actual_values))^2)
-ss_residual <- sum((actual_values - y_final_pred)^2)
-r_squared <- 1 - (ss_residual / ss_total)
-
-# Print R-squared value
-cat("R-squared:", r_squared, "\n")
-
-# Create histograms
-create_histograms <- function(df) {
-  plots <- lapply(names(df), function(col) {
-    mean_value <- mean(df[[col]])
-    sd_value <- sd(df[[col]])
-    
-    ggplot(df, aes_string(x = col)) +
-      geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", color = "black", alpha = 0.7) +
-      geom_density(color = "red", size = 1) +
-      geom_vline(aes(xintercept = mean_value), color = "green", linetype = "dashed", size = 1) +
-      ggtitle(paste("Density, Mean and SD of", col)) +
-      theme_minimal() +
-      annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 2), "\nSD:", round(sd_value, 2)), 
-               hjust = 1.1, vjust = 2, color = "black", size = 4)
-  })
-  
-  grid.arrange(grobs = plots, ncol = 2)
-}
-
-# Generate histograms for the simulation results
-create_histograms(results_df)
-
-# Plot the final regression model
-ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Actual, y = Predicted)) +
-  geom_point(alpha = 0.7) +
-  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 2), ")"), 
-       x = "Actual Values", y = "Predicted Values") +
-  theme_minimal()
-
 # Summarize models
-klassisk_model <- fit_polynomial_regression(numeric_data, 1:nrow(numeric_data))
+klassisk_model <- lm(mpg ~ poly(acceleration, 2) + poly(cylinders, 2) + poly(model.year, 2) + poly(origin, 2), data = data)
 summary(final_model)
 summary(klassisk_model)

@@ -52,7 +52,6 @@ scatter_plots <- function(data, color, title_prefix) {
   lapply(names(data)[-1], function(col) {
     ggplot(data, aes_string(x = "y", y = col)) +
       geom_point(color = color) +
-      ggtitle(paste(title_prefix, col, "vs y")) +
       theme_minimal()
   })
 }
