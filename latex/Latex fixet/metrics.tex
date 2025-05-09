@@ -1,0 +1,98 @@
+To evaluate the quality of a regression model, i. e. how well the model is performing. All the metrics provide some kind of score that reflects the reliability of the model's predictions..
+
+Metrics in are measures used to evaluate how well a model performs. Metrics assess the accuracy of the model’s predictions compared to actual values. Common metrics like R² and MBE help determine how closely predictions match real outcomes, while others like bias and variance reveal systematic errors and model stability. Metrics help model selection improvement by providing objective feedback on performance. They’re essential for comparing models, detecting underfitting or overfitting, and ensuring predictions are reliable for real-world use.
+\\\\
+
+\subsection{R-Squared}
+% What is it?
+The $R^2$ measures how much better the model is at guessing than guessing the mean of the variable. It is calculated using the Total Sum of Squares (TSS) and the Sum of Squared Errors (SSE) with this formula: $$R^2= \frac{TSS-SSE}{TSS}.$$ TSS explains how much the values of a dataset vary from the mean and is calculated by: 
+$$\sum_{i=1}^{n}(y_i-\overline{y})^2,$$
+where $y_1$ is the actual value and $\overline{y}$ is the mean of all actual values.
+\\\\
+
+\noindent The SSE is how far the predictions from the model are from the actual values and is calculated by:
+$$\sum_{i=1}^{n}(y_i-\hat{y_i})^2,$$
+where $\hat{y_i}$ is the predicted value from the model. The errors are squared to make all values positive, highlight larger mistakes more strongly, and stay consistent with how variance is calculated in statistics.
+\\\\
+% Interpretation
+$R^2$ explains much of the variance explained by the model. The value of $R^2$ will therefore normally be $0\leq R^2 \geq 1$, where 0 means that the model explains none of the variance, a value of 1 would mean that the model explains all the variance, while 0.5 means that the model explains 50\% of the variance. If the $R^2$-value is negative, it means that the model is performing so bad, that it would be better so simply predict the mean for all observations.
+\newpage
+
+\noindent Although widely used, the $R^2$-score should not be relied upon as the only metric of model performance due to several shortcomings. Primarily, it evaluates the proportion of variance in the dependent variable explained by the model, but does not reflect the accuracy of individual values. As a result, a model can achieve a high $R^2$ despite making major errors on specific data points. In addition, $R^2$ is vulnerable to overfitting, especially when the model becomes overly complex and starts fitting the noise in the data instead of underlying trends. Another critical issue is that $R^2$ does not adjust for the number of predictors in the model. It will never decrease when more features are added, even if those features are irrelevant. For a more reliable assessment, alternative metrics should be used alongside $R^2$ to evaluate a regression model. 
+\newpage
+
+\subsection{Mean Bias Error}
+Mean Bias Error (MBE) is a metric that measures the average difference between the actual values and the model's predictions. Unlike other metrics, MBE does not emphasize the magnitude of the error but instead indicates whether the model systematically overestimates or underestimates, revealing potential bias in the predictions.
+
+The formula for MBE is:
+
+$$MBE=\frac{1}{n}\sum_{i=1}^{n}(\hat{y_i}-y_i)$$
+
+\noindent Here $\hat{y_i}$ is the predicted value, $y_i$ is the actual value, and $n$ is the number of observations.
+\\\\
+
+When interpreting MBE there are three different cases. If the $\text{MBE}\geq 0$, the model tends to over-predict the values compared to the actual values. If the $\text{MBE}\leq0$, the opposite is the case, and the model tends to under-predict the values. If the $\text{MBE}\approx0$ there is no consistent bias in either direction.
+\\
+
+\noindent As mentioned, the MBE measures the bias of the model, if it generally predicts values too high or too low compared to the actual values. This means that we cannot use MBE to estimate the size of the error or the overall quality of the model. If two actual values are $100$ and the model predicts $120$ and $80$ the error calculated with $\hat{y}-y$ is respectively $+20$ and $-20$. Because the absolute or squared values are not used, these errors will cancel each other out. Therefore, the size of the error is not computed. Instead, to understand the size of the errors, Root Mean Square Error can be used, which penalizes large deviations more heavily.
+
+\newpage
+
+\subsection{Root Mean Square Error}
+https://www.sciencedirect.com/topics/earth-and-planetary-sciences/root-mean-square-error    
+\\
+Root Mean Square Error (RMSE) is a metric used to evaluate regression models. It measures the average size of prediction errors. Since it squares the errors, it punishes larger mistakes harder than smaller ones, which is useful if the objective is to emphasize the impact of larger deviations of the actual values.
+\\
+The formula used to calculate RMSE:
+$$\text{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y_i}-y_{1})^2}$$
+As before $\hat{y_i}$ is the predicted value, $y_i$ is the actual value, and $n$ is the number of observations.
+\\ The idea is to find the error by subtracting the actual value from its prediction, square the error so negatives and positives do not cancel out (like in MBE) and large errors will stand out. Then the average of all squared errors is found, and the square root is taken to bring the result back to the original scale. 
+\\
+
+The value of the result of RMSE will always be a non-negative number and the closer RMSE is to 0, the better the model is performing. The scale and unit of RMSE is the same as the target variable. So, if the data is about 'Miles Per Gallon', a RMSE of 2 means that the predictions of the model are 2 miles off, on average. Therefore, RMSE is most useful when the objective is comparing different models on the same dataset, or at least on datasets that are on the same scale, and in the same units. This also means an RMSE of 5 can be great if the values of the target variable ranges from 1-1000, but awful if the range is 1-10. As the other metrics, RMSE should be used alongside other metrics like better picture of the models performance. RMSE does not explain why a model performs well or bad. To investigate that, bias-variance decomposition can be used to split error into systematic bias and model instability.
+\newpage
+
+\subsection{Bias-Variance}
+To understand the sources of error in a model’s predictions, the bias-variance decomposition framework can be used. Bias and variance describe two different ways a model can make mistakes. Bias measures how far, on average, the model's predictions are from the true values. Variance describes how sensitive the model is to changes in the training data; it measures how much the model’s predictions vary when trained on different datasets. 
+
+The ideal case is when both bias and variance are low, meaning the model is both accurate and stable. This framework is especially useful for diagnosing underfitting, which is caused by high bias, and overfitting, which is caused by high variance. By examining both bias and variance, the decomposition helps in understanding the trade-off between model complexity and generalization.
+
+\subsubsection{Variance}
+The variance of a model, for a single input, can be calculated using this formula:
+$$
+\textbf{Var}[\hat{f}(x)] = \frac{1}{M} \sum_{j=1}^{M} (\hat{f}_j(x) - \overline{\hat{f}}(x))^2
+$$
+
+Where:
+\begin{itemize}
+	\item $M$ is the number of models or simulations,
+	\item $\hat{f}_j(x)$ is the prediction by model $j$ at input $x$,
+	\item $\overline{\hat{f}}(x)$ is the mean prediction across all $M$ models at input $x$.
+\end{itemize}
+
+This formula measures how much predictions vary at a specific input $x$ across multiple model runs. To calculate the overall variance across the input space, the average of the variances at all test inputs is taken:
+
+$$
+\textbf{Overall Model Variance} = \frac{1}{n} \sum_{i=1}^{n} \textbf{Var}[\hat{f}(x_i)]
+$$
+
+This overall measure is beneficial because it captures how the model’s prediction variability behaves across the entire dataset, rather than at just one point. A model with high variance is likely too complex and sensitive to the noise in the data.
+
+\subsubsection{Bias}
+Bias measures how far the model’s average prediction is from the true value. Since bias can be positive or negative, it is typically squared to focus on its magnitude. The squared bias for a specific input $x$ is calculated as:
+
+$$
+\textbf{Bias}^2(x) = (\overline{\hat{f}}(x) - f(x))^2
+$$
+
+The overall squared bias across all inputs is calculated by averaging over the test set:
+
+$$
+\textbf{Bias}^2 = \frac{1}{n} \sum_{i=1}^{n} (\overline{\hat{f}}(x_i) - f(x_i))^2
+$$
+
+High bias typically indicates that the model is too simple to capture the underlying structure of the data, resulting in systematic under- or over-prediction.
+
+
+
+\subsection{Confidence-intervals}

@@ -1,11 +1,14 @@
+# Load necessary libraries
 library(dplyr)
 library(ggplot2)
 library(foreach)
 library(doParallel)
 library(gridExtra)
+library(boot)
+library(car)
 
 # Set working directory and read data
-setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
+setwd("C:/Users/jonat/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # Convert horsepower to numeric, coercing non-numeric values to NA
@@ -17,6 +20,28 @@ data <- data %>% na.omit()
 # Select numeric columns
 numeric_data <- data[sapply(data, is.numeric)]
 
+# Function to calculate VIF and remove predictors with high VIF
+remove_multicollinearity <- function(data, threshold = 5) {
+  predictors <- setdiff(names(data), "mpg")
+  formula <- as.formula(paste("mpg ~", paste(predictors, collapse = " + ")))
+  model <- lm(formula, data = data)
+  vif_values <- vif(model)
+  
+  while (any(vif_values > threshold)) {
+    high_vif <- names(vif_values)[which.max(vif_values)]
+    predictors <- setdiff(predictors, high_vif)
+    formula <- as.formula(paste("mpg ~", paste(predictors, collapse = " + ")))
+    model <- lm(formula, data = data)
+    vif_values <- vif(model)
+  }
+  
+  data <- data %>% select(all_of(c("mpg", predictors)))
+  return(data)
+}
+
+# Remove multicollinearity
+numeric_data <- remove_multicollinearity(numeric_data)
+
 # Function to perform Monte Carlo bootstrapping
 monte_carlo_bootstrap <- function(data, sample_size) {
   data %>%
@@ -24,40 +49,36 @@ monte_carlo_bootstrap <- function(data, sample_size) {
 }
 
 # Fit polynomial regression function
-fit_polynomial_regression <- function(data) {
-  predictors <- setdiff(names(data), "mpg")
-  formula <- reformulate(termlabels = paste0("poly(", predictors, ", 2)"), response = "mpg")
-  lm(formula, data = data)
+fit_polynomial_regression <- function(data, indices) {
+  resampled_data <- data[indices, ]
+  model <- lm(mpg ~ poly(acceleration, 2) + poly(cylinders, 2) + poly(model.year, 2) + poly(origin, 2), data = resampled_data)
+  return(model)
 }
 
-# Run simulations
-run_simulations <- function(n_simulations, numeric_data, sample_size) {
-  num_cores <- detectCores() - 1
-  cl <- makeCluster(num_cores)
-  registerDoParallel(cl)
-  
-  clusterExport(cl, c("numeric_data", "fit_polynomial_regression", "monte_carlo_bootstrap", "sample_size"))
-  clusterEvalQ(cl, library(dplyr))
-  
-  results <- foreach(i = 1:n_simulations, .combine = rbind, .packages = "dplyr") %dopar% {
-    resampled_data <- monte_carlo_bootstrap(numeric_data, sample_size)
-    model <- fit_polynomial_regression(resampled_data)
+# Apply coefficients function
+apply_coefficients <- function(model, coefficients) {
+  model$coefficients <- coefficients[1:length(model$coefficients)]
+  return(model)
+}
+
+# Run simulations using boot
+run_simulations <- function(n_simulations, numeric_data) {
+  boot_results <- boot(data = numeric_data, statistic = function(data, indices) {
+    model <- fit_polynomial_regression(data, indices)
     c(coef(model), summary(model)$r.squared)
-  }
+  }, R = n_simulations)
   
-  stopCluster(cl)
-  
-  results_df <- as.data.frame(results)
-  colnames(results_df) <- c(names(coef(fit_polynomial_regression(numeric_data))), "r_squared")
+  results_df <- as.data.frame(boot_results$t)
+  colnames(results_df) <- c(names(coef(fit_polynomial_regression(numeric_data, 1:nrow(numeric_data)))), "r_squared")
   
   return(results_df)
 }
 
 # Set seed and run simulations
-set.seed(210)
+set.seed(211)
 n_simulations <- 10000
 sample_size <- 300
-results_df <- run_simulations(n_simulations, numeric_data, sample_size)
+results_df <- run_simulations(n_simulations, numeric_data)
 
 # Clean column names to remove special characters
 clean_colnames <- function(df) {
@@ -67,65 +88,19 @@ clean_colnames <- function(df) {
 
 results_df <- clean_colnames(results_df)
 
-# Create histograms
-create_histograms <- function(df) {
-  plots <- lapply(names(df), function(col) {
-    mean_value <- mean(df[[col]])
-    sd_value <- sd(df[[col]])
-    
-    ggplot(df, aes_string(x = col)) +
-      geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", color = "black", alpha = 0.7) +
-      geom_density(color = "red", size = 1) +
-      geom_vline(aes(xintercept = mean_value), color = "green", linetype = "dashed", size = 1) +
-      ggtitle(paste("Density, Mean and SD of", col)) +
-      theme_minimal() +
-      annotate("text", x = Inf, y = Inf, label = paste("Mean:", round(mean_value, 2), "\nSD:", round(sd_value, 2)), 
-               hjust = 1.1, vjust = 2, color = "black", size = 4)
-  })
-  
-  grid.arrange(grobs = plots, ncol = 2)
-}
-
-# Generate histograms for the simulation results
-create_histograms(results_df)
-
-# Calculate the mean of the coefficients from the Monte Carlo simulation
-best_coefficients <- colMeans(results_df)
-
-print(best_coefficients)
+# Calculate the median of the coefficients from the Monte Carlo simulation
+best_coefficients <- apply(results_df, 8, median)
 
 # Fit the final model using the original data
-final_model <- fit_polynomial_regression(numeric_data)
+final_model <- fit_polynomial_regression(numeric_data, 1:nrow(numeric_data))
 
-# Create a function to apply averaged coefficients
-apply_coefficients <- function(model, coefficients) {
-  model$coefficients <- coefficients
-  return(model)
-}
-
-# Apply the averaged coefficients to the final model
+# Apply the median coefficients to the final model
 final_model <- apply_coefficients(final_model, best_coefficients)
 
-# Predict using the final model
+
 y_final_pred <- predict(final_model, newdata = numeric_data)
 
-# Calculate R-squared
-actual_values <- numeric_data$mpg
-ss_total <- sum((actual_values - mean(actual_values))^2)
-ss_residual <- sum((actual_values - y_final_pred)^2)
-r_squared <- 1 - (ss_residual / ss_total)
-
-# Print R-squared value
-cat("R-squared:", r_squared, "\n")
-
-# Plot the final regression model
-ggplot(data.frame(Actual = actual_values, Predicted = y_final_pred), aes(x = Actual, y = Predicted)) +
-  geom_point(alpha = 0.7) +
-  labs(title = paste("Final Regression Model (R-squared:", round(r_squared, 2), ")"), 
-       x = "Actual Values", y = "Predicted Values") +
-  theme_minimal()
-
 # Summarize models
-klassisk_model <- fit_polynomial_regression(numeric_data)
+klassisk_model <- lm(mpg ~ poly(acceleration, 2) + poly(cylinders, 2) + poly(model.year, 2) + poly(origin, 2), data = data)
 summary(final_model)
 summary(klassisk_model)

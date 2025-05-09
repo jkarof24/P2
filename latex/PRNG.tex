@@ -1,15 +1,18 @@
-	\section{Pseudo Random Number Generator}
+\section{Pseudo Random Number Generator}
+
+    When producing a synthetic dataset, there is a need for a lot of random numbers. Many programming languages have a built-in function that produces numbers that appear random, but actually are not. Computers are deterministic machines, and can therefore not produce a number without some sort of algorithm. With knowledge of this algorithm, it would be possible to predict the next number; hence the numbers are not completely random. Random numbers should be independent, i.e., the next number should not have any connection to the number or numbers produced previously. The distribution should also be uniform, meaning if you generate 1,000,000 random numbers in the range [0,1), you'd expect about 500,000 values in [0, 0.5) and about 500,000 in [0.5, 1). Earlier, these numbers have been produced by flipping coins or rolling dice. Now, it is possible to produce truly random numbers by using atmospheric noise. Despite its potential advantages, this method requires significant resources, making it inefficient for the intended application. Therefore, pseudo-random numbers will be used instead.
+
+    Pseudo-random numbers look and act like random numbers, but are actually deterministically generated from an initial seed value. While
+	these numbers are not truly random, they are sufficiently unpredictable for many practical applications.
+	To generate the data, we use a Pseudo-Random Number Generator (PRNG).
+	PRNGs are algorithms that produce sequences of numbers that appear random.
 	
-	To generate the dataset, we use a Pseudo-Random Number Generator (PRNG).
-	PRNGs are algorithms that produce sequences of numbers that appear random
-	but are actually deterministically generated from an initial seed value. While
-	these numbers are not truly random, they are sufficiently unpredictable for many
-	practical applications.
-	Random numbers are widely used in fields such as statistics, game theory, cryp-
-	tography, and simulations. These applications require numbers that behave
+
+	Random numbers are widely used in fields such as statistics, game theory, cryptography, and simulations. These applications require numbers that behave
 	as if they were random, yet can be reproduced when needed. This is where
-	PRNGs come in—they allow for repeatable randomness, making them ideal for
+	PRNGs come in. They allow for repeatable randomness, making them ideal for
 	controlled experiments, testing, and security.
+    \\
 	This chapter will explore the key concepts behind PRNGs. Before going into the
 	mechanics of these generators, it is important to first understand what ’random’
 	means and the characteristics that define truly random numbers.
@@ -19,18 +22,22 @@
 The quality of a PRNG is determined by several key factors that influence its
 use for different applications. Some of the properties of a good PRNG is prop-
 erties: Independency, a large period and reproducibility
+\newline \\
 The numbers produced by the PRNG should be statistically independent, en-
 suring that each generated value exhibits no correlation with previous numbers
 or other sequences. This implies that knowledge of previously generated num-
 bers or sequences provides no advantage in predicting the next output.
+\newline \\
 A PRNG operates within a specific interval before its sequence begins to repeat.
 A high-quality PRNG has a long interval, delaying repetition and enhancing its
 unpredictability. Conversely, a PRNG with a shorter period becomes more pre-
 dictable and less suitable for practical use.
+\newline \\
 A key feature of a PRNG is its ability to reproduce the same sequence of num-
 bers when given a specific seed. This property is particularly useful in testing
 and simulation scenarios, where it is essential to generate identical sequences
-multiple times for consistency and reproducibility
+multiple times for consistency and reproducibility.
+\newline \\
 In addition, a PRNG must be fast and efficient to prevent it from introducing
 performance bottlenecks within an application. The speed of number generation
 directly impacts computational efficiency, especially in applications requiring a
@@ -44,15 +51,44 @@ balancing randomness and efficiency is essential for practical applications
 	pseudo-random numbers. LCS generates a sequence of numbers using a linear
 	recurrence relation LCS is expressed as:
 
-		$$X_{n+1} = (aX_n + c) \bmod m.$$
-
-	where $X_0$ is the seed, $a$ is the multiplier, $c$ is the increment, and $m$ is the modulus.
+$$X_{n+1} = (aX_n + c) \bmod m.$$  \\
+\\
+	\noindent $X_0$ is the starting value, also called the seed and must be i the range $0\leq c>m$ \newline
+    $a$ is the multiplier,\newline 
+    $c$ is the increment and \newline
+    $m$ is the modulus, which specifies the range of values, in the range $m>0$ \newline
+	\\
+    \noindent The operation 'mod $m$' represents division by $m$, where only the remainder
+is retained. This ensures that the generated number remains within the range
+0 to $m-1$.  $X_0$, $a$ and $c$ must all be in the interval $[0; m[$. 
+Here is is an example of the first 4 numbers of a sequence given these parameters: \newline
 	
-	\textbf{Example:} Given $a = 5$, $c = 1$, $m = 16$, and $X_0 = 7$:
+    \begin{center}
+        $a = 5$, $c = 1$, $m = 16$, and $X_0 = 7$:
+    \end{center}
+    
 		$$X_1 = (5 \cdot 7 + 1)\bmod 16 = 4 $$
 		$$X_2 = (5 \cdot 4 + 1) \bmod 16 = 5 $$
 		$$X_3 = (5 \cdot 5 + 1) \bmod 16 = 10 $$
 		$$X_4 = (5 \cdot 10 + 1) \bmod 16 = 3 $$
+\\
+\noindent This sequence has a period of 16. In an LCG, the period can be as large as $m$,
+because the remainder after division by $m$ will always be less than or equal to
+$m$. Consequently, choosing a large $m$ is typically desirable, as it can potentially
+lead to longer periods. However, the period length is not determined solely by
+$m$; the choice of other parameters—such as the multiplier, increment, and the
+seed, along with their relationships, significantly impact the overall period. It
+is possible to select a larger $m$ and still end up with a shorter period if the parameters are not chosen properly. Here is an example where a larger $m$ results
+in a shorter period, illustrating that:
 
-	
-	This sequence has a period of 16. In an LCG, the period can be as large as $m$, but choosing parameters carefully is crucial to achieving long periods. Therefore
+\begin{center}
+    $a=4$, $c=6$, $m=20$, $X_0=3$
+\end{center}
+
+$$X_1=(4 \cdot 3 +6)=18 \bmod 16=4$$ 
+$$X_2=(4 \cdot 18+6)=78 \bmod 16=5$$
+
+Here a larger $m$ is used, but a shorter period of 1 appears. The selection of the optimal parameters for the LCG is beyond the scope of this project and will therefore not be addressed further.
+
+\subsection{Marsenne Twister}
+In this project, the PRNG used will be the Mersenne-Twister. It has very good properties, uniformity and a period of $2^19937-1$. It also passes the spectral test as seen on figure X and figure X. Another reason of this choice, is that Mersenne-Twister is the build-in generator in R, which makes it convenient.
