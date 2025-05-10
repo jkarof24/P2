@@ -8,7 +8,7 @@ library(boot)
 library(car)
 
 # Set working directory and read data
-setwd("C:/Users/jonat/Documents/GitHub/P2/R kode")
+setwd("C:/Users/Jonathan/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # Convert horsepower to numeric, coercing non-numeric values to NA
@@ -86,7 +86,53 @@ clean_colnames <- function(df) {
   return(df)
 }
 
+klassisk_model <- lm(mpg ~ poly(acceleration, 2) + poly(cylinders, 2) + poly(model.year, 2) + poly(origin, 2), data = data)
+
 results_df <- clean_colnames(results_df)
+
+
+
+bootstrap_se <- sapply(results_df, sd)
+
+print("Bootstrap Standard Errors")
+print(bootstrap_se)
+
+print("\nStandard OLS Standard Errors for comparison")
+# Hent standardfejlene fra summary(klassisk_model)
+ols_summary <- summary(klassisk_model)
+ols_se <- ols_summary$coefficients[, "Std. Error"]
+print(ols_se)
+
+
+confidence_level <- 0.95
+alpha <- 1 - confidence_level
+
+
+z_critical <- qnorm(1 - alpha/2)
+
+
+normal_bootstrap_ci_coef <- data.frame(
+  Lower = best_coefficients[-length(best_coefficients)] - z_critical * bootstrap_se[-length(bootstrap_se)],
+  Upper = best_coefficients[-length(best_coefficients)] + z_critical * bootstrap_se[-length(bootstrap_se)]
+)
+
+cat(paste0("\nNormal Bootstrap Confidence Intervals (", confidence_level * 100, "%):\n"))
+print(normal_bootstrap_ci_coef)
+
+
+
+
+
+
+normal_bootstrap_ci_rsq <- data.frame(
+  Lower = best_coefficients["r_squared"] - z_critical * bootstrap_se["r_squared"],
+  Upper = best_coefficients["r_squared"] + z_critical * bootstrap_se["r_squared"]
+)
+cat(paste0("\nNormal Bootstrap Confidence Interval for R-squared (", confidence_level * 100, "%):\n"))
+print(normal_bootstrap_ci_rsq)
+
+
+
 
 # Calculate the median of the coefficients from the Monte Carlo simulation
 best_coefficients <- apply(results_df, 8, median)
@@ -101,6 +147,5 @@ final_model <- apply_coefficients(final_model, best_coefficients)
 y_final_pred <- predict(final_model, newdata = numeric_data)
 
 # Summarize models
-klassisk_model <- lm(mpg ~ poly(acceleration, 2) + poly(cylinders, 2) + poly(model.year, 2) + poly(origin, 2), data = data)
 summary(final_model)
 summary(klassisk_model)

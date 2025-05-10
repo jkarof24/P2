@@ -85,6 +85,44 @@ clean_colnames <- function(df) {
 
 results_df <- clean_colnames(results_df)
 
+
+bootstrap_se <- sapply(results_df, sd)
+
+cat("Bootstrap Standard Errors:\n")
+print(bootstrap_se)
+
+cat("\nStandard OLS Standard Errors (from model_new) for comparison:\n")
+# Hent standardfejlene fra summary(model_new)
+ols_summary <- summary(model_new)
+ols_se <- ols_summary$coefficients[, "Std. Error"]
+print(ols_se)
+
+confidence_level <- 0.95
+alpha <- 1 - confidence_level
+
+
+z_critical <- qnorm(1 - alpha/2)
+
+
+normal_bootstrap_ci_coef <- data.frame(
+  Lower = best_coefficients[-length(best_coefficients)] - z_critical * bootstrap_se[-length(bootstrap_se)],
+  Upper = best_coefficients[-length(best_coefficients)] + z_critical * bootstrap_se[-length(bootstrap_se)]
+)
+
+cat(paste0("\nNormal Bootstrap Confidence Intervals (", confidence_level * 100, "%):\n"))
+print(normal_bootstrap_ci_coef)
+
+
+normal_bootstrap_ci_rsq <- data.frame(
+  Lower = best_coefficients["r_squared"] - z_critical * bootstrap_se["r_squared"],
+  Upper = best_coefficients["r_squared"] + z_critical * bootstrap_se["r_squared"]
+)
+cat(paste0("\nNormal Bootstrap Confidence Interval for R-squared (", confidence_level * 100, "%):\n"))
+print(normal_bootstrap_ci_rsq)
+
+
+
+
 # Create Histograms Function
 create_histograms <- function(df, xz) {
   plots <- lapply(names(df), function(col) {
