@@ -5,7 +5,7 @@
 Monte Carlo bootstrapping is used to find the model for the mpg data. It starts by cleaning the data, then selecting the numeric columns, and defining the Monte Carlo bootstrapping function. After that, it defines the polynomial regression function using mpg as the dependent variable. Next, it defines the simulation function using clusters, thereby speeding up the computation time with the doParallel library. After defining the run simulation function, it runs the simulation with the set seed, simulation number, and sample size of the Monte Carlo bootstrapping method.
 
 After that, it creates histograms of the simulation results. It calculates the mean result of the coefficients, and using these means, it calculates a new regression model and the R-squared of the new average model. Finally, it makes a scatter plot showing the final regression model results versus the results from the actual data set.
-\lstinputlisting[language=R, caption=montecarlo bootstrapping]{kode/montecarlo bootstrapping.R}
+%\lstinputlisting[language=R, caption=montecarlo bootstrapping]{kode/montecarlo bootstrapping.R}
 
 \begin{figure}[h] 
 	\centering
