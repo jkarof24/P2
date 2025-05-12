@@ -111,10 +111,23 @@ alpha <- 1 - confidence_level
 z_critical <- qnorm(1 - alpha/2)
 
 
+# Calculate the mean of each column in results_df
+mean_results <- colMeans(results_df)
+
+# Calculate the confidence intervals using the mean values
 normal_bootstrap_ci_coef <- data.frame(
-  Lower = best_coefficients[-length(best_coefficients)] - z_critical * bootstrap_se[-length(bootstrap_se)],
-  Upper = best_coefficients[-length(best_coefficients)] + z_critical * bootstrap_se[-length(bootstrap_se)]
+  Lower = mean_results - z_critical * bootstrap_se,
+  Upper = mean_results + z_critical * bootstrap_se
 )
+
+
+normal_ci_coef <- data.frame(
+  Lower = mean_results - z_critical * bootstrap_se,
+  Upper = mean_results + z_critical * bootstrap_se
+)
+
+  
+
 
 cat(paste0("\nNormal Bootstrap Confidence Intervals (", confidence_level * 100, "%):\n"))
 print(normal_bootstrap_ci_coef)
