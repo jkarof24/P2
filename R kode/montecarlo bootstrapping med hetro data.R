@@ -86,41 +86,52 @@ clean_colnames <- function(df) {
 results_df <- clean_colnames(results_df)
 
 
+
+# Estimer klassisk OLS-model med polynomielle termer
+klassisk_model <- lm(y ~ I(x1^2) + I(x2^3) + I(x3^4) + I(x4^5), data = data_new)
+
+# Rens kolonnenavne i bootstrap-resultaterne (hvis nødvendigt)
+results_df <- clean_colnames(results_df)
+
+# Beregn bootstrap-standardfejl
 bootstrap_se <- sapply(results_df, sd)
 
 cat("Bootstrap Standard Errors:\n")
 print(bootstrap_se)
 
-cat("\nStandard OLS Standard Errors (from model_new) for comparison:\n")
-# Hent standardfejlene fra summary(model_new)
-ols_summary <- summary(model_new)
+# Hent standardfejlene fra OLS-modellen
+ols_summary <- summary(klassisk_model)
 ols_se <- ols_summary$coefficients[, "Std. Error"]
+
+cat("\nStandard OLS Standard Errors for comparison:\n")
 print(ols_se)
 
+# Konfidensniveau og kritisk z-værdi
 confidence_level <- 0.95
 alpha <- 1 - confidence_level
+z_critical <- qnorm(1 - alpha / 2)
 
+# Beregn gennemsnit af bootstrap-koefficienter
+mean_results <- colMeans(results_df)
 
-z_critical <- qnorm(1 - alpha/2)
-
-
+# Bootstrap konfidensintervaller
 normal_bootstrap_ci_coef <- data.frame(
-  Lower = best_coefficients[-length(best_coefficients)] - z_critical * bootstrap_se[-length(bootstrap_se)],
-  Upper = best_coefficients[-length(best_coefficients)] + z_critical * bootstrap_se[-length(bootstrap_se)]
+  Lower = mean_results - z_critical * bootstrap_se,
+  Upper = mean_results + z_critical * bootstrap_se
 )
 
-cat(paste0("\nNormal Bootstrap Confidence Intervals (", confidence_level * 100, "%):\n"))
+# OLS konfidensintervaller
+normal_ci_coef <- data.frame(
+  Lower = klassisk_model$coefficients - z_critical * ols_se,
+  Upper = klassisk_model$coefficients + z_critical * ols_se
+)
+
+# Udskriv resultater
+cat(paste0("\nBootstrap Confidence Intervals (", confidence_level * 100, "%):\n"))
 print(normal_bootstrap_ci_coef)
 
-
-normal_bootstrap_ci_rsq <- data.frame(
-  Lower = best_coefficients["r_squared"] - z_critical * bootstrap_se["r_squared"],
-  Upper = best_coefficients["r_squared"] + z_critical * bootstrap_se["r_squared"]
-)
-cat(paste0("\nNormal Bootstrap Confidence Interval for R-squared (", confidence_level * 100, "%):\n"))
-print(normal_bootstrap_ci_rsq)
-
-
+cat(paste0("\nNormal OLS Confidence Intervals (", confidence_level * 100, "%):\n"))
+print(normal_ci_coef)
 
 
 # Create Histograms Function
