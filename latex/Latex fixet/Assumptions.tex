@@ -35,6 +35,10 @@ Every position in the matrix is calculated, then the diagonal will tell if the d
 
 Source: https://openpublishing.library.umass.edu/pare/article/id/1590/
 
+\textbf{Detecting heteroscedasticity}
+When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but its not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables has an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the dataset contains heteroscedasticity.
+source: $https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html?fbclid=IwZXh0bgNhZW0CMTEAAR4qxZqqD0CVoqZfHgWZU8lUOuxg43dFRSs9Opswn-IAo8l-UaO1oDWCuUfkvw_aem_9Ft7wkFWKUHycQ1GnX-x0g$
+
 \subsubsection{No multicollinearity}
 Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
 $$
