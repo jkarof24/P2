@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  13 MAY 2025 13:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  14 MAY 2025 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -328,12 +328,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
-[16] (Assumptions.tex [17] [18])) [19] (PRNG.tex [20]) [21] [22] (metrics.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
+
+ []
+
+[17] (Assumptions.tex [18]
+Overfull \hbox (209.65147pt too wide) in paragraph at lines 38--41
+\OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
+d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
+hZW\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CMTEAAR\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 q
+xZqqD\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CVoqZfHgWZU\OT1/cmr/m/n/10 8\OML/cmm/m/i
+t/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/
+it/10 Opswn \OMS/cmsy/m/n/10 ^^@
+ []
+
+[19])) [20] (PRNG.tex [21]) [22] [23] (metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -358,7 +373,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
-[23] [24]
+[24] [25]
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
@@ -373,7 +388,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
-[25]
+[26]
 Overfull \hbox (3.44507pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-scienc
 es/root-mean-
@@ -384,7 +399,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
-[26] [27]) [28] [29] [30] (Comparison.tex
+[27] [28]) [29] [30] [31] (Comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--17
 
  []
@@ -394,7 +409,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--50
 
  []
 
-) [31] [32] [33] [34] (P2.aux)
+) [32] [33] [34] [35] (P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -426,9 +441,9 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (34 pages, 275108 bytes).
+Output written on P2.pdf (35 pages, 282365 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
+ 196 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
