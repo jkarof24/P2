@@ -4,7 +4,7 @@ library(car)     # for vif()
 library(boot)    # for bootstrapping
 
 # 1. Indlæs data
-setwd("C:/Users/jonat/Documents/GitHub/P2/R kode")
+setwd("C:/Users/jonathan/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 # 2. Konverter 'horsepower' til numerisk og fjern NA
