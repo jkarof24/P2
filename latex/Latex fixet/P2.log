@@ -1,75 +1,63 @@
-<<<<<<< Updated upstream
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  14 MAY 2025 13:45
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  13 MAY 2025 12:16
->>>>>>> Stashed changes
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.29)  15 MAY 2025 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./P2.tex
-(P2.tex
+**P2.tex
+(./P2.tex
 LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+L3 programming layer <2025-03-26>
+(c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+(c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count196
-\c@section=\count197
-\c@subsection=\count198
-\c@subsubsection=\count199
-\c@paragraph=\count266
-\c@subparagraph=\count267
-\c@figure=\count268
-\c@table=\count269
+\c@part=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen141
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+\bibindent=\dimen146
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.sty (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-\lst@mode=\count270
-\lst@gtempboxa=\box52
+\lst@mode=\count271
+\lst@gtempboxa=\box53
 \lst@token=\toks18
-\lst@length=\count271
-\lst@currlwidth=\dimen142
-\lst@column=\count272
-\lst@pos=\count273
-\lst@lostspace=\dimen143
-\lst@width=\dimen144
-\lst@newlines=\count274
-\lst@lineno=\count275
-\lst@maxwidth=\dimen145
-
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+\lst@length=\count272
+\lst@currlwidth=\dimen147
+\lst@column=\count273
+\lst@pos=\count274
+\lst@lostspace=\dimen148
+\lst@width=\dimen149
+\lst@newlines=\count275
+\lst@lineno=\count276
+\lst@maxwidth=\dimen150
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count276
-\lst@skipnumbers=\count277
-\lst@framebox=\box53
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+\c@lstnumber=\count277
+\lst@skipnumbers=\count278
+\lst@framebox=\box54
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -79,96 +67,72 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen146
-\Gin@req@width=\dimen147
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.s
-ty
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
-
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
- (C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+)) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
-
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)))
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen148
-\lightrulewidth=\dimen149
-\cmidrulewidth=\dimen150
-\belowrulesep=\dimen151
-\belowbottomsep=\dimen152
-\aboverulesep=\dimen153
-\abovetopsep=\dimen154
-\cmidrulesep=\dimen155
-\cmidrulekern=\dimen156
-\defaultaddspace=\dimen157
-\@cmidla=\count278
-\@cmidlb=\count279
-\@aboverulesep=\dimen158
-\@belowrulesep=\dimen159
-\@thisruleclass=\count280
-\@lastruleclass=\count281
-\@thisrulewidth=\dimen160
-)
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count282
-\l__pdf_internal_box=\box54
-) (P2.aux)
+\heavyrulewidth=\dimen153
+\lightrulewidth=\dimen154
+\cmidrulewidth=\dimen155
+\belowrulesep=\dimen156
+\belowbottomsep=\dimen157
+\aboverulesep=\dimen158
+\abovetopsep=\dimen159
+\cmidrulesep=\dimen160
+\cmidrulekern=\dimen161
+\defaultaddspace=\dimen162
+\@cmidla=\count279
+\@cmidlb=\count280
+\@aboverulesep=\dimen163
+\@belowrulesep=\dimen164
+\@thisruleclass=\count281
+\@lastruleclass=\count282
+\@thisrulewidth=\dimen165
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count283
+) (./P2.aux)
 \openout1 = `P2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -185,23 +149,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
-\c@lstlisting=\count283
-
-(C:\Users\jonat\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count284
-\scratchdimen=\dimen161
-\scratchbox=\box55
-\nofMPsegments=\count285
-\nofMParguments=\count286
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count287
-\MPscratchDim=\dimen162
-\MPnumerator=\count288
-\makeMPintoPDFobject=\count289
-\everyMPtoPDFconversion=\toks20
-)
+\c@lstlisting=\count284
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -212,7 +160,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{C:/Users/jonat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (P2.toc
+{c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./P2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -225,9 +173,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
-[3] (Introduktion.tex)
+[3] (./Introduktion.tex)
 
-[4] (Statistical theory.tex (Statistical theory/Probability space.tex
+[4] (./Statistical theory.tex (./Statistical theory/Probability space.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
@@ -243,7 +191,7 @@ LaTeX Warning: Command \O invalid in math mode on input line 23.
 
 LaTeX Warning: Command \O invalid in math mode on input line 28.
 
-) (random variabels.tex
+) (./random variabels.tex
 Underfull \hbox (badness 10000) in paragraph at lines 20--1
 
  []
@@ -279,7 +227,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--54
 
  []
 
-) (Estimator and estimates.tex
+) (./Estimator and estimates.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--10
 
  []
@@ -296,14 +244,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
 
 
-[8]) (Statistical theory/Probability distribution.tex
+[8]) (./Statistical theory/Probability distribution.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
 
 
-[9]) (Statistical theory/Statistical methods.tex
+[9]) (./Statistical theory/Statistical methods.tex
 
 [10]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
@@ -312,9 +260,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
 
 Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
-\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=scie
-nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
-s:pdf$ 
+\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=science=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]ciences:pdf$ 
  []
 
 
@@ -328,7 +274,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
 [12]))
 
-[13] (Polynomial regression.tex
+[13] (./Polynomial regression.tex
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
@@ -337,9 +283,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
 [14]
 Overfull \hbox (36.66817pt too wide) in paragraph at lines 52--53
-[]\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations
-$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m
-/it/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
+[]\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
  []
 
 
@@ -363,44 +307,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
+
+
 [16]
 Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
 
-<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
-[17] (Assumptions.tex [18]
+
+
+[17] (./Assumptions.tex
+
+[18]
 Overfull \hbox (209.65147pt too wide) in paragraph at lines 38--41
-\OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
-d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
-hZW\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CMTEAAR\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 q
-xZqqD\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CVoqZfHgWZU\OT1/cmr/m/n/10 8\OML/cmm/m/i
-t/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/
-it/10 Opswn \OMS/cmsy/m/n/10 ^^@
+\OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbclid \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgNhZW\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CMTEAAR\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 qxZqqD\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CVoqZfHgWZU\OT1/cmr/m/n/10 8\OML/cmm/m/it/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/it/10 Opswn \OMS/cmsy/m/n/10 ^^@
  []
 
-[19])) [20] (PRNG.tex [21]) [22] [23] (metrics.tex
-=======
 
-[16] (Assumptions.tex
 
-[17]
+[19]))
 
-[18]))
+[20] (./PRNG.tex
 
-[19] (PRNG.tex
+[21])
 
-[20])
+[22]
 
-[21]
-
-[22] (metrics.tex
->>>>>>> Stashed changes
+[23] (./metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -425,15 +363,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
-<<<<<<< Updated upstream
-[24] [25]
-=======
 
-
-[23]
 
 [24]
->>>>>>> Stashed changes
+
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
@@ -448,16 +382,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
-<<<<<<< Updated upstream
+
+
 [26]
-=======
-
-
-[25]
->>>>>>> Stashed changes
 Overfull \hbox (3.44507pt too wide) in paragraph at lines 42--47
-\OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-scienc
-es/root-mean-
+\OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-sciences/root-mean-
  []
 
 
@@ -465,81 +394,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
-<<<<<<< Updated upstream
-[27] [28]) [29] [30] [31] (Comparison.tex
-=======
 
 
-[26]
+[27]
 
-[27])
-
-[28]
+[28])
 
 [29]
 
-[30] (Comparison.tex
->>>>>>> Stashed changes
-Underfull \hbox (badness 10000) in paragraph at lines 1--17
+[30]
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--50
-
- []
-
-<<<<<<< Updated upstream
-) [32] [33] [34] [35] (P2.aux)
-=======
-)
-
-[31]
+[31] (./Comparison.tex)
 
 [32]
 
 [33]
 
-[34] (P2.aux)
->>>>>>> Stashed changes
+[34]
+
+[35] (./P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+L3 programming layer <2025-03-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3964 strings out of 473523
- 65552 string characters out of 5714631
- 469404 words of memory out of 5000000
- 27126 multiletter control sequences out of 15000+600000
- 563773 words of font info for 52 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1051b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\jonat\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jonat/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/jonat/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/jonat/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/j
-onat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr5.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr7.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/jonat/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/jonat/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-<<<<<<< Updated upstream
-Output written on P2.pdf (35 pages, 282317 bytes).
-=======
-Output written on P2.pdf (34 pages, 274649 bytes).
->>>>>>> Stashed changes
+ 3645 strings out of 471606
+ 60817 string characters out of 5519417
+ 450082 words of memory out of 5000000
+ 30146 multiletter control sequences out of 15000+600000
+ 631761 words of font info for 56 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 57i,10n,65p,1049b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on P2.pdf (35 pages, 260458 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
