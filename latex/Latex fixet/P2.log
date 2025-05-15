@@ -1,449 +1,49 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  14 MAY 2025 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.3.4)  15 MAY 2025 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./P2.tex
-(P2.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+**P2.tex
+(./P2.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(c:/Users/chris/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(c:/Users/chris/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
 )
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-)
-\lst@mode=\count195
-\lst@gtempboxa=\box51
-\lst@token=\toks18
-\lst@length=\count196
-\lst@currlwidth=\dimen141
-\lst@column=\count197
-\lst@pos=\count198
-\lst@lostspace=\dimen142
-\lst@width=\dimen143
-\lst@newlines=\count199
-\lst@lineno=\count266
-\lst@maxwidth=\dimen144
 
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count267
-\lst@skipnumbers=\count268
-\lst@framebox=\box52
-)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2023/02/27 1.9 listings configuration
-))
-Package: listings 2023/02/27 1.9 (Carsten Heinz)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+! LaTeX Error: File `listings.sty' not found.
 
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-) (C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.7 \usepackage
+               {xcolor}^^M
+*** (cannot \read from terminal in nonstop modes)
 
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 107.
-)
-\Gin@req@height=\dimen145
-\Gin@req@width=\dimen146
-)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.s
-ty
-Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
-
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
- (C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
-
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)))
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen147
-\lightrulewidth=\dimen148
-\cmidrulewidth=\dimen149
-\belowrulesep=\dimen150
-\belowbottomsep=\dimen151
-\aboverulesep=\dimen152
-\abovetopsep=\dimen153
-\cmidrulesep=\dimen154
-\cmidrulekern=\dimen155
-\defaultaddspace=\dimen156
-\@cmidla=\count269
-\@cmidlb=\count270
-\@aboverulesep=\dimen157
-\@belowrulesep=\dimen158
-\@thisruleclass=\count271
-\@lastruleclass=\count272
-\@thisrulewidth=\dimen159
-)
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count273
-\l__pdf_internal_box=\box53
-) (P2.aux)
-\openout1 = `P2.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-\c@lstlisting=\count274
-
-(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count275
-\scratchdimen=\dimen160
-\scratchbox=\box54
-\nofMPsegments=\count276
-\nofMParguments=\count277
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count278
-\MPscratchDim=\dimen161
-\MPnumerator=\count279
-\makeMPintoPDFobject=\count280
-\everyMPtoPDFconversion=\toks20
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
- [1
-
-{C:/Users/sofia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (P2.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
-
-[2])
-\tf@toc=\write3
-\openout3 = `P2.toc'.
-
- [3] (Introduktion.tex) [4] (Statistical theory.tex
-(Statistical theory/Probability space.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--19
-
- []
-
-
-LaTeX Warning: Command \O invalid in math mode on input line 23.
-
-
-LaTeX Warning: Command \O invalid in math mode on input line 28.
-
-) (random variabels.tex
-Underfull \hbox (badness 10000) in paragraph at lines 20--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 28--31
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 51--54
-
- []
-
-) (Estimator and estimates.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--23
-
- []
-
-[8]) (Statistical theory/Probability distribution.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
-
- []
-
-[9]) (Statistical theory/Statistical methods.tex [10]
-Underfull \hbox (badness 10000) in paragraph at lines 18--21
-
- []
-
-
-Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
-\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=scie
-nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
-s:pdf$ 
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
-
- []
-
-[12])) [13] (Polynomial regression.tex
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
-
- []
-
-[14]
-Overfull \hbox (36.66817pt too wide) in paragraph at lines 52--53
-[]\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations
-$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m
-/it/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
- []
-
-
-LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
-
-
-LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
-
-Missing character: There is no £ in font cmr10!
-
-LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
-
-
-LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
-
-Missing character: There is no £ in font cmr10!
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 142--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
-
- []
-
-[17] (Assumptions.tex [18]
-Overfull \hbox (209.65147pt too wide) in paragraph at lines 38--41
-\OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
-d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
-hZW\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CMTEAAR\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 q
-xZqqD\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CVoqZfHgWZU\OT1/cmr/m/n/10 8\OML/cmm/m/i
-t/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/
-it/10 Opswn \OMS/cmsy/m/n/10 ^^@
- []
-
-[19])) [20] (PRNG.tex [21]) [22] [23] (metrics.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--19
-
- []
-
-[24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
-
- []
-
-[26]
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 42--47
-\OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-scienc
-es/root-mean-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-
- []
-
-[27] [28]) [29] [30] [31] (Comparison.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--17
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--50
-
- []
-
-) [32] [33] [34] [35] (P2.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
- ***********
- ) 
+ 
 Here is how much of TeX's memory you used:
- 3951 strings out of 474486
- 65698 string characters out of 5743756
- 1941542 words of memory out of 5000000
- 26174 multiletter control sequences out of 15000+600000
- 563005 words of font info for 52 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1051b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sofia/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/sofia/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sofia/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/s
-ofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr7.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (35 pages, 282317 bytes).
-PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 237 strings out of 475171
+ 3021 string characters out of 5763734
+ 386911 words of memory out of 5000000
+ 23326 multiletter control sequences out of 15000+600000
+ 558837 words of font info for 36 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 35i,0n,38p,151b,36s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
