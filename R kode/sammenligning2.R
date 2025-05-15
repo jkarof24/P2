@@ -46,21 +46,20 @@ ols_coefs <- ols_summary$coefficients
 # Calculate Confidence Intervals for OLS coefficients
 ols_confint <- confint(olsmodel)
 
+# --- OLS R-squared ---
+r_squared <- summary(olsmodel)$r.squared
+adj_r_squared <- summary(olsmodel)$adj.r.squared
+
 # 8. Bootstrap-model for coefficients
-# Function to extract coefficients from a model fit
 coef_function <- function(data, indices) {
-  d <- data[indices,] # allows bootstrap to work on the data
+  d <- data[indices,]
   fit <- lm(y ~ I(x1new^2) + I(x2new^3) + I(x3new^4) + I(x4new^5), data = d)
   return(coef(fit))
 }
 
-# Perform bootstrap
 boot_results <- boot(data = traindata, statistic = coef_function, R = n_simulations)
 
-# Get bootstrap standard errors for coefficients
 bootstrap_coef_se <- apply(boot_results$t, 2, sd)
-
-# Get bootstrap confidence intervals for coefficients (using percentile method)
 bootstrap_coef_ci <- t(apply(boot_results$t, 2, quantile, probs = c(0.025, 0.975)))
 
 # OLS Prediction Errors
@@ -69,12 +68,11 @@ olspreds <- ols_preds_info$fit[, "fit"]
 olserrors <- olspreds - testdata$y
 MBEOLS <- mean(olserrors)
 RMSEOLS <- sqrt(mean(olserrors^2))
-SEOLS_pred <- mean(ols_preds_info$se.fit) # Renamed to avoid confusion
+SEOLS_pred <- mean(ols_preds_info$se.fit)
 CI_OLS_pred <- ols_preds_info$fit[, "upr"] - ols_preds_info$fit[, "lwr"]
-AvgCIWidthOLS_pred <- mean(CI_OLS_pred) # Renamed to avoid confusion
+AvgCIWidthOLS_pred <- mean(CI_OLS_pred)
 
 # Bootstrap Prediction Errors
-# (Prediction calculation remains the same as it uses the mean of bootstrap predictions)
 bootstrappredictions <- matrix(NA, nrow = nrow(testdata), ncol = n_simulations)
 for (i in 1:n_simulations) {
   indices <- sample(1:nrow(traindata), replace = TRUE)
@@ -86,11 +84,22 @@ bootstrapmeanpreds <- rowMeans(bootstrappredictions)
 bootstraperrors <- bootstrapmeanpreds - testdata$y
 MBEBootstrap <- mean(bootstraperrors)
 RMSEBootstrap <- sqrt(mean(bootstraperrors^2))
-SEBootstrap_pred <- mean(apply(bootstrappredictions, 1, sd)) # Renamed to avoid confusion
+SEBootstrap_pred <- mean(apply(bootstrappredictions, 1, sd))
 CI_Bootstrap_pred <- t(apply(bootstrappredictions, 1, quantile, probs = c(0.025, 0.975)))
-AvgCIWidthBootstrap_pred <- mean(CI_Bootstrap_pred[, 2] - CI_Bootstrap_pred[, 1]) # Renamed to avoid confusion
+AvgCIWidthBootstrap_pred <- mean(CI_Bootstrap_pred[, 2] - CI_Bootstrap_pred[, 1])
 
+# --- Bootstrap R-squared Distribution ---
+bootstrap_r_squared <- numeric(n_simulations)
+for (i in 1:n_simulations) {
+  indices <- sample(1:nrow(traindata), replace = TRUE)
+  bootmodel <- lm(y ~ I(x1new^2) + I(x2new^3) + I(x3new^4) + I(x4new^5),
+                  data = traindata[indices, ])
+  bootstrap_r_squared[i] <- summary(bootmodel)$r.squared
+}
+mean_r_squared_boot <- mean(bootstrap_r_squared)
+ci_r_squared_boot <- quantile(bootstrap_r_squared, probs = c(0.025, 0.975))
 
+# --- Output ---
 cat("\n--- OLS Model (Prediction Errors) ---\n")
 cat("MBEOLS: ", round(MBEOLS, 4), "\n")
 cat("RMSEOLS: ", round(RMSEOLS, 4), "\n")
@@ -100,15 +109,18 @@ print(ols_coefs)
 cat("\n--- OLS Model (95% Confidence Intervals for Coefficients) ---\n")
 print(ols_confint)
 
+cat("\n--- OLS Model (R-squared) ---\n")
+cat("R-squared: ", round(r_squared, 4), "\n")
 
 cat("\n--- Bootstrap Model (Prediction Errors) ---\n")
 cat("MBEBootstrap: ", round(MBEBootstrap, 4), "\n")
 cat("RMSEBootstrap: ", round(RMSEBootstrap, 4), "\n")
 
 cat("\n--- Bootstrap Model (95% Confidence Intervals for Coefficients) ---\n")
-# Print the calculated bootstrap confidence intervals
 print(bootstrap_coef_ci)
 cat("\n--- Bootstrap Model (Standard Errors for Coefficients) ---\n")
-# Print the calculated bootstrap standard errors
 print(bootstrap_coef_se)
+
+cat("\n--- Bootstrap Model (R-squared) ---\n")
+cat("Mean R-squared: ", round(mean_r_squared_boot, 4), "\n")
 
