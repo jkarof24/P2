@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.29)  15 MAY 2025 10:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.29)  15 MAY 2025 11:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,15 +404,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
 [30]
 
-[31] (./Comparison.tex)
+[31] (./Comparison.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
-[32]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+
+[32])
 
 [33]
 
 [34]
 
-[35] (./P2.aux)
+[35]
+
+[36] (./P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
@@ -427,10 +459,10 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  57i,10n,65p,1049b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (35 pages, 260458 bytes).
+Output written on P2.pdf (36 pages, 262503 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
+ 202 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
