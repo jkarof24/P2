@@ -91,15 +91,6 @@ CI_Bootstrap_pred <- t(apply(bootstrappredictions, 1, quantile, probs = c(0.025,
 AvgCIWidthBootstrap_pred <- mean(CI_Bootstrap_pred[, 2] - CI_Bootstrap_pred[, 1]) # Renamed to avoid confusion
 
 
-
-# --- Output Results ---
-
-
-
-
-# (Keeping the prediction error metrics for comparison as well)
-
-
 cat("\n--- OLS Model (Prediction Errors) ---\n")
 cat("MBEOLS: ", round(MBEOLS, 4), "\n")
 cat("RMSEOLS: ", round(RMSEOLS, 4), "\n")
