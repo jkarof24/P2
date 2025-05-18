@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  15 MAY 2025 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  15 MAY 2025 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,6 +307,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--21
  []
 
 
+
+[11]
 Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
 \OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=scie
 nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
@@ -314,8 +316,6 @@ s:pdf$
  []
 
 
-
-[11]
 Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
@@ -376,7 +376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--236
 [17] (Assumptions.tex
 
 [18]
-Overfull \hbox (209.65147pt too wide) in paragraph at lines 38--41
+Overfull \hbox (209.65147pt too wide) in paragraph at lines 39--42
 \OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
 d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
 hZW\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CMTEAAR\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 q
@@ -469,24 +469,46 @@ Overfull \hbox (4.4451pt too wide) in paragraph at lines 4--5
 [30]
 
 [31] (Comparison.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--17
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--50
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
 
-)
 
-[32]
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+
+
+[32])
 
 [33]
 
 [34]
 
-[35] (P2.aux)
+[35]
+
+[36] (P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -499,7 +521,7 @@ Here is how much of TeX's memory you used:
  27131 multiletter control sequences out of 15000+600000
  563773 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1051b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,10n,65p,1052b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\marcu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -518,9 +540,9 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (35 pages, 282415 bytes).
+Output written on P2.pdf (36 pages, 287077 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
+ 199 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
