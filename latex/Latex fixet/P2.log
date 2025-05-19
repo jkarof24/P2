@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  18 MAY 2025 16:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  19 MAY 2025 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -252,20 +252,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--1
  []
 
 
+
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
 
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
 
-
-[7]
 Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
@@ -301,16 +301,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
 
 
-[10]) (Statistical theory/Statistical methods.tex
+[10]
 
-[11]
+[11]) (Statistical theory/Statistical methods.tex
+
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
 
 
-
-[12]
 Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
 \OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=scie
 nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
@@ -318,13 +318,13 @@ s:pdf$
  []
 
 
+
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
-
-
-[13]))
+))
 
 [14] (Polynomial regression.tex
 Underfull \hbox (badness 10000) in paragraph at lines 31--34
@@ -469,7 +469,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--51
 [30])
 
 [31] (Problem Statement.tex
-Overfull \hbox (4.4451pt too wide) in paragraph at lines 7--8
+Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
 []\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and
  no mul-ti-collinear-
  []
@@ -550,7 +550,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (38 pages, 291983 bytes).
+Output written on P2.pdf (38 pages, 292696 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
