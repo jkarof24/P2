@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  19 MAY 2025 08:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  19 MAY 2025 12:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -213,8 +213,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `P2.toc'.
 
- [3] (Introduktion.tex) [4] (Problem analyse.tex) [5]
-(Statistical theory.tex (Statistical theory/Probability space.tex
+ [3] (Introduktion.tex) [4] (Problem analyse.tex) [5] (MPG.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+) [6] (Statistical theory.tex (Statistical theory/Probability space.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
@@ -245,17 +254,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
-[7]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 51--54
 
  []
@@ -275,17 +284,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
  []
 
-[9]) (Statistical theory/Probability distribution.tex
+[10]) (Statistical theory/Probability distribution.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
-[10]) (Statistical theory/Statistical methods.tex [11]
+[11]) (Statistical theory/Statistical methods.tex [12]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
 
-[12]
+[13]
 Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
 \OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=scie
 nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
@@ -297,12 +306,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
-[13])) [14] (Polynomial regression.tex
+[14])) [15] (Polynomial regression.tex
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
-[15]
+[16]
 Overfull \hbox (36.66817pt too wide) in paragraph at lines 51--52
 []\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations
 $\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m
@@ -323,12 +332,12 @@ LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
 LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
 
 Missing character: There is no £ in font cmr10!
-[16]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-[17]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 141--146
 
  []
@@ -343,7 +352,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
  []
 
-[18] [19] (Assumptions.tex [20]
+[19] [20] (Assumptions.tex [21]
 Overfull \hbox (209.65147pt too wide) in paragraph at lines 39--42
 \OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
 d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
@@ -353,7 +362,7 @@ t/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/
 it/10 Opswn \OMS/cmsy/m/n/10 ^^@
  []
 
-[21])) [22] (PRNG.tex [23]) [24] [25] (metrics.tex
+[22])) [23] (PRNG.tex [24]) [25] [26] (metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -378,7 +387,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
-[26] [27]
+[27] [28]
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
@@ -393,7 +402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
-[28]
+[29]
 Overfull \hbox (3.44507pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-scienc
 es/root-mean-
@@ -404,13 +413,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
-[29] [30]) [31] (Problem Statement.tex
-Overfull \hbox (4.4451pt too wide) in paragraph at lines 4--5
+[30] [31]) [32] (Problem Statement.tex
+Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
 []\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and
  no mul-ti-collinear-
  []
 
-) [32] [33] (Comparison.tex
+) [33] [34] (Comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
@@ -440,17 +449,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
 
-[34]) [35] [36] [37] [38] (P2.aux)
+[35]) [36] [37] [38] [39] (P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3967 strings out of 474486
- 66224 string characters out of 5743756
+ 3975 strings out of 474486
+ 66381 string characters out of 5743756
  1941542 words of memory out of 5000000
- 26184 multiletter control sequences out of 15000+600000
+ 26189 multiletter control sequences out of 15000+600000
  563005 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,10n,65p,1052b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -472,9 +481,9 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (38 pages, 291940 bytes).
+Output written on P2.pdf (39 pages, 293487 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
+ 211 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
