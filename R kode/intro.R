@@ -23,12 +23,13 @@ data$horsepower <- as.numeric(data$horsepower)
 # Remove rows with any NA values
 data <- data %>% na.omit()
 
-"numeric_data <- data %>% select_if(is.numeric)
+numeric_data <- data %>% select_if(is.numeric)
 
 # Beregn korrelationer og smelt til format for ggplot2
+
 data_korrelationer <- melt(cor(numeric_data, use = "complete.obs"))
 
-"Opret heatmap baseret p korrelationer
+
 ggplot(data_korrelationer, aes(x = Var1, y = Var2, fill = abs(value))) +
   geom_tile() +
   geom_text(aes(label = round(value, 2)), color = "black", size = 4) +
@@ -57,10 +58,10 @@ bp_df <- data.frame(Variable = names(bp_results), P_Value = bp_results)
 print(bp_df)
 
 
-arrange scatter plots and Breusch prage plot 
+
 do.call(grid.arrange, c(scatter_plots, ncol = 3))
 
-"Lav histogrammer og density plots med mean og SD
+
 plots <- lapply(names(numeric_data), function(col) {
   n_bins <- ceiling(log2(length(numeric_data[[col]])) + 1)
   mean_value <- mean(numeric_data[[col]])

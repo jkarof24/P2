@@ -6,7 +6,7 @@ library(gridExtra)
 library(lmtest)  # For Breusch-Pagan test
 
 # Set seed for reproducibility
-set.seed(203)
+set.seed(176)
 
 # Generate independent variables
 n <- 2500
