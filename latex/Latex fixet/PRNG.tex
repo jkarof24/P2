@@ -1,12 +1,13 @@
-When producing a synthetic dataset, there is a need for a lot of random numbers. Many programming languages have a built-in function that produces numbers that appear random, but actually are not. Computers are deterministic machines, and can therefore not produce a number without some sort of algorithm. With knowledge of this algorithm, it would be possible to predict the next number; hence the numbers are not completely random. Random numbers should be independent, i.e., the next number should not have any connection to the number or numbers produced previously. The distribution should also be uniform, meaning if you generate 1,000,000 random numbers in the range [0,1), you'd expect about 500,000 values in [0, 0.5) and about 500,000 in [0.5, 1). Earlier, these numbers have been produced by flipping coins or rolling dice. Now, it is possible to produce truly random numbers by using atmospheric noise. Despite its potential advantages, this method requires significant resources, making it inefficient for the intended application. Therefore, pseudo-random numbers will be used instead.
+When producing a synthetic dataset, there is a need for a lot of random numbers. Many programming languages have a built-in function that produces numbers that appear random, but actually are not. Computers are deterministic machines, and therefore cannot produce a number without some sort of algorithm. If the algorithm is known, it becomes possible to predict the next number; hence the numbers are not completely random. Random numbers should be independent; that is, each number should have no connection to any previously produced values. The distribution should also be uniform, meaning if you generate 1,000,000 random numbers in the range [0,1), you'd expect about 500,000 values in [0, 0.5) and about 500,000 in [0.5, 1). Earlier in history, these numbers have been produced by flipping coins or rolling dice. Today, it is possible to produce truly random numbers by using atmospheric noise. Despite its potential advantages, this method requires significant resources, making it inefficient for the intended application. Therefore, pseudo-random numbers will be used instead.
+\newline
 
-Pseudo-random numbers look and act like random numbers, but are actually deterministically generated from an initial seed value. While
+\noindent Pseudo-random numbers behave like random numbers but are deterministically generated from a seed value. While
 these numbers are not truly random, they are sufficiently unpredictable for many practical applications.
 To generate the data, we use a Pseudo-Random Number Generator (PRNG).
 PRNGs are algorithms that produce sequences of numbers that appear random.
+\newline
 
-
-Random numbers are widely used in fields such as statistics, game theory, cryptography, and simulations. These applications require numbers that behave
+\noindent Random numbers are widely used in fields such as statistics, game theory, cryptography, and simulations. These applications require numbers that behave
 as if they were random, yet can be reproduced when needed. This is where
 PRNGs come in. They allow for repeatable randomness, making them ideal for
 controlled experiments, testing, and security.
@@ -18,8 +19,7 @@ means and the characteristics that define truly random numbers.
 \subsection{Properties of PRNGs}
 
 The quality of a PRNG is determined by several key factors that influence its
-use for different applications. Some of the properties of a good PRNG is prop-
-erties: Independency, a large period and reproducibility
+use for different applications. Some of the properties of a good PRNG are independence, a long period and reproducibility
 \newline \\
 The numbers produced by the PRNG should be statistically independent, en-
 suring that each generated value exhibits no correlation with previous numbers
@@ -45,21 +45,21 @@ balancing randomness and efficiency is essential for practical applications
 
 \subsection{Linear Congruential Generator}
 
-Linear Congruential Sequence (LCS) is a commonly used approach to generate
-pseudo-random numbers. LCS generates a sequence of numbers using a linear
-recurrence relation LCS is expressed as:
+Linear Congruential Generator (LCG) is a commonly used approach to generate
+pseudo-random numbers. LCG generates a sequence of numbers using a linear
+recurrence relation, expressed as:
 
 $$X_{n+1} = (aX_n + c) \bmod m.$$  \\
 \\
-\noindent $X_0$ is the starting value, also called the seed and must be i the range $0\leq c>m$ \newline
+\noindent $X_0$ is the seed value and must be in the range $0 \leq X_0 < m$ \newline
 $a$ is the multiplier,\newline 
 $c$ is the increment and \newline
-$m$ is the modulus, which specifies the range of values, in the range $m>0$ \newline
+$m$ is the modulus, which specifies the range of values. $m$ must be greater than 0 \newline
 \\
 \noindent The operation 'mod $m$' represents division by $m$, where only the remainder
 is retained. This ensures that the generated number remains within the range
-0 to $m-1$.  $X_0$, $a$ and $c$ must all be in the interval $[0; m[$. 
-Here is is an example of the first 4 numbers of a sequence given these parameters: \newline
+0 to $m-1$.  $X_0$, $a$ and $c$ must all be in the interval $[0, m)$. 
+Here is an example of the first 4 numbers of a sequence given these parameters: \newline
 
 \begin{center}
 	$a = 5$, $c = 1$, $m = 16$, and $X_0 = 7$:
@@ -76,28 +76,82 @@ $m$. Consequently, choosing a large $m$ is typically desirable, as it can potent
 lead to longer periods. However, the period length is not determined solely by
 $m$; the choice of other parameters—such as the multiplier, increment, and the
 seed, along with their relationships, significantly impact the overall period. It
-is possible to select a larger $m$ and still end up with a shorter period if the parameters are not chosen properly. Here is an example where a larger $m$ results
-in a shorter period, illustrating that:
+is possible to select a larger $m$ and still end up with a shorter period if the parameters are not chosen properly. Here is an example where a larger $m$ results in a shorter period, illustrating that.
 
 \begin{center}
 	$a=4$, $c=6$, $m=20$, $X_0=3$
 \end{center}
 
-$$X_1=(4 \cdot 3 +6)=18 \bmod 16=4$$ 
-$$X_2=(4 \cdot 18+6)=78 \bmod 16=5$$
+$$X_1=(4 \cdot 3 +6)=18 \bmod 20=18$$ 
+$$X_2=(4 \cdot 18+6)=78 \bmod 20=78 \bmod 20=18$$
 
-Here a larger $m$ is used, but a shorter period of 1 appears. 
-\newline 
-The selection of the optimal parameters for a lcg would be excessive for the objective of this project, it is beyond the scope of this project and will therefore not be addressed further.
+\noindent Here a larger $m$ is used, but a shorter period of 1 appears. 
+\newline \\
+The selection of the optimal parameters for a LCG would be excessive for the objective of this project, it is beyond the scope of this project and will therefore not be addressed further.
 
 \subsection{Test of PRNG}
-As stated previously, the length of the sequence produced by the PRNG is not the only important factor. A uniform distribution and independence of each generated number is significant too. If these criterias are not met, there will be correlation between the generated number, which means that the randomness is of low quality. An example of this could be a sequence that follows the three-times-table, with the first number being 3: (3,6,9,12,...). In that sequence, it is pretty easy to guess the upcoming number, based on the previous. Normally the correlations are harder to spot than this example, which is why it is important to test the quality of a PRNG.
+As stated previously, the length of the sequence produced by the PRNG is not the only important factor. A uniform distribution and independence of each generated number is significant too. If these criteria are not met, there will be correlation between the generated numbers, which means that the randomness is of low quality. For example, consider a sequence that follows the three-times-table, with the first number being 3: (3,6,9,12,...). In that sequence, it is pretty easy to guess the upcoming number, based on the previous one. Normally the correlations are harder to spot than this example, which is why it is important to test the quality of a PRNG.
+\newline
 
-There are different tests used to evaluate the quality and performance of a PRNG. This includes the 'Kolmogorov-Smirnov test', 'chi-squared test' and the 'spectral test'. If the PRNG passes one of these tests, it does not mean that it will pass others. Therefore every test that it passes, just makes it more likely to produce a high quality sequence. One of the important tests for LCG is The spectral test. Another advantage of the spectral test, in the context of this paper is, that it can be used visually, which can make it easier to understand.
+\noindent There are different tests used to evaluate PRNG quality and performance, including the Kolmogorov-Smirnov test, chi-squared test and the spectral test. Passing one of these tests does not mean that it will pass others. Therefore, every test that it passes, just makes it more likely to produce a high quality sequence. One of the important tests for LCG is the spectral test. Another advantage of the spectral test in the context of this paper is that it can be visualized in two or three dimensions, which can make it easier to understand.
+\newline
 
-The test looks at how the numbers in the sequence are distributed in different dimensions. If hyperplanes and lines occurs, as seen on Figure X and Figure X, generated by $X_{n+1}=137\cdot X_{n}+187$ mod $256$, the sequence fails the test, since the distribution is not random.
+\noindent The test looks at how the numbers in the sequence are distributed in different dimensions. If hyperplanes and lines occur, as seen on Figure \ref{fig:badspec2d} and Figure \ref{fig:badspec3d}, generated by $X_{n+1}=137\cdot X_{n}+187$ mod $256$, the sequence fails the test, since the distribution is not random.
+\newline
 
+\noindent Looking at the spectral test used on a LCG with better parameters:  $X_{n+1}=3 141 592 621\cdot X_{n}+1$ mod $2^{32}$ (Kilde: Knuth), on Figure \ref{fig:goodspec2d} and Figure \ref{fig:goodspec3d}, the hyperplanes will not always be visible in 2d or 3d, but only in higher dimensions. Therefore a visual examination will not be enough to conclude the complete quality of a PRNG. Methods for inspecting LCGs in these dimensions do exist, but will not be mentioned in this project
+\newline
 
-\subsection{Marsenne Twister}
-In this project, the PRNG used will be the Mersenne-Twister. It has very good properties, uniformity and a period of $2^19937-1$. It also passes the spectral test in two and three dimensions, as seen in figure X and figure X. Another reason for this choice is that Mersenne-Twister is the built-in generator in R, which makes it convenient. 
+\noindent In this project, the PRNG used will be the Mersenne-Twister. It has very good properties, uniformity and a period of $2^19937-1$ and passes the spectral test. The test in 2D and 3D can be seen on figure \ref{fig:msspec2d} and figure \ref{fig:msspec3d}. Another reason for this choice is that Mersenne-Twister is the built-in generator in R, which makes it convenient. 
 \newpage
+
+%Spectral test for bad LCG
+\begin{figure}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{billder/spec_bad_lcg_2d.png}
+		\caption{2D spectral test for LCG using bad parameters: $X_{n+1}=137\cdot X_{n}+187$ mod $256$}
+		\label{fig:badspec2d}
+	\end{minipage}\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{billder/spec_bad_lcg_3d.png}
+		\caption{3D spectral test for LCG using bad parameters: $X_{n+1}=137\cdot X_{n}+187$ mod $256$}
+		\label{fig:badspec3d}
+	\end{minipage}
+\end{figure}
+
+%Spectral test good LCG
+\begin{figure}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{billder/spec_good_lcg_2d.png}
+		\caption{2D spectral test for LCG using good parameters: $X_{n+1}=3 141 592 621\cdot X_{n}+1$ mod $2^{32}$}
+		\label{fig:goodspec2d}
+	\end{minipage}\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{billder/spec_good_lcg_3d.png}
+		\caption{3D spectral test for LCG using good parameters: $X_{n+1}=3 141 592 621\cdot X_{n}+1$ mod $2^{32}$}
+		\label{fig:goodspec3d}
+	\end{minipage}
+\end{figure}
+
+%Mersenne-Twister spectral tests
+\begin{figure}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{billder/ms_spec_2d.png}
+		\caption{2D Spectral test for the PRNG Mersenne-Twister, in R}
+		\label{fig:msspec2d}
+	\end{minipage}\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{billder/ms_spec_3d.png}
+		\caption{3D Spectral test for the PRNG Mersenne-Twister, in R}
+		\label{fig:msspec3d}
+	\end{minipage}
+\end{figure}
