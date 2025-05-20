@@ -1,21 +1,21 @@
-To evaluate the quality of a regression model, i. e. how well the model is performing. All the metrics provide some kind of score that reflects the reliability of the model's predictions..
+To evaluate the quality of a regression model, various metrics are used. Each metric provides a score that reflects the reliability of the model's predictions.
 
-Metrics in are measures used to evaluate how well a model performs. Metrics assess the accuracy of the model’s predictions compared to actual values. Common metrics like R² and MBE help determine how closely predictions match real outcomes, while others like bias and variance reveal systematic errors and model stability. Metrics help model selection improvement by providing objective feedback on performance. They’re essential for comparing models, detecting underfitting or overfitting, and ensuring predictions are reliable for real-world use.
+Metrics are measures used to evaluate how well a model performs. Metrics assess the accuracy of the model’s predictions compared to actual values. Common metrics like R² and MBE help determine how closely predictions match real outcomes, while others like bias and variance reveal systematic errors and model stability. Metrics help model selection and improvement by providing objective feedback on performance. They’re essential for comparing models, detecting underfitting or overfitting, and ensuring predictions are reliable for real-world use.
 \\\\
 
 \subsection{R-Squared}
 % What is it?
-The $R^2$ measures how much better the model is at guessing than guessing the mean of the variable. It is calculated using the Total Sum of Squares (TSS) and the Sum of Squared Errors (SSE) with this formula: $$R^2= \frac{TSS-SSE}{TSS}.$$ TSS explains how much the values of a dataset vary from the mean and is calculated by: 
+The $R^2$ measures how much better the model predicts outcomes compared to simply using the mean. It is calculated using the Total Sum of Squares (TSS) and the Sum of Squared Errors (SSE) with this formula: $$R^2= \frac{TSS-SSE}{TSS}.$$ TSS explains how much the values of a dataset vary from the mean and is calculated by: 
 $$\sum_{i=1}^{n}(y_i-\overline{y})^2,$$
-where $y_1$ is the actual value and $\overline{y}$ is the mean of all actual values.
+where $y_i$ is the actual value and $\overline{y}$ is the mean of all actual values.
 \\\\
 
 \noindent The SSE is how far the predictions from the model are from the actual values and is calculated by:
-$$\sum_{i=1}^{n}(y_i-\hat{y_i})^2,$$
-where $\hat{y_i}$ is the predicted value from the model. The errors are squared to make all values positive, highlight larger mistakes more strongly, and stay consistent with how variance is calculated in statistics.
+$$\sum_{i=1}^{n}(y_i-\hat{y}_{i})^2,$$
+where $\hat{y}_{i}$ is the predicted value from the model. The errors are squared to make all values positive, highlight larger mistakes more strongly, and stay consistent with how variance is calculated in statistics.
 \\\\
 % Interpretation
-$R^2$ explains much of the variance explained by the model. The value of $R^2$ will therefore normally be $0\leq R^2 \geq 1$, where 0 means that the model explains none of the variance, a value of 1 would mean that the model explains all the variance, while 0.5 means that the model explains 50\% of the variance. If the $R^2$-value is negative, it means that the model is performing so bad, that it would be better so simply predict the mean for all observations.
+$R^2$ explains how much of the variance explained by the model. The value of $R^2$ typically lies in the range $0 \leq R^2 \leq 1$, where 0 means that the model explains none of the variance, a value of 1 would mean that the model explains all the variance, while 0.5 means that the model explains 50\% of the variance. If the $R^2$-value is negative, it means that the model is performing so poorly that it would be better to simply predict the mean for all observations.
 \newpage
 
 \noindent Although widely used, the $R^2$-score should not be relied upon as the only metric of model performance due to several shortcomings. Primarily, it evaluates the proportion of variance in the dependent variable explained by the model, but does not reflect the accuracy of individual values. As a result, a model can achieve a high $R^2$ despite making major errors on specific data points. In addition, $R^2$ is vulnerable to overfitting, especially when the model becomes overly complex and starts fitting the noise in the data instead of underlying trends. Another critical issue is that $R^2$ does not adjust for the number of predictors in the model. It will never decrease when more features are added, even if those features are irrelevant. For a more reliable assessment, alternative metrics should be used alongside $R^2$ to evaluate a regression model. 
@@ -26,34 +26,34 @@ Mean Bias Error (MBE) is a metric that measures the average difference between t
 
 The formula for MBE is:
 
-$$MBE=\frac{1}{n}\sum_{i=1}^{n}(\hat{y_i}-y_i)$$
+$$MBE=\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_{i}-y_i)$$
 
-\noindent Here $\hat{y_i}$ is the predicted value, $y_i$ is the actual value, and $n$ is the number of observations.
+\noindent Here $\hat{y}_{i}$ is the predicted value, $y_i$ is the actual value, and $n$ is the number of observations.
 \\\\
 
-When interpreting MBE there are three different cases. If the $\textbf{MBE}\geq 0$, the model tends to over-predict the values compared to the actual values. If the $\textbf{MBE}\leq0$, the opposite is the case, and the model tends to under-predict the values. If the $\textbf{MBE}\approx0$ there is no consistent bias in either direction.
+When interpreting MBE, there are three different cases to consider. If the $\textbf{MBE}\geq 0$, the model tends to over-predict the values compared to the actual values. If the $\textbf{MBE}\leq0$, the opposite is the case, and the model tends to under-predict the values. If the $\textbf{MBE}\approx0$ there is no consistent bias in either direction.
 \\
 
-\noindent As mentioned, the MBE measures the bias of the model, if it generally predicts values too high or too low compared to the actual values. This means that we cannot use MBE to estimate the size of the error or the overall quality of the model. If two actual values are $100$ and the model predicts $120$ and $80$ the error calculated with $\hat{y}-y$ is respectively $+20$ and $-20$. Because the absolute or squared values are not used, these errors will cancel each other out. Therefore, the size of the error is not computed. Instead, to understand the size of the errors, Root Mean Square Error can be used, which penalizes large deviations more heavily.
+\noindent The MBE measures the bias of the model, whether it tends to predict values that are generally too high or too low compared to the actual values. This means that we cannot use MBE to estimate the size of the error or the overall quality of the model. If two actual values are $100$ and the model predicts $120$ and $80$ the error calculated with $\hat{y}-y$ is $+20$ and $-20$. Because the absolute or squared values are not used, these errors will cancel each other out. Therefore, the size of the error is not computed. Instead, to understand the size of the errors, Root Mean Square Error can be used, which penalizes large deviations more heavily.
 
 \newpage
 
 \subsection{Root Mean Square Error}
 https://www.sciencedirect.com/topics/earth-and-planetary-sciences/root-mean-square-error    
 \\
-Root Mean Square Error (RMSE) is a metric used to evaluate regression models. It measures the average size of prediction errors. Since it squares the errors, it punishes larger mistakes harder than smaller ones, which is useful if the objective is to emphasize the impact of larger deviations of the actual values.
+Root Mean Square Error (RMSE) is a metric used to evaluate regression models. It measures the average size of prediction errors. Since it squares the errors, it punishes larger errors more than smaller ones, which is useful if the objective is to emphasize the impact of larger deviations of the actual values.
 \\
-The formula used to calculate RMSE:
-$$\textbf{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y_i}-y_{1})^2}$$
-As before $\hat{y_i}$ is the predicted value, $y_i$ is the actual value, and $n$ is the number of observations.
+The formula for RMSE:
+$$\textbf{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_{i}-y_{i})^2}$$
+As before $\hat{y}_{i}$ is the predicted value, $y_i$ is the actual value, and $n$ is the number of observations.
 \\ The idea is to find the error by subtracting the actual value from its prediction, square the error so negatives and positives do not cancel out (like in MBE) and large errors will stand out. Then the average of all squared errors is found, and the square root is taken to bring the result back to the original scale. 
 \\
 
-The value of the result of RMSE will always be a non-negative number and the closer RMSE is to 0, the better the model is performing. The scale and unit of RMSE is the same as the target variable. So, if the data is about 'Miles Per Gallon', a RMSE of 2 means that the predictions of the model are 2 miles off, on average. Therefore, RMSE is most useful when the objective is comparing different models on the same dataset, or at least on datasets that are on the same scale, and in the same units. This also means an RMSE of 5 can be great if the values of the target variable ranges from 1-1000, but awful if the range is 1-10. As the other metrics, RMSE should be used alongside other metrics like better picture of the models performance. RMSE does not explain why a model performs well or bad. To investigate that, bias-variance decomposition can be used to split error into systematic bias and model instability.
+The RMSE is always a non-negative number, and the closer RMSE is to 0, the better the model is performing. The scale and unit of RMSE is the same as the target variable. So, if the data is about 'Miles Per Gallon', a RMSE of 2 means that the predictions of the model are 2 miles off, on average. Therefore, RMSE is most useful when the objective is comparing different models on the same dataset, or at least on datasets with the same scale, and in the same units. This also means an RMSE of 5 can be great if the values of the target variable range from 1-1000, but awful if the range is 1-10. Like the other metrics, RMSE should be used alongside other metrics to provide a more complete picture of the model’s performance. RMSE does not explain why a model performs well or poorly. To understand why a model performs poorly, bias-variance decomposition can be used to split error into systematic bias and model instability.
 \newpage
 
 \subsection{Bias-Variance}
-To understand the sources of error in a model’s predictions, the bias-variance decomposition framework can be used. Bias and variance describe two different ways a model can make mistakes. Bias measures how far, on average, the model's predictions are from the true values. Variance describes how sensitive the model is to changes in the training data; it measures how much the model’s predictions vary when trained on different datasets. 
+To understand the sources of error in a model’s predictions, the bias-variance decomposition framework helps explain errors in a model’s predictions. Bias measures how far, on average, the model's predictions are from the true values. Variance describes how sensitive the model is to changes in the training data; it measures how much the model’s predictions vary when trained on different datasets. 
 
 The ideal case is when both bias and variance are low, meaning the model is both accurate and stable. This framework is especially useful for diagnosing underfitting, which is caused by high bias, and overfitting, which is caused by high variance. By examining both bias and variance, the decomposition helps in understanding the trade-off between model complexity and generalization.
 
@@ -95,7 +95,7 @@ High bias typically indicates that the model is too simple to capture the underl
 
 
 
-\subsection{Confidence-intervals}
-Confidence intervals are used in model evaluation to judge the stability and reliability the estimations of a model. Unlike the previous mentioned metrics, confidence intervals does not provide a single number, but instead a range within which the true parameter value is likely to lie, given a specified level of confidence. The level of confidence is typically 95\%.
+\subsection{Confidence Intervals}
+Confidence intervals are used in model evaluation to judge the stability and reliability of a model's estimations. Unlike the previously mentioned metrics, confidence intervals do not provide a single number, but instead a range within which the true parameter value is likely to lie, given a specified level of confidence. The level of confidence is typically 95\%.
 
-By comparing overlap and width of the confidence intervals across different models, it is possible to asses which model generates the best estimates, based on consistency and reliability.
+By comparing overlap and width of the confidence intervals across different models, it is possible to assess which model generates the best estimates, based on consistency and reliability.
