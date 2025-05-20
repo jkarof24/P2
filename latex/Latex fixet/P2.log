@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  20 MAY 2025 14:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  20 MAY 2025 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -395,19 +395,29 @@ LaTeX Warning: Command \O invalid in math mode on input line 23.
 
 LaTeX Warning: Command \O invalid in math mode on input line 28.
 
-) (random variabels.tex
-Underfull \hbox (badness 10000) in paragraph at lines 20--1
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--1
+Underfull \hbox (badness 10000) in paragraph at lines 20--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--48
 
  []
 
 
 
-[7]
+[7]) (random variabels.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -449,7 +459,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
 
 [10]) (Statistical theory/Probability distribution.tex
-<billder/Normal distribution.png, id=286, 674.52pt x 581.17125pt>
+<billder/Normal distribution.png, id=291, 674.52pt x 581.17125pt>
 File: billder/Normal distribution.png Graphic file (type png)
 <use billder/Normal distribution.png>
 Package pdftex.def Info: billder/Normal distribution.png  used on input line 15
@@ -465,13 +475,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--22
 [11]
 
 [12 <./billder/Normal distribution.png>]
-<billder/T_distribution.png, id=300, 674.52pt x 581.17125pt>
+<billder/T_distribution.png, id=305, 674.52pt x 581.17125pt>
 File: billder/T_distribution.png Graphic file (type png)
 <use billder/T_distribution.png>
 Package pdftex.def Info: billder/T_distribution.png  used on input line 46.
 (pdftex.def)             Requested size: 276.00105pt x 237.80289pt.
 )
 (Statistical theory/Statistical methods.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 
 [13]
 
@@ -520,9 +534,6 @@ LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
 
 Missing character: There is no £ in font cmr10!
 
-
-[19]
-
 LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
 
 
@@ -530,6 +541,8 @@ LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
 
 Missing character: There is no £ in font cmr10!
 
+
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
@@ -547,13 +560,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--228
  []
 
 
-
-[21]
 Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
 
+
+[21]
 
 [22] (Assumptions.tex
 
@@ -650,36 +663,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
 
 [29]
-<billder/spec_bad_lcg_2d.png, id=389, 358.33875pt x 416.15475pt>
+<billder/spec_bad_lcg_2d.png, id=394, 358.33875pt x 416.15475pt>
 File: billder/spec_bad_lcg_2d.png Graphic file (type png)
 <use billder/spec_bad_lcg_2d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_2d.png  used on input line 113.
 (pdftex.def)             Requested size: 155.24895pt x 180.30196pt.
-<billder/spec_bad_lcg_3d.png, id=390, 473.3685pt x 431.211pt>
+<billder/spec_bad_lcg_3d.png, id=395, 473.3685pt x 431.211pt>
 File: billder/spec_bad_lcg_3d.png Graphic file (type png)
 <use billder/spec_bad_lcg_3d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_3d.png  used on input line 119.
 (pdftex.def)             Requested size: 155.24895pt x 141.42496pt.
-<billder/spec_good_lcg_2d.png, id=392, 410.13225pt x 416.15475pt>
+<billder/spec_good_lcg_2d.png, id=397, 410.13225pt x 416.15475pt>
 File: billder/spec_good_lcg_2d.png Graphic file (type png)
 <use billder/spec_good_lcg_2d.png>
 Package pdftex.def Info: billder/spec_good_lcg_2d.png  used on input line 130.
 (pdftex.def)             Requested size: 155.24895pt x 157.53084pt.
-<billder/spec_good_lcg_3d.png, id=393, 470.9595pt x 431.211pt>
+<billder/spec_good_lcg_3d.png, id=398, 470.9595pt x 431.211pt>
 File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.14215pt.
-<billder/ms_spec_2d.png, id=394, 394.47375pt x 416.757pt>
+<billder/ms_spec_2d.png, id=399, 394.47375pt x 416.757pt>
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
 Package pdftex.def Info: billder/ms_spec_2d.png  used on input line 147.
 (pdftex.def)             Requested size: 155.24895pt x 164.01627pt.
-<billder/ms_spec_3d.png, id=395, 380.01974pt x 348.1005pt>
+<billder/ms_spec_3d.png, id=400, 380.01974pt x 348.1005pt>
 File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
 (pdftex.def)             Requested size: 155.24895pt x 142.2069pt.
+) (montecarlobootstrap.tex
+<billder/10.png, id=401, 1433.355pt x 753.5653pt>
+File: billder/10.png Graphic file (type png)
+<use billder/10.png>
+Package pdftex.def Info: billder/10.png  used on input line 12.
+(pdftex.def)             Requested size: 398.33858pt x 209.42155pt.
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 12--13
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 )
 
 [30 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>]
@@ -696,6 +723,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
  []
 
 
+
+[32 <./billder/10.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 9--12
 
  []
@@ -712,9 +741,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
 
 
-[32]
-
 [33]
+
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
@@ -731,7 +760,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
 
 
-[34]
+[35]
 Overfull \hbox (3.44507pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-scienc
 es/root-mean-
@@ -744,11 +773,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
 
 
-[35]
+[36]
 
-[36])
+[37])
 
-[37] (Problem Statement.tex
+[38] (Problem Statement.tex
 Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
 []\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and
  no mul-ti-collinear-
@@ -756,9 +785,9 @@ Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
 
 )
 
-[38]
+[39]
 
-[39] (Comparison.tex
+[40] (Comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
@@ -790,30 +819,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
 
 
-[40])
+[41])
 
-[41] (Discussion.tex)
+[42] (Discussion.tex)
 
-[42] (Conclusion.tex)
+[43] (Conclusion.tex)
 
-[43]
+[44]
 
-[44] (P2.aux)
+[45] (P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `P2.out' has not changed.
-(rerunfilecheck)             Checksum: A275D66B717220526BC5B7DEAABE578D;6476.
+(rerunfilecheck)             Checksum: 2FDE5792B5B53C211B77CD00176361CC;6652.
  ) 
 Here is how much of TeX's memory you used:
- 10782 strings out of 473523
- 171321 string characters out of 5714630
- 579277 words of memory out of 5000000
- 33753 multiletter control sequences out of 15000+600000
+ 10803 strings out of 473523
+ 171816 string characters out of 5714630
+ 578317 words of memory out of 5000000
+ 33768 multiletter control sequences out of 15000+600000
  563773 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,10n,67p,1130b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,10n,67p,1130b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\marcu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -832,9 +861,9 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (44 pages, 649848 bytes).
+Output written on P2.pdf (45 pages, 701894 bytes).
 PDF statistics:
- 559 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 401 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
+ 414 words of extra memory for PDF output out of 10000 (max. 10000000)
 
