@@ -7,7 +7,7 @@ Linear regression is a model that estimates the relationship between a dependent
 A reasonable relationship between the two in simple regression is the linear relationship:
 
 \[
-Y = \beta_0 + \beta_1 x
+Y = \beta_0 + \beta_1 x.
 \]
 
 Where \( \beta_0 \) is the intercept, and \( \beta_1 \) is the slope.
@@ -15,7 +15,7 @@ Where \( \beta_0 \) is the intercept, and \( \beta_1 \) is the slope.
 In a lot of cases, there will be more independent variables, so the relationship for multiple regression will look like this:
 
 \[
-Y = \beta_0 + \beta_1 x_1 + ......+ \beta_n x_n
+Y = \beta_0 + \beta_1 x_1 + ......+ \beta_n x_n.
 \]
 
 
@@ -25,7 +25,7 @@ Where \( n \) is the number of independent variables, and $\beta_2$ further shap
 In simple linear regression, the random error \( \epsilon \) is included:
 
 \[
-Y = \beta_0 + \beta_1 x + \epsilon
+Y = \beta_0 + \beta_1 x + \epsilon.
 \]
 
 It is assumed that \( \epsilon \) is distributed with $\epsilon = 0$ and $\epsilon) = \sigma^2$, and it has consistent variance, which is usually called the \textit{homogeneous variance assumption}. The random error \( \epsilon \) adds randomness to account for the natural variability in real data, making the model more realistic.
@@ -42,36 +42,36 @@ In polynomial regression, as mentioned before, there are six assumptions, that a
 	Least squares considers the deviation of $Y_i$ for  its expected value, where the observations are $(X_i, Y_i)$. 
 	This method also requires, that we consider the sum of the $n$ squared deviations.
 	This is denoted by the following function,
-	$$Q=\sum_{i=1}^{n}(Y_i-\beta_0 - \beta_1 X_i)^2$$
+	$$Q=\sum_{i=1}^{n}(Y_i-\beta_0 - \beta_1 X_i)^2.$$	
 	
 	According to the method of least squares, the estimations of $\beta_0$ and $\beta_1$ that minimize Q for the given sample observations $(X_1,X_1), (X_2,Y_2), ..., (X_n,Y_n)$, are called $b_0$ and $b_1$.  
 	
 	If an analytical approach is used, the values $b_0$ and $b_1$ that minimize Q for any particular set of sample data are given by these simultaneous equations: 
-	$$\sum Y_i =n b_0 +b_1 \sum X_i$$
-	$$\sum X_i y_i = b_0 \sum X_i + b_1 \sum X_i^2$$
+	$$\sum Y_i =n b_0 +b_1 \sum X_i,$$
+	$$\sum X_i y_i = b_0 \sum X_i + b_1 \sum X_i^2.$$
 	
 	These equations are called $normal  equations$, where $b_0$ and $b_1$ are the $point estimators$ of $\beta_0$ and $\beta_1$. It is possible to calculate these normal equations simultaneously for $b_0$ and $b_1$ through these expressions,
 	
-	$$b_1 = \frac{\sum (X_i - \bar{X}) (Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2}$$
+	$$b_1 = \frac{\sum (X_i - \bar{X}) (Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2} .$$
 	
-	$$b_0 = \frac{1}{n} (\sum Y_i - b_1 \sum X_i ) = \bar{Y} - b_1 \bar{X}$$
+	$$b_0 = \frac{1}{n} (\sum Y_i - b_1 \sum X_i ) = \bar{Y} - b_1 \bar{X}.$$
 	
 	Here, $\bar{X}$ and $\bar{Y}$ are the means of $X_i$ and $Y_i$.
 	
 	The normal equations can also be derived by differentiating with respect to $\beta_0$ and $\beta_1$:
-	$$\frac{\partial Q}{\partial \beta_0}=-2 \sum (Y_i - \beta_0 - \beta_1 X_i)$$
-	$$\frac{\partial Q} {\partial \beta_1} = -2 \sum X_i (Y_i - \beta_0 - \beta_1 X_i)$$
+	$$\frac{\partial Q}{\partial \beta_0}=-2 \sum (Y_i - \beta_0 - \beta_1 X_i).$$
+	$$\frac{\partial Q} {\partial \beta_1} = -2 \sum X_i (Y_i - \beta_0 - \beta_1 X_i).$$
 	
 	Then $b_0$ and $b_1$ can be set to equal zero, 
 	
-	$$-2 \sum (Y_i - b_0 - b_1 X_1)=0$$
-	$$-2\sum X_i(Y_i - b_0 - b_1 X_1)=0$$
+	$$-2 \sum (Y_i - b_0 - b_1 X_1)=0.$$
+	$$-2\sum X_i(Y_i - b_0 - b_1 X_1)=0.$$
 	This can be simplified, 
-	$$\sum_{i=1}^{n} (Y_i - b_0 - b_1 Xi)=0£$$
-	$$\sum_{i=1}^{n} X_1(Y_i - b_0 - b_1 Xi)=0£$$
+	$$\sum_{i=1}^{n} (Y_i - b_0 - b_1 Xi)=0£.$$
+	$$\sum_{i=1}^{n} X_1(Y_i - b_0 - b_1 Xi)=0£,$$
 	And it can be expanded, so the normal equations are obtained, 
-	$$\sum Y_1 - n b_0 - b_1 \sum X_1 =0$$
-	$$\sum X_1 Y_1  - b_0 \sum X_1 - b_1 \sum X_i^2 =0$$
+	$$\sum Y_1 - n b_0 - b_1 \sum X_1 =0,$$
+	$$\sum X_1 Y_1  - b_0 \sum X_1 - b_1 \sum X_i^2 =0.$$
 	Solving this will lead to values of $b_0$ and $b_1$, that minimize Q, and these are the estimates for $\beta_0$ and $\beta_1$. 
 	
 	The estimates $b_0$ and $b_1$ obtain the minimum when checking the second partial derivatives. \newline
@@ -80,7 +80,7 @@ In polynomial regression, as mentioned before, there are six assumptions, that a
 	\subsection{Linear models}
 	
 	Equations for linear models can be written in matrix terms, where the normal error regression model for simple linear regression is.
-	$$Y_i = \beta_0 + \beta_1 X_i 0 \epsilon_i $$ 
+	$$Y_i = \beta_0 + \beta_1 X_i 0 \epsilon_i. $$ 
 	
 	
 	Which implies that,
@@ -138,9 +138,9 @@ In polynomial regression, as mentioned before, there are six assumptions, that a
 	$$
 	
 	This can be written in matrix terms as, 
-	$$Y_{n \times 1}=X_{n \times 2} \cdot \beta_{2 \times 1} + \epsilon_{n \times 1}$$	
+	$$Y_{n \times 1}=X_{n \times 2} \cdot \beta_{2 \times 1} + \epsilon_{n \times 1},$$	
 	
-	Where, \newline
+	where, \newline
 	\textbf{$Y$} is a vector of response \newline
 	\textbf{$\beta$} is a vector of parameters \\
 	\textbf{$X$} is a matrix of constants, called the design matrix\\
@@ -184,7 +184,7 @@ In polynomial regression, as mentioned before, there are six assumptions, that a
 	
 	If the dependent variable $Y$ has more than one independent variable in a linear model, the equation looks like this, 
 	
-	$$Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + ... + \beta_{p-1} X_{i, p-1} + \epsilon_i$$
+	$$Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + ... + \beta_{p-1} X_{i, p-1} + \epsilon_i.$$
 	
 	In matrix terms it is,  
 	$$
@@ -228,17 +228,17 @@ In polynomial regression, as mentioned before, there are six assumptions, that a
 	
 	\subsection{Polynomial regression}
 	Polynomial regression models the relationship like this, 
-	$$Y=\beta_0 + \beta_1 x + \beta_2 x^2	+ ... + \beta_{p-1} x^{p-1}+ \epsilon$$
+	$$Y=\beta_0 + \beta_1 x + \beta_2 x^2	+ ... + \beta_{p-1} x^{p-1}+ \epsilon.$$
 	
 	The coefficients can still be found through the method of least squares,
 	
-	$$Q=\sum_{i=1}^{n}(Y_i -(\beta_0 + \beta_1 X_i + \beta_2 x_i^2 + ... + \beta_{p-1}X_{i}^{p-1}))^2$$
+	$$Q=\sum_{i=1}^{n}(Y_i -(\beta_0 + \beta_1 X_i + \beta_2 x_i^2 + ... + \beta_{p-1}X_{i}^{p-1}))^2.$$
 	\newline
 	
 	This can be written in matrix terms as,
-	$$Q=(Y-X\beta)' (Y-X\beta)$$
+	$$Q=(Y-X\beta)' (Y-X\beta),$$
 	
-	Where the design matrix for polynomial regression is, 
+	where the design matrix for polynomial regression is, 
 	
 	$$ X=
 	\left[
@@ -252,7 +252,7 @@ In polynomial regression, as mentioned before, there are six assumptions, that a
 	$$
 	
 	We can expand the expression from before, so it looks like this,
-	$$Q=Y' Y -Y' X \beta -\beta' X' Y + \beta' X' X \beta$$
+	$$Q=Y' Y -Y' X \beta -\beta' X' Y + \beta' X' X \beta .$$
 	
 	
 	It is possible to find the value of $\beta$ that minimizes Q by differentiating with respect to $\beta_0$ and $\beta_1$,
@@ -282,20 +282,20 @@ In polynomial regression, as mentioned before, there are six assumptions, that a
 	
 	So, 
 	
-	$$X' Xa  =0$$
-	$$ a' X' X a =0$$
-	$$(Xa)'(Xa)=0$$
+	$$X' Xa  =0,$$
+	$$ a' X' X a =0,$$
+	$$(Xa)'(Xa)=0.$$
 	
 	This shows, that $X'Xa=0$ if and only if $(Xa)'(Xa)=0$, so $Xa=0$. 
 	
 	If it is supposed, that there exists a non-trivial solution for $Xa=0$, there also exists a non-trivial solution for $X'Xa=0$. It is therefore only invertible when the null space of $X$ is 0, or if the columns are linearly independent. This is called no multicollinearity, since there is independence between the independent variables. 
 	
 	To ensure that the solution gives a minimum, the \textbf{Hessian} is calculated,
-	$$\frac{\partial^2 Q}{\partial \beta' \beta}=2X'X$$
+	$$\frac{\partial^2 Q}{\partial \beta' \beta}=2X'X.$$
 	
 	If it is positive definite, the function Q has a global minimum, which can be shown with,
 	
-	$$a' (X' X)a = (Xa)' (Xa)$$
+	$$a' (X' X)a = (Xa)' (Xa).$$
 	
 	As shown in %indsæt ligning (Xa)'(Xa)
 	these can only be calculated coefficients, if $Xa \not= 0$. This means, that $X'X$ is positive definite in all relevant situations, which is when the coefficients can be calculated. 
