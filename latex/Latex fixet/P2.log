@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  20 MAY 2025 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  20 MAY 2025 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -721,7 +721,7 @@ Package rerunfilecheck Info: File `P2.out' has not changed.
 Here is how much of TeX's memory you used:
  10652 strings out of 474486
  168921 string characters out of 5743756
- 1941542 words of memory out of 5000000
+ 1940542 words of memory out of 5000000
  32690 multiletter control sequences out of 15000+600000
  563005 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -744,7 +744,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (42 pages, 625771 bytes).
+Output written on P2.pdf (42 pages, 625769 bytes).
 PDF statistics:
  541 PDF objects out of 1000 (max. 8388607)
  97 named destinations out of 1000 (max. 500000)
