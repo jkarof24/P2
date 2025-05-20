@@ -1,71 +1,63 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  20 MAY 2025 14:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.29)  20 MAY 2025 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./P2.tex
-(P2.tex
+**P2.tex
+(./P2.tex
 LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+L3 programming layer <2025-03-26>
+(c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+(c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count196
-\c@section=\count197
-\c@subsection=\count198
-\c@subsubsection=\count199
-\c@paragraph=\count266
-\c@subparagraph=\count267
-\c@figure=\count268
-\c@table=\count269
+\c@part=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen141
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+\bibindent=\dimen146
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.sty (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-\lst@mode=\count270
-\lst@gtempboxa=\box52
+\lst@mode=\count271
+\lst@gtempboxa=\box53
 \lst@token=\toks18
-\lst@length=\count271
-\lst@currlwidth=\dimen142
-\lst@column=\count272
-\lst@pos=\count273
-\lst@lostspace=\dimen143
-\lst@width=\dimen144
-\lst@newlines=\count274
-\lst@lineno=\count275
-\lst@maxwidth=\dimen145
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+\lst@length=\count272
+\lst@currlwidth=\dimen147
+\lst@column=\count273
+\lst@pos=\count274
+\lst@lostspace=\dimen148
+\lst@width=\dimen149
+\lst@newlines=\count275
+\lst@lineno=\count276
+\lst@maxwidth=\dimen150
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count276
-\lst@skipnumbers=\count277
-\lst@framebox=\box53
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+\c@lstnumber=\count277
+\lst@skipnumbers=\count278
+\lst@framebox=\box54
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -75,131 +67,100 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen146
-\Gin@req@width=\dimen147
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.s
-ty
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
- (C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+)) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)))
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen148
-\lightrulewidth=\dimen149
-\cmidrulewidth=\dimen150
-\belowrulesep=\dimen151
-\belowbottomsep=\dimen152
-\aboverulesep=\dimen153
-\abovetopsep=\dimen154
-\cmidrulesep=\dimen155
-\cmidrulekern=\dimen156
-\defaultaddspace=\dimen157
-\@cmidla=\count278
-\@cmidlb=\count279
-\@aboverulesep=\dimen158
-\@belowrulesep=\dimen159
-\@thisruleclass=\count280
-\@lastruleclass=\count281
-\@thisrulewidth=\dimen160
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+\heavyrulewidth=\dimen153
+\lightrulewidth=\dimen154
+\cmidrulewidth=\dimen155
+\belowrulesep=\dimen156
+\belowbottomsep=\dimen157
+\aboverulesep=\dimen158
+\abovetopsep=\dimen159
+\cmidrulesep=\dimen160
+\cmidrulekern=\dimen161
+\defaultaddspace=\dimen162
+\@cmidla=\count279
+\@cmidlb=\count280
+\@aboverulesep=\dimen163
+\@belowrulesep=\dimen164
+\@thisruleclass=\count281
+\@lastruleclass=\count282
+\@thisrulewidth=\dimen165
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
-ty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
-lestring.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count282
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+\c@section@level=\count283
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count283
+\etb@tempcnta=\count284
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
-ty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
-)
-)
-\@linkdim=\dimen161
-\Hy@linkcounter=\count284
-\Hy@pagecounter=\count285
- (C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+\@linkdim=\dimen166
+\Hy@linkcounter=\count285
+\Hy@pagecounter=\count286
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count286
- (C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+\Hy@SavedSpaceFactor=\count287
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -211,26 +172,21 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count287
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\c@Hy@tempcnt=\count288
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen162
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+\XeTeXLinkMargin=\dimen167
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
-.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count288
-\Field@Width=\dimen163
-\Fld@charsize=\dimen164
+\Fld@menulength=\count289
+\Field@Width=\dimen168
+\Fld@charsize=\dimen169
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -238,46 +194,35 @@ Package hyperref Info: backreferencing OFF on input line 6057.
 Package hyperref Info: Link coloring OFF on input line 6062.
 Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode OFF on input line 6072.
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count289
-\c@Item=\count290
-\c@Hfootnote=\count291
+\Hy@abspage=\count290
+\c@Item=\count291
+\c@Hfootnote=\count292
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
-kage
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count292
-\c@bookmark@seq@number=\count293
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
-echeck.sty
+\Fld@listcount=\count293
+\c@bookmark@seq@number=\count294
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
-ounter.sty
+ (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-85.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip51
-)
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
-\l__pdf_internal_box=\box54
-) (P2.aux)
+) (c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count295
+) (./P2.aux)
 \openout1 = `P2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
@@ -298,25 +243,9 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
-\c@lstlisting=\count295
-
-(C:\Users\marcu\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
-\scratchdimen=\dimen165
-\scratchbox=\box55
-\nofMPsegments=\count297
-\nofMParguments=\count298
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count299
-\MPscratchDim=\dimen166
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
-\everyMPtoPDFconversion=\toks20
-)
+\c@lstlisting=\count296
 Package hyperref Info: Link coloring OFF on input line 38.
- (P2.out) (P2.out)
+ (./P2.out) (./P2.out)
 \@outlinefile=\write3
 \openout3 = `P2.out'.
 
@@ -330,7 +259,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{C:/Users/marcu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (P2.toc
+{c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./P2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -343,9 +272,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
-[3] (Introduktion.tex)
+[3] (./Introduktion.tex)
 
-[4] (Problem analyse.tex
+[4] (./Problem analyse.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -377,14 +306,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
 )
 
-[5] (MPG.tex)
+[5] (./MPG.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
-[6] (Statistical theory.tex (Statistical theory/Probability space.tex
+ []
+
+<billder/1.png, id=257, 867.24pt x 569.12625pt>
+File: billder/1.png Graphic file (type png)
+<use billder/1.png>
+Package pdftex.def Info: billder/1.png  used on input line 6.
+(pdftex.def)             Requested size: 345.0pt x 226.40463pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+
+ []
+
+<billder/2.png, id=259, 867.24pt x 589.4522pt>
+File: billder/2.png Graphic file (type png)
+<use billder/2.png>
+Package pdftex.def Info: billder/2.png  used on input line 15.
+(pdftex.def)             Requested size: 345.0pt x 234.49051pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+
+[6 <./billder/1.png>] (./Statistical theory.tex (./Statistical theory/Probability space.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
 
+
+[7 <./billder/2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 10--19
 
  []
@@ -415,9 +369,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--48
 
  []
 
-
-
-[7]) (random variabels.tex
+) (./random variabels.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -441,7 +393,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--54
 
  []
 
-) (Estimator and estimates.tex
+
+
+[10]) (./Estimator and estimates.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--10
 
  []
@@ -456,14 +410,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
  []
 
+) (./Statistical theory/Probability distribution.tex
 
-
-[10]) (Statistical theory/Probability distribution.tex
-<billder/Normal distribution.png, id=291, 674.52pt x 581.17125pt>
+[11]
+<billder/Normal distribution.png, id=299, 674.52pt x 581.17125pt>
 File: billder/Normal distribution.png Graphic file (type png)
 <use billder/Normal distribution.png>
-Package pdftex.def Info: billder/Normal distribution.png  used on input line 15
-.
+Package pdftex.def Info: billder/Normal distribution.png  used on input line 15.
 (pdftex.def)             Requested size: 276.00105pt x 237.80289pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--22
@@ -472,22 +425,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--22
 
 
 
-[11]
-
 [12 <./billder/Normal distribution.png>]
-<billder/T_distribution.png, id=305, 674.52pt x 581.17125pt>
+
+[13]
+<billder/T_distribution.png, id=314, 674.52pt x 581.17125pt>
 File: billder/T_distribution.png Graphic file (type png)
 <use billder/T_distribution.png>
 Package pdftex.def Info: billder/T_distribution.png  used on input line 46.
 (pdftex.def)             Requested size: 276.00105pt x 237.80289pt.
-)
-(Statistical theory/Statistical methods.tex
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[13]
+) (./Statistical theory/Statistical methods.tex
 
 [14 <./billder/T_distribution.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
@@ -496,9 +442,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
 
 Overfull \hbox (160.45001pt too wide) in paragraph at lines 22--28
-\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=scie
-nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
-s:pdf$ 
+\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:drhuang:com=science=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]ciences:pdf$ 
  []
 
 
@@ -512,7 +456,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
 [16]))
 
-[17] (Polynomial regression.tex
+[17] (./Polynomial regression.tex
 Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
@@ -521,9 +465,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
 [18]
 Overfull \hbox (36.66817pt too wide) in paragraph at lines 53--54
-[]\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations
-$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m
-/it/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
+[]\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
  []
 
 
@@ -568,23 +510,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
 [21]
 
-[22] (Assumptions.tex
+[22] (./Assumptions.tex
 
 [23]
 Overfull \hbox (209.65147pt too wide) in paragraph at lines 39--42
-\OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
-d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
-hZW\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CMTEAAR\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 q
-xZqqD\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CVoqZfHgWZU\OT1/cmr/m/n/10 8\OML/cmm/m/i
-t/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/
-it/10 Opswn \OMS/cmsy/m/n/10 ^^@
+\OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbclid \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgNhZW\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CMTEAAR\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 qxZqqD\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CVoqZfHgWZU\OT1/cmr/m/n/10 8\OML/cmm/m/it/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/it/10 Opswn \OMS/cmsy/m/n/10 ^^@
  []
 
 
 
 [24]))
 
-[25] (PRNG.tex
+[25] (./PRNG.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -663,56 +600,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
 
 [29]
-<billder/spec_bad_lcg_2d.png, id=394, 358.33875pt x 416.15475pt>
+<billder/spec_bad_lcg_2d.png, id=399, 358.33875pt x 416.15475pt>
 File: billder/spec_bad_lcg_2d.png Graphic file (type png)
 <use billder/spec_bad_lcg_2d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_2d.png  used on input line 113.
 (pdftex.def)             Requested size: 155.24895pt x 180.30196pt.
-<billder/spec_bad_lcg_3d.png, id=395, 473.3685pt x 431.211pt>
+<billder/spec_bad_lcg_3d.png, id=400, 473.3685pt x 431.211pt>
 File: billder/spec_bad_lcg_3d.png Graphic file (type png)
 <use billder/spec_bad_lcg_3d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_3d.png  used on input line 119.
 (pdftex.def)             Requested size: 155.24895pt x 141.42496pt.
-<billder/spec_good_lcg_2d.png, id=397, 410.13225pt x 416.15475pt>
+<billder/spec_good_lcg_2d.png, id=401, 410.13225pt x 416.15475pt>
 File: billder/spec_good_lcg_2d.png Graphic file (type png)
 <use billder/spec_good_lcg_2d.png>
 Package pdftex.def Info: billder/spec_good_lcg_2d.png  used on input line 130.
 (pdftex.def)             Requested size: 155.24895pt x 157.53084pt.
-<billder/spec_good_lcg_3d.png, id=398, 470.9595pt x 431.211pt>
+<billder/spec_good_lcg_3d.png, id=402, 470.9595pt x 431.211pt>
 File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.14215pt.
-<billder/ms_spec_2d.png, id=399, 394.47375pt x 416.757pt>
+<billder/ms_spec_2d.png, id=403, 394.47375pt x 416.757pt>
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
 Package pdftex.def Info: billder/ms_spec_2d.png  used on input line 147.
 (pdftex.def)             Requested size: 155.24895pt x 164.01627pt.
-<billder/ms_spec_3d.png, id=400, 380.01974pt x 348.1005pt>
+<billder/ms_spec_3d.png, id=404, 380.01974pt x 348.1005pt>
 File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
 (pdftex.def)             Requested size: 155.24895pt x 142.2069pt.
-) (montecarlobootstrap.tex
-<billder/10.png, id=401, 1433.355pt x 753.5653pt>
-File: billder/10.png Graphic file (type png)
-<use billder/10.png>
-Package pdftex.def Info: billder/10.png  used on input line 12.
-(pdftex.def)             Requested size: 398.33858pt x 209.42155pt.
-
-Overfull \hbox (53.33858pt too wide) in paragraph at lines 12--13
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 )
 
 [30 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>]
 
-[31 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billde
-r/ms_spec_2d.png> <./billder/ms_spec_3d.png>] (metrics.tex
+[31 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billder/ms_spec_2d.png> <./billder/ms_spec_3d.png>] (./metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -723,8 +645,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
  []
 
 
-
-[32 <./billder/10.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 9--12
 
  []
@@ -741,9 +661,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
 
 
-[33]
+[32]
 
-[34]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
@@ -760,10 +680,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
 
 
-[35]
+[34]
 Overfull \hbox (3.44507pt too wide) in paragraph at lines 42--47
-\OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-scienc
-es/root-mean-
+\OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-sciences/root-mean-
  []
 
 
@@ -773,21 +692,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
 
 
-[36]
+[35]
 
-[37])
+[36])
 
-[38] (Problem Statement.tex
+[37] (./Problem Statement.tex
 Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
-[]\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and
- no mul-ti-collinear-
+[]\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and no mul-ti-collinear-
  []
 
 )
 
-[39]
+[38]
 
-[40] (Comparison.tex
+[39] (./Comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
@@ -819,51 +737,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
 
 
-[41])
+[40])
 
-[42] (Discussion.tex)
+[41] (./Discussion.tex)
 
-[43] (Conclusion.tex)
+[42] (./conclusion.tex)
 
-[44]
+[43]
 
-[45] (P2.aux)
+[44] (./P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `P2.out' has not changed.
-(rerunfilecheck)             Checksum: 2FDE5792B5B53C211B77CD00176361CC;6652.
+(rerunfilecheck)             Checksum: A275D66B717220526BC5B7DEAABE578D;6476.
  ) 
 Here is how much of TeX's memory you used:
- 10803 strings out of 473523
- 171816 string characters out of 5714630
- 578317 words of memory out of 5000000
- 33768 multiletter control sequences out of 15000+600000
- 563773 words of font info for 52 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 63i,10n,67p,1130b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\marcu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/marcu/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/marcu/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/marcu/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m
-arcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr7.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (45 pages, 701894 bytes).
+ 10482 strings out of 471606
+ 166465 string characters out of 5519417
+ 558491 words of memory out of 5000000
+ 36789 multiletter control sequences out of 15000+600000
+ 631761 words of font info for 56 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 63i,10n,67p,1128b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Users/Jonathan/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on P2.pdf (44 pages, 646914 bytes).
 PDF statistics:
  572 PDF objects out of 1000 (max. 8388607)
- 104 named destinations out of 1000 (max. 500000)
- 414 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 468 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
