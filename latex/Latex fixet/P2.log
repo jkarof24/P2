@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  20 MAY 2025 14:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  20 MAY 2025 14:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -826,8 +826,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--15
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `P2.out' has not changed.
-(rerunfilecheck)             Checksum: 7E29F3F2224188C2B9C13B82BE604EAA;6328.
+
+
+Package rerunfilecheck Warning: File `P2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `P2.out':
+(rerunfilecheck)             Before: D4311C6553D1EE243DC2B99B45A368A5;6372
+(rerunfilecheck)             After:  7E29F3F2224188C2B9C13B82BE604EAA;6328.
  ) 
 Here is how much of TeX's memory you used:
  10779 strings out of 473523
@@ -855,7 +862,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (43 pages, 649792 bytes).
+Output written on P2.pdf (43 pages, 649811 bytes).
 PDF statistics:
  550 PDF objects out of 1000 (max. 8388607)
  99 named destinations out of 1000 (max. 500000)
