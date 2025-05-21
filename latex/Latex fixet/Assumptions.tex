@@ -10,25 +10,25 @@ A way to display homoscedasticity is through the variance-covariance matrix. The
 
 
 	
-%	\[
-%	\text{Var}(\varepsilon) = \begin{bmatrix}
-%		\sigma^2 & 0 & \cdots & 0 & 0 \\
-%		0 & \sigma^2 & \cdots & 0 & 0 \\
-%		\vdots & \vdots & \ddots & \vdots & \vdots \\
-%		0 & 0 & \cdots & \sigma^2 & 0 \\
-%		0 & 0 & \cdots & 0 & \sigma^2
-%	\end{bmatrix} = \sigma^2 I
-%	\]
+% \[
+% \text{Var}(\varepsilon) = \sigma^2 I = 
+% \begin{bmatrix}
+%	\sigma^2 & 0        & \cdots & 0 \\
+%	0        & \sigma^2 & \cdots & 0 \\
+%	\vdots   & \vdots   & \ddots & \vdots \\
+%	0        & 0        & \cdots & \sigma^2 \\
+% \end{bmatrix}
+% \]
 %\newline
-%The general way of writing the variance-covariance matrix, is by this formula:
-%\[
-%\text{Var}(\epsilon) = \mathbb{E}(\epsilon \epsilon') = \begin{bmatrix}
-%	\sigma_{1,1}^2 & \sigma_{1,2} & \sigma_{1,3} & \cdots & \sigma_{1,l-1} & \sigma_{1,l} \\
-%	\sigma_{2,1} & \sigma_{2,2}^2 & 0 & 0 & 0 \\
-%	\sigma_{3,1} & 0 & \ddots & \vdots & \vdots \\
-%	\vdots & & \ddots & \ddots & 0 \\
-%	\sigma_{l-1,1} & 0 & & 0 & \sigma_{l-1,l-1}^2 \\
-%	\sigma_{l,1} & 0 & & & & \sigma_{l,l}^2 
+The general way of writing the variance-covariance matrix, is by this formula:
+% \[
+% \text{Var}(\varepsilon) = \mathbb{E}(\varepsilon \varepsilon') =
+% \begin{bmatrix}
+%	\sigma_{11} & \sigma_{12} & \sigma_{13} & \cdots &  \sigma_{1l} \\
+%	\sigma_{12} & \sigma_{22} & \sigma_{23} & \cdots & \sigma_{2l} \\
+%	\sigma_{13} & \sigma_{23} & \sigma_{33} & \cdots & \sigma_{3l} \\
+%	\vdots      & \vdots      & \vdots      & \ddots & \vdots \\
+%	\sigma_{1l} & \sigma_{2l} & \sigma_{3l} & \cdots & \sigma_{ll}
 %\end{bmatrix}
 %\]
 %\newline

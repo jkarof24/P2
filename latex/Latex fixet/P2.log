@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.19)  20 MAY 2025 14:42
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.19)  20 MAY 2025 21:47
->>>>>>> Stashed changes
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 08:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -379,6 +375,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
 )
 
 [5] (MPG.tex
@@ -473,7 +474,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
 
 [10]) (Statistical theory/Probability distribution.tex
-<billder/Normal distribution.png, id=281, 674.52pt x 581.17125pt>
+<billder/Normal distribution.png, id=271, 674.52pt x 581.17125pt>
 File: billder/Normal distribution.png Graphic file (type png)
 <use billder/Normal distribution.png>
 Package pdftex.def Info: billder/Normal distribution.png  used on input line 15
@@ -489,7 +490,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--22
 [11]
 
 [12 <./billder/Normal distribution.png>]
-<billder/T_distribution.png, id=295, 674.52pt x 581.17125pt>
+<billder/T_distribution.png, id=285, 674.52pt x 581.17125pt>
 File: billder/T_distribution.png Graphic file (type png)
 <use billder/T_distribution.png>
 Package pdftex.def Info: billder/T_distribution.png  used on input line 46.
@@ -529,64 +530,511 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [16]))
 
 [17] (Polynomial regression.tex
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
 
 
 [18]
-Overfull \hbox (36.66817pt too wide) in paragraph at lines 53--54
+Overfull \hbox (36.66817pt too wide) in paragraph at lines 52--53
 []\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations
 $\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m
 /it/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
  []
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
 
 Missing character: There is no £ in font cmr10!
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
 
 Missing character: There is no £ in font cmr10!
 
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 143--148
+Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--237
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
 
 
-[21]
+[21] (Assumptions.tex
 
-[22] (Assumptions.tex
+[22]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.14 $${Var}(\varepsilon
+                        ) = \sigma^2 I = $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-[23]
+
+! LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \begin{bmatrix}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.16 	\sigma^2 &
+                 0        & \cdots & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.16 	\sigma^2 & 0        &
+                            \cdots & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.16 	\sigma^2 & 0        & \cdots &
+                                     0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.17 	0        &
+                 \sigma^2 & \cdots & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.17 	0        & \sigma^2 &
+                            \cdots & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.17 	0        & \sigma^2 & \cdots &
+                                     0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.18 	\vdots   &
+                 \vdots   & \ddots & \vdots \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.18 	\vdots   & \vdots   &
+                            \ddots & \vdots \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.18 	\vdots   & \vdots   & \ddots &
+                                     \vdots \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.19 	0        &
+                 0        & \cdots & \sigma^2 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.19 	0        & 0        &
+                            \cdots & \sigma^2 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.19 	0        & 0        & \cdots &
+                                     \sigma^2 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: \begin{document} ended by \end{bmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{bmatrix}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \]
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \[
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.25 \text
+          {Var}(\varepsilon) = \mathbb{E}(\varepsilon \varepsilon') =
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 \text{Var}(\varepsilon) = \mathbb
+                                      {E}(\varepsilon \varepsilon') =
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \begin{bmatrix}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.27 	\sigma_{11} &
+                    \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.27 	\sigma_{11} & \sigma_{12} &
+                                  \sigma_{13} & \cdots & \sigma_{1l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.27 	\sigma_{11} & \sigma_{12} & \sigma_{13} &
+                                                \cdots & \sigma_{1l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.27 ...11} & \sigma_{12} & \sigma_{13} & \cdots &
+                                                   \sigma_{1l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.28 	\sigma_{12} &
+                    \sigma_{22} & \sigma_{23} & \cdots & \sigma_{2l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.28 	\sigma_{12} & \sigma_{22} &
+                                  \sigma_{23} & \cdots & \sigma_{2l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.28 	\sigma_{12} & \sigma_{22} & \sigma_{23} &
+                                                \cdots & \sigma_{2l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.28 ...12} & \sigma_{22} & \sigma_{23} & \cdots &
+                                                   \sigma_{2l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.29 	\sigma_{13} &
+                    \sigma_{23} & \sigma_{33} & \cdots & \sigma_{3l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.29 	\sigma_{13} & \sigma_{23} &
+                                  \sigma_{33} & \cdots & \sigma_{3l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.29 	\sigma_{13} & \sigma_{23} & \sigma_{33} &
+                                                \cdots & \sigma_{3l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.29 ...13} & \sigma_{23} & \sigma_{33} & \cdots &
+                                                   \sigma_{3l} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.30 	\vdots      &
+                    \vdots      & \vdots      & \ddots & \vdots \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.30 	\vdots      & \vdots      &
+                                  \vdots      & \ddots & \vdots \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.30 	\vdots      & \vdots      & \vdots      &
+                                                \ddots & \vdots \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.30 ...    & \vdots      & \vdots      & \ddots &
+                                                   \vdots \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.31 	\sigma_{1l} &
+                    \sigma_{2l} & \sigma_{3l} & \cdots & \sigma_{ll}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.31 	\sigma_{1l} & \sigma_{2l} &
+                                  \sigma_{3l} & \cdots & \sigma_{ll}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.31 	\sigma_{1l} & \sigma_{2l} & \sigma_{3l} &
+                                                \cdots & \sigma_{ll}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.31 ...1l} & \sigma_{2l} & \sigma_{3l} & \cdots &
+                                                   \sigma_{ll}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: \begin{document} ended by \end{bmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \end{bmatrix}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \]
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (923.9008pt too wide) in paragraph at lines 14--36
+\OML/cmm/m/it/10 Everypositioninthematrixiscalculated; thenthediagonalwilltelli
+fthedatacontainshomoscedasticityorheteroscedasticity:Thepositionsthatarenotonth
+ediagonalshouldbezeroelsethedatacontainsanotherproblem; thatisautocorrelation; 
+meaningthattheobservationsinthedatasetarecorrelated:$ 
+ []
+
+
 Overfull \hbox (209.65147pt too wide) in paragraph at lines 39--42
 \OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
 d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
@@ -598,9 +1046,9 @@ it/10 Opswn \OMS/cmsy/m/n/10 ^^@
 
 
 
-[24]))
+[23]))
 
-[25] (PRNG.tex
+[24] (PRNG.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -632,24 +1080,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--45
 
 
 
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
+
+
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
-
-
-[27]
 Underfull \hbox (badness 10000) in paragraph at lines 88--91
 
  []
@@ -671,74 +1119,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
 
 
-[28]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
 
 
-<<<<<<< Updated upstream
-[29]
-<billder/spec_bad_lcg_2d.png, id=384, 358.33875pt x 416.15475pt>
-=======
-[27]
-<billder/spec_bad_lcg_2d.png, id=381, 358.33875pt x 416.15475pt>
->>>>>>> Stashed changes
+[28]
+<billder/spec_bad_lcg_2d.png, id=377, 358.33875pt x 416.15475pt>
 File: billder/spec_bad_lcg_2d.png Graphic file (type png)
 <use billder/spec_bad_lcg_2d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_2d.png  used on input line 113.
 (pdftex.def)             Requested size: 155.24895pt x 180.30196pt.
-<<<<<<< Updated upstream
-<billder/spec_bad_lcg_3d.png, id=385, 473.3685pt x 431.211pt>
-=======
-<billder/spec_bad_lcg_3d.png, id=382, 473.3685pt x 431.211pt>
->>>>>>> Stashed changes
+<billder/spec_bad_lcg_3d.png, id=378, 473.3685pt x 431.211pt>
 File: billder/spec_bad_lcg_3d.png Graphic file (type png)
 <use billder/spec_bad_lcg_3d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_3d.png  used on input line 119.
 (pdftex.def)             Requested size: 155.24895pt x 141.42496pt.
-<<<<<<< Updated upstream
-<billder/spec_good_lcg_2d.png, id=387, 410.13225pt x 416.15475pt>
-=======
-<billder/spec_good_lcg_2d.png, id=384, 410.13225pt x 416.15475pt>
->>>>>>> Stashed changes
+<billder/spec_good_lcg_2d.png, id=380, 410.13225pt x 416.15475pt>
 File: billder/spec_good_lcg_2d.png Graphic file (type png)
 <use billder/spec_good_lcg_2d.png>
 Package pdftex.def Info: billder/spec_good_lcg_2d.png  used on input line 130.
 (pdftex.def)             Requested size: 155.24895pt x 157.53084pt.
-<<<<<<< Updated upstream
-<billder/spec_good_lcg_3d.png, id=388, 470.9595pt x 431.211pt>
-=======
-<billder/spec_good_lcg_3d.png, id=385, 470.9595pt x 431.211pt>
->>>>>>> Stashed changes
+<billder/spec_good_lcg_3d.png, id=381, 470.9595pt x 431.211pt>
 File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.14215pt.
-<<<<<<< Updated upstream
-<billder/ms_spec_2d.png, id=389, 394.47375pt x 416.757pt>
-=======
-<billder/ms_spec_2d.png, id=386, 394.47375pt x 416.757pt>
->>>>>>> Stashed changes
+<billder/ms_spec_2d.png, id=382, 394.47375pt x 416.757pt>
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
 Package pdftex.def Info: billder/ms_spec_2d.png  used on input line 147.
 (pdftex.def)             Requested size: 155.24895pt x 164.01627pt.
-<<<<<<< Updated upstream
-<billder/ms_spec_3d.png, id=390, 380.01974pt x 348.1005pt>
-=======
-<billder/ms_spec_3d.png, id=387, 380.01974pt x 348.1005pt>
->>>>>>> Stashed changes
+<billder/ms_spec_3d.png, id=383, 380.01974pt x 348.1005pt>
 File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
 (pdftex.def)             Requested size: 155.24895pt x 142.2069pt.
 )
 
-[30 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>]
+[29 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>]
 
-[31 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billde
+[30 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billde
 r/ms_spec_2d.png> <./billder/ms_spec_3d.png>] (metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
@@ -766,15 +1189,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--22
 
 
 
-[32]
-
-<<<<<<< Updated upstream
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-=======
 [31]
+
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
->>>>>>> Stashed changes
 
  []
 
@@ -790,29 +1208,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
 
 
-<<<<<<< Updated upstream
-[34]
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 42--47
-\OT1/cmr/m/n/10 https://www.sciencedirect.com/topics/earth-and-planetary-scienc
-es/root-mean-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--51
-=======
-[32]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 48--52
->>>>>>> Stashed changes
 
  []
 
 
 
-[35]
+[34]
 
-[36])
+[35])
 
-[37] (Problem Statement.tex
+[36] (Problem Statement.tex
 Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
 []\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and
  no mul-ti-collinear-
@@ -820,7 +1227,7 @@ Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
 
 )
 
-[38] (Comparison.tex
+[37] (Comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
@@ -852,41 +1259,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
 
 
-[39])
+[38])
 
-[40] (Discussion.tex)
+[39] (Discussion.tex)
 
-[41] (Conclusion.tex)
+[40] (Conclusion.tex)
 
-[42]
+[41]
 
-<<<<<<< Updated upstream
+[42] (P2.bbl)
+
 [43] (P2.aux)
-=======
-[42] (./P2.bbl)
-
-[43] (./P2.aux)
->>>>>>> Stashed changes
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-<<<<<<< Updated upstream
-
-
-Package rerunfilecheck Warning: File `P2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `P2.out':
-(rerunfilecheck)             Before: D4311C6553D1EE243DC2B99B45A368A5;6372
-(rerunfilecheck)             After:  7E29F3F2224188C2B9C13B82BE604EAA;6328.
+Package rerunfilecheck Info: File `P2.out' has not changed.
+(rerunfilecheck)             Checksum: AEA6736DC328F9B616D612CB87C8BAF8;6087.
  ) 
 Here is how much of TeX's memory you used:
- 10779 strings out of 473523
- 171292 string characters out of 5714630
- 578277 words of memory out of 5000000
- 33752 multiletter control sequences out of 15000+600000
+ 10794 strings out of 473523
+ 171067 string characters out of 5714631
+ 580360 words of memory out of 5000000
+ 33761 multiletter control sequences out of 15000+600000
  563773 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,10n,67p,1130b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -908,43 +1303,9 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (43 pages, 649811 bytes).
+Output written on P2.pdf (43 pages, 651129 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 393 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-Package rerunfilecheck Info: File `P2.out' has not changed.
-(rerunfilecheck)             Checksum: A275D66B717220526BC5B7DEAABE578D;6476.
- ) 
-Here is how much of TeX's memory you used:
- 10749 strings out of 469590
- 166252 string characters out of 5474519
- 569687 words of memory out of 5000000
- 37346 multiletter control sequences out of 15000+600000
- 631761 words of font info for 56 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 63i,10n,67p,1128b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/t
-exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2025
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.
-pfb>
-Output written on P2.pdf (43 pages, 582806 bytes).
-PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 468 compressed objects within 5 object streams
+ 552 PDF objects out of 1000 (max. 8388607)
  102 named destinations out of 1000 (max. 500000)
- 391 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> Stashed changes
+ 377 words of extra memory for PDF output out of 10000 (max. 10000000)
 
