@@ -86,53 +86,55 @@ clean_colnames <- function(df) {
   return(df)
 }
 
-klassisk_model <- lm(mpg ~ poly(acceleration, 2) + poly(cylinders, 2) + poly(model.year, 2) + poly(origin, 2), data = data)
 
+
+
+# Estimer klassisk OLS-model med polynomielle termer
+klassisk_model <- lm(mpg ~ poly(acceleration, 2) + poly(cylinders, 2) + 
+                       poly(model.year, 2) + poly(origin, 2), data = data)
+
+# Rens kolonnenavne i bootstrap-resultaterne (hvis nødvendigt)
 results_df <- clean_colnames(results_df)
 
-
-
+# Beregn bootstrap-standardfejl
 bootstrap_se <- sapply(results_df, sd)
 
-print("Bootstrap Standard Errors")
+cat("Bootstrap Standard Errors:\n")
 print(bootstrap_se)
 
-print("\nStandard OLS Standard Errors for comparison")
-# Hent standardfejlene fra summary(klassisk_model)
+# Hent standardfejlene fra OLS-modellen
 ols_summary <- summary(klassisk_model)
 ols_se <- ols_summary$coefficients[, "Std. Error"]
+
+cat("\nStandard OLS Standard Errors for comparison:\n")
 print(ols_se)
 
-
+# Konfidensniveau og kritisk z-værdi
 confidence_level <- 0.95
 alpha <- 1 - confidence_level
+z_critical <- qnorm(1 - alpha / 2)
 
-
-z_critical <- qnorm(1 - alpha/2)
-
-
-# Calculate the mean of each column in results_df
+# Beregn gennemsnit af bootstrap-koefficienter
 mean_results <- colMeans(results_df)
 
-# Calculate the confidence intervals using the mean values
+# Bootstrap konfidensintervaller
 normal_bootstrap_ci_coef <- data.frame(
   Lower = mean_results - z_critical * bootstrap_se,
   Upper = mean_results + z_critical * bootstrap_se
 )
 
-
+# OLS konfidensintervaller
 normal_ci_coef <- data.frame(
-  Lower = mean_results - z_critical * bootstrap_se,
-  Upper = mean_results + z_critical * bootstrap_se
+  Lower = klassisk_model$coefficients - z_critical * ols_se,
+  Upper = klassisk_model$coefficients + z_critical * ols_se
 )
 
-  
-
-
-cat(paste0("\nNormal Bootstrap Confidence Intervals (", confidence_level * 100, "%):\n"))
+# Udskriv resultater
+cat(paste0("\nBootstrap Confidence Intervals (", confidence_level * 100, "%):\n"))
 print(normal_bootstrap_ci_coef)
 
-
+cat(paste0("\nNormal OLS Confidence Intervals (", confidence_level * 100, "%):\n"))
+print(normal_ci_coef)
 
 
 
