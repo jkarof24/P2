@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 08:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 08:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -380,7 +380,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
 
-<billder/1.png, id=250, 867.24pt x 589.4522pt>
+<billder/1.png, id=245, 867.24pt x 589.4522pt>
 File: billder/1.png Graphic file (type png)
 <use billder/1.png>
 Package pdftex.def Info: billder/1.png  used on input line 7.
@@ -390,7 +390,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-<billder/2.png, id=251, 867.24pt x 589.4522pt>
+<billder/2.png, id=246, 867.24pt x 589.4522pt>
 File: billder/2.png Graphic file (type png)
 <use billder/2.png>
 Package pdftex.def Info: billder/2.png  used on input line 18.
@@ -468,7 +468,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
  []
 
 ) (Statistical theory/Probability distribution.tex [11]
-<billder/Normal distribution.png, id=290, 674.52pt x 581.17125pt>
+<billder/Normal distribution.png, id=285, 674.52pt x 581.17125pt>
 File: billder/Normal distribution.png Graphic file (type png)
 <use billder/Normal distribution.png>
 Package pdftex.def Info: billder/Normal distribution.png  used on input line 15
@@ -480,7 +480,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--22
  []
 
 [12 <./billder/Normal distribution.png>] [13]
-<billder/T_distribution.png, id=305, 674.52pt x 581.17125pt>
+<billder/T_distribution.png, id=300, 674.52pt x 581.17125pt>
 File: billder/T_distribution.png Graphic file (type png)
 <use billder/T_distribution.png>
 Package pdftex.def Info: billder/T_distribution.png  used on input line 46.
@@ -504,52 +504,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
  []
 
 [16])) [17] (Polynomial regression.tex
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
 [18]
-Overfull \hbox (36.66817pt too wide) in paragraph at lines 53--54
+Overfull \hbox (36.66817pt too wide) in paragraph at lines 52--53
 []\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations
 $\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m
 /it/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
  []
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
 
 Missing character: There is no £ in font cmr10!
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
 
 Missing character: There is no £ in font cmr10!
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 143--148
+Underfull \hbox (badness 10000) in paragraph at lines 142--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--237
-
- []
-
-[21] [22] (Assumptions.tex [23]
+[21] (Assumptions.tex [22]
 Overfull \hbox (209.65147pt too wide) in paragraph at lines 39--42
 \OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
 d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
@@ -559,7 +554,7 @@ t/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/
 it/10 Opswn \OMS/cmsy/m/n/10 ^^@
  []
 
-[24])) [25] (PRNG.tex
+[23])) [24] (PRNG.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -589,22 +584,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--45
 
  []
 
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
-[27]
 Underfull \hbox (badness 10000) in paragraph at lines 88--91
 
  []
@@ -624,44 +619,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
-[28]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[29]
-<billder/spec_bad_lcg_2d.png, id=395, 358.33875pt x 416.15475pt>
+[28]
+<billder/spec_bad_lcg_2d.png, id=387, 358.33875pt x 416.15475pt>
 File: billder/spec_bad_lcg_2d.png Graphic file (type png)
 <use billder/spec_bad_lcg_2d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_2d.png  used on input line 113.
 (pdftex.def)             Requested size: 155.24895pt x 180.30196pt.
-<billder/spec_bad_lcg_3d.png, id=396, 473.3685pt x 431.211pt>
+<billder/spec_bad_lcg_3d.png, id=388, 473.3685pt x 431.211pt>
 File: billder/spec_bad_lcg_3d.png Graphic file (type png)
 <use billder/spec_bad_lcg_3d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_3d.png  used on input line 119.
 (pdftex.def)             Requested size: 155.24895pt x 141.42496pt.
-<billder/spec_good_lcg_2d.png, id=398, 410.13225pt x 416.15475pt>
+<billder/spec_good_lcg_2d.png, id=390, 410.13225pt x 416.15475pt>
 File: billder/spec_good_lcg_2d.png Graphic file (type png)
 <use billder/spec_good_lcg_2d.png>
 Package pdftex.def Info: billder/spec_good_lcg_2d.png  used on input line 130.
 (pdftex.def)             Requested size: 155.24895pt x 157.53084pt.
-<billder/spec_good_lcg_3d.png, id=399, 470.9595pt x 431.211pt>
+<billder/spec_good_lcg_3d.png, id=391, 470.9595pt x 431.211pt>
 File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.14215pt.
-<billder/ms_spec_2d.png, id=400, 394.47375pt x 416.757pt>
+<billder/ms_spec_2d.png, id=392, 394.47375pt x 416.757pt>
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
 Package pdftex.def Info: billder/ms_spec_2d.png  used on input line 147.
 (pdftex.def)             Requested size: 155.24895pt x 164.01627pt.
-<billder/ms_spec_3d.png, id=401, 380.01974pt x 348.1005pt>
+<billder/ms_spec_3d.png, id=393, 380.01974pt x 348.1005pt>
 File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
 (pdftex.def)             Requested size: 155.24895pt x 142.2069pt.
-) [30 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>]
-[31 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billde
+) [29 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>]
+[30 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billde
 r/ms_spec_2d.png> <./billder/ms_spec_3d.png>] (metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
@@ -687,7 +682,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--22
 
  []
 
-[32] [33]
+[31] [32]
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
@@ -702,18 +697,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
-[34]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 48--52
 
  []
 
-[35] [36]) [37] (Problem Statement.tex
+[34] [35]) [36] (Problem Statement.tex
 Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
 []\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and
  no mul-ti-collinear-
  []
 
-) [38] (Comparison.tex
+) [37] (Comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
@@ -743,20 +738,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--15
 
  []
 
-[39]) [40] (Discussion.tex) [41] (Conclusion.tex) [42] [43] (P2.bbl) [44]
+[38]) [39] (Discussion.tex) [40] (Conclusion.tex) [41] [42] (P2.bbl) [43]
 (P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `P2.out' has not changed.
-(rerunfilecheck)             Checksum: 7E29F3F2224188C2B9C13B82BE604EAA;6328.
+(rerunfilecheck)             Checksum: F37C84C9C80F9661C424F5F238E8FD5B;6200.
  ) 
 Here is how much of TeX's memory you used:
- 10719 strings out of 474486
- 170448 string characters out of 5743756
- 1940542 words of memory out of 5000000
- 32739 multiletter control sequences out of 15000+600000
+ 10717 strings out of 474486
+ 170421 string characters out of 5743756
+ 1942542 words of memory out of 5000000
+ 32738 multiletter control sequences out of 15000+600000
  563005 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,10n,67p,1130b,453s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -778,9 +773,9 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (44 pages, 723394 bytes).
+Output written on P2.pdf (43 pages, 719286 bytes).
 PDF statistics:
- 571 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
- 403 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 563 PDF objects out of 1000 (max. 8388607)
+ 105 named destinations out of 1000 (max. 500000)
+ 395 words of extra memory for PDF output out of 10000 (max. 10000000)
 

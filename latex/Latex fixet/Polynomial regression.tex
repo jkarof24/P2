@@ -5,7 +5,7 @@ Linear regression is a model that estimates the relationship between a dependent
 A reasonable relationship between the two in simple regression is the linear relationship:
 
 \[
-Y = \beta_0 + \beta_1 x
+Y = \beta_0 + \beta_1 x .
 \]
 
 Where \( \beta_0 \) is the intercept, and \( \beta_1 \) is the slope.
@@ -13,7 +13,7 @@ Where \( \beta_0 \) is the intercept, and \( \beta_1 \) is the slope.
 In a lot of cases, there will be more independent variables, so the relationship for multiple regression will look like this:
 
 \[
-Y = \beta_0 + \beta_1 x_1 + ......+ \beta_n x_n
+Y = \beta_0 + \beta_1 x_1 + ......+ \beta_n x_n .
 \]
 
 
@@ -23,7 +23,7 @@ Where \( n \) is the number of independent variables, and $$\beta_2$$ and furthe
 In simple linear regression, the random error \( \epsilon \) is included:
 
 \[
-Y = \beta_0 + \beta_1 x + \epsilon
+Y = \beta_0 + \beta_1 x + \epsilon .
 \]
 
 It is assumed that \( \epsilon \) is distributed with $\epsilon = 0$ and $\epsilon) = \sigma^2$, and it has consistent variance, which is usually called the \textit{homogeneous variance assumption}. The random error \( \epsilon \) adds randomness to account for the natural variability in real data, making the model more realistic.
@@ -41,36 +41,36 @@ A widely used method to estimate the coefficients, is the least squares method t
 Least squares considers the deviation of $Y_i$ for  its expected value, where the observations are $(X_i, Y_i)$. 
 This method also requires, that we consider the sum of the $n$ squared deviations.
 This is denoted by the following function,
-$$Q=\sum_{i=1}^{n}(Y_1-\beta_0 - \beta_1 X_i)^2$$
+$$Q=\sum_{i=1}^{n}(Y_1-\beta_0 - \beta_1 X_i)^2 .$$
 
 According to the method of least squares, the estimations of $\beta_0$ and $\beta_1$ that minimize Q for the given sample observations $(X_1,Y_1), (X_2,Y_2), ..., (X_n,Y_n)$, are called $b_0$ and $b_1$.  
 
 If an analytical approach is used, the values $b_0$ and $b_1$ that minimize Q for any particular set of sample data are given by these simultaneous equations: 
-$$\sum Y_i =n b_0 +b_1 \sum X_i$$
-$$\sum X_i Y_i = b_0 \sum X_i + b_1 \sum X_1^2$$
+$$\sum Y_i =n b_0 +b_1 \sum X_i .$$
+$$\sum X_i Y_i = b_0 \sum X_i + b_1 \sum X_1^2 .$$
 
 These equations are called $normal equations$, where $b_0$ and $b_1$ are the $point estimators$ of $\beta_0$ and $\beta_1$. It is possible to calculate these normal equations simultaneously for $b_0$ and $b_1$ through these expressions,
 
-$$b_1 = \frac{\sum (X_1 - \bar{X}) (Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2}$$
+$$b_1 = \frac{\sum (X_1 - \bar{X}) (Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2} .$$
 
-$$b_0 = \frac{1}{n} (\sum Y_i - b_1 \sum X_i ) = \bar{Y} - b_1 \bar{X}$$
+$$b_0 = \frac{1}{n} (\sum Y_i - b_1 \sum X_i ) = \bar{Y} - b_1 \bar{X} .$$
 
 Here, $\bar{X}$ and $\bar{Y}$ are the means of $X_i$ and $Y_i$.
 
 The normal equations can also be derived by differentiating with respect to $\beta_0$ and $\beta_1$:
-$$\frac{\partial Q}{\partial \beta_0}=-2 \sum (Y_i - \beta_0 - \beta_1 X_i)$$
-$$\frac{\partial Q} {\partial \beta_1} = -2 \sum X_i (Y_i - \beta_0 - \beta_1 X_i)$$
+$$\frac{\partial Q}{\partial \beta_0}=-2 \sum (Y_i - \beta_0 - \beta_1 X_i) .$$
+$$\frac{\partial Q} {\partial \beta_1} = -2 \sum X_i (Y_i - \beta_0 - \beta_1 X_i) .$$
 
 Then $b_0$ and $b_1$ can be set to equal zero, 
 
-$$-2 \sum (Y_i - b_0 - b_1 X_1)=0$$
-$$-2\sum X_i(Y_i - b_0 - b_1 X_1)=0$$
+$$-2 \sum (Y_i - b_0 - b_1 X_1)=0 .$$
+$$-2\sum X_i(Y_i - b_0 - b_1 X_1)=0 .$$
 This can be simplified, 
-$$\sum_{i=1}^{n} (Y_i - b_0 - b_1 Xi)=0£$$
-$$\sum_{i=1}^{n} X_1(Y_i - b_0 - b_1 Xi)=0£$$
+$$\sum_{i=1}^{n} (Y_i - b_0 - b_1 Xi)=0£ .$$
+$$\sum_{i=1}^{n} X_1(Y_i - b_0 - b_1 Xi)=0£ .$$
 And it can be expanded, so the normal equations are obtained, 
-$$\sum Y_1 - n b_0 - b_1 \sum X_1 =0$$
-$$\sum X_1 Y_1  - b_0 \sum X_1 - b_1 \sum X_i^2 =0$$
+$$\sum Y_1 - n b_0 - b_1 \sum X_1 =0 .$$
+$$\sum X_1 Y_1  - b_0 \sum X_1 - b_1 \sum X_i^2 =0 .$$
 Solving this will lead to values of $b_0$ and $b_1$, that minimize Q, and these are the estimates for $\beta_0$ and $\beta_1$. 
 
 The estimates $b_0$ and $b_1$ obtain the minimum when checking the second partial derivatives. \newline
@@ -79,14 +79,14 @@ The estimates $b_0$ and $b_1$ obtain the minimum when checking the second partia
 \subsection{Linear models}
 
 Equations for linear models can be written in matrix terms, where the normal error regression model for simple linear regression is.
-$$Y_i = \beta_0 + \beta_1 X_i 0 \epsilon_i $$ 
+$$Y_i = \beta_0 + \beta_1 X_i 0 \epsilon_i .$$ 
 
 
 Which implies that,
 $$Y_1 = \beta_0 + \beta_1 X_1 + \epsilon_1$$
 $$Y_2 = \beta_0 + \beta_2 X_2 + \epsilon_2$$
 $$\vdots$$
-$$Y_n = \beta_0 + \beta_n X_n + \epsilon_n$$
+$$Y_n = \beta_0 + \beta_n X_n + \epsilon_n .$$
 
 The observations vector $Y$ is,
 $$ Y_{n \times 1} =
@@ -97,7 +97,7 @@ $$ Y_{n \times 1} =
 	\vdots \\
 	Y_n 
 \end{array}
-\right]
+\right].
 $$	
 
 The X matrix is, 
@@ -133,11 +133,11 @@ $$ \epsilon_{n \times 1} =
 	\vdots \\
 	\epsilon_n 
 \end{array}
-\right]
+\right].
 $$
 
 This can be written in matrix terms as, 
-$$Y_{n \times 1}=X_{n \times 2} \cdot \beta_{2 \times 1} + \epsilon_{n \times 1}$$	
+$$Y_{n \times 1}=X_{n \times 2} \cdot \beta_{2 \times 1} + \epsilon_{n \times 1} .$$	
 
 Where, \newline
 \textbf{$Y$} is a vector of response \newline
@@ -178,12 +178,12 @@ $$
 	\vdots \\
 	\epsilon_n 
 \end{array}
-\right]
+\right].
 $$
 
 If the dependent variable $Y$ has more than one independent variable in a linear model, the equation looks like this, 
 
-$$Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + ... + \beta_p-1 X_{i, p-1} + \epsilon_i$$
+$$Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + ... + \beta_p-1 X_{i, p-1} + \epsilon_i .$$
 
 In matrix terms it is,  
 $$
@@ -220,22 +220,22 @@ $$
 	\vdots \\
 	\epsilon_n 
 \end{array}
-\right]
+\right].
 $$
 
 The $Y$ and $\epsilon$ vectors are the same as in the simple linear regression matrix. The $\beta$ vector has additional parameters, and the $X$ matrix now has a column of $n$ observations for each $p-1 X$ variables. 
 
 \subsection{Polynomial regression}
 Polynomial regression models the relationship like this, 
-$$Y=\beta_0 + \beta_1 x + \beta_2 x^2	+ ... + \beta_{p-1} x^{p-1}+ \epsilon$$
+$$Y=\beta_0 + \beta_1 x + \beta_2 x^2	+ ... + \beta_{p-1} x^{p-1}+ \epsilon .$$
 
 The coefficients can still be found through the method of least squares,
 
-$$Q=\sum_{i=1}^{n}(Y_i -(\beta_0 + \beta_1 X_i + \beta_2 x_i^2 + ... + \beta_{p-1}X_{i}^{p-1}))^2$$
+$$Q=\sum_{i=1}^{n}(Y_i -(\beta_0 + \beta_1 X_i + \beta_2 x_i^2 + ... + \beta_{p-1}X_{i}^{p-1}))^2 .$$
 \newline
 
 This can be written in matrix terms as,
-$$Q=(Y-X\beta)' (Y-X\beta)$$
+$$Q=(Y-X\beta)' (Y-X\beta) .$$
 
 Where the design matrix for polynomial regression is, 
 
@@ -247,11 +247,11 @@ $$ X=
 	\vdots & \vdots &\vdots &&\vdots\\
 	1&x_n&x_n^2&...&x_n^{p-1} 
 \end{array}
-\right]
+\right].
 $$
 
 We can expand the expression from before, so it looks like this,
-$$Q=Y' Y -Y' X \beta -\beta' X' Y + \beta' X' X \beta$$
+$$Q=Y' Y -Y' X \beta -\beta' X' Y + \beta' X' X \beta .$$
 
 
 It is possible to find the value of $\beta$ that minimizes Q by differentiating with respect to $\beta_0$ and $beta_1$,
@@ -263,17 +263,17 @@ $$
 	\frac{\partial Q}{\partial \beta_0}\\ 
 	\frac{\partial Q}{\partial \beta_1}
 \end{array}
-\right]
+\right].
 $$
 
 $$
-\frac{\partial}{\partial \beta}(Q)=-2 X' Y + 2X' X \beta$$
+\frac{\partial}{\partial \beta}(Q)=-2 X' Y + 2X' X \beta .$$
 
 Then minimum is found by calculating, where the gradient is 0.
-$$-2 X' Y+ 2X' X \beta =0$$
-$$ 2X' X \beta = 2X' Y$$
-$$(X' X)^{-1} X' X \beta = (X' X)^{-1} X' Y$$
-$$ \beta=(X' X)^{-1} X' Y$$
+$$-2 X' Y+ 2X' X \beta =0,$$
+$$ 2X' X \beta = 2X' Y,$$
+$$(X' X)^{-1} X' X \beta = (X' X)^{-1} X' Y,$$
+$$ \beta=(X' X)^{-1} X' Y.$$
 
 	\subsection{Assumptions}
 	\input{Assumptions}
