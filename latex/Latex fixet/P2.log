@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 09:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,14 +503,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--22
 [12 <./billder/Normal distribution.png>]
 
 [13]
-<billder/T_distribution.png, id=295, 674.52pt x 581.17125pt>
-File: billder/T_distribution.png Graphic file (type png)
-<use billder/T_distribution.png>
-Package pdftex.def Info: billder/T_distribution.png  used on input line 46.
-(pdftex.def)             Requested size: 276.00105pt x 237.80289pt.
+<billder/T-distribution.png, id=295, 365.56575pt x 310.761pt>
+File: billder/T-distribution.png Graphic file (type png)
+<use billder/T-distribution.png>
+Package pdftex.def Info: billder/T-distribution.png  used on input line 46.
+(pdftex.def)             Requested size: 276.00105pt x 234.62074pt.
 )
 
-[14 <./billder/T_distribution.png>] (Statistical theory/Statistical methods.tex
+[14 <./billder/T-distribution.png>] (Statistical theory/Statistical methods.tex
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
@@ -699,6 +699,10 @@ File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.14215pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <billder/ms_spec_2d.png, id=387, 394.47375pt x 416.757pt>
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
@@ -709,12 +713,15 @@ File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
 (pdftex.def)             Requested size: 155.24895pt x 142.2069pt.
-)
 
-[29 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>]
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[30 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billde
-r/ms_spec_2d.png> <./billder/ms_spec_3d.png>] (metrics.tex
+
+
+[29 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>])
+
+[30 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png>]
+(metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -735,13 +742,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--15
  []
 
 
+
+[31 <./billder/ms_spec_2d.png> <./billder/ms_spec_3d.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 17--22
 
  []
 
 
-
-[31]
 
 [32]
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
@@ -855,7 +862,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/marcu/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/marcu/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/marcu/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (43 pages, 719030 bytes).
+Output written on P2.pdf (43 pages, 714102 bytes).
 PDF statistics:
  558 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)
