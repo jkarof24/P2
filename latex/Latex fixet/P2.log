@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 09:19
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 09:48
->>>>>>> Stashed changes
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 10:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -605,12 +601,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
-<<<<<<< Updated upstream
-
-
-[21] (Assumptions.tex
-
-[22]
+[21] (Assumptions.tex [22]
 Overfull \hbox (379.12561pt too wide) in paragraph at lines 44--47
 \OML/cmm/m/it/10 ==sscc:wisc:edu=sscc=pubs=RegDiag \OMS/cmsy/m/n/10 ^^@ \OML/cm
 m/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbclid \OT1/
@@ -619,16 +610,6 @@ cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgNhZW\OT1
 T1/cmr/m/n/10 0\OML/cmm/m/it/10 CVoqZfHgWZU\OT1/cmr/m/n/10 8\OML/cmm/m/it/10 lU
 Ouxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/it/10 O
 pswn \OMS/cmsy/m/n/10 ^^@
-=======
-[21] (Assumptions.tex [22]
-Overfull \hbox (209.65147pt too wide) in paragraph at lines 39--42
-\OML/cmm/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbcli
-d \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 IwZXh\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 bgN
-hZW\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CMTEAAR\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 q
-xZqqD\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 CVoqZfHgWZU\OT1/cmr/m/n/10 8\OML/cmm/m/i
-t/10 lUOuxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/
-it/10 Opswn \OMS/cmsy/m/n/10 ^^@
->>>>>>> Stashed changes
  []
 
 [23])) [24] (PRNG.tex
@@ -751,9 +732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-)
-
-[32] (metrics.tex
+) [32] (metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -763,11 +742,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-<<<<<<< Updated upstream
 
-=======
-[32]
->>>>>>> Stashed changes
 Underfull \hbox (badness 10000) in paragraph at lines 12--15
 
  []
@@ -873,11 +848,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-<<<<<<< Updated upstream
-Output written on P2.pdf (45 pages, 729406 bytes).
-=======
-Output written on P2.pdf (45 pages, 729317 bytes).
->>>>>>> Stashed changes
+Output written on P2.pdf (45 pages, 730106 bytes).
 PDF statistics:
  588 PDF objects out of 1000 (max. 8388607)
  110 named destinations out of 1000 (max. 500000)
