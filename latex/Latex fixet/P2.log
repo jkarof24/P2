@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 10:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -437,7 +437,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
 
-<billder/1.png, id=260, 867.24pt x 589.4522pt>
+<billder/1.png, id=270, 867.24pt x 589.4522pt>
 File: billder/1.png Graphic file (type png)
 <use billder/1.png>
 Package pdftex.def Info: billder/1.png  used on input line 7.
@@ -447,7 +447,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-<billder/2.png, id=261, 867.24pt x 589.4522pt>
+<billder/2.png, id=271, 867.24pt x 589.4522pt>
 File: billder/2.png Graphic file (type png)
 <use billder/2.png>
 Package pdftex.def Info: billder/2.png  used on input line 18.
@@ -467,25 +467,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--19
 LaTeX Warning: Command \O invalid in math mode on input line 23.
 
 
-LaTeX Warning: Command \O invalid in math mode on input line 28.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--35
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--35
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--35
+LaTeX Warning: Command \O invalid in math mode on input line 27.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--48
+Underfull \hbox (badness 10000) in paragraph at lines 27--34
 
  []
 
@@ -525,7 +525,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
  []
 
 ) (Statistical theory/Probability distribution.tex [11]
-<billder/Normal distribution.png, id=300, 674.52pt x 581.17125pt>
+<billder/Normal distribution.png, id=310, 674.52pt x 581.17125pt>
 File: billder/Normal distribution.png Graphic file (type png)
 <use billder/Normal distribution.png>
 Package pdftex.def Info: billder/Normal distribution.png  used on input line 15
@@ -537,7 +537,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--22
  []
 
 [12 <./billder/Normal distribution.png>] [13]
-<billder/T_distribution.png, id=315, 674.52pt x 581.17125pt>
+<billder/T_distribution.png, id=325, 674.52pt x 581.17125pt>
 File: billder/T_distribution.png Graphic file (type png)
 <use billder/T_distribution.png>
 Package pdftex.def Info: billder/T_distribution.png  used on input line 46.
@@ -565,11 +565,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
+
+ []
+
 [18]
-Overfull \hbox (36.66817pt too wide) in paragraph at lines 52--53
-[]\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations
-$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m
-/it/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
+Overfull \hbox (21.66817pt too wide) in paragraph at lines 52--53
+\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations$\
+OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m/i
+t/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
  []
 
 
@@ -682,57 +687,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[28]
-<billder/spec_bad_lcg_2d.png, id=402, 358.33875pt x 416.15475pt>
+<billder/spec_bad_lcg_2d.png, id=403, 358.33875pt x 416.15475pt>
 File: billder/spec_bad_lcg_2d.png Graphic file (type png)
 <use billder/spec_bad_lcg_2d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_2d.png  used on input line 113.
 (pdftex.def)             Requested size: 155.24895pt x 180.30196pt.
-<billder/spec_bad_lcg_3d.png, id=403, 473.3685pt x 431.211pt>
+<billder/spec_bad_lcg_3d.png, id=404, 473.3685pt x 431.211pt>
 File: billder/spec_bad_lcg_3d.png Graphic file (type png)
 <use billder/spec_bad_lcg_3d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_3d.png  used on input line 119.
 (pdftex.def)             Requested size: 155.24895pt x 141.42496pt.
-<billder/spec_good_lcg_2d.png, id=405, 410.13225pt x 416.15475pt>
+<billder/spec_good_lcg_2d.png, id=406, 410.13225pt x 416.15475pt>
 File: billder/spec_good_lcg_2d.png Graphic file (type png)
 <use billder/spec_good_lcg_2d.png>
 Package pdftex.def Info: billder/spec_good_lcg_2d.png  used on input line 130.
 (pdftex.def)             Requested size: 155.24895pt x 157.53084pt.
-<billder/spec_good_lcg_3d.png, id=406, 470.9595pt x 431.211pt>
+<billder/spec_good_lcg_3d.png, id=407, 470.9595pt x 431.211pt>
 File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.14215pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<billder/ms_spec_2d.png, id=407, 394.47375pt x 416.757pt>
+<billder/ms_spec_2d.png, id=408, 394.47375pt x 416.757pt>
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
 Package pdftex.def Info: billder/ms_spec_2d.png  used on input line 147.
 (pdftex.def)             Requested size: 155.24895pt x 164.01627pt.
-<billder/ms_spec_3d.png, id=408, 380.01974pt x 348.1005pt>
+<billder/ms_spec_3d.png, id=409, 380.01974pt x 348.1005pt>
 File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
 (pdftex.def)             Requested size: 155.24895pt x 142.2069pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[29 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>])
-(The Bootstrap with the Monte Carlo Principle.tex [30 <./billder/spec_good_lcg_
-2d.png> <./billder/spec_good_lcg_3d.png>]
+[28 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>] [29 <./bil
+lder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billder/ms_spec_
+2d.png> <./billder/ms_spec_3d.png>])
+(The Bootstrap with the Monte Carlo Principle.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[31 <./billder/ms_spec_2d.png> <./billder/ms_spec_3d.png>]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-) [32] (metrics.tex
+) [31] (metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -757,7 +755,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--22
 
  []
 
-[33] [34]
+[32] [33]
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
@@ -772,61 +770,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
-[35]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 48--52
 
  []
 
-[36] [37]) [38] (Problem Statement.tex
+[35] [36]) [37] (Problem Statement.tex
 Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
 []\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and
  no mul-ti-collinear-
  []
 
-) [39] (Comparison.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+) [38] (Comparison.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--15
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
 
  []
 
-[40]) [41] (Discussion.tex) [42] (Conclusion.tex) [43] [44] (P2.bbl) [45]
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+
+ []
+
+[39]) [40] (Discussion.tex) [41] (Conclusion.tex) [42] [43] (P2.bbl) [44]
 (P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `P2.out' has not changed.
-(rerunfilecheck)             Checksum: 93374307F52BB8A4B7C4BCFEDD90796B;6709.
+(rerunfilecheck)             Checksum: E73A4AC1C9574379390EE9110CE86348;6978.
  ) 
 Here is how much of TeX's memory you used:
- 11430 strings out of 474486
- 180188 string characters out of 5743756
+ 11433 strings out of 474486
+ 180245 string characters out of 5743756
  1942542 words of memory out of 5000000
- 33423 multiletter control sequences out of 15000+600000
+ 33425 multiletter control sequences out of 15000+600000
  564752 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,10n,67p,1281b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -848,9 +851,9 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (45 pages, 730106 bytes).
+Output written on P2.pdf (44 pages, 730485 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
- 419 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 594 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
+ 435 words of extra memory for PDF output out of 10000 (max. 10000000)
 
