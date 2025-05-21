@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 15:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -398,18 +398,9 @@ Package hyperref Info: Link coloring OFF on input line 39.
 \openout4 = `P2.toc'.
 
  [3] (Introduktion.tex) [4] (Problem analyse.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1    \newline
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -849,10 +840,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--19
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `P2.out' has not changed.
 (rerunfilecheck)             Checksum: E73A4AC1C9574379390EE9110CE86348;6978.
  ) 
@@ -882,7 +869,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (45 pages, 819262 bytes).
+Output written on P2.pdf (45 pages, 819442 bytes).
 PDF statistics:
  599 PDF objects out of 1000 (max. 8388607)
  112 named destinations out of 1000 (max. 500000)
