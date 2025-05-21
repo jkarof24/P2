@@ -5,6 +5,7 @@ library(reshape2)
 library(lmtest)
 library(gridExtra)
 #read data
+setwd("C:/Users/jonat/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 #calculet the NA-%
@@ -38,7 +39,7 @@ ggplot(data_korrelationer, aes(x = Var1, y = Var2, fill = abs(value))) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(title = "Correlation Matrix Heatmap", x = "", y = "")
 
-" Lav scatter plots for hver kolonne mod 'mpg'
+
 scatter_plots <- lapply(names(numeric_data), function(col) {
   ggplot(numeric_data, aes_string(x = col, y = "mpg")) +
     geom_point(color = "blue") +
@@ -46,7 +47,7 @@ scatter_plots <- lapply(names(numeric_data), function(col) {
     theme_minimal()
 })
 
-"bp_results <- sapply(names(numeric_data), function(col) {
+bp_results <- sapply(names(numeric_data), function(col) {
   model <- lm(mpg ~ numeric_data[[col]], data = numeric_data)
   bp_test <- bptest(model)
   bp_test$p.value
