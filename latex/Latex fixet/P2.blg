@@ -1,14 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2025)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: P2.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
-Warning--I didn't find a database entry for "mbe"
 Warning--empty journal in metrics
 Warning--empty journal in mersenne
 You've used 3 entries,
             2118 wiz_defined-function locations,
-            514 strings with 4392 characters,
+            513 strings with 4389 characters,
 and the built_in function-call counts, 691 in all, are:
 = -- 63
 > -- 27
@@ -47,4 +48,4 @@ warning$ -- 2
 while$ -- 6
 width$ -- 4
 write$ -- 32
-(There were 3 warnings)
+(There were 2 warnings)
