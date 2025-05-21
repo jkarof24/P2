@@ -10,33 +10,38 @@ A way to display homoscedasticity is through the variance-covariance matrix. The
 
 
 	
-% \[
-% \text{Var}(\varepsilon) = \sigma^2 I = 
-% \begin{bmatrix}
-%	\sigma^2 & 0        & \cdots & 0 \\
-%	0        & \sigma^2 & \cdots & 0 \\
-%	\vdots   & \vdots   & \ddots & \vdots \\
-%	0        & 0        & \cdots & \sigma^2 \\
-% \end{bmatrix}
-% \]
-%\newline
+\[ 
+Var(\varepsilon) = \sigma^2 = 
+\left[
+\begin{array}{cccc}
+	\sigma^2 & 0        & \cdots & 0 \\
+	0        & \sigma^2 & \cdots & 0 \\
+	\vdots   & \vdots   & \ddots & \vdots \\
+	0        & 0        & \cdots & \sigma^2 \\
+\end{array}
+\right]
+\]
+
+
 The general way of writing the variance-covariance matrix, is by this formula:
-% \[
-% \text{Var}(\varepsilon) = \mathbb{E}(\varepsilon \varepsilon') =
-% \begin{bmatrix}
-%	\sigma_{11} & \sigma_{12} & \sigma_{13} & \cdots &  \sigma_{1l} \\
-%	\sigma_{12} & \sigma_{22} & \sigma_{23} & \cdots & \sigma_{2l} \\
-%	\sigma_{13} & \sigma_{23} & \sigma_{33} & \cdots & \sigma_{3l} \\
-%	\vdots      & \vdots      & \vdots      & \ddots & \vdots \\
-%	\sigma_{1l} & \sigma_{2l} & \sigma_{3l} & \cdots & \sigma_{ll}
-%\end{bmatrix}
-%\]
-%\newline
+\[
+Var(\varepsilon) = 
+\left[
+\begin{array}{ccccc}
+	\sigma_{11} & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n} \\
+	\sigma_{12} & \sigma_{22} & \sigma_{23} & \cdots & \sigma_{2n} \\
+	\sigma_{13} & \sigma_{23} & \sigma_{33} & \cdots & \sigma_{3n} \\
+	\vdots      & \vdots      & \vdots      & \ddots & \vdots      \\
+	\sigma_{1n} & \sigma_{2n} & \sigma_{3n} & \cdots & \sigma_{nn}
+\end{array}
+\right]
+\]
+
 Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The positions that are not on the diagonal should be zero else the data contains another problem, that is autocorrelation, meaning that the observations in the data set are correlated.
 
 Source: https://openpublishing.library.umass.edu/pare/article/id/1590/
 
-\textbf{Detecting heteroscedasticity}
+\noindent \textbf{Detecting heteroscedasticity} \\
 When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but its not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables has an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the dataset contains heteroscedasticity.
 source: $https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html?fbclid=IwZXh0bgNhZW0CMTEAAR4qxZqqD0CVoqZfHgWZU8lUOuxg43dFRSs9Opswn-IAo8l-UaO1oDWCuUfkvw_aem_9Ft7wkFWKUHycQ1GnX-x0g$
 
@@ -52,7 +57,7 @@ The regression model can feel the effects of multicollinearity even without ther
 \newline
 Source: https://ekja.org/upload/pdf/kja-19087.pdf
 
-\textbf{Detecting multicollinearity}\\
+\noindent \textbf{Detecting multicollinearity}\\
 To check for multicollinearity in a dataset, a good approach is pearson´s correlation coefficient. This will make a table of all pairwise correlation, this means that all combinations of independent variables are checked for multicollinearity. This can be seen in \textbf{table...}. The correlation coefficient is calculated through this formula:
 $$
 r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
