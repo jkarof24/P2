@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  21 MAY 2025 17:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,48 +579,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17])) [18] (Polynomial regression.tex
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
 
  []
 
 [19]
-Overfull \hbox (21.66817pt too wide) in paragraph at lines 52--53
+Overfull \hbox (21.66817pt too wide) in paragraph at lines 53--54
 \OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations$\
 OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m/i
 t/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
  []
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 69.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
 
 Missing character: There is no £ in font cmr10!
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
 
 
-LaTeX Warning: Command \textsterling invalid in math mode on input line 70.
+LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
 
 Missing character: There is no £ in font cmr10!
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 142--147
+Underfull \hbox (badness 10000) in paragraph at lines 143--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
@@ -869,7 +869,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P2.pdf (45 pages, 819442 bytes).
+Output written on P2.pdf (45 pages, 819472 bytes).
 PDF statistics:
  599 PDF objects out of 1000 (max. 8388607)
  112 named destinations out of 1000 (max. 500000)
