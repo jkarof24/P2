@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  22 MAY 2025 11:11
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  22 MAY 2025 11:10
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,12 +454,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-) [5] (MPG.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
+
+ []
+
+[5]) [6] (MPG.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
 
+<<<<<<< Updated upstream
 <billder/1.png, id=304, 379.27296pt x 238.78008pt>
+=======
+<billder/1.png, id=307, 379.27296pt x 238.78008pt>
+>>>>>>> Stashed changes
 File: billder/1.png Graphic file (type png)
 <use billder/1.png>
 Package pdftex.def Info: billder/1.png  used on input line 8.
@@ -470,7 +483,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
+<<<<<<< Updated upstream
 <billder/2.png, id=306, 541.15776pt x 554.45544pt>
+=======
+<billder/2.png, id=309, 541.15776pt x 554.45544pt>
+>>>>>>> Stashed changes
 File: billder/2.png Graphic file (type png)
 <use billder/2.png>
 Package pdftex.def Info: billder/2.png  used on input line 17.
@@ -478,42 +495,42 @@ Package pdftex.def Info: billder/2.png  used on input line 17.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [6 <./billder/1.png>] (Statistical theory.tex
-(Statistical theory/Probability space.tex [7 <./billder/2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 3--9
+) [7 <./billder/1.png>] (Statistical theory.tex
+(Statistical theory/Probability space.tex [8 <./billder/2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--19
+Underfull \hbox (badness 10000) in paragraph at lines 11--20
 
  []
 
 
-LaTeX Warning: Command \O invalid in math mode on input line 23.
+LaTeX Warning: Command \O invalid in math mode on input line 24.
 
 Missing character: There is no Ø in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--26
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--26
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
 
  []
 
 
-LaTeX Warning: Command \O invalid in math mode on input line 27.
+LaTeX Warning: Command \O invalid in math mode on input line 28.
 
 Missing character: There is no Ø in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 28--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--34
+Underfull \hbox (badness 10000) in paragraph at lines 28--35
 
  []
 
@@ -522,17 +539,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[9]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
 
-[10]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
@@ -552,8 +569,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
  []
 
+<<<<<<< Updated upstream
 [11]) (Statistical theory/Probability distribution.tex
 <billder/Normal distribution.png, id=347, 674.52pt x 581.17125pt>
+=======
+[12]) (Statistical theory/Probability distribution.tex
+<billder/Normal distribution.png, id=349, 674.52pt x 581.17125pt>
+>>>>>>> Stashed changes
 File: billder/Normal distribution.png Graphic file (type png)
 <use billder/Normal distribution.png>
 Package pdftex.def Info: billder/Normal distribution.png  used on input line 15
@@ -567,8 +589,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--22
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<<<<<<< Updated upstream
 [12] [13 <./billder/Normal distribution.png>]
 <billder/T-distribution.png, id=362, 365.56575pt x 310.761pt>
+=======
+[13] [14 <./billder/Normal distribution.png>]
+<billder/T-distribution.png, id=364, 365.56575pt x 310.761pt>
+>>>>>>> Stashed changes
 File: billder/T-distribution.png Graphic file (type png)
 <use billder/T-distribution.png>
 Package pdftex.def Info: billder/T-distribution.png  used on input line 46.
@@ -577,7 +604,7 @@ Package pdftex.def Info: billder/T-distribution.png  used on input line 46.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14] (Statistical theory/Statistical methods.tex [15 <./billder/T-distribution.
+[15] (Statistical theory/Statistical methods.tex [16 <./billder/T-distribution.
 png>]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
@@ -590,7 +617,7 @@ nce=mathematics=book=probability[]nd[]tatistics[]or[]ngineering[]nd[]he[]cience
 s:pdf$ 
  []
 
-[16]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
@@ -598,7 +625,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17])) [18] (Polynomial regression.tex
+[18])) [19] (Polynomial regression.tex
 Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
@@ -608,18 +635,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
+<<<<<<< Updated upstream
 [19]
 Overfull \hbox (21.61868pt too wide) in paragraph at lines 54--55
 \T1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations$\T
 1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \T1/cmr/m/n/10 and $\OML/cmm/m/it/1
 0 b[]$ \T1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
+=======
+[20]
+Overfull \hbox (21.66817pt too wide) in paragraph at lines 54--55
+\OT1/cmr/m/n/10 These equa-tions are called $\OML/cmm/m/it/10 normalequations$\
+OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 and $\OML/cmm/m/i
+t/10 b[]$ \OT1/cmr/m/n/10 are the $\OML/cmm/m/it/10 pointestimators$
+>>>>>>> Stashed changes
  []
 
 
 LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
 
+<<<<<<< Updated upstream
 Missing character: There is no ¿ in font cmr10!
 [20]
+=======
+
+LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
+
+Missing character: There is no £ in font cmr10!
+[21]
+>>>>>>> Stashed changes
 
 LaTeX Warning: Command \textsterling invalid in math mode on input line 72.
 
@@ -629,17 +672,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-[21]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 145--150
 
  []
 
-[22]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
-[23] (Assumptions.tex [24]
+[24] (Assumptions.tex [25]
 Overfull \hbox (379.12561pt too wide) in paragraph at lines 44--47
 \OML/cmm/m/it/10 ==sscc:wisc:edu=sscc=pubs=RegDiag \OMS/cmsy/m/n/10 ^^@ \OML/cm
 m/m/it/10 R=homoscedasticity:html\OT1/cmr/m/n/10 ?\OML/cmm/m/it/10 fbclid \OT1/
@@ -650,7 +693,7 @@ Ouxg\OT1/cmr/m/n/10 43\OML/cmm/m/it/10 dFRSs\OT1/cmr/m/n/10 9\OML/cmm/m/it/10 O
 pswn \OMS/cmsy/m/n/10 ^^@
  []
 
-[25])) [26] (PRNG.tex
+[26])) [27] (PRNG.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -680,22 +723,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--45
 
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--63
-
- []
-
 [28]
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--63
+
+ []
+
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 88--91
 
  []
@@ -715,42 +758,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
-[29]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
+<<<<<<< Updated upstream
 <billder/spec_bad_lcg_2d.png, id=448, 358.33875pt x 416.15475pt>
+=======
+<billder/spec_bad_lcg_2d.png, id=450, 358.33875pt x 416.15475pt>
+>>>>>>> Stashed changes
 File: billder/spec_bad_lcg_2d.png Graphic file (type png)
 <use billder/spec_bad_lcg_2d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_2d.png  used on input line 113.
 (pdftex.def)             Requested size: 155.24895pt x 180.30196pt.
+<<<<<<< Updated upstream
 <billder/spec_bad_lcg_3d.png, id=449, 473.3685pt x 431.211pt>
+=======
+<billder/spec_bad_lcg_3d.png, id=451, 473.3685pt x 431.211pt>
+>>>>>>> Stashed changes
 File: billder/spec_bad_lcg_3d.png Graphic file (type png)
 <use billder/spec_bad_lcg_3d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_3d.png  used on input line 119.
 (pdftex.def)             Requested size: 155.24895pt x 141.42496pt.
+<<<<<<< Updated upstream
 <billder/spec_good_lcg_2d.png, id=450, 410.13225pt x 416.15475pt>
+=======
+<billder/spec_good_lcg_2d.png, id=452, 410.13225pt x 416.15475pt>
+>>>>>>> Stashed changes
 File: billder/spec_good_lcg_2d.png Graphic file (type png)
 <use billder/spec_good_lcg_2d.png>
 Package pdftex.def Info: billder/spec_good_lcg_2d.png  used on input line 130.
 (pdftex.def)             Requested size: 155.24895pt x 157.53084pt.
+<<<<<<< Updated upstream
 <billder/spec_good_lcg_3d.png, id=451, 470.9595pt x 431.211pt>
+=======
+<billder/spec_good_lcg_3d.png, id=453, 470.9595pt x 431.211pt>
+>>>>>>> Stashed changes
 File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.14215pt.
+<<<<<<< Updated upstream
 <billder/ms_spec_2d.png, id=452, 394.47375pt x 416.757pt>
+=======
+<billder/ms_spec_2d.png, id=454, 394.47375pt x 416.757pt>
+>>>>>>> Stashed changes
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
 Package pdftex.def Info: billder/ms_spec_2d.png  used on input line 147.
 (pdftex.def)             Requested size: 155.24895pt x 164.01627pt.
+<<<<<<< Updated upstream
 <billder/ms_spec_3d.png, id=453, 380.01974pt x 348.1005pt>
+=======
+<billder/ms_spec_3d.png, id=455, 380.01974pt x 348.1005pt>
+>>>>>>> Stashed changes
 File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
 (pdftex.def)             Requested size: 155.24895pt x 142.2069pt.
-[30 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>] [31 <./bil
+[31 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>] [32 <./bil
 lder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billder/ms_spec_
 2d.png> <./billder/ms_spec_3d.png>])
 (The Bootstrap with the Monte Carlo Principle.tex
@@ -758,12 +825,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[32]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-) [33] (metrics.tex
+) [34] (metrics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -788,7 +855,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--22
 
  []
 
-[34] [35]
+[35] [36]
 Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
@@ -803,18 +870,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
-[36]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 48--52
 
  []
 
+<<<<<<< Updated upstream
 [37] [38]) [39] (Problem Statement.tex
 Overfull \hbox (4.36526pt too wide) in paragraph at lines 6--7
 []\T1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and 
 no mul-ti-collinear-
+=======
+[38] [39]) [40] (Problem Statement.tex
+Overfull \hbox (4.4451pt too wide) in paragraph at lines 6--7
+[]\OT1/cmr/m/n/10 How will break-ing the as-sump-tions, ho-moscedas-tic-ity and
+ no mul-ti-collinear-
+>>>>>>> Stashed changes
  []
 
-) [40] (Comparison.tex
+) [41] (Comparison.tex
 Underfull \hbox (badness 10000) in paragraph at lines 29--31
 
  []
@@ -851,7 +925,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
+<<<<<<< Updated upstream
 [41] (kode/sammenligning2.R)
+=======
+[42] (kode/sammenligning2.R
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+41.
+
+(C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+))
+>>>>>>> Stashed changes
 Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
@@ -861,7 +945,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
-(kode/sammenligning2.R [42])
+(kode/sammenligning2.R [43])
 Underfull \hbox (badness 10000) in paragraph at lines 49--53
 
  []
@@ -871,8 +955,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--53
 
  []
 
-[43]) [44] (Discussion.tex) [45] [46] (Conclusion.tex) [47] [48] (P2.bbl)
-[49] (P2.aux)
+[44]) [45] (Discussion.tex) [46] [47] (Conclusion.tex) [48] [49] (P2.bbl)
+[50] (P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -881,8 +965,13 @@ Package rerunfilecheck Info: File `P2.out' has not changed.
 (rerunfilecheck)             Checksum: 0543A3ABF3A7E8E11095FB4C68010B04;8166.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< Updated upstream
  12870 strings out of 474486
  196324 string characters out of 5743756
+=======
+ 12663 strings out of 474486
+ 194584 string characters out of 5743756
+>>>>>>> Stashed changes
  2249542 words of memory out of 5000000
  34711 multiletter control sequences out of 15000+600000
  572828 words of font info for 66 fonts, out of 8000000 for 9000
@@ -890,6 +979,7 @@ Here is how much of TeX's memory you used:
  63i,10n,67p,1281b,2106s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
 0800.pk> <C:\Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+<<<<<<< Updated upstream
 0\ecrm0500.pk> <C:\Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\tcrm1000.pk> <C:\Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\ecti1000.pk> <C:\Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour
@@ -915,5 +1005,30 @@ Output written on P2.pdf (49 pages, 893828 bytes).
 PDF statistics:
  1177 PDF objects out of 1200 (max. 8388607)
  222 named destinations out of 1000 (max. 500000)
+=======
+0\tcrm1000.pk><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/sofia/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sofia/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/sofia/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sof
+ia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/U
+sers/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.p
+fb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr17.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr5.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sofia/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/sofia/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofia/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/sof
+ia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on P2.pdf (50 pages, 881008 bytes).
+PDF statistics:
+ 791 PDF objects out of 1000 (max. 8388607)
+ 223 named destinations out of 1000 (max. 500000)
+>>>>>>> Stashed changes
  483 words of extra memory for PDF output out of 10000 (max. 10000000)
 
