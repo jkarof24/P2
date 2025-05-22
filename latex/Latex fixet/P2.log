@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  22 MAY 2025 12:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  22 MAY 2025 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -809,42 +809,42 @@ l.58 	\newpage
 \openout5 = `P2.toc'.
 
  [3] (Introduktion.tex) [4] (Problem analyse.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
@@ -1275,14 +1275,8 @@ L3 programming layer <2024-01-04>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.26pt have occurred.
 
-
-Package rerunfilecheck Warning: File `P2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `P2.out':
-(rerunfilecheck)             Before: 730F04A8A61AF03AAC85F61AB0E39630;7716
-(rerunfilecheck)             After:  D8FBD6AE4A5FC5F108F73F66A419BEE2;7865.
+Package rerunfilecheck Info: File `P2.out' has not changed.
+(rerunfilecheck)             Checksum: D8FBD6AE4A5FC5F108F73F66A419BEE2;7865.
  ) 
 Here is how much of TeX's memory you used:
  23399 strings out of 474486
@@ -1318,7 +1312,7 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sof
 ia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/U
 sers/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb>
-Output written on P2.pdf (51 pages, 1226036 bytes).
+Output written on P2.pdf (51 pages, 1226274 bytes).
 PDF statistics:
  1267 PDF objects out of 1440 (max. 8388607)
  221 named destinations out of 1000 (max. 500000)
