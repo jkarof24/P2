@@ -1,45 +1,61 @@
 \documentclass{article}
-\title{Monte Carlo Simulation}
+\title{Using Monte Carlo Bootstrapping to analyse the conflicts of assumption violations in polynomial regression.\\}
 \author{Christian, Jonathan, Marcus, Puk \& Sofia }
-\date{\today}
+\date{28\textsuperscript{th} May 2025}
 
-\usepackage{listings}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{xcolor}
+
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{booktabs}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage[content={}, color=white]{background}
 
 
+\definecolor{aaublue}{rgb}{0.129,0.102,0.322}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
+\usepackage{listings}
 \lstdefinestyle{mystyle}{
-	backgroundcolor=\color{backcolour},   
+	backgroundcolor=\color{backcolour},
 	commentstyle=\color{codegreen},
 	keywordstyle=\color{magenta},
 	numberstyle=\tiny\color{codegray},
 	stringstyle=\color{codepurple},
 	basicstyle=\ttfamily\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
 	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2
+	showtabs=false,
+	tabsize=2,
+	language=R 
 }
+\lstset{style=mystyle} 
+
+
+\usepackage{graphicx}
+\usepackage{epstopdf} 
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref} 
 
 \begin{document}
-	
-	
+
+
 	\setcounter{section}{0}
-	\maketitle
+	\input{frontpage}
+	\input{titlepage}
 	\newpage
 	\tableofcontents
 	\newpage
@@ -52,41 +68,34 @@
 	\input{Problem analyse}
 	\newpage
 	
-	\section{MPG}
+	\section{Real world data example}
 	\input{MPG}
 	\newpage
-	
-	\section{Statistical Theory}
+	\section{Background}
+	\input{background_intro}
+	\subsection{Statistical theory}
 	\input{Statistical theory}
 	\newpage
-	
-	\section{Regression models}
+	\subsection{Polynomial regression}
  	\input{Polynomial regression}
 	\newpage
-	
-	
-	\section{Pseudo Random Number Generator}
+	\subsection{PRNG}
 	\input{PRNG}
 	\newpage
-	
-	\section{Monte Carlo Bootstrap}
-	\subsection{Assumptions}
+	\subsection{The Bootstrap with the Monte Carlo Principle}
+	\input{The Bootstrap with the Monte Carlo Principle}
 	\newpage
-	\section{Metrics}
+	\subsection{metrics}
 	\input{metrics}
 	\newpage
-
-	
-	\section{Problem Statement}
+	\subsection{Problem Statement}
 	\input{Problem Statement}
 	\newpage
-%	\section{intro til data}
-%	\input{intro til data}
+%input{intro til data}
 %	\newpage
-	\section{Classical Regression}
-	\newpage
 	
-%	\section{Monte Carlo Regression}
+%	\section{M	\section{intro til data}
+	%	\onte Carlo Regression}
 %	\newpage
 	
 %	\input{montecarlobootstrap.tex}
@@ -113,5 +122,8 @@
  	
  	\section{latextables}
  	\newpage
-  
+ 	
+ 	\bibliographystyle{plain}
+ 	\bibliography{references}
+ 	
 \end{document}
