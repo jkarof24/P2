@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  22 MAY 2025 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.3)  22 MAY 2025 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -462,7 +462,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
 
-<billder/1.png, id=303, 379.27296pt x 238.78008pt>
+<billder/1.png, id=279, 379.27296pt x 238.78008pt>
 File: billder/1.png Graphic file (type png)
 <use billder/1.png>
 Package pdftex.def Info: billder/1.png  used on input line 8.
@@ -477,7 +477,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-<billder/2.png, id=305, 541.15776pt x 554.45544pt>
+<billder/2.png, id=281, 541.15776pt x 554.45544pt>
 File: billder/2.png Graphic file (type png)
 <use billder/2.png>
 Package pdftex.def Info: billder/2.png  used on input line 17.
@@ -572,7 +572,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
 
 [11]) (Statistical theory/Probability distribution.tex
-<billder/Normal distribution.png, id=346, 674.52pt x 581.17125pt>
+<billder/Normal distribution.png, id=322, 674.52pt x 581.17125pt>
 File: billder/Normal distribution.png Graphic file (type png)
 <use billder/Normal distribution.png>
 Package pdftex.def Info: billder/Normal distribution.png  used on input line 15
@@ -591,7 +591,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [12]
 
 [13 <./billder/Normal distribution.png>]
-<billder/T-distribution.png, id=361, 365.56575pt x 310.761pt>
+<billder/T-distribution.png, id=337, 365.56575pt x 310.761pt>
 File: billder/T-distribution.png Graphic file (type png)
 <use billder/T-distribution.png>
 Package pdftex.def Info: billder/T-distribution.png  used on input line 46.
@@ -654,13 +654,12 @@ LaTeX Warning: Command \textsterling invalid in math mode on input line 71.
 
 Missing character: There is no ¿ in font cmr10!
 
-
-[20]
-
 LaTeX Warning: Command \textsterling invalid in math mode on input line 72.
 
 Missing character: There is no ¿ in font cmr10!
 
+
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
@@ -673,13 +672,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--150
  []
 
 
-
-[22]
 Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
 
+
+[22]
 
 [23] (Assumptions.tex
 
@@ -768,38 +767,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--101
  []
 
 
-
-[29]
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-<billder/spec_bad_lcg_2d.png, id=447, 358.33875pt x 416.15475pt>
+
+
+[29]
+<billder/spec_bad_lcg_2d.png, id=425, 358.33875pt x 416.15475pt>
 File: billder/spec_bad_lcg_2d.png Graphic file (type png)
 <use billder/spec_bad_lcg_2d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_2d.png  used on input line 113.
 (pdftex.def)             Requested size: 155.24895pt x 180.30196pt.
-<billder/spec_bad_lcg_3d.png, id=448, 473.3685pt x 431.211pt>
+<billder/spec_bad_lcg_3d.png, id=426, 473.3685pt x 431.211pt>
 File: billder/spec_bad_lcg_3d.png Graphic file (type png)
 <use billder/spec_bad_lcg_3d.png>
 Package pdftex.def Info: billder/spec_bad_lcg_3d.png  used on input line 119.
 (pdftex.def)             Requested size: 155.24895pt x 141.42496pt.
-<billder/spec_good_lcg_2d.png, id=449, 410.13225pt x 416.15475pt>
+<billder/spec_good_lcg_2d.png, id=427, 410.13225pt x 416.15475pt>
 File: billder/spec_good_lcg_2d.png Graphic file (type png)
 <use billder/spec_good_lcg_2d.png>
 Package pdftex.def Info: billder/spec_good_lcg_2d.png  used on input line 130.
 (pdftex.def)             Requested size: 155.24895pt x 157.53084pt.
-<billder/spec_good_lcg_3d.png, id=450, 470.9595pt x 431.211pt>
+<billder/spec_good_lcg_3d.png, id=428, 470.9595pt x 431.211pt>
 File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.14215pt.
-<billder/ms_spec_2d.png, id=451, 394.47375pt x 416.757pt>
+<billder/ms_spec_2d.png, id=429, 394.47375pt x 416.757pt>
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
 Package pdftex.def Info: billder/ms_spec_2d.png  used on input line 147.
 (pdftex.def)             Requested size: 155.24895pt x 164.01627pt.
-<billder/ms_spec_3d.png, id=452, 380.01974pt x 348.1005pt>
+<billder/ms_spec_3d.png, id=430, 380.01974pt x 348.1005pt>
 File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
@@ -964,14 +964,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--53
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `P2.out' has not changed.
-(rerunfilecheck)             Checksum: 0543A3ABF3A7E8E11095FB4C68010B04;8166.
+
+
+Package rerunfilecheck Warning: File `P2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `P2.out':
+(rerunfilecheck)             Before: 50038661568B2ADCFC04C6779668D0DB;7421
+(rerunfilecheck)             After:  20ECE57A396CFF347B1C48BB03A60B15;7421.
  ) 
 Here is how much of TeX's memory you used:
- 12944 strings out of 473523
- 196515 string characters out of 5714631
- 950883 words of memory out of 5000000
- 35731 multiletter control sequences out of 15000+600000
+ 12934 strings out of 473523
+ 196421 string characters out of 5714631
+ 950984 words of memory out of 5000000
+ 35726 multiletter control sequences out of 15000+600000
  573596 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,10n,67p,1281b,2103s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -984,22 +991,23 @@ pen/ec/dpi600\ecti1000.pk> <C:\Users\jonat\AppData\Local\MiKTeX\fonts/pk/ljfour
 ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\jonat\AppData\Local\MiKTeX\fon
 ts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\jonat\AppData\Local\MiKT
 eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\jonat\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\jonat\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/jonat/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/User
-s/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi5.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr5.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jonat/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/jonat/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on P2.pdf (49 pages, 887002 bytes).
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\jonat\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\jonat\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/j
+onat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Users/jonat/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jonat/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jonat/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jonat/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/jonat/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on P2.pdf (49 pages, 888045 bytes).
 PDF statistics:
- 1159 PDF objects out of 1200 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 483 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1149 PDF objects out of 1200 (max. 8388607)
+ 217 named destinations out of 1000 (max. 500000)
+ 443 words of extra memory for PDF output out of 10000 (max. 10000000)
 
