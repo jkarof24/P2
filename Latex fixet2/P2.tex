@@ -1,0 +1,129 @@
+\documentclass{article}
+\title{Using Monte Carlo Bootstrapping to analyse the conflicts of assumption violations in polynomial regression.\\}
+\author{Christian, Jonathan, Marcus, Puk \& Sofia }
+\date{28\textsuperscript{th} May 2025}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage[content={}, color=white]{background}
+
+
+\definecolor{aaublue}{rgb}{0.129,0.102,0.322}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2,
+	language=R 
+}
+\lstset{style=mystyle} 
+
+
+\usepackage{graphicx}
+\usepackage{epstopdf} 
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[hidelinks]{hyperref} 
+
+\begin{document}
+	
+	
+	\setcounter{section}{0}
+	\input{frontpage}
+	\input{titlepage}
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	\section{Introduction}
+	\input{Introduktion}
+	\newpage
+	
+	\section{Problem Analysis}
+	\input{Problem analyse}
+	\newpage
+	
+	\section{Real world data example}
+	\input{MPG}
+	\newpage
+	\section{Background}
+	\input{background_intro}
+	\subsection{Statistical theory}
+	\input{Statistical theory}
+	\newpage
+	\subsection{Polynomial regression}
+	\input{Polynomial regression}
+	\newpage
+	\subsection{PRNG}
+	\input{PRNG}
+	\newpage
+	\subsection{The Bootstrap with the Monte Carlo Principle}
+	\input{The Bootstrap with the Monte Carlo Principle}
+	\newpage
+	\subsection{metrics}
+	\input{metrics}
+	\newpage
+	\subsection{Problem Statement}
+	\input{Problem Statement}
+	\newpage
+	%input{intro til data}
+	%	\newpage
+	
+	%	\section{M	\section{intro til data}
+		%	\onte Carlo Regression}
+	%	\newpage
+	
+	%	\input{montecarlobootstrap.tex}
+	
+	
+	%	\section{super syntetisk}
+	%	\input{super syntetisk}
+	%	\newpage
+	
+	
+	\section{Comparison between Regressions}
+	\input{Comparison}
+	\newpage
+	
+	\section{Discussion}
+	\input{Discussion}
+	\newpage
+	
+	\section{Conclusion}
+	\input{Conclusion}
+	\newpage
+	
+	\section{Litteratur}
+	
+	\section{latextables}
+	\newpage
+	
+	\bibliographystyle{plain}
+	\bibliography{references}
+	
+\end{document}

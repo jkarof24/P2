@@ -1,0 +1,45 @@
+
+
+To understand how assumption violations affect classical polynomial regression, we begin by generating synthetic data using a random number generator. First, four independent variables are created, each normally distributed with known standard deviations. Then, the dependent variable is generated as a function of these four independent variables. This synthetic dataset initially satisfies all the assumptions required for ordinary least squares (OLS) regression.
+\\\\
+Next, an error term is added that scales with the dependent variable. This introduces heteroscedasticity meaning the error variance is no longer constant thereby violating the assumption of homoscedasticity. This step is done deliberately to ensure that this is the only assumption being violated, so any observed effects on the model can be attributed specifically to this violation.
+\\\\
+The dataset is then split into training and test sets, with $80\%$ used for training and the remaining $20\%$ for testing. A standard linear polynomial regression model is fitted to the training data. The mean bias error and root mean squared error (RMSE) calculated are useing the testdata and standard error, and confidence intervals for the coefficients are calculated all this is to evaluate the model's performance.
+\\\\
+Following this, a bootstrap is performed by resampling the training data 10000 times. For each resampled dataset, a linear polynomial model is fitted. The coefficients from each model are stored in a new data frame, and predictions are made on the test data and also stored in the dataframe. These predictions are then compared to the actual test values to compute the mean bias error and RMSE and the coefficients are used the calculated the standard error and confidence intervals of the coefficients for the bootstrap models.
+\\\\
+Comparing the results of the two models shown in Table 2, the Mean Bias Error (MBE) of the OLS model is -539, indicating that it tends to underpredict the actual values. In contrast, the bootstrap model has an MBE of 22, suggesting a slight overprediction. The smaller absolute bias of the bootstrap model indicates improved accuracy. This is further supported by the Root Mean Square Error (RMSE), where the OLS model scores 1921 compared to the bootstrap model’s 1377. This substantial difference reinforces the conclusion that the bootstrap model provides more accurate predictions.
+\\\\
+When comparing the standard errors of the estimated coefficients, the OLS model appears to have lower standard errors. However, it is important to note that these may not be reliable due to the violation of the homoscedasticity assumption. In such cases, the standard errors from OLS can be misleading. In contrast, the bootstrap standard errors are derived from the empirical distribution of the data and are therefore more representative of the true variability. As a result, the confidence intervals produced by the OLS model may not be trustworthy, while those from the bootstrap model better reflect the uncertainty in the estimates showing a false sense of predictability. Overall, the bootstrap approach demonstrates superior predictive performance and more robust inference under assumption violations.
+\\
+
+
+
+\begin{table}
+	\centering
+	\caption{Opdateret Sammenligning af OLS og Bootstrap modeller}
+	\begin{tabular}{lcc}
+		\hline
+		& \textbf{OLS} & \textbf{Bootstrap} \\
+		\hline
+		\textbf{MBE} & -539.4769 & 22.2755 \\
+		\textbf{RMSE} & 1921.0420 & 1377.4900 \\
+		\hline
+		\textbf{Std. Error} \\
+		\hline
+		Intercept & 478.4811 & 540.9184 \\
+		$I(x1^2)$ & 1.4306e-03 & 3.2636e-03 \\
+		$I(x2^3)$ & 3.0470e-07 & 9.8684e-07 \\
+		$I(x3^4)$ & 7.5112e-12 & 5.1212e-09 \\
+		$I(x4^5)$ & 2.4766e-13 & 4.2884e-12 \\
+		\hline
+		\textbf{Coefficient (95\% CI)} \\
+		\hline
+		Intercept & [2854.183 , 4796.919] & [2443.400 , 4556.982] \\
+		$I(x1^2)$ & [0.0004 , 0.0062] & [0.0023 , 0.0128] \\
+		$I(x2^3)$ & [-1.06e-06 , 1.80e-07] & [-2.70e-06 , 6.24e-07] \\
+		$I(x3^4)$ & [3.34e-11 , 6.39e-11] & [4.33e-11 , 1.20e-08] \\
+		$I(x4^5)$ & [-3.48e-12 , -2.47e-12] & [-4.23e-12 , 8.08e-12] \\
+		\hline
+	\end{tabular}
+\end{table}
