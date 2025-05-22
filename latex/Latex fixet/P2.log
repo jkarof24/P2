@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  22 MAY 2025 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.3)  22 MAY 2025 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -709,24 +709,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (P2.aux)
 \openout1 = `P2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 (C:\Users\sofia\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -743,13 +743,21 @@ ii
 \makeMPintoPDFobject=\count325
 \everyMPtoPDFconversion=\toks42
 )
-Package hyperref Info: Link coloring OFF on input line 53.
+Package hyperref Info: Link coloring OFF on input line 52.
  (P2.out) (P2.out)
 \@outlinefile=\write4
 \openout4 = `P2.out'.
 
 \c@lstlisting=\count326
  (frontpage.tex
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <22> not available
+(Font)              size <20.74> substituted on input line 36.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <22> not available
+(Font)              size <20.74> substituted on input line 36.
+
 <media/aau_logo_circle_en.pdf, id=210, 77.28876pt x 77.28876pt>
 File: media/aau_logo_circle_en.pdf Graphic file (type pdf)
 <use media/aau_logo_circle_en.pdf>
@@ -760,7 +768,7 @@ File: media/aau_waves.pdf Graphic file (type pdf)
 <use media/aau_waves.pdf>
 Package pdftex.def Info: media/aau_waves.pdf  used on input line 42.
 (pdftex.def)             Requested size: 614.33588pt x 794.9898pt.
- [1
+[1
 
 {C:/Users/sofia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./media/aau_
 waves.pdf> <./media/aau_logo_circle_en.pdf>]) (titlepage.tex
@@ -793,7 +801,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.59 	\newpage
+l.58 	\newpage
                [1
 
  <./media/aau_logo_en.pdf>] (P2.toc [2])
@@ -1130,16 +1138,16 @@ File: billder/spec_good_lcg_3d.png Graphic file (type png)
 <use billder/spec_good_lcg_3d.png>
 Package pdftex.def Info: billder/spec_good_lcg_3d.png  used on input line 136.
 (pdftex.def)             Requested size: 155.24895pt x 142.32639pt.
-<billder/ms_spec_2d.png, id=466, 394.47375pt x 416.757pt>
+<billder/ms_spec_2d.png, id=466, 409.53pt x 416.15475pt>
 File: billder/ms_spec_2d.png Graphic file (type png)
 <use billder/ms_spec_2d.png>
 Package pdftex.def Info: billder/ms_spec_2d.png  used on input line 147.
-(pdftex.def)             Requested size: 155.24895pt x 164.01627pt.
-<billder/ms_spec_3d.png, id=467, 380.01974pt x 348.1005pt>
+(pdftex.def)             Requested size: 155.24895pt x 157.75945pt.
+<billder/ms_spec_3d.png, id=467, 486.01575pt x 440.847pt>
 File: billder/ms_spec_3d.png Graphic file (type png)
 <use billder/ms_spec_3d.png>
 Package pdftex.def Info: billder/ms_spec_3d.png  used on input line 153.
-(pdftex.def)             Requested size: 155.24895pt x 142.2069pt.
+(pdftex.def)             Requested size: 155.24895pt x 140.8183pt.
  [31 <./billder/spec_bad_lcg_2d.png> <./billder/spec_bad_lcg_3d.png>]
 [32 <./billder/spec_good_lcg_2d.png> <./billder/spec_good_lcg_3d.png> <./billde
 r/ms_spec_2d.png> <./billder/ms_spec_3d.png>])
@@ -1262,15 +1270,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--53
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-Package rerunfilecheck Info: File `P2.out' has not changed.
-(rerunfilecheck)             Checksum: 730F04A8A61AF03AAC85F61AB0E39630;7716.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.26pt have occurred.
+
+
+Package rerunfilecheck Warning: File `P2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `P2.out':
+(rerunfilecheck)             Before: 730F04A8A61AF03AAC85F61AB0E39630;7716
+(rerunfilecheck)             After:  D8FBD6AE4A5FC5F108F73F66A419BEE2;7865.
  ) 
 Here is how much of TeX's memory you used:
- 23397 strings out of 474486
- 428620 string characters out of 5743756
+ 23399 strings out of 474486
+ 428647 string characters out of 5743756
  2250542 words of memory out of 5000000
- 45005 multiletter control sequences out of 15000+600000
- 574235 words of font info for 66 fonts, out of 8000000 for 9000
+ 45007 multiletter control sequences out of 15000+600000
+ 574239 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,101p,1281b,2436s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
@@ -1286,7 +1305,7 @@ l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\sofia\AppDat
 a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\sofia\
 AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\
 sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\
-Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk
+Users\sofia\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk
 ><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mex10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmmi10.pfb><C:/Users/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -1299,9 +1318,9 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sof
 ia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/U
 sers/sofia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb>
-Output written on P2.pdf (51 pages, 1116122 bytes).
+Output written on P2.pdf (51 pages, 1226036 bytes).
 PDF statistics:
- 1247 PDF objects out of 1440 (max. 8388607)
+ 1267 PDF objects out of 1440 (max. 8388607)
  221 named destinations out of 1000 (max. 500000)
  486 words of extra memory for PDF output out of 10000 (max. 10000000)
 
