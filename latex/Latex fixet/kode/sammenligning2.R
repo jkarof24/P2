@@ -33,10 +33,7 @@ trainindices <- sample(1:nrow(datanew), size = 0.8 * nrow(datanew))
 traindata <- datanew[trainindices, ]
 testdata <- datanew[-trainindices, ]
 
-# 6. difin number of bootstraps
-n_simulations <- 10000
-
-# 7. OLS-model
+# 6. OLS-model
 olsmodel <- lm(y ~ I(x1new^2) + I(x2new^3) + I(x3new^4) + I(x4new^5), data = traindata)
 
 # Get summary for OLS model to extract coefficient SE and CI
@@ -50,6 +47,20 @@ ols_confint <- confint(olsmodel)
 r_squared <- summary(olsmodel)$r.squared
 adj_r_squared <- summary(olsmodel)$adj.r.squared
 
+# OLS Prediction Errors
+ols_preds_info <- predict(olsmodel, newdata = testdata, se.fit = TRUE, interval = "confidence")
+olspreds <- ols_preds_info$fit[, "fit"]
+olserrors <- olspreds - testdata$y
+MBEOLS <- mean(olserrors)
+RMSEOLS <- sqrt(mean(olserrors^2))
+SEOLS_pred <- mean(ols_preds_info$se.fit)
+CI_OLS_pred <- ols_preds_info$fit[, "upr"] - ols_preds_info$fit[, "lwr"]
+AvgCIWidthOLS_pred <- mean(CI_OLS_pred)
+
+
+# 7. difin number of bootstraps
+n_simulations <- 10000
+
 # 8. Bootstrap-model for coefficients
 coef_function <- function(data, indices) {
   d <- data[indices,]
@@ -62,15 +73,6 @@ boot_results <- boot(data = traindata, statistic = coef_function, R = n_simulati
 bootstrap_coef_se <- apply(boot_results$t, 2, sd)
 bootstrap_coef_ci <- t(apply(boot_results$t, 2, quantile, probs = c(0.025, 0.975)))
 
-# OLS Prediction Errors
-ols_preds_info <- predict(olsmodel, newdata = testdata, se.fit = TRUE, interval = "confidence")
-olspreds <- ols_preds_info$fit[, "fit"]
-olserrors <- olspreds - testdata$y
-MBEOLS <- mean(olserrors)
-RMSEOLS <- sqrt(mean(olserrors^2))
-SEOLS_pred <- mean(ols_preds_info$se.fit)
-CI_OLS_pred <- ols_preds_info$fit[, "upr"] - ols_preds_info$fit[, "lwr"]
-AvgCIWidthOLS_pred <- mean(CI_OLS_pred)
 
 # Bootstrap Prediction Errors
 bootstrappredictions <- matrix(NA, nrow = nrow(testdata), ncol = n_simulations)
