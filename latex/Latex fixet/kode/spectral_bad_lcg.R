@@ -18,7 +18,7 @@ generate_lcg <- function(n, seed = 1) {
 }
 
 #Generering
-n <- 5000                          #Antal værdier
+n <- 2500                          #Antal værdier
 random_numbers <- generate_lcg(n) #laver sekvensen
 
 #2D plottet
