@@ -5,7 +5,6 @@ library(reshape2)
 library(lmtest)
 library(gridExtra)
 #read data
-setwd("C:/Users/jonat/Documents/GitHub/P2/R kode")
 data <- read.csv("auto-mpg.csv", na.strings = ".")
 
 #calculet the NA-%
@@ -33,24 +32,21 @@ data_korrelationer <- melt(cor(numeric_data, use = "complete.obs"))
 
 ggplot(data_korrelationer, aes(x = Var1, y = Var2, fill = abs(value))) +
   geom_tile() +
-  geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+  geom_text(aes(label = round(value, 2)), color = "black", size = 4) +
   scale_fill_gradient(low = "white", high = "red", limit = c(0, 1), name="|Correlation|") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(title = "Correlation Matrix Heatmap", x = "", y = "")
 
-
+" Lav scatter plots for hver kolonne mod 'mpg'
 scatter_plots <- lapply(names(numeric_data), function(col) {
   ggplot(numeric_data, aes_string(x = col, y = "mpg")) +
     geom_point(color = "blue") +
-    ggtitle(paste( col, "vs mpg")) +
-    theme(
-      axis.text.x = element_text(angle = 0, hjust = 1,size=12),
-      axis.text.y = element_text(angle = 0, hjust = 1,size=12)) 
+    ggtitle(paste("Scatter Plot of", col, "vs mpg")) +
+    theme_minimal()
 })
-do.call(grid.arrange, c(scatter_plots, ncol = 2))
 
-bp_results <- sapply(names(numeric_data), function(col) {
+"bp_results <- sapply(names(numeric_data), function(col) {
   model <- lm(mpg ~ numeric_data[[col]], data = numeric_data)
   bp_test <- bptest(model)
   bp_test$p.value

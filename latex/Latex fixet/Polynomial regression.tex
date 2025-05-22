@@ -1,6 +1,6 @@
 Understanding the relationship between variables is crucial when working with data, as it forms the basis for drawing meaningful conclusions. Regression models are a fundamental statistical tool used to model and analyze these relationship. Regressions models are not always robust and can include bias in their conclusions, this is a result of modeling a regression that includes breaks on one or more assumptions. This section will specifically focus on the assumption of constant variance of errors also called homoscedasticity and the assumption of no multicollinearity.
 
-\subsection*{Polynomial Regression}
+\subsubsection{Polynomial Regression}
 This section is based on 
 Linear regression is a model that estimates the relationship between a dependent variable, \( y \), and one or more independent variables, \( x \).
 
@@ -36,7 +36,7 @@ Polynomial regression is a form of linear regression, but the relationship betwe
 In polynomial regression, as mentioned before, there are six assumptions, that always need to be met.
 
 
-\subsection{The method of least squares}
+\subsubsection{The method of least squares}
 To find connections in data, it is necessary to estimate coefficients, $\beta_0$ and $\beta_1$, in linear models. 
 A widely used method to estimate the coefficients, is the least squares method that was previously mentioned. 
 
@@ -79,7 +79,7 @@ When rearranging terms, we get the normal equations %indsæt nummer på formler 
 \noindent The estimates $b_0$ and $b_1$ obtain the minimum when checking the second partial derivatives. \newline
 
 
-\subsection{Linear models}
+\subsubsection{Linear models}
 
 Equations for linear models can be written in matrix terms, where the normal error regression model for simple linear regression is.
 $$Y_i = \beta_0 + \beta_1 X_i 0 \epsilon_i .$$ 
@@ -228,7 +228,7 @@ $$
 
 \noindent The $Y$ and $\epsilon$ vectors are the same as in the simple linear regression matrix. The $\beta$ vector has additional parameters, and the $X$ matrix now has a column of $n$ observations for each $p-1 X$ variables. 
 
-\subsection{Polynomial regression}
+\subsubsection{Polynomial regression}
 Polynomial regression models the relationship like this, 
 $$Y=\beta_0 + \beta_1 x + \beta_2 x^2	+ ... + \beta_{p-1} x^{p-1}+ \epsilon .$$
 
@@ -342,5 +342,5 @@ $$ \beta=(X' X)^{-1} X' Y.$$
  
  \noindent These are the necessary matrices to use the least squares method.
 
-	\subsection{Assumptions}
+	\subsubsection{Assumptions}
 	\input{Assumptions}
