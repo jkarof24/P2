@@ -5,8 +5,8 @@ n <- 2500                           # Antal værdier
 set.seed(42)                        # Sætter seed
 mt_vals <- runif(n)                 # Bruger default mersenne twister til at generere
 
-par(mgp = c(1.5, 0.4, 0))  # Axis label closer to axis
-par(mar = c(3, 3, 2, 1))   # Optional: tighter outer margins (bottom, left, top, right)
+par(mgp = c(1.5, 0.4, 0))  # styrer margin line placering
+par(mar = c(3, 3, 2, 1))   # styrer også nogle margener
 
 #2d plot
 plot(
