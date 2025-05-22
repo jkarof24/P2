@@ -1,0 +1,72 @@
+When making a regression its important to understand, that the regression has assumptions that needs to be fulfilled if the statistical conclusions are to be correct. If these assumptions are not upheld, it will create bias that will skew the results of the model.
+\subsubsection{Homoscedasticity}
+One of the assumptions of a polynomial regression is that homoscedasticity is fulfilled. Homoscedasticity is the assumption of constant error variance, where observations in a dataset would exhibit errors that have roughly the same spread across all levels of the independent variable.
+\newline
+If this assumption is not upheld, then this will cause the standard error to be biased and therefore not trustworthy. This problem causes further testing involving this standard error to become wrong, an example is the hypothesis test.
+\newline
+The reason for the assumption needs to be upheld, comes from how the regression is created. The regression is created via the ordinary least square method, that requires the assumption of homoscedasticity to be upheld.
+\newline
+A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values. If the matrix contains all the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
+
+
+	
+\[ 
+Var(\varepsilon) = \sigma^2 = 
+\left[
+\begin{array}{cccc}
+	\sigma^2 & 0        & \cdots & 0 \\
+	0        & \sigma^2 & \cdots & 0 \\
+	\vdots   & \vdots   & \ddots & \vdots \\
+	0        & 0        & \cdots & \sigma^2 \\
+\end{array}
+\right]
+\]
+
+
+The general way of writing the variance-covariance matrix, is by this formula:
+\[
+Var(\varepsilon) = 
+\left[
+\begin{array}{ccccc}
+	\sigma_{11} & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n} \\
+	\sigma_{12} & \sigma_{22} & \sigma_{23} & \cdots & \sigma_{2n} \\
+	\sigma_{13} & \sigma_{23} & \sigma_{33} & \cdots & \sigma_{3n} \\
+	\vdots      & \vdots      & \vdots      & \ddots & \vdots      \\
+	\sigma_{1n} & \sigma_{2n} & \sigma_{3n} & \cdots & \sigma_{nn}
+\end{array}
+\right]
+\]
+
+Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The positions that are not on the diagonal should be zero else the data contains another problem, that is autocorrelation, meaning that the observations in the data set are correlated.
+
+Source: https://openpublishing.library.umass.edu/pare/article/id/1590/
+
+\noindent \textbf{Detecting heteroscedasticity} \\
+When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but its not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables has an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the dataset contains heteroscedasticity.
+source: $https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html?fbclid=IwZXh0bgNhZW0CMTEAAR4qxZqqD0CVoqZfHgWZU8lUOuxg43dFRSs9Opswn-IAo8l-UaO1oDWCuUfkvw_aem_9Ft7wkFWKUHycQ1GnX-x0g$
+
+\subsubsection{No multicollinearity}
+Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
+$$
+X_1 = c+\beta_1\cdot X_2+...+\beta_n\cdot X_n
+$$ 
+Where $X_1...X_n$ is all the independent variables that have a perfect linear relationship. The coefficients are represented by $\beta_1...\beta_n$ and they are the amount that $X_1$ changes when their relative independent variable changes.
+Lastly $c$ is the intercept and represents the value of $X_1$, when all other independent variables are zero.
+\newline
+The regression model can feel the effects of multicollinearity even without there being perfect multicollinearity. A strong linear relationship is enough to have an effect on the model. The problem caused by multicollinearity, is that as it increases the variance of the value that the coefficients can receive also increases. Where as perfect multicollinearity will make the model unable to estimate a value of one coefficient, due to the perfect linearity between the independent variables.
+\newline
+Source: https://ekja.org/upload/pdf/kja-19087.pdf
+
+\noindent \textbf{Detecting multicollinearity}\\
+To check for multicollinearity in a dataset, a good approach is pearson´s correlation coefficient. This will make a table of all pairwise correlation, this means that all combinations of independent variables are checked for multicollinearity. This can be seen in \textbf{table...}. The correlation coefficient is calculated through this formula:
+$$
+r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
+$$
+Where $n$ is the number of observations, with $x$ and $y$ representing the two variables tested for correlation and the pairwise correlation coefficient is denoted as $r$. When computing the value of $r$, the value will be in a range: $-1\leq r \leq 1$. If the value of $r$ is $-1$ or $1$, that indicates a perfect either negative or positive correlation and if the value is $0$, then there is no correlation between the variables.
+%Soruce: "https://www.academia.edu/43507843/Detecting_Multicollinearity_in_Regression_Analysis"
+
+
+
+
+
+
