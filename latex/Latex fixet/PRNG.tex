@@ -16,7 +16,7 @@ This chapter will explore the key concepts behind PRNGs. Before going into the
 mechanics of these generators, it is important to first understand what ’random’
 means and the characteristics that define truly random numbers.
 
-\subsection{Properties of PRNGs}
+\subsubsection{Properties of PRNGs}
 
 The quality of a PRNG is determined by several key factors that influence its
 use for different applications. Some of the properties of a good PRNG are independence, a long period and reproducibility
@@ -43,7 +43,7 @@ large volume of random numbers. An inefficient PRNG can significantly slow
 down processes, undermining the overall performance of the system. Therefore,
 balancing randomness and efficiency is essential for practical applications
 
-\subsection{Linear Congruential Generator}
+\subsubsection{Linear Congruential Generator}
 
 Linear Congruential Generator (LCG) is a commonly used approach to generate
 pseudo-random numbers. LCG generates a sequence of numbers using a linear
@@ -89,7 +89,7 @@ $$X_2=(4 \cdot 18+6)=78 \bmod 20=78 \bmod 20=18.$$
 \newline \\
 The selection of the optimal parameters for a LCG would be excessive for the objective of this project, it is beyond the scope of this project and will therefore not be addressed further.
 
-\subsection{Test of PRNG}
+\subsubsection{Test of PRNG}
 As stated previously, the length of the sequence produced by the PRNG is not the only important factor. A uniform distribution and independence of each generated number is significant too. If these criteria are not met, there will be correlation between the generated numbers, which means that the randomness is of low quality. For example, consider a sequence that follows the three-times-table, with the first number being 3: (3,6,9,12,...). In that sequence, it is pretty easy to guess the upcoming number, based on the previous one. Normally the correlations are harder to spot than this example, which is why it is important to test the quality of a PRNG.
 \newline
 
