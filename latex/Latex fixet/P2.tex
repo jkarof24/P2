@@ -7,6 +7,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage[content={}, color=white]{background}
+
+
+\definecolor{aaublue}{rgb}{0.129,0.102,0.322}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -44,7 +54,8 @@
 
 
 	\setcounter{section}{0}
-	\maketitle
+	\input{frontpage}
+	\input{titlepage}
 	\newpage
 	\tableofcontents
 	\newpage
