@@ -33,7 +33,7 @@ data_korrelationer <- melt(cor(numeric_data, use = "complete.obs"))
 
 ggplot(data_korrelationer, aes(x = Var1, y = Var2, fill = abs(value))) +
   geom_tile() +
-  geom_text(aes(label = round(value, 2)), color = "black", size = 4) +
+  geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
   scale_fill_gradient(low = "white", high = "red", limit = c(0, 1), name="|Correlation|") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
@@ -43,9 +43,12 @@ ggplot(data_korrelationer, aes(x = Var1, y = Var2, fill = abs(value))) +
 scatter_plots <- lapply(names(numeric_data), function(col) {
   ggplot(numeric_data, aes_string(x = col, y = "mpg")) +
     geom_point(color = "blue") +
-    ggtitle(paste("Scatter Plot of", col, "vs mpg")) +
-    theme_minimal()
+    ggtitle(paste( col, "vs mpg")) +
+    theme(
+      axis.text.x = element_text(angle = 0, hjust = 1,size=12),
+      axis.text.y = element_text(angle = 0, hjust = 1,size=12)) 
 })
+do.call(grid.arrange, c(scatter_plots, ncol = 2))
 
 bp_results <- sapply(names(numeric_data), function(col) {
   model <- lm(mpg ~ numeric_data[[col]], data = numeric_data)

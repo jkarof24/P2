@@ -27,13 +27,13 @@ x4new <- x4 + rnorm(n, mean = 0, sd = 0.1 * abs(y))
 # Create a new data frame
 datanew <- data.frame(y, x1new, x2new, x3new, x4new)
 
-# 5. Split i trænings- og testdata
+# 5. Split into tranings data and testdata
 set.seed(123)
 trainindices <- sample(1:nrow(datanew), size = 0.8 * nrow(datanew))
 traindata <- datanew[trainindices, ]
 testdata <- datanew[-trainindices, ]
 
-# 6. Definér antal bootstrap-simuleringer
+# 6. difin number of bootstraps
 n_simulations <- 10000
 
 # 7. OLS-model
