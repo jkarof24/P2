@@ -358,9 +358,9 @@ Polynomial regression models the relationship like this,
  \frac{\partial^2 Q}{\partial \beta' \beta}=2X'X
 \end{equation} 
  \noindent If it is positive definite, the function Q has a global minimum, which can be shown with,
- 
- $$a' (X' X)a = (Xa)' (Xa)$$
- 
+\begin{equation}
+ a' (X' X)a = (Xa)' (Xa)
+\end{equation}  
  \noindent As shown in %indsæt ligning (Xa)'(Xa)
  these can only be calculated coefficients, if $Xa \not= 0$. This means, that $X'X$ is positive definite in all relevant situations, which is when the coefficients can be calculated. 
  
@@ -368,8 +368,8 @@ Polynomial regression models the relationship like this,
  The matrices are,
  
  
- 
- $$X=
+\begin{equation}
+ X=
  \left[
  \begin{array}{ccc}
  	1 &X_1	& X_1^2\\ 
@@ -378,9 +378,10 @@ Polynomial regression models the relationship like this,
  	1 & X_n& X_n^2
  \end{array}
  \right]
- $$
+\end{equation}
  
- $$X'X=
+ \begin{equation}
+ 	X'X=
  \left[
  \begin{array}{ccccc}
  	n &\sum X_i	& \sum X_i^2 & ... &\sum X_i^{p-1}\\ 
@@ -390,9 +391,10 @@ Polynomial regression models the relationship like this,
  	\sum X_i^{p-1} &\sum X_i^p& \sum X_i^{p+1} & ... & \sum X_i^{2p-2}
  \end{array}
  \right]
- $$
+\end{equation}
  
- $$X' Y=
+ \begin{equation}
+ 	X' Y=
  \left[
  \begin{array}{c}
  	\sum Y_i\\ 
@@ -402,7 +404,7 @@ Polynomial regression models the relationship like this,
  	\sum X_i^{p-1} Y_i
  \end{array}
  \right]
- $$
+\end{equation}
  
  \noindent These are the necessary matrices to use the least squares method.
 

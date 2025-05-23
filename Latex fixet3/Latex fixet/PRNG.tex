@@ -49,8 +49,10 @@ Linear Congruential Generator (LCG) is a commonly used approach to generate
 pseudo-random numbers. LCG generates a sequence of numbers using a linear
 recurrence relation, expressed as:
 
-$$X_{n+1} = (aX_n + c) \bmod m \cite{knuth}.$$  \\
-\\
+\begin{equation}
+X_{n+1} = (aX_n + c) \bmod m \cite{knuth}.
+\end{equation}
+
 \noindent $X_0$ is the seed value and must be in the range $0 \leq X_0 < m$ \newline
 $a$ is the multiplier,\newline 
 $c$ is the increment and \newline
@@ -61,14 +63,18 @@ is retained. This ensures that the generated number remains within the range
 0 to $m-1$.  $X_0$, $a$ and $c$ must all be in the interval $[0, m)$. 
 Here is an example of the first 4 numbers of a sequence given these parameters: \newline
 
-\begin{center}
-	$a = 5$, $c = 1$, $m = 16$, and $X_0 = 7$:
-\end{center}
+\begin{equation}
+	a = 5, c = 1, m = 16, and X_0 = 7:
+\end{equation}
 
-$$X_1 = (5 \cdot 7 + 1)\bmod 16 = 4.$$
-$$X_2 = (5 \cdot 4 + 1) \bmod 16 = 5.$$
-$$X_3 = (5 \cdot 5 + 1) \bmod 16 = 10.$$
-$$X_4 = (5 \cdot 10 + 1) \bmod 16 = 3.$$
+\begin{equation}
+	 X_1 = (5 \cdot 7 + 1)\bmod 16 = 4.
+\end{equation}
+\begin{equation} 
+	X_2 = (5 \cdot 4 + 1) \bmod 16 = 5. 
+\end{equation}
+\begin{equation} X_3 = (5 \cdot 5 + 1) \bmod 16 = 10. \end{equation}
+\begin{equation} X_4 = (5 \cdot 10 + 1) \bmod 16 = 3. \end{equation}
 \\
 \noindent This sequence has a period of 16. In an LCG, the period can be as large as $m$,
 because the remainder after division by $m$ will always be less than or equal to
@@ -82,8 +88,8 @@ is possible to select a larger $m$ and still end up with a shorter period if the
 	$a=4$, $c=6$, $m=20$, $X_0=3.$
 \end{center}
 
-$$X_1=(4 \cdot 3 +6)=18 \bmod 20=18.$$
-$$X_2=(4 \cdot 18+6)=78 \bmod 20=78 \bmod 20=18.$$
+\begin{equation} X_1=(4 \cdot 3 +6)=18 \bmod 20=18.\end{equation}
+\begin{equation}X_2=(4 \cdot 18+6)=78 \bmod 20=78 \bmod 20=18.\end{equation}
 
 \noindent Here a larger $m$ is used, but a shorter period of 1 appears. 
 \newline \\

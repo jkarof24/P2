@@ -15,7 +15,7 @@ The variances in the matrix is calculated via the discrete method, but excluding
 
 
 	
-\[ 
+\begin{equation}
 Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] = 
 \left[
 \begin{array}{cccc}
@@ -25,11 +25,11 @@ Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] =
 	0        & 0        & \cdots & \sigma^2 \\
 \end{array}
 \right]
-\]
+\end{equation}
 
 
 The general way of writing the variance-covariance matrix, is by this formula:
-\[
+\begin{equation}
 Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] = 
 \left[
 \begin{array}{ccccc}
@@ -40,7 +40,7 @@ Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] =
 	\sigma_{1n} & \sigma_{2n} & \sigma_{3n} & \cdots & \sigma_{nn}
 \end{array}
 \right]
-\]
+\end{equation}
 
 Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The positions that are not on the diagonal should be zero else the data contains another problem, that is autocorrelation, meaning that the observations in the data set are correlated.
 
@@ -52,9 +52,9 @@ source: $https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html?fbclid=
 
 \subsubsection{No multicollinearity}
 Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
-$$
+\begin{equation}
 X_1 = c+\beta_1\cdot X_2+...+\beta_n\cdot X_n
-$$ 
+\end{equation}
 Where $X_1...X_n$ is all the independent variables that have a perfect linear relationship. The coefficients are represented by $\beta_1...\beta_n$ and they are the amount that $X_1$ changes when their relative independent variable changes.
 Lastly $c$ is the intercept and represents the value of $X_1$, when all other independent variables are zero.
 \newline
@@ -63,14 +63,12 @@ The regression model can feel the effects of multicollinearity even without ther
 Source: https://ekja.org/upload/pdf/kja-19087.pdf
 
 \noindent \textbf{Detecting multicollinearity}\\
+
 To check for multicollinearity in a dataset, a good approach is pearson´s correlation coefficient. This will make a matrix of all pairwise correlation, this means that all combinations of independent variables are checked for multicollinearity. This can be seen in \autoref{fig:1}. The Pearsons correlation coefficient is calculated through this formula:
-$$
+\begin{equation}
 r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
-$$
+\end{equation}
 Where $n$ is the number of observations, with $x$ and $y$ representing the two variables tested for correlation and the pairwise correlation coefficient is denoted as $r$. When computing the value of $r$, the value will be in a range: $-1\leq r \leq 1$. If the value of $r$ is $-1$ or $1$, that indicates a perfect either negative or positive correlation and if the value is $0$, then there is no correlation between the variables. The correlation matrix has a connection to the variance-covariance matrix, by the correlation matrix being a normalized version of the variance-covariance matrix. This means that for each spot in the variance-covariance matrix, the value is divided by the product of the standard deviations of the corresponding independent variables. By normalizing the values, then the values will go from $-1$ to $1$.
-%Soruce: "https://www.academia.edu/43507843/Detecting_Multicollinearity_in_Regression_Analysis"
-
-
 
 
 
