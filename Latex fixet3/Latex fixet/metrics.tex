@@ -6,15 +6,21 @@ Metrics are measures used to evaluate how well a model performs. Metrics assess 
 \subsection{R-Squared}
 % What is it?
 The $R^2$ (coefficient of determination) measures how much better the model predicts outcomes compared to simply using the mean. It is calculated using the Total Sum of Squares (TSS) and the Sum of Squared Errors (SSE) with this formula: 
-$$R^2=1-\frac{\text{SSE}}{\text{TSS}}$$
+\begin{equation}
+R^2=1-\frac{\text{SSE}}{\text{TSS}}
+\end{equation}
 
 TSS explains how much the values of a dataset vary from the mean and is calculated by: 
-$$\sum_{j=1}^{n}(A_j - \bar{A})^2,$$
+\begin{equation}
+\sum_{j=1}^{n}(A_j - \bar{A})^2,
+\end{equation}
 where $A_j$ is the actual value and $\hat{A}$ is the mean of all actual values.
 \\\\
 
 \noindent The SSE is how far the predictions from the model are from the actual values and is calculated by:
-$$\sum_{j=1}^{n}(P_j - A_j)^2,$$
+\begin{equation}
+	\sum_{j=1}^{n}(P_j - A_j)^2,
+\end{equation}
 where $\hat{A}$ is the predicted value from the model, $P_{j}$ is the predicted value, $A_{j}$ is the actual value, and $n$ is the number of observations \cite{metrics}. The errors are squared to make all values positive, highlight larger mistakes more strongly, and stay consistent with how variance is calculated in statistics.
 \\\\
 % Interpretation
@@ -28,8 +34,9 @@ Mean Bias Error (MBE) is a metric that measures the average difference between t
 
 The formula for MBE is:
 
-$$\text{MBE}=\frac{1}{n}\sum_{j=1}^{n}(e_{j}).$$
-
+\begin{equation}
+\text{MBE}=\frac{1}{n}\sum_{j=1}^{n}(e_{j}).
+\end{equation}
 \noindent Here $e_{j}=A_{j}-P_{j}$, again $P_{j}$ is the predicted value, $A_{j}$ is the actual value, and $n$ is the number of observations \cite{metrics}.
 \\\\
 
@@ -45,7 +52,9 @@ When interpreting MBE, there are three different cases to consider. If the $\tex
 Root Mean Square Error (RMSE) is a metric used to evaluate regression models. It measures the average size of prediction errors. Since it squares the errors, it punishes larger errors more than smaller ones, which is useful if the objective is to emphasize the impact of larger deviations of the actual values.
 \\
 The formula for RMSE:
-$$\text{RMSE}=\sqrt{\frac{ \sum_{j=1}^{n} e_j^2 }{n}}.$$
+\begin{equation}
+	\text{RMSE}=\sqrt{\frac{ \sum_{j=1}^{n} e_j^2 }{n}}.
+\end{equation}
 As before, here $e_{j}=A_{j}-P_{j}$, where $P_{j}$ is the predicted value, $A_{j}$ is the actual value, and $n$ is the number of observations \cite{metrics}.
 \\ The idea is to find the error by subtracting the actual value from its prediction, square the error so negatives and positives do not cancel out (like in MBE) and large errors will stand out. Then the average of all squared errors is found, and the square root is taken to bring the result back to the original scale. 
 \\
@@ -60,9 +69,9 @@ The ideal case is when both bias and variance are low, meaning the model is both
 
 \subsubsection{Variance}
 The variance of a model, for a single input, can be calculated using this formula:
-$$
+\begin{equation}
 \text{Var}[\hat{f}(x)] = \frac{1}{M} \sum_{j=1}^{M} (\hat{f}_j(x) - \overline{\hat{f}}(x))^{2}.
-$$
+\end{equation}
 
 Where:
 \begin{itemize}
@@ -73,24 +82,23 @@ Where:
 
 This formula measures how much predictions vary at a specific input $x$ across multiple model runs. To calculate the overall variance across the input space, the average of the variances at all test inputs is taken:
 
-$$
+\begin{equation}
 \text{Overall Model Variance} = \frac{1}{n} \sum_{i=1}^{n} \text{Var}[\hat{f}(x_i)].
-$$
-
+\end{equation}
 This overall measure is beneficial because it captures how the model’s prediction variability behaves across the entire dataset, rather than at just one point. A model with high variance is likely too complex and sensitive to the noise in the data.
 
 \subsubsection{Bias}
 Bias measures how far the model’s average prediction is from the true value. Since bias can be positive or negative, it is typically squared to focus on its magnitude. The squared bias for a specific input $x$ is calculated as:
 
-$$
+\begin{equation}
 \text{Bias}^2(x) = (\overline{\hat{f}}(x) - f(x))^{2}.
-$$
+\end{equation}
 
 The overall squared bias across all inputs is calculated by averaging over the test set:
 
-$$
+\begin{equation}
 \text{Bias}^2 = \frac{1}{n} \sum_{i=1}^{n} (\overline{\hat{f}}(x_i) - f(x_i))^{2}.
-$$
+\end{equation}
 
 High bias typically indicates that the model is too simple to capture the underlying structure of the data, resulting in systematic under- or over-prediction.
 
