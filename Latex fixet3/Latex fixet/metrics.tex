@@ -20,9 +20,9 @@ where $A_j$ is the actual value and $\hat{A}$ is the mean of all actual values.
 
 \noindent The SSE is how far the predictions from the model are from the actual values and is calculated by:
 \begin{equation}
-	\sum_{j=1}^{n}(P_j - A_j)^2,
+	\sum_{j=1}^{n}(A_j - P_j)^2,
 \end{equation}
-where $\hat{A}$ is the predicted value from the model, $P_{j}$ is the predicted value, $A_{j}$ is the actual value, and $n$ is the number of observations \cite{metrics}. The errors are squared to make all values positive, highlight larger mistakes more strongly, and stay consistent with how variance is calculated in statistics.
+where $A_J$ is the actual value, $P_j$ is the predicted value, and $n$ is the number of observations \cite{metrics}. The errors are squared to make all values positive, highlight larger mistakes more strongly, and stay consistent with how variance is calculated in statistics.
 \\\\
 % Interpretation
 $R^2$ explains how much of the variance explained by the model. The value of $R^2$ typically lies in the range $0 \leq R^2 \leq 1$, where 0 means that the model explains none of the variance, a value of 1 would mean that the model explains all the variance, while 0.5 means that the model explains 50\% of the variance. If the $R^2$-value is negative, it means that the model is performing so poorly that it would be better to simply predict the mean for all observations.
@@ -56,7 +56,7 @@ The formula for RMSE:
 \begin{equation}
 	\text{RMSE}=\sqrt{\frac{ \sum_{j=1}^{n} e_j^2 }{n}}.
 \end{equation}
-As before, here $e_{j}=A_{j}-P_{j}$, where $P_{j}$ is the predicted value, $A_{j}$ is the actual value, and $n$ is the number of observations \cite{metrics}.
+As before, $e_{j}=A_{j}-P_{j}$, where $P_{j}$ is the predicted value, $A_{j}$ is the actual value, and $n$ is the number of observations \cite{metrics}.
 \\ The idea is to find the error by subtracting the actual value from its prediction, square the error so negatives and positives do not cancel out (like in MBE) and large errors will stand out. Then the average of all squared errors is found, and the square root is taken to bring the result back to the original scale. 
 \\
 
