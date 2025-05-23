@@ -1,9 +1,10 @@
+\subsection{Metrics}
 To evaluate the quality of a regression model, various metrics are used. Each metric provides a score that reflects the reliability of the model's predictions.
 
 Metrics are measures used to evaluate how well a model performs. Metrics assess the accuracy of the model’s predictions compared to actual values. Common metrics like R² and MBE help determine how closely predictions match real outcomes, while others like bias and variance reveal systematic errors and model stability. Metrics help model selection and improvement by providing objective feedback on performance. They’re essential for comparing models, detecting underfitting or overfitting, and ensuring predictions are reliable for real-world use.
 \\\\
 
-\subsection{R-Squared}
+\subsubsection{R-Squared}
 % What is it?
 The $R^2$ (coefficient of determination) measures how much better the model predicts outcomes compared to simply using the mean. It is calculated using the Total Sum of Squares (TSS) and the Sum of Squared Errors (SSE) with this formula: 
 \begin{equation}
@@ -29,7 +30,7 @@ $R^2$ explains how much of the variance explained by the model. The value of $R^
 \noindent Although widely used, the $R^2$-score should not be relied upon as the only metric of model performance due to several shortcomings. Primarily, it evaluates the proportion of variance in the dependent variable explained by the model, but does not reflect the accuracy of individual values. As a result, a model can achieve a high $R^2$ despite making major errors on specific data points. In addition, $R^2$ is vulnerable to overfitting, especially when the model becomes overly complex and starts fitting the noise in the data instead of underlying trends. Another critical issue is that $R^2$ does not adjust for the number of predictors in the model. It will never decrease when more features are added, even if those features are irrelevant. For a more reliable assessment, alternative metrics should be used alongside $R^2$ to evaluate a regression model. 
 \newpage
 
-\subsection{Mean Bias Error}
+\subsubsection{Mean Bias Error}
 Mean Bias Error (MBE) is a metric that measures the average difference between the actual values and the model's predictions. Unlike other metrics, MBE does not emphasize the magnitude of the error but instead indicates whether the model systematically overestimates or underestimates, revealing potential bias in the predictions.
 
 The formula for MBE is:
@@ -47,7 +48,7 @@ When interpreting MBE, there are three different cases to consider. If the $\tex
 
 \newpage
 
-\subsection{Root Mean Square Error}   
+\subsubsection{Root Mean Square Error}   
 
 Root Mean Square Error (RMSE) is a metric used to evaluate regression models. It measures the average size of prediction errors. Since it squares the errors, it punishes larger errors more than smaller ones, which is useful if the objective is to emphasize the impact of larger deviations of the actual values.
 \\
@@ -62,13 +63,13 @@ As before, here $e_{j}=A_{j}-P_{j}$, where $P_{j}$ is the predicted value, $A_{j
 \noindent The RMSE is always a non-negative number, and the closer RMSE is to 0, the better the model is performing. The scale and unit of RMSE is the same as the target variable. So, if the data is about 'Miles Per Gallon', a RMSE of 2 means that the predictions of the model are 2 miles off, on average. Therefore, RMSE is most useful when the objective is comparing different models on the same dataset, or at least on datasets with the same scale, and in the same units. This also means an RMSE of 5 can be great if the values of the target variable range from 1-1000, but awful if the range is 1-10. Like the other metrics, RMSE should be used alongside other metrics to provide a more complete picture of the model’s performance. RMSE does not explain why a model performs well or poorly. To understand why a model performs poorly, bias-variance decomposition can be used to split error into systematic bias and model instability.
 \newpage
 
-\subsection{Bias-Variance}
+\subsubsection{Bias-Variance}
 To understand the sources of error in a model’s predictions, the bias-variance decomposition framework helps explain errors in a model’s predictions. Bias measures how far, on average, the model's predictions are from the true values. Variance describes how sensitive the model is to changes in the training data; it measures how much the model’s predictions vary when trained on different datasets. 
 
-The ideal case is when both bias and variance are low, meaning the model is both accurate and stable. This framework is especially useful for diagnosing underfitting, which is caused by high bias, and overfitting, which is caused by high variance. By examining both bias and variance, the decomposition helps in understanding the trade-off between model complexity and generalization.
+The ideal case is when both bias and variance are low, meaning the model is both accurate and stable. This framework is especially useful for diagnosing underfitting, which is caused by high bias, and overfitting, which is caused by high variance. By examining both bias and variance, the decomposition helps in understanding the trade-off between model complexity and generalization.\newline
 
-\subsubsection{Variance}
-The variance of a model, for a single input, can be calculated using this formula:
+\noindent \textbf{Variance} \newline
+\noindent The variance of a model, for a single input, can be calculated using this formula:
 \begin{equation}
 \text{Var}[\hat{f}(x)] = \frac{1}{M} \sum_{j=1}^{M} (\hat{f}_j(x) - \overline{\hat{f}}(x))^{2}.
 \end{equation}
@@ -85,10 +86,10 @@ This formula measures how much predictions vary at a specific input $x$ across m
 \begin{equation}
 \text{Overall Model Variance} = \frac{1}{n} \sum_{i=1}^{n} \text{Var}[\hat{f}(x_i)].
 \end{equation}
-This overall measure is beneficial because it captures how the model’s prediction variability behaves across the entire dataset, rather than at just one point. A model with high variance is likely too complex and sensitive to the noise in the data.
+This overall measure is beneficial because it captures how the model’s prediction variability behaves across the entire dataset, rather than at just one point. A model with high variance is likely too complex and sensitive to the noise in the data.\newline
 
-\subsubsection{Bias}
-Bias measures how far the model’s average prediction is from the true value. Since bias can be positive or negative, it is typically squared to focus on its magnitude. The squared bias for a specific input $x$ is calculated as:
+\noindent \textbf{Bias}\newline
+\noindent Bias measures how far the model’s average prediction is from the true value. Since bias can be positive or negative, it is typically squared to focus on its magnitude. The squared bias for a specific input $x$ is calculated as:
 
 \begin{equation}
 \text{Bias}^2(x) = (\overline{\hat{f}}(x) - f(x))^{2}.
@@ -104,7 +105,7 @@ High bias typically indicates that the model is too simple to capture the underl
 
 
 
-\subsection{Confidence Intervals}
+\subsubsection{Confidence Intervals}
 Confidence intervals are used in model evaluation to judge the stability and reliability of a model's estimations. Unlike the previously mentioned metrics, confidence intervals do not provide a single number, but instead a range within which the true parameter value is likely to lie, given a specified level of confidence. The level of confidence is typically 95\%.
 
 By comparing overlap and width of the confidence intervals across different models, it is possible to assess which model generates the best estimates, based on consistency and reliability.
