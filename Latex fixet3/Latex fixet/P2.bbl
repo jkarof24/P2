@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{Heteroscedasticity}
+Oscar L.~Olvera Astivia and Bruno~D. Zumbo.
+\newblock Heteroskedasticity in multiple regression analysis: What it is, how
+  to detect it and how to solve it with applications in r and spss.
+\newblock {\em Practical Assessment, Research, and Evaluation}, 2019.
+
 \bibitem{metrics}
 Alexei Botchkarev.
 \newblock Performance metrics (error measures) in machine learning regression,
@@ -17,5 +23,12 @@ Makoto Matsumoto and Takuji Nishimura.
 \newblock Mersenne twister: A 623-dimensionally equidistributed uniform
   pseudo-random number generator.
 \newblock 8, 1998.
+
+\bibitem{HomoSce}
+{Social Science Computing Cooperative}.
+\newblock Homoscedasticity.
+\newblock
+  \url{https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html}, n.d.
+\newblock Accessed: 2025-05-23.
 
 \end{thebibliography}
