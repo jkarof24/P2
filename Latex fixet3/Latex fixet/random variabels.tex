@@ -7,7 +7,10 @@ A random variable is defined as a function that associates a real number with ea
 
 \subsubsection{Discrete random variable}
 A discrete random variable can take each of its values with a certain probability. Frequently, it is convenient to represent all the probabilities of a random variable $X$ by a formula. Let $X$ be a discrete random variable which can take the values $x_{1}, x_{2},...$ Then the distribution of $X$ is given by the probability function:
-$$f(x_{i})=P(X=x_{i}),\quad i=1,2,...$$
+
+\begin{equation}
+	f(x_{i})=P(X=x_{i}),\quad i=1,2,...
+\end{equation}
 \newline
 For a discrete random variable this function is also called the probability mass function, where following holds for each possible outcome $x$:
 
@@ -18,20 +21,35 @@ For a discrete random variable this function is also called the probability mass
 \end{itemize}
 
 \noindent In addition to the probability mass function $f$, the discrete random variable $X$ also has a cumulative distribution function $F(x)$ given by:
-$$F(x) = P(X \leq x) = \sum_{x_i \leq x} f(x_i), \quad x \in \textbf{R}.$$
+
+\begin{equation}
+F(x) = P(X \leq x) = \sum_{x_i \leq x} f(x_i), \quad x \in \textbf{R}.
+\end{equation}
+
 
 \noindent This helps decide the probability that the random variable assumes a value equal to or smaller than $x$. Its sums up the probability density functions values.
 \newline
 
 \noindent The mean of a discrete variable $X$, with a distribution function $f(x_{i})$ is given by:
-$$\mu = E(X) = \sum_i x_i P(X = x_i) = \sum_i x_i f(x_i).$$
+
+\begin{equation}
+\mu = E(X) = \sum_i x_i P(X = x_i) = \sum_i x_i f(x_i).
+\end{equation}
+
 The mean is typically the expected value. It is a weighed average of the possible values of $X$. The values are weighed by its probability in the sample space.
 \\
 
 \noindent In addition to the mean, we should also mention the variance. The variance is the mean squared distance between the values of the variable and the mean value. It is given by:
-$$\sigma^2 = E\left[(X - \mu)^2\right] = \sum_{i} (x_i - \mu)^2 f(x_i).$$
+
+\begin{equation}
+\sigma^2 = E\left[(X - \mu)^2\right] = \sum_{i} (x_i - \mu)^2 f(x_i)
+\end{equation}
+
 The variance indicates whether the values of $X$ are far from the mean values or close. A high variance means that the values of $X$ have a high probability of being far from the mean values and vice versa. Along with the variance, the standard deviation is also often used. It is given by the square root of the variance:
-$$\sigma=+\sqrt{\sigma^2}.$$
+\begin{equation}
+\sigma=+\sqrt{\sigma^2}.
+\end{equation}
+
 The advantage of the standard deviation over the variance is that it is measured in the same units as $X$.
 
 \subsubsection{Continuous random variable}
@@ -44,16 +62,30 @@ Contrary to a discrete random variable, a continuous random variable can take va
 \end{itemize}
 
 \noindent Condition 3. ensures that $P(-\infty < X < \infty) = 1$, which means that the probability of the random variable $X$ being between $-\infty$ and $\infty$ is 100\%. Furthermore the probability of $X$ assuming a specific value $a$ is zero, in other words: $P(X=a)=0$. That means that the values of the density function should not be interpreted as a probability of a given outcome. Instead the probability of $X$ is found by integrating over the probability density function. So, the probability that a continuous random variable $X$ lies between the values $a$ and $b$ is: 
-$$P(a < X < b) = \int_a^b f(x) \, dx.$$
+
+\begin{equation}
+P(a < X < b) = \int_a^b f(x) \, dx.
+\end{equation}
+
 
 \noindent A continuous random variable $X$ also has a distribution function $F(x)$, that also predicts whether $X$ assumes a value equal to or smaller than $x$. For a continuous random variable it is again given by integrating over the probability density function in the interval from $-\infty$ to $x$:
-$$F(x) = P(X \leq x) = \int_{-\infty}^{x} f(y) \ dy.$$
+\begin{equation}
+F(x) = P(X \leq x) = \int_{-\infty}^{x} f(y) \ dy.
+\end{equation}
+
+
 That also means $P(a<X<b)$ can be calculated by $F(b)-F(a)$.
 \\
 
 \noindent For a continuous random variabel $X$ the mean, variance and standard deviation the same interpretation applies. Just given by different formulars, which are:
-$$\mu = E(X) = \int_{-\infty}^{\infty} x f(x) \, dx$$
+\begin{equation}
+	\mu = E(X) = \int_{-\infty}^{\infty} x f(x) \, dx
+\end{equation}
+
 and
-$$\sigma^2 = E\left[(X - \mu)^2\right] = \int_{-\infty}^{\infty} (x - \mu)^2 f(x) \, dx,$$
+\begin{equation}
+\sigma^2 = E\left[(X - \mu)^2\right] = \int_{-\infty}^{\infty} (x - \mu)^2 f(x) \, dx,
+\end{equation}
+
 (The standard deviation is still given by til square root of the variance).
 
