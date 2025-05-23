@@ -53,17 +53,16 @@ source: $https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html?fbclid=
 \subsubsection{No multicollinearity}
 Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
 \begin{equation}
-X_1 = c+\beta_1\cdot X_2+...+\beta_n\cdot X_n
+X_1 = \alpha+\beta_1\cdot X_2+...+\beta_n\cdot X_n
 \end{equation}
 Where $X_1...X_n$ is all the independent variables that have a perfect linear relationship. The coefficients are represented by $\beta_1...\beta_n$ and they are the amount that $X_1$ changes when their relative independent variable changes.
-Lastly $c$ is the intercept and represents the value of $X_1$, when all other independent variables are zero.
+Lastly $\alpha$ is the intercept and represents the value of $X_1$, when all other independent variables are zero.
 \newline
 The regression model can feel the effects of multicollinearity even without there being perfect multicollinearity. A strong linear relationship is enough to have an effect on the model. The problem caused by multicollinearity, is that as it increases the variance of the value that the coefficients can receive also increases. Where as perfect multicollinearity will make the model unable to estimate a value of one coefficient, due to the perfect linearity between the independent variables.
 \newline
 Source: https://ekja.org/upload/pdf/kja-19087.pdf
 
 \noindent \textbf{Detecting multicollinearity}\\
-
 To check for multicollinearity in a dataset, a good approach is pearson´s correlation coefficient. This will make a matrix of all pairwise correlation, this means that all combinations of independent variables are checked for multicollinearity. This can be seen in \autoref{fig:1}. The Pearsons correlation coefficient is calculated through this formula:
 \begin{equation}
 r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
