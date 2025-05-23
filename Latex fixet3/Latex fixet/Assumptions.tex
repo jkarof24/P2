@@ -6,7 +6,12 @@ If this assumption is not upheld, then this will cause the standard error to be 
 \newline
 The reason for the assumption needs to be upheld, comes from how the regression is created. The regression is created via the ordinary least square method, that requires the assumption of homoscedasticity to be upheld.
 \newline
-A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for each independent variable in a regression. The variances in the matrix is calculated via the discrete method, but excluding the weight function \textbf{ref to equation}. If the matrix contains all the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
+A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for each independent variable in a regression. The variances in the matrix is calculated through an alternate equation from the one introduced in \autoref{sec:disc}.
+\begin{equation}
+	\text{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\end{equation}
+
+The variances in the matrix is calculated via the discrete method, but excluding the weight function \textbf{ref to equation}. If the matrix contains all the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
 
 
 	
