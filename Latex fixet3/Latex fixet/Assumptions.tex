@@ -6,7 +6,7 @@ If this assumption is not upheld, then this will cause the standard error to be 
 \newline
 The reason for the assumption needs to be upheld, comes from how the regression is created. The regression is created via the ordinary least square method, that requires the assumption of homoscedasticity to be upheld.
 \newline
-A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for each independent variable in a regression. The variances in the matrix is calculated via the discrete method \textbf{ref to equation}. If the matrix contains all the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
+A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for each independent variable in a regression. The variances in the matrix is calculated via the discrete method, but excluding the weight function \textbf{ref to equation}. If the matrix contains all the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
 
 
 	
@@ -58,14 +58,12 @@ The regression model can feel the effects of multicollinearity even without ther
 Source: https://ekja.org/upload/pdf/kja-19087.pdf
 
 \noindent \textbf{Detecting multicollinearity}\\
-To check for multicollinearity in a dataset, a good approach is pearson´s correlation coefficient. This will make a table of all pairwise correlation, this means that all combinations of independent variables are checked for multicollinearity. This can be seen in \textbf{table...}. The correlation coefficient is calculated through this formula:
+
+To check for multicollinearity in a dataset, a good approach is pearson´s correlation coefficient. This will make a matrix of all pairwise correlation, this means that all combinations of independent variables are checked for multicollinearity. This can be seen in \autoref{fig:1}. The Pearsons correlation coefficient is calculated through this formula:
 \begin{equation}
 r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
 \end{equation}
-Where $n$ is the number of observations, with $x$ and $y$ representing the two variables tested for correlation and the pairwise correlation coefficient is denoted as $r$. When computing the value of $r$, the value will be in a range: $-1\leq r \leq 1$. If the value of $r$ is $-1$ or $1$, that indicates a perfect either negative or positive correlation and if the value is $0$, then there is no correlation between the variables.
-%Soruce: "https://www.academia.edu/43507843/Detecting_Multicollinearity_in_Regression_Analysis"
-
-
+Where $n$ is the number of observations, with $x$ and $y$ representing the two variables tested for correlation and the pairwise correlation coefficient is denoted as $r$. When computing the value of $r$, the value will be in a range: $-1\leq r \leq 1$. If the value of $r$ is $-1$ or $1$, that indicates a perfect either negative or positive correlation and if the value is $0$, then there is no correlation between the variables. The correlation matrix has a connection to the variance-covariance matrix, by the correlation matrix being a normalized version of the variance-covariance matrix. This means that for each spot in the variance-covariance matrix, the value is divided by the product of the standard deviations of the corresponding independent variables. By normalizing the values, then the values will go from $-1$ to $1$.
 
 
 
