@@ -6,12 +6,12 @@ If this assumption is not upheld, then this will cause the standard error to be 
 \newline
 The reason for the assumption needs to be upheld, comes from how the regression is created. The regression is created via the ordinary least square method, that requires the assumption of homoscedasticity to be upheld.
 \newline
-A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for each independent variable in the regression. The variances in the matrix is calculated through an alternate equation from the one presented in \autoref{sec:disc}.
+A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for the error in each independent variable in the regression. The variances in the matrix are calculated through an alternate equation from the one presented in \autoref{sec:disc}.
 \begin{equation}
 	\text{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \bar{x})^2
 \end{equation}
-The equation differs in that it excludes the weighting function and it assumes equal probability for each data point. These changes stems from the data deriving from a sample rather than the population. Consequently the use of $\frac{1}{n-1}$ rather than $\frac{1}{n}$, is to account for the bias correction. This correction is essential, as it prevents underestimation when working with samples rater than populations, by addressing bias.\\
-If the matrix contains all the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
+The equation differs in that it excludes the weighting function and it assumes equal probability for each data point. These changes stems from the data deriving from a sample rather than the population. Consequently the use of $\frac{1}{n-1}$ rather than $\frac{1}{n}$, is to account for the bias correction. This correction is essential, as it prevents underestimation when working with samples rather than populations, by addressing bias.\\
+If the matrix contains approximately the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
 
 
 	
@@ -28,24 +28,23 @@ Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] =
 \end{equation}
 
 
-The general way of writing the variance-covariance matrix, is by this formula:
+The general way of writing the variance-covariance matrix, when the mean of the error i assumed to be $0$, is by this formula:
 \begin{equation}
 Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] = 
 \left[
-\begin{array}{ccccc}
-	\sigma_{11} & \sigma_{12} & \sigma_{13} & \cdots & \sigma_{1n} \\
-	\sigma_{12} & \sigma_{22} & \sigma_{23} & \cdots & \sigma_{2n} \\
-	\sigma_{13} & \sigma_{23} & \sigma_{33} & \cdots & \sigma_{3n} \\
-	\vdots      & \vdots      & \vdots      & \ddots & \vdots      \\
-	\sigma_{1n} & \sigma_{2n} & \sigma_{3n} & \cdots & \sigma_{nn}
+\begin{array}{cccc}
+	\sigma^2_{11} & \sigma_{21} & \cdots & \sigma_{i1} \\
+	\sigma_{12} & \sigma^2_{22} & \cdots & \sigma_{i2} \\
+	\vdots      & \vdots      & \ddots & \vdots      \\
+	\sigma_{1j} & \sigma_{2j} & \cdots & \sigma^2_{ij}
 \end{array}
 \right]
 \end{equation}
 
-Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The positions that are not on the diagonal should be zero else the data contains another problem, that is autocorrelation, meaning that the observations in the data set are correlated. \cite{Heteroscedasticity}
+Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The off-diagonal values represent covariances between error terms. While not the focus of this project, non-zero values here may indicate correlation between errors, which would violate the assumption of independence. \cite{Heteroscedasticity}
 
 \noindent \textbf{Detecting heteroscedasticity} \\
-When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but its not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables has an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the dataset contains heteroscedasticity. \cite{HomoSce}
+When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but its not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables have an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the dataset contains heteroscedasticity. \cite{HomoSce}
 
 \subsubsection{No multicollinearity}
 Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
@@ -60,7 +59,7 @@ The regression model can feel the effects of multicollinearity even without ther
 Source: https://ekja.org/upload/pdf/kja-19087.pdf
 
 \noindent \textbf{Detecting multicollinearity}\\
-To check for multicollinearity in a dataset, a good approach is pearson´s correlation coefficient. This will make a matrix of all pairwise correlation, this means that all combinations of independent variables are checked for multicollinearity. This can be seen in \autoref{fig:1}. The Pearsons correlation coefficient is calculated through this formula:
+A common method to detect multicollinearity in a dataset, is to compute the pearson´s correlation coefficient for all combinations of independent variables. This will result in the correlation matrix, as seen in \autoref{fig:1}, where each cell represents the strength and direction of the relationship between two independent variables. The Pearsons correlation coefficient is calculated through this formula:
 \begin{equation}
 r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
 \end{equation}
