@@ -3,10 +3,10 @@ library(dplyr) # Used for data manipulation
 library(boot) # Used for bootstrap analysis
 
 # Set seed for reproducibility
-set.seed(16)
+set.seed(15)
 
 # Generate independent variables
-n <- 50
+n <- 50000
 x1 <- rnorm(n, mean = 20, sd = 1)
 x2 <- rnorm(n, mean = 15, sd = 4)
 x3 <- rnorm(n, mean = 10, sd = 3)
@@ -70,8 +70,11 @@ coef_function <- function(data, indices) {
 
 boot_results <- boot(data = traindata, statistic = coef_function, R = n_simulations)
 
+
 bootstrap_coef_se <- apply(boot_results$t, 2, sd)
 bootstrap_coef_ci <- t(apply(boot_results$t, 2, quantile, probs = c(0.025, 0.975)))
+
+
 
 
 # Bootstrap Prediction Errors
@@ -82,13 +85,35 @@ for (i in 1:n_simulations) {
                   data = traindata[indices, ])
   bootstrappredictions[, i] <- predict(bootmodel, newdata = testdata)
 }
+
+print_his = function(data , antal){
+  
+  for (i in 10){
+    row_values = data[i,]
+    return(hist(row_values))
+  }
+  
+}
+
+print_his(bootstrappredictions,10)
+
+hist(bootstrappredictions[33,]- 6346.2424)
+  
+
 bootstrapmeanpreds <- rowMeans(bootstrappredictions)
 bootstraperrors <- bootstrapmeanpreds - testdata$y
+
+hist(bootstraperrors)
+
 MBEBootstrap <- mean(bootstraperrors)
 RMSEBootstrap <- sqrt(mean(bootstraperrors^2))
 SEBootstrap_pred <- mean(apply(bootstrappredictions, 1, sd))
 CI_Bootstrap_pred <- t(apply(bootstrappredictions, 1, quantile, probs = c(0.025, 0.975)))
 AvgCIWidthBootstrap_pred <- mean(CI_Bootstrap_pred[, 2] - CI_Bootstrap_pred[, 1])
+
+test <- colMeans(bootstrappredictions)
+
+
 
 # --- Bootstrap R-squared Distribution ---
 bootstrap_r_squared <- numeric(n_simulations)
