@@ -354,7 +354,7 @@ Polynomial regression models the relationship like this,
  
  \noindent If it is supposed, that there exists a non-trivial solution for $Xa=0$, there also exists a non-trivial solution for $X'Xa=0$. It is therefore only invertible when the null space of $X$ is 0, or if the columns are linearly independent. This is called no multicollinearity, since there is independence between the independent variables. 
  
-\noindent To ensure that the solution gives a minimum, the \textbf{Hessian} is calculated,
+\noindent To ensure that the solution gives a minimum, the hessian is calculated,
 \begin{equation}
  \frac{\partial^2 Q}{\partial \beta' \beta}=2X'X
 \end{equation} 
@@ -362,7 +362,7 @@ Polynomial regression models the relationship like this,
 \begin{equation}
  a' (X' X)a = (Xa)' (Xa)
 \end{equation}  
- \noindent As shown in %indsæt ligning (Xa)'(Xa)
+ \noindent As shown in $(65)$,
  these can only be calculated coefficients, if $Xa \not= 0$. This means, that $X'X$ is positive definite in all relevant situations, which is when the coefficients can be calculated. 
  
  \noindent The solution to the least squares method results in only containing $X'X$ and $X'Y$.
