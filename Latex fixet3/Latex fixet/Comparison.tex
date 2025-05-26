@@ -23,7 +23,9 @@
 	tabsize=2
 }
 
-In this section we will focus on solving the problem statement, that was presented in \ref{sec:PBS}. This will be done by using PRNG to create synthetic data, from this data a polynomial regression will be create via OLS. Afterwards a resampling process will be done, to set up multiple data sets from the original data set, then multiple polynomial regression will be created, one for each new data set. Lastly the regressions will be compared through various metric, such as MBE and RMSE.
+In this section, we address the problem presented in Section \ref{sec:PBS}. To do so, we begin by generating synthetic data using a PRNG. Based on this data, we construct a polynomial regression model using OLS.
+
+\noindent Next, we apply a resampling technique to create multiple datasets derived from the original synthetic dataset. For each resampled dataset, a separate polynomial regression model is trained. Finally, we evaluate and compare the performance of these models using various metrics, including MBE and RMSE.
 
 \subsection{Setting up the models}
 To understand how assumption violations affect classical polynomial regression, we begin by generating synthetic data using a random number generator. First, four independent variables are created, each normally distributed with known standard deviations. Then, the dependent variable is generated as a function of these four independent variables. This synthetic dataset initially satisfies all the assumptions required for ordinary least squares (OLS) regression.
