@@ -24,11 +24,21 @@ Makoto Matsumoto and Takuji Nishimura.
   pseudo-random number generator.
 \newblock 8, 1998.
 
+\bibitem{AppliedLSM}
+John~Neter Michael H.~Kutner, Christopher J.~Nachtsheim and William Li.
+\newblock {\em Applied Linear Statistical Models}.
+\newblock McGraw-Hill Irwin, 5th edition, 2005.
+
 \bibitem{HomoSce}
 {Social Science Computing Cooperative}.
 \newblock Homoscedasticity.
 \newblock
   \url{https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html}, n.d.
 \newblock Accessed: 2025-05-23.
+
+\bibitem{ProbAndStat}
+Ronald~E. Walpole, Raymond~H. Myers, Sharon~L. Myers, and Keying Ye.
+\newblock {\em Probability and Statistics for Engineers and Scientist}.
+\newblock Pearson, 9th edition, 2011.
 
 \end{thebibliography}

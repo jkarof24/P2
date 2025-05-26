@@ -109,7 +109,7 @@ As stated previously, the length of the sequence produced by the PRNG is not the
 \noindent Looking at the spectral test used on a LCG with the parameters from the Park-Miller Minimal Standard\:  $X_{n+1}=(48271\cdot X_{n}) \text{ mod } (2^{31}-1)$\cite{knuth}, on Figure \ref{fig:goodspec2d} and Figure \ref{fig:goodspec3d}, the hyperplanes will not always be visible in 2d or 3d, but only in higher dimensions. Therefore a visual examination will not be enough to conclude the complete quality of a PRNG. Methods for inspecting LCGs in these dimensions do exist, but will not be mentioned in this project
 \newline
 
-\noindent In this project, the PRNG used will be the Mersenne-Twister. It has very good properties, uniformity and a period of $2^19937-1$ and passes the spectral test \cite{mersenne}. The test in 2D and 3D can be seen on figure \ref{fig:msspec2d} and figure \ref{fig:msspec3d}. Another reason for this choice is that Mersenne-Twister is the built-in generator in R, which makes it convenient. 
+\noindent In this project, the PRNG used will be the Mersenne-Twister. It has very good properties, uniformity and a period of $2^{19937}-1$ and passes the spectral test \cite{mersenne}. The test in 2D and 3D can be seen on figure \ref{fig:msspec2d} and figure \ref{fig:msspec3d}. Another reason for this choice is that Mersenne-Twister is the built-in generator in R, which makes it convenient. 
 
 
 %Spectral test for bad LCG
