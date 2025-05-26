@@ -108,7 +108,7 @@ And it can be expanded, so the normal equations are obtained,
 \end{equation}
 
 Solving this for $b_0$ and $b_1$ will lead to values, that minimize Q, and these are the estimates for $\beta_0$ and $\beta_1$. 
-When rearranging terms, we get the normal equations %indsæt nummer på formler for b1 og b0 fra før
+When rearranging terms, we get the normal equations $(28)$ and $(29)$.
 
 \noindent The estimates $b_0$ and $b_1$ obtain the minimum when checking the second partial derivatives. \newline
 
@@ -354,7 +354,7 @@ Polynomial regression models the relationship like this,
  
  \noindent If it is supposed, that there exists a non-trivial solution for $Xa=0$, there also exists a non-trivial solution for $X'Xa=0$. It is therefore only invertible when the null space of $X$ is 0, or if the columns are linearly independent. This is called no multicollinearity, since there is independence between the independent variables. 
  
-\noindent To ensure that the solution gives a minimum, the hessian is calculated,
+\noindent To ensure that the solution gives a minimum, the hessian matrix is calculated,
 \begin{equation}
  \frac{\partial^2 Q}{\partial \beta' \beta}=2X'X
 \end{equation} 
