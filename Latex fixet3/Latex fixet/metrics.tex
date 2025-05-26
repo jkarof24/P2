@@ -1,7 +1,7 @@
 \subsection{Metrics}
-To evaluate the quality of a regression model, various metrics are used. Each metric provides a score that reflects the reliability of the model's predictions.
+To evaluate the quality of a regression model, various metrics are used. Each metric provides a score that reflects the reliability of the model's predictions. \newline
 
-Metrics are measures used to evaluate how well a model performs. Metrics assess the accuracy of the model’s predictions compared to actual values. Common metrics like The Squared Correlation Coefficient ($R^{2}$) and Mean Bias Error (MBE) help determine how closely predictions match real outcomes, while others like bias and variance reveal systematic errors and model stability. Metrics help model selection and improvement by providing objective feedback on performance. They’re essential for comparing models, detecting underfitting or overfitting, and ensuring predictions are reliable for real-world use.
+\noindent Metrics are measures used to evaluate how well a model performs. Metrics assess the accuracy of the model’s predictions compared to actual values. Common metrics like The Squared Correlation Coefficient ($R^{2}$) and Mean Bias Error (MBE) help determine how closely predictions match real outcomes, while others like bias and variance reveal systematic errors and model stability. Metrics help model selection and improvement by providing objective feedback on performance. They’re essential for comparing models, detecting underfitting or overfitting, and ensuring predictions are reliable for real-world use.
 \\\\
 
 \subsubsection{R-Squared}
@@ -11,7 +11,7 @@ The $R^2$ (coefficient of determination) measures how much better the model pred
 R^2=1-\frac{\text{SSE}}{\text{TSS}}
 \end{equation}
 
-TSS explains how much the values of a dataset vary from the mean and is calculated by: 
+\noindent TSS explains how much the values of a dataset vary from the mean and is calculated by: 
 \begin{equation}
 \sum_{j=1}^{n}(A_j - \bar{A})^2,
 \end{equation}
@@ -31,9 +31,9 @@ $R^2$ explains how much of the variance explained by the model. The value of $R^
 \newpage
 
 \subsubsection{Mean Bias Error}
-Mean Bias Error (MBE) is a metric that measures the average difference between the actual values and the model's predictions. Unlike other metrics, MBE does not emphasize the magnitude of the error but instead indicates whether the model systematically overestimates or underestimates, revealing potential bias in the predictions.
+Mean Bias Error (MBE) is a metric that measures the average difference between the actual values and the model's predictions. Unlike other metrics, MBE does not emphasize the magnitude of the error but instead indicates whether the model systematically overestimates or underestimates, revealing potential bias in the predictions. \newline 
 
-The formula for MBE is:
+\noindent The formula for MBE is:
 
 \begin{equation}
 \text{MBE}=\frac{1}{n}\sum_{j=1}^{n}(e_{j}).
@@ -41,7 +41,7 @@ The formula for MBE is:
 \noindent Here $e_{j}=A_{j}-P_{j}$, again $P_{j}$ is the predicted value, $A_{j}$ is the actual value, and $n$ is the number of observations \cite{metrics}.
 \\\\
 
-When interpreting MBE, there are three different cases to consider. If the $\text{MBE}\geq 0$, the model tends to over-predict the values compared to the actual values. If the $\text{MBE}\leq0$, the opposite is the case, and the model tends to under-predict the values. If the $\text{MBE}\approx0$ there is no consistent bias in either direction.
+\noindent When interpreting MBE, there are three different cases to consider. If the $\text{MBE}\geq 0$, the model tends to over-predict the values compared to the actual values. If the $\text{MBE}\leq0$, the opposite is the case, and the model tends to under-predict the values. If the $\text{MBE}\approx0$ there is no consistent bias in either direction.
 \\
 
 \noindent The MBE measures the bias of the model, whether it tends to predict values that are generally too high or too low compared to the actual values. This means that we cannot use MBE to estimate the size of the error or the overall quality of the model. If two actual values are $100$ and the model predicts $120$ and $80$ the error calculated with $\hat{y}-y$ is $+20$ and $-20$. Because the absolute or squared values are not used, these errors will cancel each other out. Therefore, the size of the error is not computed. Instead, to understand the size of the errors, Root Mean Square Error can be used, which penalizes large deviations more heavily.
@@ -64,9 +64,9 @@ As before, $e_{j}=A_{j}-P_{j}$, where $P_{j}$ is the predicted value, $A_{j}$ is
 \newpage
 
 \subsubsection{Bias-Variance}
-To understand the sources of error in a model’s predictions, the bias-variance decomposition framework helps explain errors in a model’s predictions. Bias measures how far, on average, the model's predictions are from the true values. Variance describes how sensitive the model is to changes in the training data; it measures how much the model’s predictions vary when trained on different datasets. 
+To understand the sources of error in a model’s predictions, the bias-variance decomposition framework helps explain errors in a model’s predictions. Bias measures how far, on average, the model's predictions are from the true values. Variance describes how sensitive the model is to changes in the training data; it measures how much the model’s predictions vary when trained on different datasets. \newline 
 
-The ideal case is when both bias and variance are low, meaning the model is both accurate and stable. This framework is especially useful for diagnosing underfitting, which is caused by high bias, and overfitting, which is caused by high variance. By examining both bias and variance, the decomposition helps in understanding the trade-off between model complexity and generalization.\newline
+\noindent The ideal case is when both bias and variance are low, meaning the model is both accurate and stable. This framework is especially useful for diagnosing underfitting, which is caused by high bias, and overfitting, which is caused by high variance. By examining both bias and variance, the decomposition helps in understanding the trade-off between model complexity and generalization.\newline
 
 \noindent \textbf{Variance} \newline
 \noindent The variance of a model, for a single input, can be calculated using this formula:
@@ -81,7 +81,7 @@ Where:
 	\item $\overline{\hat{f}}(x)$ is the mean prediction across all $M$ models at input $x$.
 \end{itemize}
 
-This formula measures how much predictions vary at a specific input $x$ across multiple model runs. To calculate the overall variance across the input space, the average of the variances at all test inputs is taken:
+\noindent This formula measures how much predictions vary at a specific input $x$ across multiple model runs. To calculate the overall variance across the input space, the average of the variances at all test inputs is taken:
 
 \begin{equation}
 \text{Overall Model Variance} = \frac{1}{n} \sum_{i=1}^{n} \text{Var}[\hat{f}(x_i)].
@@ -95,17 +95,17 @@ This overall measure is beneficial because it captures how the model’s predict
 \text{Bias}^2(x) = (\overline{\hat{f}}(x) - f(x))^{2}.
 \end{equation}
 
-The overall squared bias across all inputs is calculated by averaging over the test set:
+\noindent The overall squared bias across all inputs is calculated by averaging over the test set:
 
 \begin{equation}
 \text{Bias}^2 = \frac{1}{n} \sum_{i=1}^{n} (\overline{\hat{f}}(x_i) - f(x_i))^{2}.
 \end{equation}
 
-High bias typically indicates that the model is too simple to capture the underlying structure of the data, resulting in systematic under- or over-prediction.
+\noindent High bias typically indicates that the model is too simple to capture the underlying structure of the data, resulting in systematic under- or over-prediction.
 
 
 
 \subsubsection{Confidence Intervals}
-Confidence intervals are used in model evaluation to judge the stability and reliability of a model's estimations. Unlike the previously mentioned metrics, confidence intervals do not provide a single number, but instead a range within which the true parameter value is likely to lie, given a specified level of confidence. The level of confidence is typically 95\%.
+Confidence intervals are used in model evaluation to judge the stability and reliability of a model's estimations. Unlike the previously mentioned metrics, confidence intervals do not provide a single number, but instead a range within which the true parameter value is likely to lie, given a specified level of confidence. The level of confidence is typically 95\%. \newline 
 
-By comparing overlap and width of the confidence intervals across different models, it is possible to assess which model generates the best estimates, based on consistency and reliability.
+\noindent By comparing overlap and width of the confidence intervals across different models, it is possible to assess which model generates the best estimates, based on consistency and reliability.
