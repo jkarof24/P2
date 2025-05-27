@@ -25,7 +25,7 @@
 
 In this section, we address the problem presented in Section \ref{sec:PBS}. To do so, we begin by generating synthetic data using a PRNG. Based on this data, we construct a polynomial regression model using OLS.
 
-\noindent Next, we apply a resampling technique to create multiple datasets derived from the original synthetic dataset. For each resampled dataset, a separate polynomial regression model is trained. Finally, we evaluate and compare the performance of these models using various metrics, including MBE and RMSE. The code is based on module 4 from the course 'Anvendt statistik' \cite{ASTA}, with assistance from AI \cite{AI}.
+\noindent Next, we apply resampling to create multiple datasets derived from the original synthetic dataset. For each resampled dataset, a separate polynomial regression model is trained. Finally, we evaluate and compare the performance of these models using various metrics, including MBE and RMSE. The code is based on module 4 from the course 'Anvendt statistik' \cite{ASTA}, with assistance from AI \cite{AI}.
 
 \subsection{Setting Up the Models}
 To understand how assumption violations affect classical polynomial regression, we begin by generating synthetic data using a random number generator, as shown in \autoref{code1}. First, four independent variables are created, each normally distributed with known standard deviations. Then, the dependent variable is generated as a function of these four independent variables. This synthetic dataset initially satisfies all the assumptions required for ordinary least squares regression. Next, an error term is added that scales with the dependent variable. This introduces heteroscedasticity meaning the error variance is no longer constant thereby violating the assumption of homoscedasticity. This step is done deliberately to ensure that this is the only assumption being violated, so any observed effects on the model can be attributed specifically to this violation.
@@ -35,12 +35,12 @@ To understand how assumption violations affect classical polynomial regression, 
 \lstinputlisting[language=R, caption=Datageneration and adding hetroscedasety,label=code1, firstline=8, lastline=25]{kode/sammenligning2.R}
 
 
-\noindent The dataset is then in \autoref{code2} line 2-6 split into training and test sets, with $80\%$ used for training and the remaining $20\%$ for testing. A standard linear polynomial regression model is fitted to the training data on line 8. The standard error, and confidence intervals for the coefficients are calculated on line 11 - 5 the $R^2$ is calculeted on line 18 and  the mean bias error and root mean squared error calculated are useing the testdata on line 21- 25 all this is to evaluate the model's performance.
+\noindent The dataset is then in \autoref{code2} line 2-5 split into training and test sets, with $80\%$ used for training and the remaining $20\%$ for testing. A standard polynomial regression model is fitted to the training data on line 8. The standard error, and confidence intervals for the coefficients are calculated on line 11 - 15 the $R^2$ is calculeted on line 18 and  the mean bias error and root mean squared error calculated are useing the testdata on line 21- 25 all this is to evaluate the model's performance.
 \\\\
 \lstinputlisting[language=R, caption=traning/test data and OLS,label=code2, firstline=27, lastline=53]{kode/sammenligning2.R}
 
 
-\noindent Following this,the amount of resamples for the bootstrap are set at 10000 and the function for the coefficients are defined in line 1-9 and a bootstrap is then performed by resampling the training data in line 11-30. For each resampled dateset, a linear polynomial model is fitted. The $R^2$, coefficients and the predictions on the test data. These predictions are then used to compute the mean bias error and RMSE and the coefficients are used the calculated the standard error and confidence intervals of the coefficients for the bootstrap models.
+\noindent Following this,the amount of resamples for the bootstrap are set at 10000 and the function for the coefficients are defined in line 1-9 and a bootstrap is then performed by resampling the training data in line 11-30. For each resampled dateset, a polynomial model is fitted. The $R^2$, coefficients and the predictions on the test data. These predictions are then used to compute the mean bias error and RMSE and the coefficients are used the calculated the standard error and confidence intervals of the coefficients for the bootstrap models.
 \\\\\\\\\\\\
 
 \lstinputlisting[language=R, caption=Bootstrap, label=code3, firstline=54, lastline=97]{kode/sammenligning2.R}
