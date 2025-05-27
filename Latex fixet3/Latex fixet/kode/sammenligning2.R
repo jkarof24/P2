@@ -3,10 +3,10 @@ library(dplyr) # Used for data manipulation
 library(boot) # Used for bootstrap analysis
 
 # Set seed for reproducibility
-set.seed(15)
+set.seed(16)
 
 # Generate independent variables
-n <- 50000
+n <- 50
 x1 <- rnorm(n, mean = 20, sd = 1)
 x2 <- rnorm(n, mean = 15, sd = 4)
 x3 <- rnorm(n, mean = 10, sd = 3)
@@ -27,13 +27,16 @@ x4new <- x4 + rnorm(n, mean = 0, sd = 0.1 * abs(y))
 # Create a new data frame
 datanew <- data.frame(y, x1new, x2new, x3new, x4new)
 
-# 5. Split into tranings data and testdata
+# 5. Split i trænings- og testdata
 set.seed(123)
 trainindices <- sample(1:nrow(datanew), size = 0.8 * nrow(datanew))
 traindata <- datanew[trainindices, ]
 testdata <- datanew[-trainindices, ]
 
-# 6. OLS-model
+# 6. Definér antal bootstrap-simuleringer
+n_simulations <- 10000
+
+# 7. OLS-model
 olsmodel <- lm(y ~ I(x1new^2) + I(x2new^3) + I(x3new^4) + I(x4new^5), data = traindata)
 
 # Get summary for OLS model to extract coefficient SE and CI
@@ -47,6 +50,18 @@ ols_confint <- confint(olsmodel)
 r_squared <- summary(olsmodel)$r.squared
 adj_r_squared <- summary(olsmodel)$adj.r.squared
 
+# 8. Bootstrap-model for coefficients
+coef_function <- function(data, indices) {
+  d <- data[indices,]
+  fit <- lm(y ~ I(x1new^2) + I(x2new^3) + I(x3new^4) + I(x4new^5), data = d)
+  return(coef(fit))
+}
+
+boot_results <- boot(data = traindata, statistic = coef_function, R = n_simulations)
+
+bootstrap_coef_se <- apply(boot_results$t, 2, sd)
+bootstrap_coef_ci <- t(apply(boot_results$t, 2, quantile, probs = c(0.025, 0.975)))
+
 # OLS Prediction Errors
 ols_preds_info <- predict(olsmodel, newdata = testdata, se.fit = TRUE, interval = "confidence")
 olspreds <- ols_preds_info$fit[, "fit"]
@@ -57,26 +72,6 @@ SEOLS_pred <- mean(ols_preds_info$se.fit)
 CI_OLS_pred <- ols_preds_info$fit[, "upr"] - ols_preds_info$fit[, "lwr"]
 AvgCIWidthOLS_pred <- mean(CI_OLS_pred)
 
-
-# 7. difin number of bootstraps
-n_simulations <- 10000
-
-# 8. Bootstrap-model for coefficients
-coef_function <- function(data, indices) {
-  d <- data[indices,]
-  fit <- lm(y ~ I(x1new^2) + I(x2new^3) + I(x3new^4) + I(x4new^5), data = d)
-  return(coef(fit))
-}
-
-boot_results <- boot(data = traindata, statistic = coef_function, R = n_simulations)
-
-
-bootstrap_coef_se <- apply(boot_results$t, 2, sd)
-bootstrap_coef_ci <- t(apply(boot_results$t, 2, quantile, probs = c(0.025, 0.975)))
-
-
-
-
 # Bootstrap Prediction Errors
 bootstrappredictions <- matrix(NA, nrow = nrow(testdata), ncol = n_simulations)
 for (i in 1:n_simulations) {
@@ -85,35 +80,13 @@ for (i in 1:n_simulations) {
                   data = traindata[indices, ])
   bootstrappredictions[, i] <- predict(bootmodel, newdata = testdata)
 }
-
-print_his = function(data , antal){
-  
-  for (i in 10){
-    row_values = data[i,]
-    return(hist(row_values))
-  }
-  
-}
-
-print_his(bootstrappredictions,10)
-
-hist(bootstrappredictions[33,]- 6346.2424)
-  
-
 bootstrapmeanpreds <- rowMeans(bootstrappredictions)
 bootstraperrors <- bootstrapmeanpreds - testdata$y
-
-hist(bootstraperrors)
-
 MBEBootstrap <- mean(bootstraperrors)
 RMSEBootstrap <- sqrt(mean(bootstraperrors^2))
 SEBootstrap_pred <- mean(apply(bootstrappredictions, 1, sd))
 CI_Bootstrap_pred <- t(apply(bootstrappredictions, 1, quantile, probs = c(0.025, 0.975)))
 AvgCIWidthBootstrap_pred <- mean(CI_Bootstrap_pred[, 2] - CI_Bootstrap_pred[, 1])
-
-test <- colMeans(bootstrappredictions)
-
-
 
 # --- Bootstrap R-squared Distribution ---
 bootstrap_r_squared <- numeric(n_simulations)
@@ -151,3 +124,16 @@ print(bootstrap_coef_se)
 cat("\n--- Bootstrap Model (R-squared) ---\n")
 cat("Mean R-squared: ", round(mean_r_squared_boot, 4), "\n")
 
+
+hist(bootstraperrors) 
+abline(v = mean(bootstraperrors), col = "red") 
+abline(v = median(bootstraperrors), col = "green")
+
+hist(olserrors)
+abline(v = mean(olserrors), col = "red")
+abline(v = median(olserrors), col = "green")
+
+
+
+hist(bootstrappredictions[1,])
+abline(v = mean(bootstrappredictions[1,]), col = "red")
