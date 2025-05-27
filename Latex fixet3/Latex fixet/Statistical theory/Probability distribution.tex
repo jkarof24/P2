@@ -10,7 +10,7 @@ In the world of statistics, the most common distribution is the normal distribut
 n(x;\mu,\sigma) =\frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{(x-\mu)}{2\sigma^2}}
 \end{equation}
 
-\noindent The distribution is dependent on the mean($\mu$) and the standard deviation($\sigma$), where changes to the mean will result in a change in the positioning of the normal distribution. Whereas a change in the standard deviation will change the spread of the curve. The normal distribution also always contains an area under the curve that is equal to one. This is to ensure that the normal distribution correctly models probability. There is a special variation of the normal distribution, called the standard normal distribution, where the mean is zero and the standard deviation is one. The standard normal distribution can be seen in \autoref{fig:Norm}, this distribution is widely used in statistics as it makes math behind computing statistical inference easier.
+\noindent The distribution is dependent on the mean $\mu$, and the standard deviation $\sigma$. Changes to the mean will result in a change in the positioning of the normal distribution, and changes in the standard deviation will change the spread of the curve. Also, the area under the curve of the normal distribution is always equal to one. This is to ensure that the normal distribution correctly models probability. There is a special variation of the normal distribution, called the standard normal distribution, where the mean is zero and the standard deviation is one. The standard normal distribution can be seen in \autoref{fig:Norm}, this distribution is widely used in statistics as it makes math behind computing statistical inference easier.
 \begin{figure}[h!]
 	\centering
 	\begin{minipage}{0.80\textwidth}
@@ -20,10 +20,10 @@ n(x;\mu,\sigma) =\frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{(x-\mu)}{2\sigma^2}}
 		\label{fig:Norm}
 	\end{minipage}\hfill
 \end{figure}
-All variations of a normal distribution can be standardized by a transformation of the distribution, using the Z-score formula.
+All variations of a normal distribution can be standardized by a transformation of the distribution, using the Z-score formula,
 \newline
 \begin{equation}
-Z=\frac{X-\mu}{\sigma}
+Z=\frac{X-\mu}{\sigma}.
 \end{equation}
 
 
@@ -33,23 +33,19 @@ Z=\frac{X-\mu}{\sigma}
 A very effective theorem in statistics is the central limit theorem. This theorem states that if a random sample $\bar{X}$, with the size $n$, is taken from a population with a mean and a finite variance, then as $n$ goes towards infinity, the distribution will resemble a normal distribution. If used with the Z-score formula, the distribution will resemble a standard normal distribution. The formula for the Z-score, when in conjunction with the central limit theorem, looks like this:
 
 \begin{equation}
-Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}
+Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}.
 \end{equation}
 
 
-\noindent Where $\bar{X}$ is a random sample of size $n$ and $\mu$ is the mean of the true population. The standard error i represented by $\sigma/\sqrt{n}$, where $\sigma$ is the standard deviation and $n$ is the sample size.
-Usually the standard deviation is unknown, for these situations it is possible to use the estimator $S^2$. This estimates the variance of the population from the variance of the sample, by this formula:
-
-\begin{equation}
-s^2=\sum_{i=1}^{n}\frac{(x_{i}-\bar{x})}{n-1}
-\end{equation}
+\noindent Where $\bar{X}$ is a random sample of size $n$, and $\mu$ is the mean of the true population. The standard error is represented by $\sigma/\sqrt{n}$.
+Usually the standard deviation is unknown, but for these situations it is possible to use the earlier mentioned estimator $S^2$ (See equation 12, section 4.3). This estimates the variance of the population from the variance of the sample.
 The square root of the variance is the standard deviation, therefore the square root of the estimator $S^2$ would be the estimated standard deviation. The problem with using the estimator $S^2$, is that with small samples the variance is small and therefore it contains a lot of bias. In this situation the t-distribution would be used instead of the normal distribution, because the t-distribution takes the bias of the standard deviation into account. It does this by having thicker tails, meaning that the probability of more extreme values are higher.
 
 \subsubsection{The t-Distribution}
 The t-distribution is shaped, like the standard normal distribution, in a bell shape and symmetrical around the mean of zero, the difference is that the t-distribution contains more variance. This comes from the fact that the t-distribution is dependent on the degrees of freedom. When the degrees of freedom surpasses 30, the rule of thumb is that the distribution will resemble a normal distribution. So before 30 degrees of freedom, the distribution contains more variance.
 The t-distribution will come to resemble the standard normal distribution, when it surpasses 30 degrees of freedom, this makes sense, since the two distributions have the same formula:
 \begin{equation}
-	T=\frac{\bar{X}-\mu}{S/\sqrt{n}}
+	T=\frac{\bar{X}-\mu}{S/\sqrt{n}}.
 \end{equation}
 The only difference is the estimated standard deviation $S$.
 As seen in \autoref{fig:t-dist}, the t-distribution approaches the normal distribution as the degrees of freedom increases. The t-distribution with a smaller amount of degrees of freedom, will have more mass further out from the center, but as the degrees of freedom increases and approaches 30, then the mass will shift towards the center and shaping itself as the standard normal distribution.
@@ -58,7 +54,7 @@ As seen in \autoref{fig:t-dist}, the t-distribution approaches the normal distri
 	\begin{minipage}{0.80\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{billder/T-distribution.png}
-		\caption{The t-distribution as it approaches the standard normal distribution}
+		\caption{The t-distribution as it approaches the standard normal distribution.}
 		\label{fig:t-dist}
 	\end{minipage}\hfill
 \end{figure}
