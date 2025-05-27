@@ -1,11 +1,11 @@
-\subsection{Regression model}
+\subsection{Regression Model}
 Understanding the relationship between variables is crucial when working with data, as it forms the basis for drawing meaningful conclusions. Regression models are a fundamental statistical tool used to model and analyze these relationship. Regressions models are not always robust and can include bias in their conclusions, this is a result of modeling a regression that includes breaks on one or more assumptions. This section will specifically focus on the assumption of constant variance of errors also called homoscedasticity and the assumption of no multicollinearity.
 
 \subsubsection{Regression}
 Sections $3.7.1$, $3.7.2$ and $3.7.3$ are based on the book 'Applied Lienar Statistical Models' \cite{AppliedLSM}. 
 \newline 
 
-\noindent To understand regression models, we have to start at the simple ones first, before looking at polynomial regression. \newline 
+\noindent Before looking at polynomial regression, we have to understand linear regression. \newline 
 Linear regression is a model that estimates the relationship between a dependent variable, \( y \), and one or more independent variables, \( x \).
 
 \noindent A reasonable relationship between the two in simple regression is the linear relationship:
@@ -41,7 +41,7 @@ Polynomial regression is a form of linear regression, but the relationship betwe
 In polynomial regression, as mentioned before, there are six assumptions, that always need to be met, for the model to be accurate.
 
 
-\subsubsection{The method of least squares}
+\subsubsection{The Method of Least Squares}
 
 \noindent To find connections in data, it is necessary to estimate coefficients, $\beta_0$ and $\beta_1$, in linear models. 
 A widely used method to estimate the coefficients, is the least squares method that was previously mentioned, this will be referred to as Ordinary Least Squares or OLS. 
@@ -117,7 +117,7 @@ When rearranging terms, we get the normal equations $(28)$ and $(29)$.
 \noindent The estimates $b_0$ and $b_1$ obtain the minimum when checking the second partial derivatives. \newline
 
 
-\subsubsection{Linear models}
+\subsubsection{Linear Models}
 
 Equations for linear models can be written in matrix terms, where the normal error regression model for simple linear regression is.
  
@@ -280,7 +280,7 @@ Y_n = \beta_0 + \beta_n X_n + \epsilon_n .
 
 \noindent The $Y$ and $\epsilon$ vectors are the same as in the simple linear regression matrix. The $\beta$ vector has additional parameters, and the $X$ matrix now has a column of $n$ observations for each $p-1 X$ variables. 
 
-\subsubsection{Polynomial regression}
+\subsubsection{Polynomial Regression}
 Polynomial regression models the relationship like this, 
 \begin{equation}
 	Y=\beta_0 + \beta_1 x + \beta_2 x^2	+ ... + \beta_{p-1} x^{p-1}+ \epsilon .

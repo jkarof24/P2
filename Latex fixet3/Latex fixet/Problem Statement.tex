@@ -1,9 +1,9 @@
 \label{sec:PBS}
 
-The validity and correctness of a regression model build upon OLS, relies on key assumptions to be fulfilled, specifically in context of this project, the key assumptions in focus are homoscedasticity (constant variance of errors) and no multicollinearity (Independence among independent variables). These key assumptions are essential for reliable statistical inference and parameter estimation. As established in section 4.5.1 and 4.5.2, when these assumptions are not upheld, then results can be misleading, such as confidence intervals and hypothesis test.\\
-In the real world these assumption may not always be upheld, therefore this project will explore Monte Carlo Bootstrapping as a resampling method that can overcome violations in regression assumptions and how this method can offer more reliable statistical results.  
+The validity and correctness of a regression model build upon the ordinary least squares method relies on key assumptions to be fulfilled, specifically in context of this project. Here, the key assumption in focus is homoscedasticity (constant variance of errors). This assumption is essential for reliable statistical inference and parameter estimation. As established in section 3.6.5.1, when the assumption is not upheld, the results, such as confidence intervals and hypothesis testing, can be misleading.\\
+The assumption of homoscedasticity may not always be upheld in the real world, so this project will explore Monte Carlo Bootstrapping as a resampling method that can overcome violations in regression assumptions and how this method can offer more reliable statistical results. We will test the method on generated data, where we can manipulate the data, so there is heteroscedasticity, and therefore test, if Monte Carlo Bootstrapping can help with the issue of a violated assumption. 
 
 
 \begin{itemize}
-	\item How will breaking the assumptions, homoscedasticity and no multicollinearity in a classical polynomial regression, effect the performance of the model and how can this be solved by using Monte Carlo Bootstrapping?
+	\item How will breaking the assumption of homoscedasticity in a classical polynomial regression affect the performance of the model, and how can this be solved by using Monte Carlo Bootstrapping?
 \end{itemize}

@@ -1,8 +1,8 @@
-\subsection{Probability distribution}
+\subsection{Probability Distribution}
 Data can come in various distributions depending on different parameters such
 as degrees of freedom. The distribution is the shape of the data and it will have
 an effect on statistical models. Therefore it is important to have an understanding of distributions.
-\subsubsection{Normal distribution}
+\subsubsection{Normal Distribution}
 
 In the world of statistics, the most common distribution is the normal distribution, it's called the bell shape. The normal distribution is a continuous distribution, with this density function:
 
@@ -31,7 +31,7 @@ Z=\frac{X-\mu}{\sigma}
 
 \noindent $Z$ in the Z-score represents the amount of standard deviations a given $X$ value, deviates from the mean.
 
-\subsubsection{The central limit theorem}
+\subsubsection{The Central Limit Theorem}
 A very effective theorem in statistics is the central limit theorem. This theorem states that if a random sample $\overline{X}$, with the size $n$, is taken from a population with a mean and a finite variance, then as $n$ goes towards infinity, the distribution will resemble a normal distribution. If used with the Z-score formula, the distribution will resemble a standard normal distribution. The formula for the Z-score, when in conjunction with the central limit theorem, looks like this:
 
 \begin{equation}
@@ -47,7 +47,7 @@ s^2=\sum_{i=1}^{n}\frac{(x_{i}-\overline{x})}{n-1}
 \end{equation}
 The square root of the variance is the standard deviation, therefore the square root of the estimator $S^2$ would be the estimated standard deviation. The problem with using the estimator $S^2$, is that with small samples the variance is small and therefore it contains a lot of bias. In this situation the t-distribution would be used instead of the normal distribution, because the t-distribution takes the bias into account the bias of the standard deviation. It does this by having thicker tails, meaning that the probability of more extreme values are higher.
 
-\subsubsection{The t-distribution}
+\subsubsection{The T-Distribution}
 The t-distribution is shaped as the standard normal distribution, in a bell shape and symmetrical around the mean of zero, the difference is that the t-distribution contains more variance. This comes from the fact that the t-distribution is dependent on the degrees of freedom. When the degrees of freedom surpasses 30, the rule of thumb is that the distribution will resemble a normal distribution. So before 30 degrees of freedom, the distribution contains more variance.
 The t-distribution will come to resemble the standard normal distribution, when in surpasses 30 degrees of freedom, this makes sense, since the two distributions have the same formula:
 \begin{equation}

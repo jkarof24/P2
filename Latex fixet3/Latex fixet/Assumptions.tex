@@ -1,17 +1,18 @@
-When making a regression its important to understand, that the regression has assumptions that needs to be fulfilled if the statistical conclusions are to be correct. If these assumptions are not upheld, it will create bias that will skew the results of the model.
+When making a regression it is important to understand, that the regression has assumptions that need to be fulfilled, if the statistical conclusions are to be correct. If these assumptions are not upheld, it will create bias that will skew the results of the model. \newline 
+
 \subsubsubsection{Homoscedasticity}
 One of the assumptions of a polynomial regression is that homoscedasticity is fulfilled. Homoscedasticity is the assumption of constant error variance, where observations in a dataset would exhibit errors that have roughly the same spread across all levels of the independent variable.
 \newline
-If this assumption is not upheld, then this will cause the standard error to be biased and therefore not trustworthy. This problem causes further testing involving this standard error to become wrong, an example is the hypothesis test.
+If this assumption is not upheld, then this will cause the standard error to be biased and therefore not trustworthy. This problem causes further testing, involving this standard error, to become wrong. An example of that is the hypothesis test.
 \newline
-The reason for the assumption needs to be upheld, comes from how the regression is created. The regression is created via the ordinary least square method, that requires the assumption of homoscedasticity to be upheld.
+The reason why, the assumption needs to be upheld, comes from how the regression is created. The regression is created with the ordinary least square method that requires the assumption of homoscedasticity to be upheld.
 \newline
 A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for the error in each independent variable in the regression. The variances in the matrix are calculated through an alternate equation from the one presented in \autoref{sec:disc}.
 \begin{equation}
 	\text{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \bar{x})^2
 \end{equation}
-The equation differs in that it excludes the weighting function and it assumes equal probability for each data point. These changes stems from the data deriving from a sample rather than the population. Consequently the use of $\frac{1}{n-1}$ rather than $\frac{1}{n}$, is to account for the bias correction. This correction is essential, as it prevents underestimation when working with samples rather than populations, by addressing bias.\\
-If the matrix contains approximately the same values through the diagonal, then the assumption of homoscedasticity is upheld, else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
+The equation differs in that it excludes the weighting function and it assumes equal probability for each data point. These changes stem from the data deriving from a sample, rather than the population. Consequently, the use of $\frac{1}{n-1}$ rather than $\frac{1}{n}$, is to account for the bias correction. This correction is essential, as it prevents underestimation when working with samples rather than populations, by addressing bias.\\
+If the matrix contains approximately the same values through the diagonal, then the assumption of homoscedasticity is upheld, or else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
 
 
 	
@@ -43,10 +44,10 @@ Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] =
 
 \noindent Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The off-diagonal values represent covariances between error terms. While not the focus of this project, non-zero values here may indicate correlation between errors, which would violate the assumption of independence \cite{Heteroscedasticity} . \newline 
 
-\noindent \textbf{Detecting heteroscedasticity} \\
-When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but its not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables have an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the dataset contains heteroscedasticity \cite{HomoSce}.
+\noindent \textbf{Detecting Heteroscedasticity} \\
+When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but it is not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables have an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This is checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the data contains heteroscedasticity \cite{HomoSce}. \newline
 
-\subsubsubsection{No multicollinearity}
+\subsubsubsection{No Multicollinearity}
 Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
 \begin{equation}
 X_1 = \alpha+\beta_1\cdot X_2+...+\beta_n\cdot X_n
@@ -57,13 +58,15 @@ Lastly $\alpha$ is the intercept and represents the value of $X_1$, when all oth
 The regression model can feel the effects of multicollinearity even without there being perfect multicollinearity. A strong linear relationship is enough to have an effect on the model. The problem caused by multicollinearity, is that as it increases the variance of the value that the coefficients can receive also increases. Where as perfect multicollinearity will make the model unable to estimate a value of one coefficient, due to the perfect linearity between the independent variables \cite{MultAndMis}.
 \newline
 
-\noindent \textbf{Detecting multicollinearity}\\
+\noindent \textbf{Detecting Multicollinearity}\\
 A common method to detect multicollinearity in a dataset, is to compute the pearson´s correlation coefficient for all combinations of independent variables. This will result in the correlation matrix, as seen in \autoref{fig:1}, where each cell represents the strength and direction of the relationship between two independent variables. The Pearsons correlation coefficient is calculated through this formula:
 \begin{equation}
 r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
 \end{equation}
-Where $n$ is the number of observations, with $x$ and $y$ representing the two variables tested for correlation and the pairwise correlation coefficient is denoted as $r$. When computing the value of $r$, the value will be in a range: $-1\leq r \leq 1$. If the value of $r$ is $-1$ or $1$, that indicates a perfect either negative or positive correlation and if the value is $0$, then there is no correlation between the variables. The correlation matrix has a connection to the variance-covariance matrix, by the correlation matrix being a normalized version of the variance-covariance matrix. This means that for each spot in the variance-covariance matrix, the value is divided by the product of the standard deviations of the corresponding independent variables. By normalizing the values, then the values will go from $-1$ to $1$.\cite{DetectMulti}
+Where $n$ is the number of observations, with $x$ and $y$ representing the two variables tested for correlation and the pairwise correlation coefficient is denoted as $r$. When computing the value of $r$, the value will be in a range: $-1\leq r \leq 1$. If the value of $r$ is $-1$ or $1$, that indicates a perfect either negative or positive correlation and if the value is $0$, then there is no correlation between the variables. The correlation matrix has a connection to the variance-covariance matrix, by the correlation matrix being a normalized version of the variance-covariance matrix. This means that for each spot in the variance-covariance matrix, the value is divided by the product of the standard deviations of the corresponding independent variables. By normalizing the values, then the values will go from $-1$ to $1$.\cite{DetectMulti} \newline
 
 
+\noindent\\\\
+To test the consequences of violating the assumption of multicollinearity, a metric to determine model complexity is needed. This is because a more complex model, given the same parameters plus an additional one, will always be more accurate than the same model with fewer parameters. The question of model complexity is too large for the scope of this assignment. Therefore, the consequences of violating the assumption of multicollinearity will not be further investigated. Instead, we will focus on the consequences of violating the assumption of homoscedasticity. \newline
 
 
