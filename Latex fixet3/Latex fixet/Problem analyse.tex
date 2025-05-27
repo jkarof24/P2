@@ -29,7 +29,7 @@ If such a case occurs, there are different ways to accommodate the situation. Th
  
 
 \subsection{Empirical Data}
-To give an example of a data set containing assumption violations is the "Miles Per Gallon" data set. Through the "Miles Per Gallon" it's possible to model the violations in the assumptions, as seen in \autoref{fig:1} and \autoref{fig:2}.
+To give an example of empirical data containing assumption violations is the "Miles Per Gallon" data set. Using the dataset it is possible to model the assumption violations, as seen in \autoref{fig:1} and \autoref{fig:2}.
 \newline
 
 \begin{figure}
@@ -40,8 +40,9 @@ To give an example of a data set containing assumption violations is the "Miles 
 	\label{fig:1}
 \end{figure}
 
-\noindent Multicollinearity can be seen in Figure 1. Multicollinearit occurs when independent variables are highly correlated with each other, and as a result, it becomes more difficult to isolate the individual effect of each variable in a regression model.
-In this model it is shown through the numbers, where the high numbers suggest a strong linear relationship through the variables. So between 'displacement' and ' cylinders', the value is 0.95, which is close to 1 and therefore shows there is multicollinearity.
+\noindent The first assumption violation is multicollinearity, which can be seen in Figure 1. It means, per earlier definition, that independent variables in the dataset are highly correlated with each other. Therefore, it becomes more difficult to isolate the individual effect of each variable, if a regression model was fitted to the data.
+
+In \autoref{fig:1} it is shown through the numbers, where the high numbers suggest a strong linear relationship between the variables. So, for example looking at the variables, 'displacement' and ' cylinders', the value is 0.95. Since it is close to 1, it shows that there is multicollinearity. \newline
 
 
 \begin{figure}[h]
@@ -49,7 +50,11 @@ In this model it is shown through the numbers, where the high numbers suggest a 
 	\caption{Scatterplots made from the MPG dataset}
 	\label{fig:2}
 \end{figure}
-\noindent There is an example of hetereoscedasticity in the 'mpg' and 'horsepower' scatterplot in Figure 2, where there is not constant variance of the residuals. This is seen because there is a big spread between the variables, especially when horsepower decreases.   
+
+\noindent The next assumption violation seen in the dataset is homoscedacticity. Looking at \autoref{fig:2} there is an example of hetereoscedasticity in the scatterplot of the variables 'mpg' and 'horsepower'. There is clearly not constant variance of the residuals in that scatterplot, because there is a big spread between the variables when horsepower decreases. \newline
+
+\noindent So, it shows that data does not always adhere to these assumptions, and the results may be inaccurate if the assumption violations are not accounted for. \newline
+
 
 \noindent To understand how the classical method of constructing regression models and the method of using Monte Carlo Bootstrapping works, we need to dive deeper into the background. Here, we need to understand ways to not only create a model, but how to test it as well. These topics will be explained in the following section.
 
