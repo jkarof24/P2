@@ -121,11 +121,11 @@ cat("\n--- Bootstrap Model (R-squared) ---\n")
 cat("Mean R-squared: ", round(mean_r_squared_boot, 4), "\n")
 
 # Histograms
-# It's good practice to give titles to your plots
-hist(bootstraperrors, main = "Histogram of Bootstrap Prediction Errors", xlab = "Prediction Error") 
+
+hist(bootstraperrors, main = "Histogram of Errors", xlab = "Prediction Error") 
 abline(v = mean(bootstraperrors), col = "red") 
 
-hist(olserrors, main = "Histogram of OLS Prediction Errors", xlab = "Prediction Error")
+hist(olserrors, main = "Histogram of Errors", xlab = "Prediction Error")
 abline(v = mean(olserrors), col = "red")
 
 hist(bootstrappredictions[1,], main = "Histogram of Bootstrap Predictions for First Test Point", xlab = "Prediction Value")
