@@ -1,8 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{AI}
-
-
 \bibitem{Heteroscedasticity}
 Oscar L.~Olvera Astivia and Bruno~D. Zumbo.
 \newblock Heteroskedasticity in multiple regression analysis: What it is, how
@@ -21,7 +18,9 @@ Alexei Botchkarev.
   forecasting and prognostics: Properties and typology.
 \newblock 2019.
 
-  Computer Science, Ryerson University.
+\bibitem{AI}
+Microsoft Co-Pilot.
+\newblock Ai, 2025.
 
 \bibitem{ProbAndStat_8th}
 Jay~L. Devore.
