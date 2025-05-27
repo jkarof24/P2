@@ -1,33 +1,35 @@
-Regression models are tools used to understand relationships between variables and for making predictions based on data. However, for this to work, certain assumptions need to be satisfied. 
-These assumptions are not guaranteed when working with data from real life, so how can we proceed with analyzing a regression model, if the method we use to make it, is not reliable?
+Collecting data is nothing new. Information is gathered in the form of samples, or collections of observations. Samples are collected from populations, which are collections of all individuals or individual items of a particular type. At times a population signifies a scientific system; other times it is represented as the rest of society. When conducting a data analysis, we aim to identify relationships in society, in other words, to estimate the parameters of the population. While collecting data is one step, analysing it and drawing meaningful conclusions is a much more complex task. To help make these decisions and draw conclusions, inferential statistics are used. Specifically, fitting a regression model to data based on a sample and making predictions based on the model about the population. \newline
+
+The central problem when regression models are fitted to data is to determine the true relationship among the variables. The problem is that the true relationship is not known, and we have to depend upon the sample observations to estimate the true relationship. In this case, the chosen regression model should be able to generalise beyond the sample data. \newline 
 
 
-\subsection{Assumptions for Regression Models}
 
-\noindent This section will briefly explain the previously mentioned key assumptions that are needed to ensure reliable results, so the meaning behind them is clear. Even though it is still possible to create regression models without these assumptions, it becomes undeniably harder.  \newline
+\subsection{Assumptions for regression models}
 
-\noindent The assumption independence of errors states that the errors from the model are not correlated with each other but are independent. This means that one error cannot be used to predict the next one. \newline
+\noindent Regression models are tools for understanding relationships between variables. However, for this to work, certain assumptions need to be satisfied. This section will briefly explain the previously mentioned key assumptions that are essential to ensure reliable results. It is still possible to create regression models without these assumptions, but it becomes undeniably harder.  \newline
 
-
-\noindent The assumption of linearity states that the relationship between the independent variables and the parameters, also known as the coefficients, is linear. This does not mean that the regression model itself has to be linear. For example, in polynomial regression, the relationship between the independent variables and the coefficients is still linear, but the independent variables can be transformed using powers.\newline
+\noindent The first assumption is called Independence of Errors, and it states that the errors from the model are not correlated with each other, they are independent. This means that one error cannot be used to predict the next one. \newline
 
 
-\noindent Homoscedasticity is the assumption of constant variance across errors for all levels of the independent variables. \newline
-
-\noindent The assumption normality of errors states that the errors between the model and the observed values, also called residuals, are normally distributed. If this is not met, it may result in a biased model and a worse model fit. \newline
+\noindent The next is the assumption of Linearity, which states that the relationship between the independent variables and the parameters, also known as the coefficients, is linear. This does not mean that the regression model itself has to be linear. For example, in polynomial regression, the relationship between the independent variables and the coefficients is still linear, but the independent variables can be transformed using powers.\newline
 
 
-\noindent Multicollinearity occurs when two or more independent variables in a regression model are highly correlated with each other. This means that changes in one independent variable are associated with changes in another, making it difficult to determine the individual effect of each independent variable on the dependent variable. \newline
+\noindent Then there is Homoscedasticity, which is the assumption of constant variance across errors for all levels of the independent variables. This assumption will be addressed in more detail later. \newline
 
-\noindent Correct model specifications assumes that the provided dependent variables for the models are the correct ones. If one is missing or the model is overfitting, this may result in incorrect coefficients and introduce errors into the model. \newline
+\noindent Next, is the assumption, Normality of Errors which states that the errors between the model and the observed values, also called residuals, are normally distributed. If this is not met, it may result in a biased model and a worse model fit. \newline
 
-\noindent Data does not always adhere to these assumptions, so the results may be inaccurate. 
+
+\noindent Then, there is also the assumption of Multicollinearity which occurs when two or more independent variables in a regression model are highly correlated with each other. This means that changes in one independent variable are associated with changes in another, making it difficult to determine the individual effect of each independent variable on the dependent variable. \newline
+
+\noindent Last assumption is Correct Model Specifications which assume that the provided dependent variables for the models are the correct ones. If one is missing, or the model is overfitting, this may result in incorrect coefficients and introduce errors into the model. \newline
+
+\noindent These assumptions are not guaranteed when working with empirical data, which could make the results inaccurate. 
 If such a case occurs, there are different ways to accommodate the situation. These methods will be further discussed later on. \newline 
 
  
 
-\subsubsection{Data from Real-life}
-An example of a data set containing violations in assumptions, specifically the assumptions of homscedasticity and no multicollinearity, is the "Miles Per Gallon" data set. Through the "Miles Per Gallon" it's possible to model the violations in the assumptions, as seen in \autoref{fig:1} and \autoref{fig:2}.
+\subsection{Empirical data}
+To give an example of a data set containing assumption violations is the "Miles Per Gallon" data set. Through the "Miles Per Gallon" it's possible to model the violations in the assumptions, as seen in \autoref{fig:1} and \autoref{fig:2}.
 \newline
 
 \begin{figure}
