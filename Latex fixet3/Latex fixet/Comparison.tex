@@ -32,20 +32,20 @@ To understand how assumption violations affect classical polynomial regression, 
 \\\\
 
 
-\lstinputlisting[language=R, caption=datageneration, firstline=6, lastline=19]{kode/sammenligning2.R}
+\lstinputlisting[language=R, caption=Datageneration, firstline=6, lastline=19]{kode/sammenligning2.R}
 
 \noindent Next, an error term is added that scales with the dependent variable. This introduces heteroscedasticity meaning the error variance is no longer constant thereby violating the assumption of homoscedasticity. This step is done deliberately to ensure that this is the only assumption being violated, so any observed effects on the model can be attributed specifically to this violation.
 \\\\
-\lstinputlisting[language=R, caption=datageneration, firstline=20, lastline=28]{kode/sammenligning2.R}
+\lstinputlisting[language=R, caption=Datageneration, firstline=20, lastline=28]{kode/sammenligning2.R}
 The dataset is then split into training and test sets, with $80\%$ used for training and the remaining $20\%$ for testing. A standard linear polynomial regression model is fitted to the training data. The mean bias error and root mean squared error (RMSE) calculated are useing the testdata and standard error, and confidence intervals for the coefficients are calculated all this is to evaluate the model's performance.
 \\\\
-\lstinputlisting[language=R, caption=datageneration, firstline=29, lastline=59]{kode/sammenligning2.R}
+\lstinputlisting[language=R, caption=Datageneration, firstline=29, lastline=59]{kode/sammenligning2.R}
 
 
 \noindent Following this, a bootstrap is performed by resampling the training data 10000 times. For each resampled dataset, a linear polynomial model is fitted. The coefficients from each model are stored in a new data frame, and predictions are made on the test data and also stored in the dataframe. These predictions are then compared to the actual test values to compute the mean bias error and RMSE and the coefficients are used the calculated the standard error and confidence intervals of the coefficients for the bootstrap models.
 \\\\
 
-\lstinputlisting[language=R, caption=datageneration, firstline=60, lastline=102]{kode/sammenligning2.R}
+\lstinputlisting[language=R, caption=Datageneration, firstline=60, lastline=102]{kode/sammenligning2.R}
 
 \subsection{Results}
 Comparing the results of the two models shown in Table 2, the Mean Bias Error (MBE) of the OLS model is -539, indicating that it tends to underpredict the actual values. In contrast, the bootstrap model has an MBE of 22, suggesting a slight overprediction. The smaller absolute bias of the bootstrap model indicates improved accuracy. This is further supported by the Root Mean Square Error (RMSE), where the OLS model scores 1921 compared to the bootstrap model’s 1377. This substantial difference reinforces the conclusion that the bootstrap model provides more accurate predictions.
