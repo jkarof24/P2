@@ -30,6 +30,11 @@ Donald~E. Knuth.
   Algorithms}.
 \newblock Addison-Wesley, 3rd edition, 1997.
 
+\bibitem{MathStatResampling}
+Chihara Laura and Tim Hesterberg.
+\newblock {\em Mathematical Statistics with Resampling and R}.
+\newblock Wiley, 2011.
+
 \bibitem{mersenne}
 Makoto Matsumoto and Takuji Nishimura.
 \newblock Mersenne twister: A 623-dimensionally equidistributed uniform

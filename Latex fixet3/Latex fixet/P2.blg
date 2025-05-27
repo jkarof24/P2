@@ -7,45 +7,45 @@ Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
 Warning--empty journal in metrics
 Warning--empty journal in mersenne
-You've used 10 entries,
+You've used 11 entries,
             2118 wiz_defined-function locations,
-            560 strings with 5597 characters,
-and the built_in function-call counts, 2576 in all, are:
-= -- 243
-> -- 120
+            565 strings with 5715 characters,
+and the built_in function-call counts, 2827 in all, are:
+= -- 265
+> -- 133
 < -- 0
-+ -- 49
-- -- 38
-* -- 138
-:= -- 465
-add.period$ -- 33
-call.type$ -- 10
-change.case$ -- 48
++ -- 54
+- -- 42
+* -- 150
+:= -- 509
+add.period$ -- 36
+call.type$ -- 11
+change.case$ -- 52
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 108
-empty$ -- 210
-format.name$ -- 38
-if$ -- 528
+cite$ -- 13
+duplicate$ -- 120
+empty$ -- 232
+format.name$ -- 42
+if$ -- 581
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 14
-newline$ -- 56
-num.names$ -- 20
-pop$ -- 67
+int.to.str$ -- 11
+missing$ -- 16
+newline$ -- 61
+num.names$ -- 22
+pop$ -- 76
 preamble$ -- 1
-purify$ -- 39
+purify$ -- 43
 quote$ -- 0
-skip$ -- 67
+skip$ -- 74
 stack$ -- 0
-substring$ -- 76
-swap$ -- 8
+substring$ -- 81
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 30
+type$ -- 32
 warning$ -- 2
-while$ -- 22
-width$ -- 12
-write$ -- 112
+while$ -- 24
+width$ -- 13
+write$ -- 122
 (There were 2 warnings)
