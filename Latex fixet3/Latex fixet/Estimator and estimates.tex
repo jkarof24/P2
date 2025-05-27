@@ -3,9 +3,9 @@ If we are interested in certain parameters of a population distribution, we can 
 \newline
 Examples of this are, 
 \newline
-$\bar{x}$ is a point estimate of $\mu$
+$\bar{x}$ is a point estimate of the mean, $\mu$.
 \newline
-s is a point estimate of $\sigma$
+s is a point estimate of the standard deviation, $\sigma$.
 \newline
 
 \noindent This is often supplemented with a confidence interval
@@ -13,28 +13,28 @@ s is a point estimate of $\sigma$
 This is an interval around the point estimate, where we are confident that the population parameter is located.
 \newline
 
-\noindent For $\mu$, we have different ways of estimating it. We can use the sample mean $\bar{X}$, or the average $X_T$ of the sample upper and lower quartiles. 
-But in this case, we have to look out for bias. If the distribution of a population is skewed, then $X_T$ is biased. The result of this is, that in the long run, this estimator will systematically over or under estimate the value of $\mu$. This is written as,
+\noindent For the mean, we have different ways of estimating it. We can use the sample mean, $\bar{X}$, or the average, $X_T$, of the sample upper and lower quartiles. 
+But in this case, we have to look out for bias. If the distribution of a population is skewed, then the average is biased. The result of this is, that in the long run, this estimator will systematically over or under estimate the value of the mean. This is written as,
 \newline
 $E(X_T) \neq \mu$.
 \newline
-It is generally preferred that the estimator is unbiased. In this case, $\bar{X}$ is an unbiased estimate of the population mean $\mu$.
+It is generally preferred that the estimator is unbiased. In this case, the sample mean is an unbiased estimate of the population mean.
 \newline
 
-\noindent The standard error of $\bar{X}$ is $\frac{\sigma}{\sqrt{n}}$. Here, the standard error decreases, when the sample size increases. If an estimator has this property, it is called consistent. If we compare, the estimator $X_T$ is also consistent, but has a greater variance than $\bar{X}$. 
+\noindent The standard error of the sample mean is $\frac{\sigma}{\sqrt{n}}$. Here, the standard error decreases, when the sample size increases. If an estimator has this property, it is called consistent. If we compare, the average, $X_T$, is also consistent, but has a greater variance than the sample mean, $\bar{X}$. 
 \newline
-It is generally preferred that the estimator has the smallest possible variance, and in that case it is called efficient. So $\bar{X}$ is an efficient estimator.
+It is generally preferred that the estimator has the smallest possible variance, and in that case it is called efficient. So the sample mean is an efficient estimator.
 \newline
-When estimating a parameter, the symbol $\hat{}$ is used above it. For $\mu$, $\hat{\mu} = \bar{X}$ .
+When estimating a parameter, the symbol $\hat{}$ is used above it. An example of this is for the mean, $\mu$, it is $\hat{\mu} = \bar{X}$.
 \newline
-We can calculate $\bar{X}$ using the following formula,
+We can calculate the sample mean using the following formula,
 
 \begin{equation}
 	\bar{X}=\frac{1}{n} \sum_{i=1}^{n}X_i
 \end{equation}
 
 
-\noindent For the variance $\sigma$, we can estimate it by using the formula for $S^2$,
+\noindent For the variance, we can estimate it by using the formula for $S^2$,
 
 \begin{equation}
 	S^2=\frac{1}{n-1} \sum_{i=1}(X_i-\bar{X})
