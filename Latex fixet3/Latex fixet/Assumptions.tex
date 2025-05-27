@@ -7,7 +7,7 @@ One of the assumptions of a polynomial regression is that homoscedasticity is fu
 
 \noindent One way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for the error in each independent variable in the regression. The variances in the matrix are calculated through an alternate equation from the one presented in \autoref{sec:disc}.
 \begin{equation}
-	\text{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \bar{x})^2
+	\text{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \bar{x})^2.
 \end{equation}
 The equation differs in that it excludes the weighting function and it assumes equal probability for each data point. These changes stem from the data deriving from a sample, rather than the population. Consequently, the use of $\frac{1}{n-1}$ rather than $\frac{1}{n}$, is to account for the bias correction. This correction is essential, as it prevents underestimation when working with samples rather than populations, by addressing bias.\\
 If the matrix contains approximately the same values through the diagonal, then the assumption of homoscedasticity is upheld, or else the data contains heteroscedasticity. This is a showcase of the variance-covariance matrix with homoscedasticity:
@@ -23,7 +23,7 @@ Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] =
 	\vdots   & \vdots   & \ddots & \vdots \\
 	0        & 0        & \cdots & \sigma^2 \\
 \end{array}
-\right]
+\right].
 \end{equation}
 
 
@@ -37,7 +37,7 @@ Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] =
 	\vdots      & \vdots      & \ddots & \vdots      \\
 	\sigma_{1j} & \sigma_{2j} & \cdots & \sigma^2_{ij}
 \end{array}
-\right]
+\right].
 \end{equation}
 
 \noindent Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The off-diagonal values represent covariances between error terms. While not the focus of this project, non-zero values here may indicate correlation between errors, which would violate the assumption of independence \cite{Heteroscedasticity} . \newline 
@@ -57,7 +57,7 @@ The regression model can feel the effects of multicollinearity even without ther
 \newline
 
 \noindent \textbf{Detecting Multicollinearity}\\
-A common method to detect multicollinearity in a dataset, is to compute the pearson´s correlation coefficient for all combinations of independent variables. This will result in the correlation matrix, as seen in \autoref{fig:1}, where each cell represents the strength and direction of the relationship between two independent variables. The Pearsons correlation coefficient is calculated through this formula:
+A common method to detect multicollinearity in a dataset, is to compute the pearson's correlation coefficient for all combinations of independent variables. This will result in the correlation matrix, as seen in \autoref{fig:1}, where each cell represents the strength and direction of the relationship between two independent variables. The Pearsons correlation coefficient is calculated through this formula:
 \begin{equation}
 r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
 \end{equation}

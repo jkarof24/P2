@@ -31,12 +31,12 @@ Y = \beta_0 + \beta_1 x + \epsilon .
 \end{equation}
 
 
-\noindent It is assumed that \( \epsilon \) is distributed with $\epsilon = 0$ and $\epsilon) = \sigma^2$, and it has consistent variance, which is usually called the \textit{homogeneous variance assumption}. The random error \( \epsilon \) adds randomness to account for the natural variability in real data, making the model more realistic.
+\noindent It is assumed that \( \epsilon \) is distributed with $\epsilon = 0$ and $\epsilon) = \sigma^2$, and it has consistent variance, which is usually called the Homogeneous Variance Assumption. The random error \( \epsilon \) adds randomness to account for the natural variability in real data, making the model more realistic.
 \newline\\
 Polynomial regression is a form of linear regression, but the relationship between \( x \) and \( y \) is an \( n \)th-degree polynomial. It fits a nonlinear relationship between the value of \( x \) and the corresponding conditional mean of \( y \), meaning the model predicts the expected value of \( y \) given \( x \). \newline
 
 \noindent That is why it is used when the relationship between the independent variable and the dependent variable is better represented by a curve rather than a straight line, since it can show the nonlinear patterns in the data.
-In polynomial regression, as mentioned before, there are six assumptions, that should be met, for the model to be as accurate as possible.
+In polynomial regression, as mentioned earlier, there are six assumptions, that should be met, for the model to be as accurate as possible.
 
 
 \subsubsection{The Method of Least Squares}
@@ -156,7 +156,7 @@ Y_n = \beta_0 + \beta_n X_n + \epsilon_n .
 	\vdots & \vdots \\
 	1 & X_n
 \end{array}
-\right]
+\right].
 \end{equation}
 
 
@@ -167,7 +167,7 @@ Y_n = \beta_0 + \beta_n X_n + \epsilon_n .
 	\beta_0 \\ 
 	\beta_1 
 \end{array}
-\right]
+\right].
 \end{equation}
 
 \noindent And the $\epsilon$ vector is,
@@ -288,7 +288,7 @@ Polynomial regression models the relationship like this,
 
 \noindent This can be written in matrix terms as,
 \begin{equation}
-	Q=(Y-X\beta)' (Y-X\beta) 
+	Q=(Y-X\beta)' (Y-X\beta). 
 \end{equation}
 
 \noindent Where the design matrix for polynomial regression is, 
@@ -352,11 +352,11 @@ Polynomial regression models the relationship like this,
  
 \noindent To ensure that the solution gives a minimum, the hessian matrix is calculated,
 \begin{equation}
- \frac{\partial^2 Q}{\partial \beta' \beta}=2X'X
+ \frac{\partial^2 Q}{\partial \beta' \beta}=2X'X.
 \end{equation} 
  \noindent If it is positive definite, the function Q has a global minimum, which can be shown with,
 \begin{equation}
- a' (X' X)a = (Xa)' (Xa)
+ a' (X' X)a = (Xa)' (Xa).
 \end{equation}  
  \noindent As shown in $(63)$,
  these can only be calculated coefficients, if $Xa \not= 0$. This means, that $X'X$ is positive definite in all relevant situations, which is when the coefficients can be calculated. 
@@ -374,7 +374,7 @@ Polynomial regression models the relationship like this,
  	\vdots & \vdots & \vdots \\
  	1 & X_n& X_n^2
  \end{array}
- \right]
+ \right],
 \end{equation}
  
  \begin{equation}
@@ -387,7 +387,7 @@ Polynomial regression models the relationship like this,
  	\vdots&\vdots&\vdots& & \vdots	\\
  	\sum X_i^{p-1} &\sum X_i^p& \sum X_i^{p+1} & ... & \sum X_i^{2p-2}
  \end{array}
- \right]
+ \right],
 \end{equation}
  
  \begin{equation}
@@ -400,7 +400,7 @@ Polynomial regression models the relationship like this,
  	\vdots	\\
  	\sum X_i^{p-1} Y_i
  \end{array}
- \right]
+ \right].
 \end{equation}
  
  \noindent These are the necessary matrices to use the least squares method.

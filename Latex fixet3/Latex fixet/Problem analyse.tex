@@ -9,18 +9,18 @@ Collecting data is nothing new. Information is gathered in the form of samples, 
 
 \noindent Regression models are tools for understanding relationships between variables. However, for this to work, certain assumptions need to be satisfied. This section will briefly explain the previously mentioned key assumptions that are essential to ensure reliable results and the ability to predict beyond the sample. It is still possible to create regression models without these assumptions, but it becomes undeniably harder. The assumptions are explained from the video 'Regression assumptions explained!' \cite{Assumptions}.  \newline
 
-\noindent The first assumption is called Independence of Errors, and it states that the errors from the model are not correlated with each other, they are independent. This means that one error cannot be used to predict the next one. \newline
+\noindent One assumption is called Independence of Errors, and it states that the errors from the model are not correlated with each other, they are independent. This means that one error cannot be used to predict the next one. \newline
 
 
-\noindent The next is the assumption of Linearity, which states that the relationship between the independent variables and the parameters, also known as the coefficients, is linear. This does not mean that the regression model itself has to be linear. For example, in polynomial regression, the relationship between the independent variables and the coefficients is still linear, but the independent variables can be transformed using powers.\newline
+\noindent Another is the assumption of Linearity, which states that the relationship between the independent variables and the parameters, also known as the coefficients, is linear. This does not mean that the regression model itself has to be linear. For example, in polynomial regression, the relationship between the independent variables and the coefficients is still linear, but the independent variables can be transformed using powers.\newline
 
 
-\noindent Then there is Homoscedasticity, which is the assumption of constant variance across errors for all levels of the independent variables. This assumption will be addressed in more detail later. \newline
+\noindent Then Homoscedasticity, which is the assumption of constant variance across errors for all levels of the independent variables. This assumption will be addressed in more detail later. \newline
 
 \noindent Next, is the assumption, Normality of Errors which states that the errors between the model and the observed values, also called residuals, are normally distributed. If this is not met, it may result in a biased model and a worse model fit. \newline
 
 
-\noindent Then, there is also the assumption of Multicollinearity which occurs when two or more independent variables in a regression model are highly correlated with each other. This means that changes in one independent variable are associated with changes in another, making it difficult to determine the individual effect of each independent variable on the dependent variable. \newline
+\noindent There is also the assumption of Multicollinearity which occurs when two or more independent variables in a regression model are highly correlated with each other. This means that changes in one independent variable are associated with changes in another, making it difficult to determine the individual effect of each independent variable on the dependent variable. \newline
 
 \noindent Last assumption is Correct Model Specifications which assume that the provided dependent variables for the models are the correct ones. If one is missing, or the model is overfitting, this may result in incorrect coefficients and introduce errors into the model. \newline
 
@@ -40,7 +40,7 @@ To give an example of empirical data containing assumption violations is the "Mi
 	\label{fig:1}
 \end{figure}
 
-\noindent The first assumption violation is multicollinearity, which can be seen in Figure 1. It means, per earlier definition, that independent variables in the dataset are highly correlated with each other. Therefore, it becomes more difficult to isolate the individual effect of each variable, if a regression model was fitted to the data. In \autoref{fig:1} it is shown through the numbers, where the closer the number is to 1 the stronger the  linear relationship between the variables. So, for example looking at the variables, 'displacement' and ' cylinders', the value is 0.95. Since it is close to 1, it shows that there is multicollinearity. \newline
+\noindent The first assumption violation is multicollinearity, which can be seen in Figure 1. It means, per earlier definition, that independent variables in the dataset are highly correlated with each other. Therefore, it becomes more difficult to isolate the individual effect of each variable, if a regression model was fitted to the data. In \autoref{fig:1} it is shown through the numbers, where the closer the number is to 1 the stronger the  linear relationship between the variables. For example looking at the variables, 'displacement' and ' cylinders', the value is 0.95. Since it is close to 1, it shows that there is multicollinearity. \newline
 
 
 \begin{figure}

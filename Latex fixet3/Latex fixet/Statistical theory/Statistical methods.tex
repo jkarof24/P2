@@ -12,7 +12,7 @@ The confidence interval is a good tool to use when trying to estimate a paramete
 
 \noindent The standard error will change depending on which parameter that the confidence interval is estimating, but the general formula for the standard error is:
 \begin{equation}
-	\frac{\sigma}{\sqrt{n}}
+	\text{Standard Error} = \frac{\sigma}{\sqrt{n}}
 \end{equation}
 
 \noindent Where $\sigma$ is the standard deviation and $n$ is the amount of observations. An example of computing a confidence interval of the mean while working with a standard normal distribution, then the formula for the confidence interval would be this:
@@ -29,7 +29,7 @@ P(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}<\mu<\bar{X}+z_{\alpha/2}\frac{\sig
 
 \noindent \textbf{The interpretation of a confidence interval}
 \newline
-To interpret a confidence interval, it would be incorrect to interpret the confidence level of some value $x$, as the probability of the true parameter being inside of the interval. The reason behind this, is that the computed interval is static, so either the value $x$ is inside the interval or it is not. So the correct way of interpreting the confidence interval is by taking multiple samples and computing the confidence interval for all samples, then the value $x$ would reside inside 95\% of the confidence intervals.\cite{ProbAndStat_8th}
+To interpret a confidence interval, it would be incorrect to do it the confidence level of some value $x$, as the probability of the true parameter being inside of the interval. The reason behind this, is that the computed interval is static, so either the value $x$ is inside the interval or it is not. So the correct way of interpreting the confidence interval is by taking multiple samples and computing the confidence interval for all samples, then the value $x$ would reside inside 95\% of the confidence intervals.\cite{ProbAndStat_8th}
 
 
 \subsubsection{Hypothesis Testing}
