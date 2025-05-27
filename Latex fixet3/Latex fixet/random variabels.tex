@@ -1,6 +1,8 @@
 
 \subsection{Random Variables}
-A random variable is defined as a function that associates a real number with each element in the sample space. We use capital letters to denote a random variabel, for example $X$, and then the corresponding small letter, in this case $x$, for one of its values. As an example we roll a dice 3 times, which gives us a sample space of the different combinations. Each point in the sample space gets a numerical value assigned between 0 and 3.For example, if the random variabel $X$ assumes the number of 5's rolled, then worst case is zero 5's rolled, and best case is three 5's rolled. These values are random quantities assumed by the random variabel $X$, and they are written like this: $X(5,1,2) = 1$ and $X(3,6,1) = 0$.
+Now we will introduce random variables, which are important to understand when analysing assumption violations. In statistics, data and results can vary. To understand and handle this randomness, we use random variables, to help describe this uncertainty. \newline
+
+\noindent A random variable is defined as a function that associates a real number with each element in the sample space. We use capital letters to denote a random variabel, for example $X$, and then the corresponding small letter, in this case $x$, for one of its values. As an example we roll a dice 3 times, which gives us a sample space of the different combinations. Each point in the sample space gets a numerical value assigned between 0 and 3.For example, if the random variabel $X$ assumes the number of 5's rolled, then worst case is zero 5's rolled, and best case is three 5's rolled. These values are random quantities assumed by the random variabel $X$, and they are written like this: $X(5,1,2) = 1$ and $X(3,6,1) = 0$.
 \newline
 
 \noindent A random variable $X$ can be discrete, which means that its set of possible outcomes is countable. The dice example is a discrete random variable, because you can count how many times 5 is rolled. The outcomes of some statistical experiments may be neither finite nor countable. For example when something is measured such as temperature or speed where the set of possible values is an entire interval of numbers, it is not discrete. The random variable $X$ then takes values on a continues scale, which therefore is called a continuous random variable.
@@ -62,7 +64,7 @@ Contrary to a discrete random variable, a continuous random variable can take va
 	\item $\int_{-\infty}^{\infty} f(x) \, dx = 1.$
 \end{itemize}
 
-\noindent Condition 3. ensures that $P(-\infty < X < \infty) = 1$, which means that the probability of the random variable $X$ being between $-\infty$ and $\infty$ is 100\%. Furthermore the probability of $X$ assuming a specific value $a$ is zero, in other words: $P(X=a)=0$. That means that the values of the density function should not be interpreted as a probability of a given outcome. Instead the probability of $X$ is found by integrating over the probability density function. So, the probability that a continuous random variable $X$ lies between the values $a$ and $b$ is: 
+\noindent The third condition ensures that $P(-\infty < X < \infty) = 1$, which means that the probability of the random variable $X$ being between $-\infty$ and $\infty$ is 100\%. Furthermore the probability of $X$ assuming a specific value $a$ is zero, in other words: $P(X=a)=0$. That means that the values of the density function should not be interpreted as a probability of a given outcome. Instead the probability of $X$ is found by integrating over the probability density function. So, the probability that a continuous random variable $X$ lies between the values $a$ and $b$ is: 
 
 \begin{equation}
 P(a < X < b) = \int_a^b f(x) \, dx.
