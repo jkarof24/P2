@@ -17,8 +17,8 @@ Alexei Botchkarev.
 \newblock Performance metrics (error measures) in machine learning regression,
   forecasting and prognostics: Properties and typology.
 \newblock 2019.
-\newblock Principal, GS Research \& Consulting; Adjunct Prof., Department of
-  Computer Science, Ryerson University.
+\newblock Principal, GS Research \& Consulting; Adjunct Prof., Department of Computer Science, Ryerson University.
+
 
 \bibitem{ProbAndStat_8th}
 Jay~L. Devore.
@@ -60,11 +60,6 @@ John~Neter Michael H.~Kutner, Christopher J.~Nachtsheim and William Li.
 \newblock
   \url{https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html}, n.d.
 \newblock Accessed: 2025-05-23.
-
-\bibitem{ASTA}
-The~ASTA team.
-\newblock Asta.
-\newblock 2025.
 
 \bibitem{ProbAndStat}
 Ronald~E. Walpole, Raymond~H. Myers, Sharon~L. Myers, and Keying Ye.
