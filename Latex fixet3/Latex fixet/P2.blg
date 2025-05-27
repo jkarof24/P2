@@ -6,51 +6,45 @@ The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
 Warning--entry type for "Assumptions" isn't style-file defined
---line 207 of file references.bib
-I was expecting a `,' or a `}'---line 241 of file references.bib
- :  
- :  author = {Microsoft Co-Pilot},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 251 of file references.bib
+--line 205 of file references.bib
+Repeated entry---line 249 of file references.bib
  : @video{Assumptions
  :                   ,
 I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in AI
 Warning--empty journal in GoodPRNG
 Warning--empty journal in metrics
 Warning--empty journal in mersenne
 Warning--empty journal in ASTA
 You've used 15 entries,
             2118 wiz_defined-function locations,
-            582 strings with 6080 characters,
-and the built_in function-call counts, 3645 in all, are:
-= -- 335
-> -- 166
+            583 strings with 5998 characters,
+and the built_in function-call counts, 3696 in all, are:
+= -- 342
+> -- 172
 < -- 0
-+ -- 69
-- -- 52
-* -- 186
-:= -- 642
++ -- 71
+- -- 54
+* -- 187
+:= -- 661
 add.period$ -- 46
 call.type$ -- 15
-change.case$ -- 68
+change.case$ -- 70
 chr.to.int$ -- 0
-cite$ -- 20
+cite$ -- 19
 duplicate$ -- 154
-empty$ -- 311
-format.name$ -- 52
-if$ -- 751
+empty$ -- 310
+format.name$ -- 54
+if$ -- 759
 int.to.chr$ -- 0
 int.to.str$ -- 15
 missing$ -- 18
 newline$ -- 79
-num.names$ -- 28
-pop$ -- 106
+num.names$ -- 30
+pop$ -- 108
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 57
 quote$ -- 0
-skip$ -- 108
+skip$ -- 104
 stack$ -- 0
 substring$ -- 102
 swap$ -- 11
@@ -58,8 +52,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 48
-warning$ -- 5
-while$ -- 30
+warning$ -- 4
+while$ -- 32
 width$ -- 17
-write$ -- 154
-(There were 2 error messages)
+write$ -- 156
+(There was 1 error message)
