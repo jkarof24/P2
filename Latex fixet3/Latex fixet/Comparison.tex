@@ -55,31 +55,32 @@ When comparing the standard errors of the estimated coefficients, the OLS model 
 
 
 
-\begin{table}
+\begin{table}[]
 	\centering
 	\caption{Comparison of OLS and Bootstrap model}
 	\begin{tabular}{lcc}
 		\hline
 		& \textbf{OLS} & \textbf{Bootstrap} \\
 		\hline
-		\textbf{MBE} & -539.4769 & 22.2755 \\
-		\textbf{RMSE} & 1921.0420 & 1377.4900 \\
+		\textbf{MBE} & -546.4660 & -2.9349 \\
+		\textbf{RMSE} & 1884.5830 & 1363.7740 \\
+		\textbf{R-squared} & 0.8552 & 0.7881 \\
 		\hline
 		\textbf{Std. Error} \\
 		\hline
-		Intercept & 478.4811 & 540.9184 \\
-		$I(x1^2)$ & 1.4306e-03 & 3.2636e-03 \\
-		$I(x2^3)$ & 3.0470e-07 & 9.8684e-07 \\
-		$I(x3^4)$ & 7.5112e-12 & 5.1212e-09 \\
-		$I(x4^5)$ & 2.4766e-13 & 4.2884e-12 \\
+		Intercept & 475.7736 & 538.8108 \\
+		$I(x1^2)$ & 3.5947e-04 & 8.1540e-04 \\
+		$I(x2^3)$ & 3.7720e-08 & 1.2226e-07 \\
+		$I(x3^4)$ & 4.6861e-13 & 3.3174e-10 \\
+		$I(x4^5)$ & 7.4733e-15 & 1.3140e-13 \\
 		\hline
 		\textbf{Coefficient (95\% CI)} \\
 		\hline
-		Intercept & [2854.183 , 4796.919] & [2443.400 , 4556.982] \\
-		$I(x1^2)$ & [0.0004 , 0.0062] & [0.0023 , 0.0128] \\
-		$I(x2^3)$ & [-1.06e-06 , 1.80e-07] & [-2.70e-06 , 6.24e-07] \\
-		$I(x3^4)$ & [3.34e-11 , 6.39e-11] & [4.33e-11 , 1.20e-08] \\
-		$I(x4^5)$ & [-3.48e-12 , -2.47e-12] & [-4.23e-12 , 8.08e-12] \\
+		Intercept & [2835.399 , 4767.143] & [2423.519 , 4533.566] \\
+		$I(x1^2)$ & [1.2481e-04 , 1.5844e-03] & [5.9831e-04 , 3.2108e-03] \\
+		$I(x2^3)$ & [-1.3172e-07 , 2.1432e-08] & [-3.3097e-07 , 7.8818e-08] \\
+		$I(x3^4)$ & [2.1146e-12 , 4.0173e-12] & [2.7492e-12 , 7.6689e-10] \\
+		$I(x4^5)$ & [-1.0574e-13 , -7.5394e-14] & [-1.3259e-13 , 2.3062e-13] \\
 		\hline
 	\end{tabular}
 \end{table}
