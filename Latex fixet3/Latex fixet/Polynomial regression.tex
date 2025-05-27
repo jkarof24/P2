@@ -23,7 +23,7 @@ Y = \beta_0 + \beta_1 x .
 
 
 
-\noindent Where \( n \) is the number of independent variables, and $\beta_2$ further shapes the curvature and complexity of the curve. Linear models use the method of least squares of the residuals to estimate parameters, in order to find the best fitting line for the data.
+\noindent Where \( n \) is the number of independent variables, and $\beta_2$ further shapes the curvature and complexity of the curve. A widely used method to determine the parameters of linear models is the least square method, in order to find the best fitting line for the data.
 
 \noindent In simple linear regression, the random error \( \epsilon \) is included:
 \begin{equation}
@@ -333,7 +333,6 @@ Polynomial regression models the relationship like this,
 \begin{equation}(X' X)^{-1} X' X \beta = (X' X)^{-1} X' Y,\end{equation}
 \begin{equation} \beta=(X' X)^{-1} X' Y.\end{equation}
   For this to be calculated, the matrix $X' X$ has to be invertible, so the columns of $X$ have to be linearly independant.
- This means, that the assumption of no multicollinearity has to be met.
  
  \noindent So, 
  
@@ -349,7 +348,7 @@ Polynomial regression models the relationship like this,
  
  \noindent This shows, that $X'Xa=0$ if and only if $(Xa)'(Xa)=0$, so $Xa=0$. 
  
- \noindent If it is supposed, that there exists a non-trivial solution for $Xa=0$, there also exists a non-trivial solution for $X'Xa=0$. It is therefore only invertible when the null space of $X$ is 0, or if the columns are linearly independent. This is called no multicollinearity, since there is independence between the independent variables. 
+ \noindent If it is supposed, that there exists a non-trivial solution for $Xa=0$, there also exists a non-trivial solution for $X'Xa=0$. It is therefore only invertible when the null space of $X$ is 0, or if the columns are linearly independent. 
  
 \noindent To ensure that the solution gives a minimum, the hessian matrix is calculated,
 \begin{equation}
