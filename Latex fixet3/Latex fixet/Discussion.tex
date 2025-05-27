@@ -8,7 +8,7 @@ The objective of this project has been to investigate how breaking key asssumpti
 \subsection{Bootstrapping as a Solution}
 To address these assumption violations, bootstrapping was applied as a nonparametric resampling method. Since it is based on the empirical distribution of the data rather than relying on theoretical assumptions, bootstrapping offers a flexible alternative to OLS.
 
-\noindent The results support this effectiveness. The bootstrap model produced a substantially lower RMSE (1377 vs. 1921) and a near-zero MBE (22 vs. -539), indicating more accurate and less biased predictions. This suggests that bootstrapping can successfully mitigate the effects of assumption violations and improve model robustness.
+\noindent The results support this effectiveness. The bootstrap model produced a substantially lower RMSE (1350.7740 vs. 1884.5830) and a near-zero MBE (17.7164 vs. -546.4660), indicating more accurate and less biased predictions. This suggests that bootstrapping can successfully mitigate the effects of assumption violations and improve model robustness.
 
 \subsection{Alternative Approaches and their Limitations}
 Several alternative methods can be used to handle heteroscedasticity. One is Weighted Least Squares (WLS), which adjusts for variable variance by assigning different weights to each data point. However, determining appropriate weights is often computationally intensive and can introduce more uncertainty, since estimated weights are used. Additionally, it complicates model interpretation, as results depend on the weighting scheme.

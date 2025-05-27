@@ -47,39 +47,39 @@ To understand how assumption violations affect classical polynomial regression, 
 
 
 \subsection{Results}
-Comparing the results of the two models shown in Table 2, the Mean Bias Error, MBE, of the OLS model is -546.4660, indicating that it tends to underpredict the actual values. In contrast, the bootstrap model has an MBE of -2.9349, suggesting only a slight under-prediction. The smaller absolute bias of the bootstrap model indicates improved accuracy. This is further supported by the Root Mean Square Error, RMSE, where the OLS model scores 1884.5830 compared to the bootstrap model’s 1363.7740. This substantial difference reinforces the conclusion that the bootstrap model provides more accurate predictions.
+Comparing the results of the two models shown in Table 2, the Mean Bias Error, MBE, of the OLS model is -546.4660, indicating that it tends to underpredict the actual values. In contrast, the bootstrap model has an MBE of 17.7164, suggesting only a slight over-prediction. The smaller absolute bias of the bootstrap model indicates improved accuracy. This is further supported by the Root Mean Square Error, RMSE, where the OLS model scores 1884.5830 compared to the bootstrap model’s 1350.7740. This substantial difference reinforces the conclusion that the bootstrap model provides more accurate predictions.
 \\\\
 When comparing the standard errors of the estimated coefficients, the OLS model appears to have lower standard errors. However, it is important to note that these may not be reliable due to the violation of the homoscedasticity assumption. In such cases, the standard errors from OLS can be misleading. In contrast, the bootstrap standard errors are derived from the empirical distribution of the data and are therefore more representative of the true variability. As a result, the confidence intervals produced by the OLS model may not be trustworthy, while those from the bootstrap model better reflect the uncertainty in the estimates showing a false sense of predictability. Overall, the bootstrap approach demonstrates superior predictive performance and more robust inference under assumption violations.
 \\
 
 
 
-\begin{table}[]
+\begin{table}[h!]
 	\centering
 	\caption{Comparison of OLS and Bootstrap model}
 	\begin{tabular}{lcc}
 		\hline
 		& \textbf{OLS} & \textbf{Bootstrap} \\
 		\hline
-		\textbf{MBE} & -546.4660 & -2.9349 \\
-		\textbf{RMSE} & 1884.5830 & 1363.7740 \\
-		\textbf{R-squared} & 0.8552 & 0.7881 \\
+		\textbf{MBE} & -546.4660 & 17.7164 \\
+		\textbf{RMSE} & 1884.5830 & 1350.7740 \\
+		\textbf{R-squared} & 0.8552 & 0.7891 \\
 		\hline
 		\textbf{Std. Error} \\
 		\hline
-		Intercept & 475.7736 & 538.8108 \\
-		$I(x1^2)$ & 3.5947e-04 & 8.1540e-04 \\
-		$I(x2^3)$ & 3.7720e-08 & 1.2226e-07 \\
-		$I(x3^4)$ & 4.6861e-13 & 3.3174e-10 \\
-		$I(x4^5)$ & 7.4733e-15 & 1.3140e-13 \\
+		Intercept & 475.7736 & 534.8255 \\
+		$I(x1^2)$ & 3.5947e-04 & 8.4177e-04 \\
+		$I(x2^3)$ & 3.7720e-08 & 1.2377e-07 \\
+		$I(x3^4)$ & 4.6861e-13 & 3.3556e-10 \\
+		$I(x4^5)$ & 7.4733e-15 & 1.4069e-13 \\
 		\hline
 		\textbf{Coefficient (95\% CI)} \\
 		\hline
-		Intercept & [2835.399 , 4767.143] & [2423.519 , 4533.566] \\
-		$I(x1^2)$ & [1.2481e-04 , 1.5844e-03] & [5.9831e-04 , 3.2108e-03] \\
-		$I(x2^3)$ & [-1.3172e-07 , 2.1432e-08] & [-3.3097e-07 , 7.8818e-08] \\
-		$I(x3^4)$ & [2.1146e-12 , 4.0173e-12] & [2.7492e-12 , 7.6689e-10] \\
-		$I(x4^5)$ & [-1.0574e-13 , -7.5394e-14] & [-1.3259e-13 , 2.3062e-13] \\
+		Intercept & [2835.399 , 4767.143] & [2424.484 , 4508.749] \\
+		$I(x1^2)$ & [1.2481e-04 , 1.5844e-03] & [6.0011e-04 , 3.2840e-03] \\
+		$I(x2^3)$ & [-1.3172e-07 , 2.1432e-08] & [-3.2404e-07 , 8.1277e-08] \\
+		$I(x3^4)$ & [2.1146e-12 , 4.0173e-12] & [2.6966e-12 , 7.9974e-10] \\
+		$I(x4^5)$ & [-1.0574e-13 , -7.5394e-14] & [-1.3206e-13 , 2.5471e-13] \\
 		\hline
 	\end{tabular}
 \end{table}
