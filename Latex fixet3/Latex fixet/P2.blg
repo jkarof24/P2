@@ -5,54 +5,61 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
+Warning--entry type for "Assumptions" isn't style-file defined
+--line 207 of file references.bib
 I was expecting a `,' or a `}'---line 241 of file references.bib
  :  
  :  author = {Microsoft Co-Pilot},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Repeated entry---line 251 of file references.bib
+ : @video{Assumptions
+ :                   ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in AI
 Warning--empty journal in GoodPRNG
 Warning--empty journal in metrics
 Warning--empty journal in mersenne
 Warning--empty journal in ASTA
-You've used 13 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            575 strings with 6001 characters,
-and the built_in function-call counts, 3311 in all, are:
-= -- 310
-> -- 158
+            582 strings with 6080 characters,
+and the built_in function-call counts, 3645 in all, are:
+= -- 335
+> -- 166
 < -- 0
-+ -- 65
-- -- 50
-* -- 175
-:= -- 599
-add.period$ -- 43
-call.type$ -- 13
-change.case$ -- 62
++ -- 69
+- -- 52
+* -- 186
+:= -- 642
+add.period$ -- 46
+call.type$ -- 15
+change.case$ -- 68
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 140
-empty$ -- 266
-format.name$ -- 50
-if$ -- 675
+cite$ -- 20
+duplicate$ -- 154
+empty$ -- 311
+format.name$ -- 52
+if$ -- 751
 int.to.chr$ -- 0
-int.to.str$ -- 13
+int.to.str$ -- 15
 missing$ -- 18
-newline$ -- 72
-num.names$ -- 26
-pop$ -- 89
+newline$ -- 79
+num.names$ -- 28
+pop$ -- 106
 preamble$ -- 1
-purify$ -- 51
+purify$ -- 56
 quote$ -- 0
-skip$ -- 88
+skip$ -- 108
 stack$ -- 0
-substring$ -- 92
-swap$ -- 9
+substring$ -- 102
+swap$ -- 11
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
-warning$ -- 4
-while$ -- 28
-width$ -- 15
-write$ -- 142
-(There was 1 error message)
+type$ -- 48
+warning$ -- 5
+while$ -- 30
+width$ -- 17
+write$ -- 154
+(There were 2 error messages)
