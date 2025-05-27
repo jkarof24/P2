@@ -1,5 +1,5 @@
 When making a regression its important to understand, that the regression has assumptions that needs to be fulfilled if the statistical conclusions are to be correct. If these assumptions are not upheld, it will create bias that will skew the results of the model.
-\subsubsection{Homoscedasticity}
+\subsubsubsection{Homoscedasticity}
 One of the assumptions of a polynomial regression is that homoscedasticity is fulfilled. Homoscedasticity is the assumption of constant error variance, where observations in a dataset would exhibit errors that have roughly the same spread across all levels of the independent variable.
 \newline
 If this assumption is not upheld, then this will cause the standard error to be biased and therefore not trustworthy. This problem causes further testing involving this standard error to become wrong, an example is the hypothesis test.
@@ -46,7 +46,7 @@ Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] =
 \noindent \textbf{Detecting heteroscedasticity} \\
 When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but its not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables have an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the dataset contains heteroscedasticity \cite{HomoSce}.
 
-\subsubsection{No multicollinearity}
+\subsubsubsection{No multicollinearity}
 Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
 \begin{equation}
 X_1 = \alpha+\beta_1\cdot X_2+...+\beta_n\cdot X_n

@@ -14,6 +14,24 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[content={}, color=white]{background}
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+\titleclass{\subsubsubsection}{straight}[\subsubsection]
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}{0pt}{1ex plus .1ex minus .2ex}{1ex plus .1ex}
+
+% Enable ToC and numbering
+\setcounter{secnumdepth}{4}    % Enables numbering to subsubsubsection
+\setcounter{tocdepth}{4}       % Includes subsubsubsection in ToC
+
+% Add subsubsubsection to ToC
+\makeatletter
+\newcommand{\l@subsubsubsection}{\@dottedtocline{4}{7em}{4em}} % Format for ToC entry
+\makeatother
 
 
 \definecolor{aaublue}{rgb}{0.129,0.102,0.322}
@@ -68,11 +86,12 @@
 	\input{Problem analyse}
 	\newpage
 	\newpage
-	\section{Theoretical Background}
+	\section{Statistical Background}
 	\input{Statistical theory}
 	\newpage
  	\input{Polynomial regression}
 	\newpage
+	\section{Another Background}
 	\input{PRNG}
 	\newpage
 	\input{The Bootstrap with the Monte Carlo Principle}
@@ -113,7 +132,6 @@
  	
  	\section{latextables}
  	\newpage
- 	
  	\bibliographystyle{plain}
  	\bibliography{references}
  	
