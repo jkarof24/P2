@@ -1,13 +1,11 @@
-When making a regression it is important to understand, that the regression has assumptions that need to be fulfilled, if the statistical conclusions are to be correct. If these assumptions are not upheld, it will create bias that will skew the results of the model. \newline 
+As mentioned earlier, it is important to understand, that regression models has assumptions that need to be fulfilled, if the statistical conclusions are to be reliable. In the problem analysis we mentioned 6 key assumptions, when it comes to regression models. But, working with 6 different assumptions in one project, would not be sufficient. Therefore we have chosen two to focus on in this project. Those are homoscedacticity and multicollinearity and will be discussed in this section. \newline 
 
 \subsubsubsection{Homoscedasticity}
-One of the assumptions of a polynomial regression is that homoscedasticity is fulfilled. Homoscedasticity is the assumption of constant error variance, where observations in a dataset would exhibit errors that have roughly the same spread across all levels of the independent variable.
-\newline
-If this assumption is not upheld, then this will cause the standard error to be biased and therefore not trustworthy. This problem causes further testing, involving this standard error, to become wrong. An example of that is the hypothesis test.
-\newline
-The reason why, the assumption needs to be upheld, comes from how the regression is created. The regression is created with the ordinary least square method that requires the assumption of homoscedasticity to be upheld.
-\newline
-A way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for the error in each independent variable in the regression. The variances in the matrix are calculated through an alternate equation from the one presented in \autoref{sec:disc}.
+One of the assumptions of a polynomial regression is that homoscedasticity is fulfilled. Homoscedasticity is the assumption of constant error variance, where observations in a dataset would exhibit errors that have roughly the same spread across all levels of the independent variable. If this assumption is not upheld, then this will cause the standard error to be biased and therefore not trustworthy. This problem causes further testing, involving this standard error, to become wrong. An example of that is the hypothesis test.\newline
+
+\noindent The reason why the assumption needs to be upheld, comes from how the regression is created. The regression is, as mentioned, created with OLS, and that method requires the assumption of homoscedasticity to be upheld.\newline
+
+\noindent One way to display homoscedasticity is through the variance-covariance matrix. The matrix shows whether the data contains homoscedasticity or heteroscedasticity through the diagonal values, that is the variance for the error in each independent variable in the regression. The variances in the matrix are calculated through an alternate equation from the one presented in \autoref{sec:disc}.
 \begin{equation}
 	\text{Var}(X) = \frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \bar{x})^2
 \end{equation}
