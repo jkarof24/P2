@@ -1,8 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2025)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: P2.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
+I was expecting a `,' or a `}'---line 241 of file references.bib
+ :  
+ :  author = {Microsoft Co-Pilot},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty journal in GoodPRNG
 Warning--empty journal in metrics
 Warning--empty journal in mersenne
@@ -48,4 +55,4 @@ warning$ -- 4
 while$ -- 28
 width$ -- 15
 write$ -- 142
-(There were 4 warnings)
+(There was 1 error message)

@@ -2,26 +2,23 @@
 
 \bibitem{Heteroscedasticity}
 Oscar L.~Olvera Astivia and Bruno~D. Zumbo.
-\newblock Heteroskedasticity in multiple regression analysis: What it is, how to detect it and how to solve it with applications in r and spss.
+\newblock Heteroskedasticity in multiple regression analysis: What it is, how
+  to detect it and how to solve it with applications in r and spss.
 \newblock {\em Practical Assessment, Research, and Evaluation}, 2019.
 
 \bibitem{GoodPRNG}
 Kamalika Bhattacharjee, Krishnendu Maity, and Sukanta Das.
-\newblock A search for good pseudo-random number generators : Survey and empirical studies.
+\newblock A search for good pseudo-random number generators : Survey and
+  empirical studies.
 \newblock 2018.
 
 \bibitem{metrics}
 Alexei Botchkarev.
-\newblock Performance metrics (error measures) in machine learning regression, forecasting and prognostics: Properties and typology.
+\newblock Performance metrics (error measures) in machine learning regression,
+  forecasting and prognostics: Properties and typology.
 \newblock 2019.
-\newblock Principal, GS Research \& Consulting; Adjunct Prof., Department of Computer Science, Ryerson University.
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+\newblock Principal, GS Research & Consulting; Adjunct Prof., Department of
+  Computer Science, Ryerson University.
 
 \bibitem{ProbAndStat_8th}
 Jay~L. Devore.
@@ -37,7 +34,8 @@ Jong~Hae Kim.
 
 \bibitem{knuth}
 Donald~E. Knuth.
-\newblock {\em The Art of Computer Programming, Volume 2: Seminumerical Algorithms}.
+\newblock {\em The Art of Computer Programming, Volume 2: Seminumerical
+  Algorithms}.
 \newblock Addison-Wesley, 3rd edition, 1997.
 
 \bibitem{MathStatResampling}
@@ -47,7 +45,8 @@ Chihara Laura and Tim Hesterberg.
 
 \bibitem{mersenne}
 Makoto Matsumoto and Takuji Nishimura.
-\newblock Mersenne twister: A 623-dimensionally equidistributed uniform pseudo-random number generator.
+\newblock Mersenne twister: A 623-dimensionally equidistributed uniform
+  pseudo-random number generator.
 \newblock 8, 1998.
 
 \bibitem{AppliedLSM}
@@ -58,8 +57,14 @@ John~Neter Michael H.~Kutner, Christopher J.~Nachtsheim and William Li.
 \bibitem{HomoSce}
 {Social Science Computing Cooperative}.
 \newblock Homoscedasticity.
-\newblock \url{https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html}, n.d.
+\newblock
+  \url{https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html}, n.d.
 \newblock Accessed: 2025-05-23.
+
+\bibitem{ASTA}
+The~ASTA team.
+\newblock Asta.
+\newblock 2025.
 
 \bibitem{ProbAndStat}
 Ronald~E. Walpole, Raymond~H. Myers, Sharon~L. Myers, and Keying Ye.
