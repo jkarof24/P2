@@ -27,16 +27,22 @@ x4new <- x4 + rnorm(n, mean = 0, sd = 0.2 * abs(y))
 # Create a new data frame
 datanew <- data.frame(y, x1new, x2new, x3new, x4new)
 
+
 # 5. Split into training and test data
+
+
 set.seed(123)
 trainindices <- sample(1:nrow(datanew), size = 0.8 * nrow(datanew))
 traindata <- datanew[trainindices, ]
 testdata <- datanew[-trainindices, ]
 
+
 # 6. Define number of bootstrap simulations
 n_simulations <- 10000
 
 # 7. OLS model
+
+
 olsmodel <- lm(y ~ I(x1new^2) + I(x2new^3) + I(x3new^4) + I(x4new^5), data = traindata)
 
 # Get summary for OLS model to extract coefficient SE and CI
@@ -50,7 +56,10 @@ ols_confint <- confint(olsmodel)
 r_squared <- summary(olsmodel)$r.squared
 adj_r_squared <- summary(olsmodel)$adj.r.squared
 
+
 # 8. Bootstrap model for coefficients
+
+
 coef_function <- function(data, indices) {
   d <- data[indices,]
   fit <- lm(y ~ I(x1new^2) + I(x2new^3) + I(x3new^4) + I(x4new^5), data = d)
@@ -124,7 +133,6 @@ print(bootstrap_coef_se)
 cat("\n--- Bootstrap Model (R-squared) ---\n")
 cat("Mean R-squared: ", round(mean_r_squared_boot, 4), "\n")
 
-# Histograms
 hist(bootstraperrors) 
 abline(v = mean(bootstraperrors), col = "red") 
 

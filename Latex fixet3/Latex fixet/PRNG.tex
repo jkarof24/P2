@@ -1,6 +1,7 @@
-The following sections will focus on the theory behind generating data and using Monte Carlo Bootstrapping to create models from the data.
+The following sections will focus on the theory behind deterministicly generating data and using Monte Carlo Bootstrapping to create models from the data.
 
 \subsection{Pseudo Random Number Generators}
+This section is based on the book 'The Art of Computer Programming'\cite{knuth} and the article 'A Search for Good Pseudo-random Number Generators : Survey and Empirical Studies'\cite{GoodPRNG}.
 When producing a synthetic dataset, there is a need for a lot of random numbers. Many programming languages have a built-in function that produces numbers that appear random, but actually are not. Computers are deterministic machines, and therefore cannot produce a number without some sort of algorithm. If the algorithm is known, it becomes possible to predict the next number; hence the numbers are not completely random. Random numbers should be independent; that is, each number should have no connection to any previously produced values. The distribution should also be uniform, meaning if you generate 1,000,000 random numbers in the range [0,1), you'd expect about 500,000 values in [0, 0.5) and about 500,000 in [0.5, 1). Earlier in history, these numbers have been produced by flipping coins or rolling dice. Today, it is possible to produce truly random numbers by using atmospheric noise. Despite its potential advantages, this method requires significant resources, making it inefficient for the intended application. Therefore, pseudo-random numbers will be used instead.
 \newline
 
