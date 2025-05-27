@@ -121,6 +121,7 @@ cat("\n--- Bootstrap Model (R-squared) ---\n")
 cat("Mean R-squared: ", round(mean_r_squared_boot, 4), "\n")
 
 # Histograms
+hist(bootstrap_r_squared)
 
 hist(bootstraperrors, main = "Histogram of Errors", xlab = "Prediction Error") 
 abline(v = mean(bootstraperrors), col = "red") 
