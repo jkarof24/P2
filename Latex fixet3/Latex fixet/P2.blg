@@ -4,8 +4,8 @@ The top-level auxiliary file: P2.aux
 The style file: plain.bst
 Database file #1: references.bib
 Warning--entry type for "Assumptions" isn't style-file defined
---line 205 of file references.bib
-Repeated entry---line 249 of file references.bib
+--line 103 of file references.bib
+Repeated entry---line 125 of file references.bib
  : @video{Assumptions
  :                   ,
 I'm skipping whatever remains of this entry
