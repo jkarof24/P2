@@ -5,10 +5,14 @@ Building on the concept of random variables, we now focus on estimators and thei
 \newline
 
 \noindent For the mean, we have different ways of estimating it. We can use the sample mean, $\bar{X}$, or the average, $X_T$, of the sample upper and lower quartiles. 
-But in this case, we have to look out for bias. If the distribution of a population is skewed, then the average is biased. The result of this is, that in the long run, this estimator will systematically over or under estimate the value of the mean. This is written as,$E(X_T) \neq \mu$. It is generally preferred that the estimator is unbiased. In this case, the sample mean is an unbiased estimate of the population mean.
+But in this case, we have to look out for bias. If the distribution of a population is skewed, then the average is biased. The result of this is, that in the long run, this estimator will systematically over or under estimate the value of the mean. This is written as, $E(X_T) \neq \mu$. It is generally preferred that the estimator is unbiased. In this case, the sample mean is an unbiased estimate of the population mean.
 \newline
 
-\noindent The standard error of the sample mean is $\frac{\sigma}{\sqrt{n}}$. Here, the standard error decreases, when the sample size increases. If an estimator has this property, it is called consistent. If we compare, the average, $X_T$, is also consistent, but has a greater variance than the sample mean, $\bar{X}$. It is generally preferred that the estimator has the smallest possible variance, and in that case it is called efficient. So the sample mean is an efficient estimator.\newline
+\noindent The standard error of the sample mean is,
+\begin{equation}
+ \frac{\sigma}{\sqrt{n}} .
+\end{equation}
+Here, the standard error decreases, when the sample size increases. If an estimator has this property, it is called consistent. If we compare, the average, $X_T$, is also consistent, but has a greater variance than the sample mean, $\bar{X}$. It is generally preferred that the estimator has the smallest possible variance, and in that case it is called efficient. So the sample mean is an efficient estimator.\newline
 
 \noindent When estimating a parameter, the symbol $\hat{}$ is used above it. An example of this is for the mean, $\mu$, it is $\hat{\mu} = \bar{X}$. We can calculate the sample mean using the following formula,
 

@@ -30,23 +30,23 @@ Z=\frac{X-\mu}{\sigma}
 \noindent $Z$ in the Z-score represents the amount of standard deviations a given $X$ value, deviates from the mean.
 
 \subsubsection{The Central Limit Theorem}
-A very effective theorem in statistics is the central limit theorem. This theorem states that if a random sample $\overline{X}$, with the size $n$, is taken from a population with a mean and a finite variance, then as $n$ goes towards infinity, the distribution will resemble a normal distribution. If used with the Z-score formula, the distribution will resemble a standard normal distribution. The formula for the Z-score, when in conjunction with the central limit theorem, looks like this:
+A very effective theorem in statistics is the central limit theorem. This theorem states that if a random sample $\bar{X}$, with the size $n$, is taken from a population with a mean and a finite variance, then as $n$ goes towards infinity, the distribution will resemble a normal distribution. If used with the Z-score formula, the distribution will resemble a standard normal distribution. The formula for the Z-score, when in conjunction with the central limit theorem, looks like this:
 
 \begin{equation}
-Z=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}
+Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}
 \end{equation}
 
 
 \noindent Where $\bar{X}$ is a random sample of size $n$ and $\mu$ is the mean of the true population. The standard error i represented by $\sigma/\sqrt{n}$, where $\sigma$ is the standard deviation and $n$ is the sample size.
-Usually the standard deviation is unknown, for these situations it's possible to use the estimator $S^2$. This estimates the variance of the population from the variance of the sample, by this formula:
+Usually the standard deviation is unknown, for these situations it is possible to use the estimator $S^2$. This estimates the variance of the population from the variance of the sample, by this formula:
 
 \begin{equation}
 s^2=\sum_{i=1}^{n}\frac{(x_{i}-\bar{x})}{n-1}
 \end{equation}
-The square root of the variance is the standard deviation, therefore the square root of the estimator $S^2$ would be the estimated standard deviation. The problem with using the estimator $S^2$, is that with small samples the variance is small and therefore it contains a lot of bias. In this situation the t-distribution would be used instead of the normal distribution, because the t-distribution takes the bias into account the bias of the standard deviation. It does this by having thicker tails, meaning that the probability of more extreme values are higher.
+The square root of the variance is the standard deviation, therefore the square root of the estimator $S^2$ would be the estimated standard deviation. The problem with using the estimator $S^2$, is that with small samples the variance is small and therefore it contains a lot of bias. In this situation the t-distribution would be used instead of the normal distribution, because the t-distribution takes the bias of the standard deviation into account. It does this by having thicker tails, meaning that the probability of more extreme values are higher.
 
 \subsubsection{The t-Distribution}
-The t-distribution is shaped as the standard normal distribution, in a bell shape and symmetrical around the mean of zero, the difference is that the t-distribution contains more variance. This comes from the fact that the t-distribution is dependent on the degrees of freedom. When the degrees of freedom surpasses 30, the rule of thumb is that the distribution will resemble a normal distribution. So before 30 degrees of freedom, the distribution contains more variance.
+The t-distribution is shaped, like the standard normal distribution, in a bell shape and symmetrical around the mean of zero, the difference is that the t-distribution contains more variance. This comes from the fact that the t-distribution is dependent on the degrees of freedom. When the degrees of freedom surpasses 30, the rule of thumb is that the distribution will resemble a normal distribution. So before 30 degrees of freedom, the distribution contains more variance.
 The t-distribution will come to resemble the standard normal distribution, when it surpasses 30 degrees of freedom, this makes sense, since the two distributions have the same formula:
 \begin{equation}
 	T=\frac{\bar{X}-\mu}{S/\sqrt{n}}

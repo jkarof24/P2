@@ -6,7 +6,7 @@ Sections $4.6.1$, $4.6.2$ and $4.6.3$ are based on the book 'Applied Lienar Stat
 \newline 
 
 \noindent Before looking at polynomial regression, we have to understand linear regression. \newline 
-Linear regression is a model that estimates the relationship between a dependent variable, \( y \), and one or more independent variables, \( x \). A reasonable relationship between the two in simple regression is the linear relationship:
+Linear regression is a model that estimates the relationship between a dependent variable, \( Y \), and one or more independent variables, \( x \). A reasonable relationship between the two in simple regression is the linear relationship:
 \begin{equation}
 Y = \beta_0 + \beta_1 x .
 \end{equation}
@@ -31,9 +31,9 @@ Y = \beta_0 + \beta_1 x + \epsilon .
 \end{equation}
 
 
-\noindent It is assumed that \( \epsilon \) is distributed with $\epsilon = 0$ and $\epsilon) = \sigma^2$, and it has consistent variance, which is usually called the Homogeneous Variance Assumption. The random error \( \epsilon \) adds randomness to account for the natural variability in real data, making the model more realistic.
+\noindent It is assumed that \( \epsilon \) is distributed with $\epsilon = 0$ and $\epsilon = \sigma^2$, and it has consistent variance, which is usually called the Homogeneous Variance Assumption. The random error \( \epsilon \) adds randomness to account for the natural variability in real data, making the model more realistic.
 \newline\\
-Polynomial regression is a form of linear regression, but the relationship between \( x \) and \( y \) is an \( n \)th-degree polynomial. It fits a nonlinear relationship between the value of \( x \) and the corresponding conditional mean of \( y \), meaning the model predicts the expected value of \( y \) given \( x \). \newline
+Polynomial regression is a form of linear regression, but the relationship between \( x \) and \( Y \) is an \( n \)th-degree polynomial. It fits a nonlinear relationship between the value of \( x \) and the corresponding conditional mean of \( Y \), meaning the model predicts the expected value of \( Y \) given \( x \). \newline
 
 \noindent That is why it is used when the relationship between the independent variable and the dependent variable is better represented by a curve rather than a straight line, since it can show the nonlinear patterns in the data.
 In polynomial regression, as mentioned earlier, there are six assumptions, that should be met, for the model to be as accurate as possible.
@@ -48,7 +48,7 @@ A widely used method to estimate the coefficients, is the previously mentioned l
 This method also requires, that we consider the sum of the $n$ squared deviations.
 This is denoted by the criterion $Q$,
 \begin{equation}
-Q=\sum_{i=1}^{n}(Y_1-\beta_0 - \beta_1 X_i)^2 .
+Q=\sum_{i=1}^{n}(Y_i-\beta_0 - \beta_1 X_i)^2 .
 \end{equation}
 
 \noindent According to the method of OLS, the estimations of $\beta_0$ and $\beta_1$ that minimize Q for the given sample observations $(X_1,Y_1), (X_2,Y_2), ..., (X_n,Y_n)$, are called $b_0$ and $b_1$.  
@@ -127,11 +127,11 @@ Y_1 = \beta_0 + \beta_1 X_1 + \epsilon_1
 \end{equation}
 
 \begin{equation}
-Y_2 = \beta_0 + \beta_2 X_2 + \epsilon_2
+Y_2 = \beta_0 + \beta_1 X_2 + \epsilon_2
 \end{equation}
 $$\vdots$$
 \begin{equation}
-Y_n = \beta_0 + \beta_n X_n + \epsilon_n .
+Y_n = \beta_0 + \beta_1 X_n + \epsilon_n .
 \end{equation}
 
 \noindent The observations vector $Y$ is,
@@ -311,7 +311,7 @@ Polynomial regression models the relationship like this,
 \end{equation}
 
 
-\noindent It is possible to find the value of $\beta$ that minimizes Q by differentiating with respect to $\beta_0$ and $beta_1$,
+\noindent It is possible to find the value of $\beta$ that minimizes Q by differentiating with respect to $\beta_0$ and $\beta_1$,
 
 \begin{equation}
 \frac{\partial}{\partial \beta}(Q)=

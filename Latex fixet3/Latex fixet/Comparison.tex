@@ -35,12 +35,12 @@ To understand how assumption violations affect classical polynomial regression, 
 \lstinputlisting[language=R, caption=Datageneration and adding hetroscedasety,label=code1, firstline=8, lastline=25]{kode/sammenligning2.R}
 
 
-\noindent The dataset is then in \autoref{code2} line 2-5 split into training and test sets, with $80\%$ used for training and the remaining $20\%$ for testing. A standard polynomial regression model is fitted to the training data on line 8. The standard error, and confidence intervals for the coefficients are calculated on line 11 - 15 the $R^2$ is calculeted on line 18 and  the mean bias error and root mean squared error calculated are useing the testdata on line 21- 25 all this is to evaluate the model's performance.
+\noindent The dataset is then in \autoref{code2} line 2-5 split into training and test sets, with $80\%$ used for training and the remaining $20\%$ for testing. A standard polynomial regression model is fitted to the training data on line 8. The standard error, and confidence intervals for the coefficients are calculated on line 11 - 15. The $R^2$ is calculeted on line 18 and  the mean bias error and root mean squared error calculated are using the testdata on line 21- 25. All this is to evaluate the model's performance.
 \\\\
 \lstinputlisting[language=R, caption=traning/test data and OLS,label=code2, firstline=27, lastline=53]{kode/sammenligning2.R}
 
 
-\noindent Following this,the amount of resamples for the bootstrap are set at 10000 and the function for the coefficients are defined in line 1-9 and a bootstrap is then performed by resampling the training data in line 11-30. For each resampled dateset, a polynomial model is fitted. The $R^2$, coefficients and the predictions on the test data. These predictions are then used to compute the mean bias error and RMSE and the coefficients are used the calculated the standard error and confidence intervals of the coefficients for the bootstrap models.
+\noindent Following this, the amount of resamples for the bootstrap are set at 10000 and the function for the coefficients are defined in line 1-9 and a bootstrap is then performed by resampling the training data in line 11-30. For each resampled dateset, a polynomial model is fitted. The $R^2$, coefficients and the predictions on the test data. These predictions are then used to compute the mean bias error and RMSE and the coefficients are used to calculate the standard error and confidence intervals of the coefficients for the bootstrap models.
 \\\\\\\\\\\\
 
 \lstinputlisting[language=R, caption=Bootstrap, label=code3, firstline=54, lastline=97]{kode/sammenligning2.R}
