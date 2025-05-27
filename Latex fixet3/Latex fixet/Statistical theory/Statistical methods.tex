@@ -1,5 +1,5 @@
 \subsection{Statistical Methods}
-This section will present statistical methods to evaluate the reliability and significance of a regression model. The focus will be on confidence intervals and hypothesis testing, these are two methods that can access the models uncertainty and determine whether observed effects are random. The confidence interval is used to determine an interval which likely include a value of a parameter with a chosen level of confidence. A hypothesis test is used to determine if there is enough statistical evidence to reject a null hypothesis with a chosen significance level.
+This section will present statistical methods to evaluate the reliability and significance of a regression model. The focus will be on confidence intervals and hypothesis testing, because these two methods can access the models uncertainty and determine whether observed effects are random. The confidence interval is used to determine an interval which likely include a value of a parameter with a chosen level of confidence. A hypothesis test is used to determine if there is enough statistical evidence to reject a null hypothesis with a chosen significance level.
 
 \subsubsection{Confidence Intervals}
 The confidence interval is a good tool to use when trying to estimate a parameter of a population. It is used to create an interval, where the parameter has a probability to be inside of. This probability is called the confidence level, which is a chosen value, usually either 95\% or 99\%. The confidence interval will become bigger with a smaller confidence level. A good confidence interval is small with a large confidence level, this will usually occur when the sample size is large. The chosen confidence level relates to an $\alpha$-value. As an example, the chosen confidence level would be 95\%, then the $\alpha$-value would be 5\% or normally written as $0.05$. The $\alpha$-value is used to determine the critical value, which is used to calculate the margin of error. For example, it is used when trying to find the critical value of the confidence interval when working with a t-distribution.
@@ -24,15 +24,16 @@ P(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}<\mu<\bar{X}+z_{\alpha/2}\frac{\sig
 
 \noindent \textbf{The interpretation of a confidence interval}
 \newline
-To interpret a confidence interval, it would be incorrect to do it the confidence level of some value $x$, as the probability of the true parameter being inside of the interval. The reason behind this, is that the computed interval is static, so either the value $x$ is inside the interval or it is not. So the correct way of interpreting the confidence interval is by taking multiple samples and computing the confidence interval for all samples, then the value $x$ would reside inside 95\% of the confidence intervals.\cite{ProbAndStat_8th}
+To interpret a confidence interval correctly, we should not say that the confidence level, for example 95\%, is the probability that the true parameter lies within the interval. This is incorrect because the interval we calculate from a single sample is fixed, either the true parameter is in it, or it is not. So the correct way of interpreting the confidence interval is by taking multiple samples and computing the confidence interval for all samples, then the value $x$ would reside inside 95\% of the confidence intervals.\cite{ProbAndStat_8th}
 
 
 \subsubsection{Hypothesis Testing}
-A hypothesis test is used to test an assumption about a population. This is done from a sample of the population, as the information about the population is usually hard to come by. A hypothesis test is set up by having a null hypothesis and an alternate hypothesis.
-$$H_0 = \text{Null hypothesis}$$
-$$H_a = \text{Alternate hypothesis}$$
+A hypothesis test is used to test an assumption about a population. This is done from a sample of the population, as the information about the population is usually hard to come by. A hypothesis test is set up by having a null hypothesis and an alternate hypothesis, which is written like this:
+$$H_0 = \text{Null hypothesis},$$
+$$H_a = \text{Alternate hypothesis}.$$
 When working with hypothesis testing, the hypothesis $H_0$ is usually represented as the status quo, where the hypothesis $H_a$ is represented as an alternate hypothesis. It is also important to note that there is only two outcomes of a hypothesis test, either $H_0$ is rejected in favor of $H_a$, or $H_0$ is failed to be rejected. Therefore in no situation can $H_0$ be stated to be an absolute truth, as there might be other samples where $H_0$ will be rejected. Therefore, in a hypothesis test $H_0$ needs to be able to be rejected. If $H_0$ gets rejected, $H_a$ will become the new status quo until proven otherwise.\\
-In a hypothesis test $H_0$ will be the assumption that a parameter for two populations is the same, whereas $H_a$ can be either one of three assumptions, depending on the intention of the hypothesis test.
+
+\noindent In a hypothesis test $H_0$ will be the assumption that a parameter for two populations is the same, whereas $H_a$ can be either one of three assumptions, depending on the intention of the hypothesis test.
 $$H_0: \theta = \theta_0$$
 $$1.\;H_a: \theta \neq \theta_0$$
 $$2.\;H_a: \theta < \theta_0$$
@@ -60,7 +61,7 @@ When making a hypothesis test, there is four different possible outcomes. The re
 \noindent It is possible to compute the probability of a type 1 error occurring, this value is the same as the significance level $\alpha$. To calculate the probability of a type 2 error occurring, the $H_a$ needs to be defined, or more specifically, the mean of the sample is needed. Depending on which parameter is known, different formulas are taken into use. As an example, where the standard deviation is known, it is a normal distribution and it is a one tailed test, then the formula for the Z-score is used, but $\bar{X}$ is exchanged with $\bar{x}_{crit}$ and $\mu$ is exchanged with $\mu_1$:
 
 \begin{equation}
-Z=\frac{\bar{x}_{crit}-\mu_1}{\sigma/\sqrt{n}}
+Z=\frac{\bar{x}_{crit}-\mu_1}{\sigma/\sqrt{n}}.
 \end{equation}
 
 
