@@ -1,4 +1,4 @@
-\subsection{Assumption violations and implications}
+\subsection{Assumption Violations and Implications}
 The objective of this prroject has been to investigate how breaking key asssumptions, like homoskcedasticity and multicollinarity, impacts the performance of classical polynomial regression models, and how Monte Carlo bootstrapping can offer a more reliable alternative. Synthetic data were used to deliberately violate the assumption of homoscedasticity while controlling other variables. This allowed for a focused analysis of how non-constant error variance influences model accuracy and inference.
 
 \noindent Violating the homoscedasticity assumption was shown to significantly distort the performance of the ordinary least squares (OLS) model. The resulting regression had a notably high Root Mean Square Error (RMSE) and a strong negative bias, indicating that such violations can invalidate the statistical conclusions. 
@@ -8,13 +8,13 @@ To address these assumption violations, bootstrapping was applied as a nonparame
 
 \noindent The results support this effectiveness. The bootstrap model produced a substantially lower RMSE (1377 vs. 1921) and a near-zero MBE (22 vs. -539), indicating more accurate and less biased predictions. This suggests that bootstrapping can successfully mitigate the effects of assumption violations and improve model robustness.
 
-\subsection{Alternative approaches and their limitations}
+\subsection{Alternative Approaches and their Limitations}
 Several alternative methods can be used to handle heteroscedasticity. One is Weighted Least Squares (WLS), which adjusts for variable variance by assigning different weights to each data point. However, determining appropriate weights is often computationally intensive and can introduce more uncertainty, since estimated weights are used. Additionally, it complicates model interpretation, as results depend on the weighting scheme.
 
 \noindent Transforming the data with techniques like log or square root transformations, is another common approach. While these can sometimes stabilize variance, they do not consistently resolve assumption violations. In some cases, they may even worsen heteroscedasticity. Again, interpretation becomes more difficult, as the model no longer operates on the original scale of the variables.
 
 
-\subsection{Strengths and limits of bootstrapping}
+\subsection{Strengths and Limits of Bootstrapping}
 For these reasons, bootstrapping remains widely used despite its computational demands. Because it draws directly from the empirical distribution, bootstrapping makes fewer theoretical assumptions and often yields more robust results when an assumption like homoscedasticity is violated. However, it is not without limitations. The number of resamples must be chosen carefully to balance precision and efficiency. In the case of parametric bootstrapping, the method still relies on the assumption that the sample accurately represents the population. Another limitation comes from the use of the mean to estimate parameters, which can make bootstrap models sensitive to outliers and lead to distorted results if such anomalies are not properly addressed.
 
 \noindent In summary, while several methods exist to address assumption violations in regression, bootstrapping, through this project, proved very effective. It provided more accurate predictions, reduced bias, and more reliable confidence intervals under heteroscedastic conditions. Although not without limitations, its empirical and assumption-light approach makes it a preferable method, when assumptions are violated.

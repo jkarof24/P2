@@ -43,10 +43,10 @@ Var(\varepsilon) = \mathbb{E}[\boldsymbol{\epsilon} \boldsymbol{\epsilon}'] =
 
 \noindent Every position in the matrix is calculated, then the diagonal will tell if the data contains homoscedasticity or heteroscedasticity. The off-diagonal values represent covariances between error terms. While not the focus of this project, non-zero values here may indicate correlation between errors, which would violate the assumption of independence \cite{Heteroscedasticity} . \newline 
 
-\noindent \textbf{Detecting heteroscedasticity} \\
+\noindent \textbf{Detecting Heteroscedasticity} \\
 When working with data, one method of checking for heteroscedasticity is to visualize it through plotting the residuals, but its not always possible to detect heteroscedasticity through visual media. Another approach is to calculate if the data contains heteroscedasticity. This can be done through the Breusch-Pagan test, that is specifically designed to detect heteroscedasticity. The test detects heteroscedasticity, by regressing the residuals on the independent variables and checks if the independent variables have an effect on the residual variance. If this is not the case, then there is no heteroscedasticity. This checked through a hypothesis test, where the $H_0$ is that the data contains homoscedasticity and $H_a$ is that the dataset contains heteroscedasticity \cite{HomoSce}.
 
-\subsubsubsection{No multicollinearity}
+\subsubsubsection{No Multicollinearity}
 Perfect multicollinearity is a term used for describing a perfect linear relationship between two or more independent variables. This relationship occurs when an independent variable can be perfectly predicted from other independent variables. In mathematical terms, this could be written as a linear regression:
 \begin{equation}
 X_1 = \alpha+\beta_1\cdot X_2+...+\beta_n\cdot X_n
@@ -57,7 +57,7 @@ Lastly $\alpha$ is the intercept and represents the value of $X_1$, when all oth
 The regression model can feel the effects of multicollinearity even without there being perfect multicollinearity. A strong linear relationship is enough to have an effect on the model. The problem caused by multicollinearity, is that as it increases the variance of the value that the coefficients can receive also increases. Where as perfect multicollinearity will make the model unable to estimate a value of one coefficient, due to the perfect linearity between the independent variables \cite{MultAndMis}.
 \newline
 
-\noindent \textbf{Detecting multicollinearity}\\
+\noindent \textbf{Detecting Multicollinearity}\\
 A common method to detect multicollinearity in a dataset, is to compute the pearson´s correlation coefficient for all combinations of independent variables. This will result in the correlation matrix, as seen in \autoref{fig:1}, where each cell represents the strength and direction of the relationship between two independent variables. The Pearsons correlation coefficient is calculated through this formula:
 \begin{equation}
 r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}

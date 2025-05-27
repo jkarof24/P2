@@ -1,6 +1,6 @@
-\subsection{Statistical methods}
+\subsection{Statistical Methods}
 This section will present statistical methods to evaluate the reliability and significance of a regression model. The focus will be on confidence intervals and hypothesis testing, these are two methods that can access the model uncertainty and determine whether observed effects are random. This section will be focused on two methods, confidence intervals and hypothesis testing. Where the confidence interval is used to determine an interval which likely include a value of a parameter with a chosen level of confidence. A hypothesis test is used to determine if there is enough statistical evidence to reject a null hypothesis, with a chosen significance level.
-\subsubsection{Confidence intervals}
+\subsubsection{Confidence Intervals}
 The confidence interval is a good tool to use, when trying to estimate a parameter of a population. Its used to create an interval, where the parameter has a probability to lie inside of. This probability is called the confidence level and it's a chosen value, usually the chosen confidence level is either 95\% or 99\%. The confidence interval will become bigger with a smaller confidence level. A good confidence interval is small with a large confidence level, this will usually occur when the sample size is large. The chosen confidence level relates to an $\alpha$-value, where as an example the chosen confidence level is 95\%, then the $\alpha$-value would be 5\% or normally written as $0.05$. The $\alpha$-value is used to determine the critical value, which is used to calculate the margin of error. For example it's used when trying to find the critical value of the confidence interval, when working with a t-distribution.
 \newline
 To set up a confidence interval, the margin of error needs to be computed and then that will be both added and subtracted from the point estimate. This will give the values of the outer bounds of the interval. The margin of error is calculated from this formula:
@@ -30,7 +30,7 @@ P(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}<\mu<\bar{X}+z_{\alpha/2}\frac{\sig
 To interpret a confidence interval, it would be incorrect to interpret the confidence level of some value $x$, as the probability of the true parameter being inside of the interval. The reason behind this is that the computed interval is static, so either the value $x$ is inside the interval or it's not. So the correct way of interpreting the confidence interval is by taking multiple samples and computing the confidence interval for all samples, then the value $x$ would reside inside 95\% of the confidence intervals.\cite{ProbAndStat_8th}
 
 
-\subsubsection{Hypothesis testing}
+\subsubsection{Hypothesis Testing}
 A hypothesis test is used to test an assumption about a population. This is done from a sample of the population, as the information about the population is usually hard to come by. A hypothesis test is set up, by having a null hypothesis and an alternate hypothesis.
 $$H_0 = \text{Null hypothesis}$$
 $$H_a = \text{Alternate hypothesis}$$
