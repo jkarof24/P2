@@ -44,7 +44,7 @@ In polynomial regression, as mentioned before, there are six assumptions, that a
 \subsubsection{The method of least squares}
 
 \noindent To find connections in data, it is necessary to estimate coefficients, $\beta_0$ and $\beta_1$, in linear models. 
-A widely used method to estimate the coefficients, is the least squares method that was previously mentioned. 
+A widely used method to estimate the coefficients, is the least squares method that was previously mentioned, this will be referred to as Ordinary Least Squares or OLS. 
 
 \noindent Least squares considers the deviation of $Y_i$ for  its expected value, where the observations are $(X_i, Y_i)$. 
 This method also requires, that we consider the sum of the $n$ squared deviations.
@@ -366,7 +366,7 @@ Polynomial regression models the relationship like this,
 \begin{equation}
  a' (X' X)a = (Xa)' (Xa)
 \end{equation}  
- \noindent As shown in $(65)$,
+ \noindent As shown in $(63)$,
  these can only be calculated coefficients, if $Xa \not= 0$. This means, that $X'X$ is positive definite in all relevant situations, which is when the coefficients can be calculated. 
  
  \noindent The solution to the least squares method results in only containing $X'X$ and $X'Y$.
