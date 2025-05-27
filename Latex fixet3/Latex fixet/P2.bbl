@@ -6,6 +6,12 @@ Oscar L.~Olvera Astivia and Bruno~D. Zumbo.
   to detect it and how to solve it with applications in r and spss.
 \newblock {\em Practical Assessment, Research, and Evaluation}, 2019.
 
+\bibitem{GoodPRNG}
+Kamalika Bhattacharjee, Krishnendu Maity, and Sukanta Das.
+\newblock A search for good pseudo-random number generators : Survey and
+  empirical studies.
+\newblock 2018.
+
 \bibitem{metrics}
 Alexei Botchkarev.
 \newblock Performance metrics (error measures) in machine learning regression,
