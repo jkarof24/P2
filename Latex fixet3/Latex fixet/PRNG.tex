@@ -52,10 +52,10 @@ balancing randomness and efficiency is essential for practical applications
 
 Linear Congruential Generator (LCG) is a commonly used approach to generate
 pseudo-random numbers. LCG generates a sequence of numbers using a linear
-recurrence relation, expressed as:
+recurrence relation, expressed as\cite{knuth}:
 
 \begin{equation}
-X_{n+1} = (aX_n + c) \bmod m \cite{knuth}.
+X_{n+1} = (aX_n + c) \bmod m.
 \end{equation}
 
 \noindent $X_0$ is the seed value and must be in the range $0 \leq X_0 < m$ \newline

@@ -12,19 +12,19 @@ The confidence interval is a good tool to use when trying to estimate a paramete
 
 \noindent The standard error will change depending on which parameter that the confidence interval is estimating, but the general formula for the standard error is mentioned in equation (10), $\frac{\sigma}{\sqrt{n}}$, where $\sigma$ is the standard deviation and $n$ is the amount of observations. An example of computing a confidence interval of the mean while working with a standard normal distribution, then the formula for the confidence interval would be this:
 \begin{equation}
-P(-z_{\alpha/2}<Z<z_{\alpha/2}) = 1-\alpha
+P(-z_{\alpha/2}<Z<z_{\alpha/2}) = 1-\alpha.
 \end{equation}
 
 \noindent Where $1-\alpha$ is the confidence level. As it is the mean that is being estimated, then instead of Z-score, $\mu$ must be isolated and that is done by multiplying $\frac{\sigma}{\sqrt{n}}$ and subtracting $\bar{X}$ on all sides, then multiplying all side by $-1$ to remove the minus sign. So the formula for a confidence interval of the mean will look like this:
 \begin{equation}
-P(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}<\mu<\bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})=1-\alpha
+P(\bar{X}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}<\mu<\bar{X}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})=1-\alpha.
 \end{equation}
 
 \noindent This formula will give the upper and lower bounds of the confidence interval.\\
 
 \noindent \textbf{The interpretation of a confidence interval}
 \newline
-To interpret a confidence interval correctly, we should not say that the confidence level, for example 95\%, is the probability that the true parameter lies within the interval. This is incorrect because the interval we calculate from a single sample is fixed, either the true parameter is in it, or it is not. So the correct way of interpreting the confidence interval is by taking multiple samples and computing the confidence interval for all samples, then the value $x$ would reside inside 95\% of the confidence intervals.\cite{ProbAndStat_8th}
+To interpret a confidence interval correctly, we should not say that the confidence level, for example 95\%, is the probability that the true parameter lies within the interval. This is incorrect because the interval we calculate from a single sample is fixed, either the true parameter is in it, or it is not. So the correct way of interpreting the confidence interval is by taking multiple samples and computing the confidence interval for all samples, then the value $x$ would reside inside 95\% of the confidence intervals\cite{ProbAndStat_8th}.
 
 
 \subsubsection{Hypothesis Testing}

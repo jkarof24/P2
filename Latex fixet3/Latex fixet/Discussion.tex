@@ -1,14 +1,15 @@
 This section interprets the results of the models, discusses how the violation in the assumption of homoscedasticity affect their performances, considers alternative approaches, and reflects on the scope and limitations of the project.
+\newline
 
-\subsection{Assumption Violations and Implications}
-The objective of this project has been to investigate how violating the key asssumption of homoscedasticity affects the performance of classical polynomial regression models, and how Monte Carlo bootstrapping can offer a more reliable alternative. Synthetic data were used to deliberately violate the assumption of homoscedasticity while controlling other variables. This allowed for a focused analysis of how non-constant error variance influences model accuracy and inference.
+\noindent The objective of this project has been to investigate how violating the key asssumption of homoscedasticity affects the performance of classical polynomial regression models, and how Monte Carlo bootstrapping can offer a more reliable alternative. Synthetic data were used to deliberately violate the assumption of homoscedasticity while controlling other variables. This allowed for a focused analysis of how non-constant error variance influences model accuracy and inference.
 
 \noindent Violating the homoscedasticity assumption was shown to significantly distort the performance of the ordinary least squares (OLS) model. The resulting regression had a notably high Root Mean Square Error (RMSE) and a strong negative bias, indicating that such violations can invalidate the statistical conclusions. 
 
 \subsection{Bootstrapping as a Solution}
-To address these assumption violations, bootstrapping was applied as a nonparametric resampling method. Since it is based on the empirical distribution of the data rather than relying on theoretical assumptions, bootstrapping offers a flexible alternative to OLS.
 
-\noindent The results support this effectiveness. The bootstrap model produced a substantially lower RMSE (1350.7740 vs. 1884.5830) and a near-zero MBE (17.7164 vs. -546.4660), indicating more accurate and less biased predictions. This suggests that bootstrapping can successfully mitigate the effects of assumption violations and improve model robustness.
+When comparing the standard errors of the estimated coefficients, see \autoref{table2}, the OLS model appears to have lower standard errors. However, it is important to note that these may not be reliable due to the violation of the homoscedasticity assumption. In such cases, the standard errors from OLS can be misleading. In contrast, the bootstrap standard errors are derived from the empirical distribution of the data and are therefore more representative of the true variability. As a result, the confidence intervals produced by the OLS model may not be trustworthy, while those from the bootstrap model better reflect the uncertainty in the estimates showing a false sense of predictability. Overall, the bootstrap approach demonstrates superior predictive performance and more robust inference under assumption violations.
+\\\\
+\noindent The bootstrap model also produced a substantially lower RMSE (1350.7740 vs. 1884.5830) and a near-zero MBE (17.7164 vs. -546.4660), indicating more accurate and less biased predictions. This suggests that bootstrapping can successfully mitigate the effects of assumption violations and improve model robustness.
 
 \subsection{Alternative Approaches and their Limitations}
 Several alternative methods can be used to handle heteroscedasticity. One is Weighted Least Squares (WLS), which adjusts for variable variance by assigning different weights to each data point. However, determining appropriate weights is often computationally intensive and can introduce more uncertainty, since estimated weights are used. Additionally, it complicates model interpretation, as results depend on the weighting scheme.

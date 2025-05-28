@@ -47,9 +47,7 @@ To understand how assumption violations affect classical polynomial regression, 
 
 
 \subsection{Results}
-Comparing the results of the two models shown in Table 2, the Mean Bias Error, MBE, of the OLS model is -546.4660, indicating that it tends to underpredict the actual values. In contrast, the bootstrap model has an MBE of 17.7164, suggesting only a slight over-prediction. The smaller absolute bias of the bootstrap model indicates improved accuracy. This is further supported by the Root Mean Square Error, RMSE, where the OLS model scores 1884.5830 compared to the bootstrap model’s 1350.7740. This substantial difference reinforces the conclusion that the bootstrap model provides more accurate predictions.
-\\\\
-When comparing the standard errors of the estimated coefficients, the OLS model appears to have lower standard errors. However, it is important to note that these may not be reliable due to the violation of the homoscedasticity assumption. In such cases, the standard errors from OLS can be misleading. In contrast, the bootstrap standard errors are derived from the empirical distribution of the data and are therefore more representative of the true variability. As a result, the confidence intervals produced by the OLS model may not be trustworthy, while those from the bootstrap model better reflect the uncertainty in the estimates showing a false sense of predictability. Overall, the bootstrap approach demonstrates superior predictive performance and more robust inference under assumption violations.
+Comparing the results of the two models shown in Table 2, the Mean Bias Error, MBE, of the OLS model is -546.4660, indicating that it tends to underpredict the actual values. In contrast, the bootstrap model has an MBE of 17.7164, suggesting only a slight over-prediction. The smaller absolute bias of the bootstrap model indicates improved accuracy. This is further supported by the Root Mean Square Error, RMSE, where the OLS model scores 1884.5830 compared to the bootstrap model’s 1350.7740. This substantial difference reinforces the conclusion that the bootstrap model provides more accurate predictions. When comparing the standard errors of the two models, it appears that the OLS model is more precise, this is not entirely accurate. This will be discussed further in the discussion section.
 \\\\
 The $R^2$ of the OLS is 0.8552 compering it to the mean of the bootstraps $R^2$ that is 0.7891 and median that is 0.8688. it is clear that there are a big differences this difference indicates a skewed  $R^2$ distribution this is truther shown in \autoref{fig:5} where it is clear that the $R^2$ distribution is heavily skewed. this also explains the 95\% confidence interval of the  $R^2$ distribution being $[ 0.2468 ,  0.9656 ] $ witch is extremely wide.
 
@@ -57,6 +55,7 @@ The $R^2$ of the OLS is 0.8552 compering it to the mean of the bootstraps $R^2$ 
 \begin{table}[h!]
 	\centering
 	\caption{Comparison between OLS and Bootstrap model.}
+	\label{table2}
 	\begin{tabular}{lcc}
 		\hline
 		& \textbf{OLS} & \textbf{Bootstrap} \\

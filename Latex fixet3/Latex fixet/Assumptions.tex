@@ -59,7 +59,7 @@ The regression model can feel the effects of multicollinearity even without ther
 \noindent \textbf{Detecting Multicollinearity}\\
 A common method to detect multicollinearity in a dataset, is to compute the pearson's correlation coefficient for all combinations of independent variables. This will result in the correlation matrix, as seen in \autoref{fig:1}, where each cell represents the strength and direction of the relationship between two independent variables. The Pearsons correlation coefficient is calculated through this formula:
 \begin{equation}
-r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}
+r = \frac{n \sum xy - (\sum x)(\sum y)}{\sqrt{[n \sum x^2 - (\sum x)^2][n \sum y^2 - (\sum y)^2]}}.
 \end{equation}
 Where $n$ is the number of observations, with $x$ and $y$ representing the two variables tested for correlation and the pairwise correlation coefficient is denoted as $r$. When computing the value of $r$, the value will be in a range: $-1\leq r \leq 1$. If the value of $r$ is $-1$ or $1$, that indicates a perfect either negative or positive correlation and if the value is $0$, then there is no correlation between the variables. The correlation matrix has a connection to the variance-covariance matrix, by the correlation matrix being a normalized version of the variance-covariance matrix. This means that for each spot in the variance-covariance matrix, the value is divided by the product of the standard deviations of the corresponding independent variables. By normalizing the values, then the values will go from $-1$ to $1$ \cite{DetectMulti}. \newline
 
