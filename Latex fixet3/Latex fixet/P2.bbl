@@ -2,17 +2,20 @@
 
 \bibitem{Heteroscedasticity}
 Oscar L.~Olvera Astivia and Bruno~D. Zumbo.
-\newblock Heteroskedasticity in multiple regression analysis: What it is, how to detect it and how to solve it with applications in r and spss.
+\newblock Heteroskedasticity in multiple regression analysis: What it is, how
+  to detect it and how to solve it with applications in r and spss.
 \newblock {\em Practical Assessment, Research, and Evaluation}, 2019.
 
 \bibitem{GoodPRNG}
 Kamalika Bhattacharjee, Krishnendu Maity, and Sukanta Das.
-\newblock A search for good pseudo-random number generators : Survey and empirical studies.
+\newblock A search for good pseudo-random number generators : Survey and
+  empirical studies.
 \newblock 2018.
 
 \bibitem{metrics}
 Alexei Botchkarev.
-\newblock Performance metrics (error measures) in machine learning regression, forecasting and prognostics: Properties and typology.
+\newblock Performance metrics (error measures) in machine learning regression,
+  forecasting and prognostics: Properties and typology.
 \newblock 2019.
 
 \bibitem{AI}
@@ -33,7 +36,8 @@ Jong~Hae Kim.
 
 \bibitem{knuth}
 Donald~E. Knuth.
-\newblock {\em The Art of Computer Programming, Volume 2: Seminumerical Algorithms}.
+\newblock {\em The Art of Computer Programming, Volume 2: Seminumerical
+  Algorithms}.
 \newblock Addison-Wesley, 3rd edition, 1997.
 
 \bibitem{MathStatResampling}
@@ -41,9 +45,15 @@ Chihara Laura and Tim Hesterberg.
 \newblock {\em Mathematical Statistics with Resampling and R}.
 \newblock Wiley, 2011.
 
+\bibitem{abcde12345}
+University~College London.
+\newblock Lecture 9: Evaluation measures, 2020.
+\newblock Lecture notes University College London.
+
 \bibitem{mersenne}
 Makoto Matsumoto and Takuji Nishimura.
-\newblock Mersenne twister: A 623-dimensionally equidistributed uniform pseudo-random number generator.
+\newblock Mersenne twister: A 623-dimensionally equidistributed uniform
+  pseudo-random number generator.
 \newblock 8, 1998.
 
 \bibitem{AppliedLSM}
@@ -51,16 +61,25 @@ John~Neter Michael H.~Kutner, Christopher J.~Nachtsheim and William Li.
 \newblock {\em Applied Linear Statistical Models}.
 \newblock McGraw-Hill Irwin, 5th edition, 2005.
 
+\bibitem{wls}
+{Pennsylvania State University}.
+\newblock Lesson 13.1: Introduction to prediction in regression.
+\newblock https://online.stat.psu.edu/stat501/lesson/13/13.1.
+\newblock STAT 501 Regression Methods Penn State Eberly College of Science.
+
 \bibitem{HomoSce}
 {Social Science Computing Cooperative}.
 \newblock Homoscedasticity.
-\newblock \url{https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html}, n.d.
+\newblock
+  \url{https://sscc.wisc.edu/sscc/pubs/RegDiag-R/homoscedasticity.html}, n.d.
 \newblock Accessed: 2025-05-23.
 
 \bibitem{ASTA}
 The~ASTA team.
 \newblock Asta.
-\newblock 2025.
+\newblock
+  \url{https://asta.math.aau.dk/course/asta/2025-1/dvmlmatok/lecture/4-1?file=R/module-R.pdf},
+  2025.
 
 \bibitem{ProbAndStat}
 Ronald~E. Walpole, Raymond~H. Myers, Sharon~L. Myers, and Keying Ye.
@@ -72,8 +91,9 @@ David Weisburd, Chester Britt, David~B. Wilson, and Alese Wooditch.
 \newblock {\em Basic Statistics in Criminology and Criminal Justice}.
 \newblock Springer, 2020.
 
-\bibitem{Assumptions}
+\bibitem{Assumptionszed}
 zedstatistics.
-\newblock Regression assumptions explained!, 2018.
+\newblock Regression assumptions explained!
+\newblock \url{https://www.youtube.com/watch?v=0MFpOQRY0rw}, 2018.
 
 \end{thebibliography}
